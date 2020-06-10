@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,400&display=swap");
+$color: red;
+$dark50: rgba(31, 32, 65, 0.5);
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: hsl(0, 0%, 90%);
+}
+
+a {
+  text-decoration: none;
+  color: $dark50;
+}
+
+.nav-bar {
+  height: 70px;
+  background: #ffffff;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+}
+
+.nav-bar ul {
+  list-style: none;
+  display: flex;
+  position: relative;
+  margin: 0 auto;
+  //border: #000000 solid 1px;
+  font: 14px Montserrat, normal, normal;
+  justify-content: center;
+}
+
+.nav-bar li {
+  margin: 1em;
+  //border: #000000 solid 1px;
+}

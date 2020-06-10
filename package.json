@@ -1,0 +1,28 @@
+{
+  "name": "hotel",
+  "version": "1.0.0",
+  "description": "\"Учебный проект по верстке лендинга\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel src/index.pug --open",
+    "build": "parcel build src/index.pug -d docs --public-url ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/injashkin/hotel.git"
+  },
+  "author": "injashkin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/injashkin/hotel/issues"
+  },
+  "homepage": "https://github.com/injashkin/hotel#readme",
+  "dependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
+  "devDependencies": {
+    "pug": "^3.0.0",
+    "sass": "^1.26.8"
+  }
+}
