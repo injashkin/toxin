@@ -1,25 +1,35 @@
-<!DOCTYPE html>
+doctype html
 html(lang="ru")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Document
-    body
-        menu.nav-bar
-            ul                
-                li 
-                    a(class='button' href='#') Home
-                li 
-                    a(class='button' href='#') About Us
-                li 
-                    a(class='button' href='#') Services
-                li 
-                    a(class='button' href='#') Careers
-                li 
-                    a(class='button' href='#') News
-                li 
-                    a(class='button' href='#') Documentation
-       
-        script(src='./main.js')
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Document
+  body.body
+    .container-nav-bar
+      .nav-bar
+        .container-logo
+          .logo 
+            img.logo__img(src="logo.svg", alt="Значек логотипа")
+            img.logo__text(src="logo-text.svg", alt="Текст логотипа")
 
+        ul.group 
+          li.item 
+            a.link(href="#") Home
+          li.item 
+            a.link(href="#") About Us
+          li.item 
+            a.link(href="#") Services
+          li.item 
+            a.link(href="#") Careers
+          li.item 
+            a.link(href="#") News
+          li.item 
+            a.link(href="#") Documentation
+        .container-button
+          include button/button.pug
+
+    .group2
+      p.group2__head Найдём номера под ваши пожелания
+
+    script(src="./main.js")

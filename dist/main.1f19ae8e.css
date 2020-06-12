@@ -1,35 +1,98 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,400&display=swap");
-* {
-  padding: 0;
+.button {
+  position: relative;
+}
+.button .button__text {
+  position: absolute;
+  top: 9.5px;
+  left: 20.5px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height */
+  text-transform: uppercase;
+  color: #bc9cff;
+}
+
+.body {
+  background: url(/image.5ae2eb22.png);
+  background-size: 1534px;
   margin: 0;
 }
 
-body {
-  background: #e6e6e6;
+.container-nav-bar {
+  width: 100%;
 }
 
-a {
-  text-decoration: none;
-  color: rgba(31, 32, 65, 0.5);
+.container-logo {
+  margin-left: 8.75em;
 }
 
 .nav-bar {
-  height: 70px;
+  display: flex;
+  width: 100%;
+  height: 4.38em;
+  align-items: center;
   background: #ffffff;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 }
-
-.nav-bar ul {
-  list-style: none;
-  display: flex;
+.nav-bar .logo {
   position: relative;
+  width: 6.7em;
+  height: 40px;
+}
+.nav-bar .logo .logo__text {
+  position: absolute;
+  top: 13.5px;
+  left: 3em;
+}
+.nav-bar .group {
+  display: flex;
+  list-style: none;
   margin: 0 auto;
   font: 14px Montserrat, normal, normal;
-  justify-content: center;
+}
+.nav-bar .group .item {
+  margin: 1em;
+}
+.nav-bar .group .link {
+  text-decoration: none;
+  color: rgba(31, 32, 65, 0.5);
+}
+.nav-bar .container-button {
+  margin-right: 1em;
 }
 
-.nav-bar li {
-  margin: 1em;
+/* Group2 */
+.group2 {
+  position: absolute;
+  width: 380px;
+  height: 374px;
+  left: 140px;
+  top: 140px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  /* Найдём номера под ваши пожелания */
+}
+.group2 .group2__head {
+  position: absolute;
+  width: 320px;
+  height: 60px;
+  left: 30px;
+  top: 40px;
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  /* Dark 100% */
+  color: #1f2041;
 }
 
 /*# sourceMappingURL=/main.1f19ae8e.css.map */
