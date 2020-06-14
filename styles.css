@@ -1,3 +1,4 @@
+@import "/src/main.scss";
 .body {
   background: url(src/image.png);
   margin: 0;

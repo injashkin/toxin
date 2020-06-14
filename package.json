@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/injashkin/hotel#readme",
   "dependencies": {
-    "parcel-bundler": "^1.12.4"
+    "parcel-bundler": "^1.12.4",
+    "src": "^1.1.2"
   },
   "devDependencies": {
     "pug": "^3.0.0",
