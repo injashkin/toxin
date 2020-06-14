@@ -1,95 +1,47 @@
-@import "button/button.scss";
+@import "macbook/macbook";
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,400&display=swap");
-$color: red;
-$dark50: rgba(31, 32, 65, 0.5);
+//$color: red;
 
 .body {
   background: url(image.png);
-  background-size: 1534px;
   margin: 0;
-  //padding: 0;
 }
 
-.container-nav-bar {
-  width: 100%;
-}
-
-.container-logo {
-  margin-left: 8.75em;
-}
-
-.nav-bar {
-  display: flex;
-  width: 100%;
-  height: 4.38em;
-  align-items: center;
-  background: #ffffff;
-  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-
-  .logo {
-    position: relative;
-    width: 6.7em;
-    height: 40px;
-
-    .logo__text {
-      position: absolute;
-      top: 13.5px;
-      left: 3em;
-    }
+.container-macbook {
+  .container-nav-bar {
+    width: 100%;
   }
 
-  .group {
-    display: flex;
-    list-style: none;
-    //position: relative;
-    margin: 0 auto;
-    font: 14px Montserrat, normal, normal;
-    //justify-content: center;
-
-    .item {
-      margin: 1em;
-    }
-
-    .link {
-      text-decoration: none;
-      color: $dark50;
-    }
-  }
-
-  .container-button {
-    margin-right: 1em;
-  }
-}
-
-/* Group2 */
-.group2 {
-  position: absolute;
-  width: 380px;
-  height: 374px;
-  left: 140px;
-  top: 140px;
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  box-sizing: border-box;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-
-  /* Найдём номера под ваши пожелания */
-  .group2__head {
+  /* Group2 */
+  .group2 {
     position: absolute;
-    width: 320px;
-    height: 60px;
-    left: 30px;
-    top: 40px;
+    width: 380px;
+    height: 374px;
+    left: 140px;
+    top: 140px;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
 
-    font-family: Quicksand;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 30px;
+    /* Найдём номера под ваши пожелания */
+    .group2__head {
+      position: absolute;
+      width: 320px;
+      height: 60px;
+      left: 30px;
+      top: 40px;
 
-    /* Dark 100% */
+      font-family: Quicksand;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 30px;
 
-    color: #1f2041;
+      /* Dark 100% */
+
+      color: #1f2041;
+    }
   }
 }

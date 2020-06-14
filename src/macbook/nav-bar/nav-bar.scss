@@ -1,0 +1,28 @@
+@import "button/button.scss";
+@import "button2/button2.scss";
+@import "logo/logo.scss";
+
+.nav-bar {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  height: 4.38em;
+  align-items: center;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  //Вот эта сволочь не позволяла видеть бордер кнопки
+  background: #ffffff;
+  //после того, как я опустил слой, все заработало
+  z-index: -1;
+
+  .container-logo {
+    margin-left: 8.75em;
+  }
+
+  .container-button2 {
+    margin-right: 1em;
+  }
+}
+
+//.container-button {
+//margin-right: 1em;
+//}

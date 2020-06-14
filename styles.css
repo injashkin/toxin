@@ -1,0 +1,17 @@
+.body {
+  background: url(src/image.png);
+  margin: 0;
+}
+
+.home-menu {
+  position: absolute;
+  font-size: 2em;
+  list-style: none;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.item-menu {
+  text-decoration: none;
+}
