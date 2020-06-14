@@ -5,6 +5,22 @@
 @import "button3/button3";
 @import "pagination/pagination";
 
+.container-label {
+  margin: 0;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height */
+
+  text-transform: uppercase;
+
+  /* Dark 100% */
+
+  color: #1f2041;
+}
+
 .container-button {
   padding-top: 1em;
 }

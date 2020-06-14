@@ -1,17 +1,21 @@
-nav
-    ul.pagination
-        li.previous
-            a.item(href="#") Предыдущая
-        li.active
-            a.item(href="#") 1
-        li
-            a.item(href="#") 2
-        li
-            a.item(href="#") 3
-        li
-            a.item(href="#") ...
-        li
-            a.item(href="#") 15
-        li.next
-            a.item(href="#") 
-            i.material-icons arrow_forward
+nav.pagination    
+    ul.pagination__ul
+        li.pagination__li
+            a.pagination__item.pagination__item_active(href="#") 
+                span.pagination__number 1
+        li.pagination__li
+            a.pagination__item(href="#") 
+                span.pagination__number 2
+        li.pagination__li
+            a.pagination__item(href="#") 
+                span.pagination__number 3
+        li.pagination__li
+            a.pagination__item(href="#") 
+                span.pagination__number ...
+        li.pagination__li
+            a.pagination__item(href="#") 
+                span.pagination__number 15
+        li.pagination__li
+            button.button-next           
+                i.material-icons arrow_forward
+    .pagination__text 1 – 12 из 100+ вариантов аренды 
