@@ -176,12 +176,20 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
+.pagination .pagination__ul .pagination__number:hover {
+  opacity: 0.5;
+}
 .pagination .pagination__ul .pagination__item_active {
   background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
   border-radius: 22px;
   padding: 12.5px 20.5px;
   font-weight: bold;
   color: #ffffff;
+}
+.pagination .pagination__ul .pagination__item_active:hover {
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  opacity: 0.5;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 .pagination .pagination__ul .button-next {
   /* Сбрасываем дефолтные стили */
@@ -192,6 +200,11 @@
   border-radius: 22px;
   padding: 6.5px 8px;
   color: #ffffff;
+}
+.pagination .pagination__ul .button-next:hover {
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  opacity: 0.5;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 .pagination .pagination__text {
   margin-top: -4px;
