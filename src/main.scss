@@ -1,48 +1,16 @@
-@import "macbook/macbook";
 @import "ui-kit/ui-kit.scss";
+@import "landing/landing.scss";
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,400&display=swap");
 //$color: red;
+//$imgBackground: url(image.jpg);
 
 .body {
-  background: url(image.png);
+  background: url(image.jpg);
   margin: 0;
 }
 
 .container-macbook {
   .container-nav-bar {
     width: 100%;
-  }
-
-  /* Group2 */
-  .group2 {
-    position: absolute;
-    width: 380px;
-    height: 374px;
-    left: 140px;
-    top: 140px;
-    background: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    box-sizing: border-box;
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-
-    /* Найдём номера под ваши пожелания */
-    .group2__head {
-      position: absolute;
-      width: 320px;
-      height: 60px;
-      left: 30px;
-      top: 40px;
-
-      font-family: Quicksand;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 24px;
-      line-height: 30px;
-
-      /* Dark 100% */
-
-      color: #1f2041;
-    }
   }
 }

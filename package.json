@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel index.html --open",
-    "build": "parcel build index.html -d docs --public-url ./"
+    "start": "parcel src/ui-kit/ui-kit.pug src/landing/landing.pug --open",
+    "build": "parcel build src/ui-kit/ui-kit.pug src/landing/landing.pug -d docs --public-url ../"
   },
   "repository": {
     "type": "git",
