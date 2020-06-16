@@ -1,0 +1,44 @@
+.radio-buttons {
+  border: 1px solid #000000;
+  display: flex;
+}
+
+.radio-buttons__item {
+  border: 1px solid #000000;
+  position: relative;
+}
+
+.radio-buttons__button {
+  border: 1px solid #000000;
+}
+
+.radio-buttons__label {
+  //display: inline-block;
+  position: absolute;
+  //padding-left: 20px;
+  //margin-right: 5px;
+
+  cursor: pointer;
+
+  //&::before {
+  //content: "";
+  //display: inline-block;
+  //width: 16px;
+  //height: 16px;
+
+  //margin-right: 16px;
+  //left: 0;
+  //}
+
+  border: 1px solid #000000;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
+
+  /* Dark 75% */
+
+  color: rgba(31, 32, 65, 0.75);
+}

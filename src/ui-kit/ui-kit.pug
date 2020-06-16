@@ -1,16 +1,19 @@
 extends ../template
 block main
   body.body 
-    h1 Страница UI-Ki
+    h1 Страница UI-Kit
 
-    .container-button
-      include button/button
+    .container-button    
+      include ../components/button/button
     .container-button2
-      include button2/button2
+      include ../components/button2/button2
     .container-link
-      include link/link
+      include ../components/link/link
     .container-button3
-      include button3/button3
+      include ../components/button3/button3
     .container-pagination
       .container-label Pagination
-      include pagination/pagination
+      include ../components/pagination/pagination
+    .container-radio-buttons
+      .container-label Radio Buttons
+      include ../components/radio-buttons/radio-buttons

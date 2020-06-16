@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,400&display=swap");
-@import "button/button";
-@import "button2/button2";
-@import "link/link";
-@import "button3/button3";
-@import "pagination/pagination";
+@import "../components/button/button";
+@import "../components/button2/button2";
+@import "../components/link/link";
+@import "../components/button3/button3";
+@import "../components/pagination/pagination";
+@import "../components/radio-buttons/radio-buttons";
 
 .container-label {
   margin: 0;
