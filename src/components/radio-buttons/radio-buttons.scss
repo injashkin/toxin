@@ -1,44 +1,106 @@
+/* Данные стили взяты отсюда
+https://drbrain.ru/articles/css-radio-buttons-styling/ */
+
 .radio-buttons {
-  border: 1px solid #000000;
   display: flex;
-}
-
-.radio-buttons__item {
-  border: 1px solid #000000;
-  position: relative;
-}
-
-.radio-buttons__button {
-  border: 1px solid #000000;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 220.74px;
+  height: 35px;
 }
 
 .radio-buttons__label {
-  //display: inline-block;
-  position: absolute;
-  //padding-left: 20px;
-  //margin-right: 5px;
+  /* Выравниваем по горизонтали элементы, обернутые в label */
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
 
-  cursor: pointer;
+  /* Скрываем штатные радио-кнопки */
+  input {
+    position: absolute;
+    opacity: 0;
+    display: block;
+    height: 0;
+    width: 0;
+  }
 
-  //&::before {
-  //content: "";
-  //display: inline-block;
-  //width: 16px;
-  //height: 16px;
+  /* Устанавливаем параметры элементов, 
+  заменяющих штатные радио-кнопки */
+  .radio-buttons__item {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: inline-block;
+    position: relative;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    margin-right: 5px;
+    /* Dark 25% */
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    background-color: #ffffff;
+    cursor: pointer;
+    outline: none;
+    box-sizing: border-box;
+    transition: 0.5s all;
+  }
 
-  //margin-right: 16px;
-  //left: 0;
-  //}
+  /* Параметры элементов, заменяющих 
+  штатные радио-кнопки. На кнопку навели */
+  &:hover .radio-buttons__item {
+    /* Dark 25% */
+    border: 1px solid rgba(31, 32, 65, 0.5);
+  }
 
-  border: 1px solid #000000;
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 24px;
-  /* identical to box height, or 171% */
+  /* Параметры элементов, заменяющих штатные 
+  радио-кнопки. Кпопку выбрали */
+  input:checked + .radio-buttons__item {
+    border-color: #bc9cff;
+    background: #ffffff; /*фон активной кнопки*/
+    cursor: default;
+  }
 
-  /* Dark 75% */
+  /* Добавляем декор */
+  &:hover .radio-buttons__item::before,
+  input:checked + .radio-buttons__item::before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 10px;
+    background-color: #bc9cff; /*внутренний кружок выбранной кнопки*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
-  color: rgba(31, 32, 65, 0.75);
+  /*
+  input:checked + .radio-buttons__item::before {
+    //Бордер маленького кружка
+    border: 1px solid rgba(31, 32, 65, 0.25);
+  }
+  */
+
+  /* Параметры подписей радио-кнопок */
+  input + .radio-buttons__item + .radio-buttons__text {
+    /* Dark 75% */
+    color: rgba(31, 32, 65, 0.5);
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    font-family: sans-serif;
+    cursor: pointer;
+    //margin-right: 10px;
+    align-self: center;
+  }
+
+  /* Праметры подписей выбранных радио-кнопок */
+  input:checked + .radio-buttons__item + .radio-buttons__text {
+    /* Dark 50% */
+    color: rgba(31, 32, 65, 0.75);
+    cursor: default;
+  }
 }
