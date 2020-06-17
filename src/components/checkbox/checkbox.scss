@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,400&display=swap");
+.checkbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 222px;
+  height: 102px;
+  margin-top: 15px;
+  //border: 1px solid #000000;
+
+  .checkbox__item {
+    //border: 1px solid #000000;
+  }
+
+  /* прячем стандартный checkbox */
+  input {
+    display: none;
+  }
+
+  /* стили для текста */
+  label {
+    display: flex;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    /* identical to box height, or 129% */
+    /* Dark 50% */
+    color: rgba(31, 32, 65, 0.5);
+    cursor: pointer;
+
+    //border: 1px solid #000000;
+
+    &:hover {
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  /*Стили чекбокса и галочки*/
+  input + label:before {
+    content: "";
+    //display: flex;
+    height: 20px;
+    width: 20px;
+    //text-align: center;
+    //vertical-align: sub;
+    margin-right: 10px;
+
+    /* Dark 25% */
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    /*Стили галочки*/
+    background-repeat: no-repeat;
+    background-position: 4px;
+    background-size: 10px;
+  }
+
+  input:checked + label:before {
+    /* Primary Color */
+    border: 1px solid #bc9cff;
+    background-image: url(../components/checkbox/vector.svg);
+  }
+}

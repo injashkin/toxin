@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,400&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,400&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,400&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,400&display=swap");
 .button {
   /* Сбрасываем дефолтные стили */
   border: none;
@@ -382,6 +383,55 @@ https://drbrain.ru/articles/css-radio-buttons-styling/ */
 }
 .toggle input:hover + .toggle__text:before {
   opacity: 0.5;
+}
+
+.checkbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 222px;
+  height: 102px;
+  margin-top: 15px;
+  /* прячем стандартный checkbox */
+  /* стили для текста */
+  /*Стили чекбокса и галочки*/
+}
+.checkbox input {
+  display: none;
+}
+.checkbox label {
+  display: flex;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height, or 129% */
+  /* Dark 50% */
+  color: rgba(31, 32, 65, 0.5);
+  cursor: pointer;
+}
+.checkbox label:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.checkbox input + label:before {
+  content: "";
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+  /* Dark 25% */
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 4px;
+  /*Стили галочки*/
+  background-repeat: no-repeat;
+  background-position: 4px;
+  background-size: 10px;
+}
+.checkbox input:checked + label:before {
+  /* Primary Color */
+  border: 1px solid #bc9cff;
+  background-image: url(/vector.a97c5277.svg);
 }
 
 .container {
