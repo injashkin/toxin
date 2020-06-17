@@ -5,6 +5,11 @@
 @import "../components/button3/button3";
 @import "../components/pagination/pagination";
 @import "../components/radio-buttons/radio-buttons";
+@import "../components/toggle/toggle";
+
+.container {
+  padding-top: 1rem;
+}
 
 .container-label {
   margin: 0;
@@ -20,28 +25,4 @@
   /* Dark 100% */
 
   color: #1f2041;
-}
-
-.container-button {
-  padding-top: 1rem;
-}
-
-.container-button2 {
-  padding-top: 1rem;
-}
-
-.container-link {
-  padding-top: 1rem;
-}
-
-.container-button3 {
-  padding-top: 1rem;
-}
-
-.container-pagination {
-  padding-top: 1rem;
-}
-
-.container-radio-buttons {
-  padding-top: 1rem;
 }
