@@ -1,8 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,400&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,400&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,400&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,400&display=swap");
 .button {
   /* Сбрасываем дефолтные стили */
   border: none;
@@ -385,6 +383,27 @@ https://drbrain.ru/articles/css-radio-buttons-styling/ */
   opacity: 0.5;
 }
 
+/*Стандартные цвета*/
+/* montserrat-regular - latin_cyrillic */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/montserrat-v14-latin_cyrillic-regular.9c413f0d.eot");
+  /* IE9 Compat Modes */
+  src: local("Montserrat Regular"), local("Montserrat-Regular"), url("/montserrat-v14-latin_cyrillic-regular.9c413f0d.eot?#iefix") format("embedded-opentype"), url("/montserrat-v14-latin_cyrillic-regular.2ad30f1c.woff") format("woff"), url("/montserrat-v14-latin_cyrillic-regular.62472a27.ttf") format("truetype"), url("/montserrat-v14-latin_cyrillic-regular.c4759a18.svg#Montserrat") format("svg");
+  /* Legacy iOS */
+}
+/* montserrat-700 - latin_cyrillic */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/montserrat-v14-latin_cyrillic-700.69095323.eot");
+  /* IE9 Compat Modes */
+  src: local("Montserrat Bold"), local("Montserrat-Bold"), url("/montserrat-v14-latin_cyrillic-700.69095323.eot?#iefix") format("embedded-opentype"), url("/montserrat-v14-latin_cyrillic-700.828a8ed1.woff") format("woff"), url("/montserrat-v14-latin_cyrillic-700.ae6647a6.ttf") format("truetype"), url("/montserrat-v14-latin_cyrillic-700.38d4f879.svg#Montserrat") format("svg");
+  /* Legacy iOS */
+}
 .checkbox {
   display: flex;
   flex-direction: column;
@@ -593,6 +612,7 @@ https://drbrain.ru/articles/css-radio-buttons-styling/ */
 }
 
 .body {
+  font-size: 10px;
   margin: 0;
 }
 

@@ -1,5 +1,5 @@
 @import "./src/theme/variables.scss";
-@import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,400&display=swap");
+
 .checkbox {
   display: flex;
   flex-direction: column;
@@ -9,10 +9,6 @@
   height: 102px;
   margin-top: 15px;
   //border: 1px solid #000000;
-
-  .checkbox__item {
-    //border: 1px solid #000000;
-  }
 
   /* прячем стандартный checkbox */
   input {
