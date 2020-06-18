@@ -399,27 +399,24 @@ https://drbrain.ru/articles/css-radio-buttons-styling/ */
 .checkbox input {
   display: none;
 }
-.checkbox label {
+.checkbox .checkbox__text {
   display: flex;
   font-family: Montserrat;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
-  /* identical to box height, or 129% */
-  /* Dark 50% */
   color: rgba(31, 32, 65, 0.5);
   cursor: pointer;
 }
-.checkbox label:hover {
+.checkbox .checkbox__text:hover {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.checkbox input + label:before {
+.checkbox input + .checkbox__text:before {
   content: "";
   height: 20px;
   width: 20px;
   margin-right: 10px;
-  /* Dark 25% */
   border: 1px solid rgba(31, 32, 65, 0.25);
   box-sizing: border-box;
   border-radius: 4px;
@@ -428,8 +425,7 @@ https://drbrain.ru/articles/css-radio-buttons-styling/ */
   background-position: 4px;
   background-size: 10px;
 }
-.checkbox input:checked + label:before {
-  /* Primary Color */
+.checkbox input:checked + .checkbox__text:before {
   border: 1px solid #bc9cff;
   background-image: url(/vector.a97c5277.svg);
 }
