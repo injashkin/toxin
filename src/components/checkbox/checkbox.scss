@@ -1,56 +1,56 @@
-@import "./src/theme/variables.scss";
+@import "./src/theme/variables";
 
 .checkbox {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  width: 22.2rem;
+}
 
-  width: 222px;
-  height: 102px;
-  margin-top: 15px;
-  //border: 1px solid #000000;
+.checkbox__label {
+  position: relative;
+}
 
-  /* прячем стандартный checkbox */
-  input {
-    display: none;
+/* прячем стандартный checkbox */
+.checkbox__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+/* стили для текста */
+.checkbox__text {
+  display: flex;
+  @include font-body(normal, 1.4rem, 1.8rem);
+  color: $dark-50;
+  cursor: pointer;
+  padding: 0.5rem 0;
+
+  &:hover {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
+}
 
-  /* стили для текста */
-  .checkbox__text {
-    display: flex;
-    @include font-body(normal, 14px, 18px);
-    color: $dark-50;
-    cursor: pointer;
+/*Стили чекбокса и галочки*/
+.checkbox__input + .checkbox__text:before {
+  content: "";
+  height: 2rem;
+  width: 2rem;
+  padding-left: 1.8rem;
+  margin-right: 1rem;
 
-    //border: 1px solid #000000;
+  border: 1px solid $dark-25;
+  box-sizing: border-box;
+  border-radius: 0.4rem;
 
-    &:hover {
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    }
-  }
+  /*Стили галочки*/
+  background-repeat: no-repeat;
+  background-position: 0.4rem;
+  background-size: 1rem;
+}
 
-  /*Стили чекбокса и галочки*/
-  input + .checkbox__text:before {
-    content: "";
-    //display: flex;
-    height: 20px;
-    width: 20px;
-    //text-align: center;
-    //vertical-align: sub;
-    margin-right: 10px;
-
-    border: 1px solid $dark-25;
-    box-sizing: border-box;
-    border-radius: 4px;
-
-    /*Стили галочки*/
-    background-repeat: no-repeat;
-    background-position: 4px;
-    background-size: 10px;
-  }
-
-  input:checked + .checkbox__text:before {
-    border: 1px solid $purple;
-    background-image: url(../components/checkbox/vector.svg);
-  }
+.checkbox__input:checked + .checkbox__text:before {
+  border: 1px solid $purple;
+  background-image: url(../components/checkbox/vector.svg);
 }

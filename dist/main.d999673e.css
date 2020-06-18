@@ -1,6 +1,26 @@
 @charset "UTF-8";
+/*Стандартные цвета*/
+/* montserrat-regular - latin_cyrillic */
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,400&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,400&display=swap");
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/montserrat-v14-latin_cyrillic-regular.9c413f0d.eot");
+  /* IE9 Compat Modes */
+  src: local("Montserrat Regular"), local("Montserrat-Regular"), url("/montserrat-v14-latin_cyrillic-regular.9c413f0d.eot?#iefix") format("embedded-opentype"), url("/montserrat-v14-latin_cyrillic-regular.2ad30f1c.woff") format("woff"), url("/montserrat-v14-latin_cyrillic-regular.62472a27.ttf") format("truetype"), url("/montserrat-v14-latin_cyrillic-regular.c4759a18.svg#Montserrat") format("svg");
+  /* Legacy iOS */
+}
+/* montserrat-700 - latin_cyrillic */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/montserrat-v14-latin_cyrillic-700.69095323.eot");
+  /* IE9 Compat Modes */
+  src: local("Montserrat Bold"), local("Montserrat-Bold"), url("/montserrat-v14-latin_cyrillic-700.69095323.eot?#iefix") format("embedded-opentype"), url("/montserrat-v14-latin_cyrillic-700.828a8ed1.woff") format("woff"), url("/montserrat-v14-latin_cyrillic-700.ae6647a6.ttf") format("truetype"), url("/montserrat-v14-latin_cyrillic-700.38d4f879.svg#Montserrat") format("svg");
+  /* Legacy iOS */
+}
 .button {
   /* Сбрасываем дефолтные стили */
   border: none;
@@ -407,44 +427,55 @@ https://drbrain.ru/articles/css-radio-buttons-styling/ */
 .checkbox {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: 222px;
-  height: 102px;
-  margin-top: 15px;
-  /* прячем стандартный checkbox */
-  /* стили для текста */
-  /*Стили чекбокса и галочки*/
+  width: 22.2rem;
 }
-.checkbox input {
-  display: none;
+
+.checkbox__label {
+  position: relative;
 }
-.checkbox .checkbox__text {
+
+/* прячем стандартный checkbox */
+.checkbox__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+/* стили для текста */
+.checkbox__text {
   display: flex;
   font-family: Montserrat;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
   color: rgba(31, 32, 65, 0.5);
   cursor: pointer;
+  padding: 0.5rem 0;
 }
-.checkbox .checkbox__text:hover {
+.checkbox__text:hover {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.checkbox input + .checkbox__text:before {
+
+/*Стили чекбокса и галочки*/
+.checkbox__input + .checkbox__text:before {
   content: "";
-  height: 20px;
-  width: 20px;
-  margin-right: 10px;
+  height: 2rem;
+  width: 2rem;
+  padding-left: 1.8rem;
+  margin-right: 1rem;
   border: 1px solid rgba(31, 32, 65, 0.25);
   box-sizing: border-box;
-  border-radius: 4px;
+  border-radius: 0.4rem;
   /*Стили галочки*/
   background-repeat: no-repeat;
-  background-position: 4px;
-  background-size: 10px;
+  background-position: 0.4rem;
+  background-size: 1rem;
 }
-.checkbox input:checked + .checkbox__text:before {
+
+.checkbox__input:checked + .checkbox__text:before {
   border: 1px solid #bc9cff;
   background-image: url(/vector.a97c5277.svg);
 }
@@ -454,15 +485,13 @@ https://drbrain.ru/articles/css-radio-buttons-styling/ */
 }
 
 .container-label {
-  margin: 0;
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
-  /* identical to box height */
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin: 0;
   text-transform: uppercase;
-  /* Dark 100% */
   color: #1f2041;
 }
 
@@ -611,8 +640,11 @@ https://drbrain.ru/articles/css-radio-buttons-styling/ */
   margin: 0;
 }
 
-.body {
+html {
   font-size: 10px;
+}
+
+body {
   margin: 0;
 }
 

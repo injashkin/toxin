@@ -1,25 +1,29 @@
 extends ../template
-block main
-  body.body 
-    h1 Страница UI-Kit
 
-    .container   
-      include ../../components/button/button
-    .container
-      include ../../components/button2/button2
-    .container
-      include ../../components/link/link
-    .container
-      include ../../components/button3/button3
-    .container
-      .container-label Pagination
-      include ../../components/pagination/pagination
-    .container
-      .container-label Radio Buttons
-      include ../../components/radio-buttons/radio-buttons
-    .container
-      .container-label Toggle
-      include ../../components/toggle/toggle
-    .container
-      .container-label Checkbox
-      include ../../components/checkbox/checkbox
+block title
+  |  Страница UI-Kit
+    
+block main
+
+  h1 Страница UI-Kit
+
+  .container   
+    include ../../components/button/button
+  .container
+    include ../../components/button2/button2
+  .container
+    include ../../components/link/link
+  .container
+    include ../../components/button3/button3
+  .container
+    .container-label Pagination
+    include ../../components/pagination/pagination
+  .container
+    .container-label Radio Buttons
+    include ../../components/radio-buttons/radio-buttons
+  .container
+    .container-label Toggle
+    include ../../components/toggle/toggle
+  .container
+    .container-label Checkbox
+    include ../../components/checkbox/checkbox
