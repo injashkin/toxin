@@ -17,3 +17,13 @@ body {
     width: 100%;
   }
 }
+
+// Remove border and padding in Firefox
+::-moz-focus-outer,
+::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+:focus {
+  outline: none !important;
+}

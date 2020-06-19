@@ -456,7 +456,7 @@ https://drbrain.ru/articles/css-radio-buttons-styling/ */
   padding: 0.5rem 0;
 }
 .checkbox__text:hover {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 /*Стили чекбокса и галочки*/
@@ -478,6 +478,10 @@ https://drbrain.ru/articles/css-radio-buttons-styling/ */
 .checkbox__input:checked + .checkbox__text:before {
   border: 1px solid #bc9cff;
   background-image: url(/vector.a97c5277.svg);
+}
+
+.checkbox__input:hover + .checkbox__text:before {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .container {
@@ -650,6 +654,16 @@ body {
 
 .container-macbook .container-nav-bar {
   width: 100%;
+}
+
+::-moz-focus-outer,
+::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+:focus {
+  outline: none !important;
 }
 
 /*# sourceMappingURL=/main.d999673e.css.map */
