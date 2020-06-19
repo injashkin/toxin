@@ -484,6 +484,23 @@ https://drbrain.ru/articles/css-radio-buttons-styling/ */
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.text-field__input {
+  background: #ffffff;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 320px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  padding: 1.3rem 1.5rem;
+}
+.text-field__input:hover {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+}
+
 .container {
   padding-top: 1rem;
 }

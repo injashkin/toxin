@@ -1,0 +1,14 @@
+.text-field__input {
+  background: #ffffff;
+  border: 1px solid $dark-25;
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 320px;
+  @include font-body(normal, 1.4rem, 1.8rem);
+  padding: 1.3rem 1.5rem;
+
+  &:hover {
+    border: 1px solid $dark-50;
+    //content: "This is pretty awesome";
+  }
+}
