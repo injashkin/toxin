@@ -1,14 +1,44 @@
-.text-field__input {
-  background: #ffffff;
-  border: 1px solid $dark-25;
-  box-sizing: border-box;
-  border-radius: 4px;
-  width: 320px;
-  @include font-body(normal, 1.4rem, 1.8rem);
-  padding: 1.3rem 1.5rem;
+.text-field {
+  display: inline-block;
+  position: relative;
 
-  &:hover {
-    border: 1px solid $dark-50;
-    //content: "This is pretty awesome";
+  &__input {
+    background: #ffffff;
+    border: 1px solid $dark-25;
+    box-sizing: border-box;
+    border-radius: 4px;
+    @include font-body(normal, 1.4rem, 1.8rem);
+    padding: 1.3rem 1.5rem;
+
+    &:hover {
+      border: 1px solid $dark-50;
+      //content: "This is pretty awesome";
+    }
+  }
+
+  &_add-arrow-off {
+    display: none;
+  }
+
+  &_add-arrow-on {
+    position: absolute;
+    top: 50%;
+    left: 95%;
+    transform: translate(-50%, -50%);
+
+    .material-icons {
+      cursor: pointer;
+
+      font-family: Material Icons;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 24px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+
+      color: $purple;
+    }
   }
 }

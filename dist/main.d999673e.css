@@ -484,12 +484,15 @@ https://drbrain.ru/articles/css-radio-buttons-styling/ */
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.text-field {
+  display: inline-block;
+  position: relative;
+}
 .text-field__input {
   background: #ffffff;
   border: 1px solid rgba(31, 32, 65, 0.25);
   box-sizing: border-box;
   border-radius: 4px;
-  width: 320px;
   font-family: Montserrat;
   font-style: normal;
   font-weight: normal;
@@ -500,9 +503,30 @@ https://drbrain.ru/articles/css-radio-buttons-styling/ */
 .text-field__input:hover {
   border: 1px solid rgba(31, 32, 65, 0.5);
 }
+.text-field_add-arrow-off {
+  display: none;
+}
+.text-field_add-arrow-on {
+  position: absolute;
+  top: 50%;
+  left: 95%;
+  transform: translate(-50%, -50%);
+}
+.text-field_add-arrow-on .material-icons {
+  cursor: pointer;
+  font-family: Material Icons;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #bc9cff;
+}
 
 .container {
-  padding-top: 1rem;
+  margin: 1rem;
 }
 
 .container-label {
@@ -511,9 +535,9 @@ https://drbrain.ru/articles/css-radio-buttons-styling/ */
   font-weight: bold;
   font-size: 1.2rem;
   line-height: 1.5rem;
-  margin: 0;
   text-transform: uppercase;
   color: #1f2041;
+  margin: 0.5rem;
 }
 
 .button {

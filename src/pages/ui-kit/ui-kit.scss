@@ -11,12 +11,12 @@
 @import "../components/text-field/text-field";
 
 .container {
-  padding-top: 1rem;
+  margin: 1rem;
 }
 
 .container-label {
   @include font-body(bold, 1.2rem, 1.5rem);
-  margin: 0;
   text-transform: uppercase;
   color: $dark;
+  margin: 0.5rem;
 }

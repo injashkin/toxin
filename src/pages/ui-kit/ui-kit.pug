@@ -1,4 +1,4 @@
-extends ../template
+extends ../template    
 
 block title
   |  Страница UI-Kit
@@ -6,6 +6,11 @@ block title
 block main
 
   h1 Страница UI-Kit
+
+  mixin compo(name)
+    .container
+      .container-label= name 
+      block
 
   .container   
     include ../../components/button/button
@@ -15,18 +20,18 @@ block main
     include ../../components/link/link
   .container
     include ../../components/button3/button3
-  .container
-    .container-label Pagination
+
+  +compo('Pagination')
     include ../../components/pagination/pagination
-  .container
-    .container-label Radio Buttons
+
+  +compo('Radio Buttons')
     include ../../components/radio-buttons/radio-buttons
-  .container
-    .container-label Toggle
+  +compo('Toggle')
     include ../../components/toggle/toggle
-  .container
-    .container-label Checkbox
+  +compo('Checkbox')
     include ../../components/checkbox/checkbox
-  .container
-    .container-label Text Field
-    include ../../components/text-field/text-field
+
+  +compo('Text Field')
+    +field('e', 'Email', 'email', 'y', 32)
+  +compo('Subscription text field')
+    +field('e', 'Email', 'subscription', 'n', 20)
