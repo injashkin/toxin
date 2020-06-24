@@ -1,5 +1,8 @@
 @import "./src/theme/variables.scss";
 
+@import "../components/сolor-item/сolor-item";
+@import "../components/types/types.scss";
+
 @import "../components/button/button";
 @import "../components/button2/button2";
 @import "../components/link/link";
@@ -9,6 +12,27 @@
 @import "../components/toggle/toggle";
 @import "../components/checkbox/checkbox";
 @import "../components/text-field/text-field";
+
+.color-types {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  height: 90rem;
+
+  &__logo {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+  }
+
+  &__color {
+    display: flex;
+    flex-direction: column;
+    margin-left: 14rem;
+  }
+}
 
 .container {
   margin: 1rem;

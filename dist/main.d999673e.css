@@ -21,6 +21,134 @@
   src: local("Montserrat Bold"), local("Montserrat-Bold"), url("/montserrat-v14-latin_cyrillic-700.69095323.eot?#iefix") format("embedded-opentype"), url("/montserrat-v14-latin_cyrillic-700.828a8ed1.woff") format("woff"), url("/montserrat-v14-latin_cyrillic-700.ae6647a6.ttf") format("truetype"), url("/montserrat-v14-latin_cyrillic-700.38d4f879.svg#Montserrat") format("svg");
   /* Legacy iOS */
 }
+/* quicksand-regular - latin-ext */
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/quicksand-v20-latin-ext-regular.a0b2e6f2.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("/quicksand-v20-latin-ext-regular.a0b2e6f2.eot?#iefix") format("embedded-opentype"), url("/quicksand-v20-latin-ext-regular.43b609b5.woff2") format("woff2"), url("/quicksand-v20-latin-ext-regular.4617df5c.woff") format("woff"), url("/quicksand-v20-latin-ext-regular.f2adc946.ttf") format("truetype"), url("/quicksand-v20-latin-ext-regular.af7b7801.svg#Quicksand") format("svg");
+  /* Legacy iOS */
+}
+/* quicksand-700 - latin-ext */
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/quicksand-v20-latin-ext-700.32924d25.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("/quicksand-v20-latin-ext-700.32924d25.eot?#iefix") format("embedded-opentype"), url("/quicksand-v20-latin-ext-700.56c82eff.woff2") format("woff2"), url("/quicksand-v20-latin-ext-700.d15a33f8.woff") format("woff"), url("/quicksand-v20-latin-ext-700.5e68f0a4.ttf") format("truetype"), url("/quicksand-v20-latin-ext-700.1e0a7b3f.svg#Quicksand") format("svg");
+  /* Legacy iOS */
+}
+.color-item {
+  display: flex;
+  padding: 1rem;
+}
+.color-item__rectangle {
+  min-width: 7rem;
+  min-height: 7rem;
+  border-radius: 0.6rem;
+}
+.color-item__label {
+  margin-left: 3.5rem;
+  padding: 0.5rem;
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 29px;
+}
+
+.color-types__types {
+  align-self: start;
+  padding-top: 14.5rem;
+  margin-right: 20.5rem;
+}
+
+.type-item {
+  display: grid;
+  grid-template-columns: 15% 85%;
+  gap: 2rem;
+  margin-bottom: 5rem;
+  width: 40rem;
+}
+.type-item__type {
+  padding-right: 1rem;
+}
+.type-item__type_h1 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  text-align: right;
+  text-transform: uppercase;
+  color: rgba(31, 32, 65, 0.25);
+}
+.type-item__type_h2 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.9rem;
+  line-height: 2.3rem;
+  text-align: right;
+  text-transform: uppercase;
+  color: rgba(31, 32, 65, 0.25);
+}
+.type-item__type_h3 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  text-align: right;
+  text-transform: uppercase;
+  color: rgba(31, 32, 65, 0.25);
+}
+.type-item__type_body {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  text-align: right;
+  color: rgba(31, 32, 65, 0.25);
+}
+.type-item__sample_h1 {
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.4rem;
+  line-height: 3rem;
+  color: dark;
+}
+.type-item__sample_h2 {
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.9rem;
+  line-height: 2.4rem;
+  color: #1f2041;
+}
+.type-item__sample_h3 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  color: #1f2041;
+}
+.type-item__sample_body {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  color: .type-item__sample_body dark-75;
+}
+
 .button {
   /* Сбрасываем дефолтные стили */
   border: none;
@@ -424,6 +552,26 @@ https://drbrain.ru/articles/css-radio-buttons-styling/ */
   src: local("Montserrat Bold"), local("Montserrat-Bold"), url("/montserrat-v14-latin_cyrillic-700.69095323.eot?#iefix") format("embedded-opentype"), url("/montserrat-v14-latin_cyrillic-700.828a8ed1.woff") format("woff"), url("/montserrat-v14-latin_cyrillic-700.ae6647a6.ttf") format("truetype"), url("/montserrat-v14-latin_cyrillic-700.38d4f879.svg#Montserrat") format("svg");
   /* Legacy iOS */
 }
+/* quicksand-regular - latin-ext */
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/quicksand-v20-latin-ext-regular.a0b2e6f2.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("/quicksand-v20-latin-ext-regular.a0b2e6f2.eot?#iefix") format("embedded-opentype"), url("/quicksand-v20-latin-ext-regular.43b609b5.woff2") format("woff2"), url("/quicksand-v20-latin-ext-regular.4617df5c.woff") format("woff"), url("/quicksand-v20-latin-ext-regular.f2adc946.ttf") format("truetype"), url("/quicksand-v20-latin-ext-regular.af7b7801.svg#Quicksand") format("svg");
+  /* Legacy iOS */
+}
+/* quicksand-700 - latin-ext */
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/quicksand-v20-latin-ext-700.32924d25.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("/quicksand-v20-latin-ext-700.32924d25.eot?#iefix") format("embedded-opentype"), url("/quicksand-v20-latin-ext-700.56c82eff.woff2") format("woff2"), url("/quicksand-v20-latin-ext-700.d15a33f8.woff") format("woff"), url("/quicksand-v20-latin-ext-700.5e68f0a4.ttf") format("truetype"), url("/quicksand-v20-latin-ext-700.1e0a7b3f.svg#Quicksand") format("svg");
+  /* Legacy iOS */
+}
 .checkbox {
   display: flex;
   flex-direction: column;
@@ -523,6 +671,25 @@ https://drbrain.ru/articles/css-radio-buttons-styling/ */
   align-items: center;
   text-align: center;
   color: #bc9cff;
+}
+
+.color-types {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  height: 90rem;
+}
+.color-types__logo {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+}
+.color-types__color {
+  display: flex;
+  flex-direction: column;
+  margin-left: 14rem;
 }
 
 .container {

@@ -2,12 +2,25 @@ extends ../template
 
 block title
   |  Страница UI-Kit
-    
-block main
+   
+block main   
+  .color-types
 
-  h1 Страница UI-Kit
+    .color-types__logo
+      include ../../theme/logo-dark-25.svg
+    .color-types__color
+      +color-items("Dark Shade 100%", "#1F2041",  "#1F2041")
+      +color-items("Dark Shade 75%", "#1F2041",  "rgba(31, 32, 65, 0.75)")
+      +color-items("Dark Shade 50%", "#1F2041",  "rgba(31, 32, 65, 0.5)")
+      +color-items("Dark Shade 25%", "#1F2041",  "rgba(31, 32, 65, 0.25)")
+      +color-items("Dark Shade 5%", "#1F2041",  "rgba(31, 32, 65, 0.05)")
+      +color-items("Purple",  "#BC9CFF",  "#BC9CFF")
+      +color-items("Green",  "#BC9CFF",  "#6FCF97")
 
-  mixin compo(name)
+    .color-types__types
+      +types
+  
+  mixin container(name)
     .container
       .container-label= name 
       block
@@ -21,17 +34,17 @@ block main
   .container
     include ../../components/button3/button3
 
-  +compo('Pagination')
+  +container('Pagination')
     include ../../components/pagination/pagination
 
-  +compo('Radio Buttons')
+  +container('Radio Buttons')
     include ../../components/radio-buttons/radio-buttons
-  +compo('Toggle')
+  +container('Toggle')
     include ../../components/toggle/toggle
-  +compo('Checkbox')
+  +container('Checkbox')
     include ../../components/checkbox/checkbox
 
-  +compo('Text Field')
+  +container('Text Field')
     +field('e', 'Email', 'email', 'y', 32)
-  +compo('Subscription text field')
+  +container('Subscription text field')
     +field('e', 'Email', 'subscription', 'n', 20)

@@ -1,0 +1,31 @@
+$dark50: rgba(31, 32, 65, 0.5);
+
+.logo {
+  position: relative;
+  width: 6.7em;
+  height: 40px;
+
+  .logo__text {
+    position: absolute;
+    top: 13px;
+    left: 48px;
+  }
+}
+
+.group {
+  display: flex;
+  list-style: none;
+  //position: relative;
+  margin: 0 auto;
+  font: 14px Montserrat, normal, normal;
+  //justify-content: center;
+
+  .item {
+    margin: 1em;
+  }
+
+  .link {
+    text-decoration: none;
+    color: $dark50;
+  }
+}

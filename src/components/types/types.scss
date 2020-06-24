@@ -1,0 +1,67 @@
+.color-types__types {
+  align-self: start;
+  padding-top: 14.5rem;
+  margin-right: 20.5rem;
+}
+
+.type-item {
+  display: grid;
+  grid-template-columns: 15% 85%;
+  gap: 2rem;
+  margin-bottom: 5rem;
+  width: 40rem;
+
+  &__type {
+    padding-right: 1rem;
+
+    &_h1 {
+      @include Montserrat(normal, 2.4rem, 2.9rem);
+      text-align: right;
+      text-transform: uppercase;
+      color: $dark-25;
+    }
+
+    &_h2 {
+      @include Montserrat(normal, 1.9rem, 2.3rem);
+      text-align: right;
+      text-transform: uppercase;
+      color: $dark-25;
+    }
+
+    &_h3 {
+      @include Montserrat(normal, 1.2rem, 1.5rem);
+      text-align: right;
+      text-transform: uppercase;
+      color: $dark-25;
+    }
+
+    &_body {
+      @include Montserrat(normal, 1.4rem, 2.4rem);
+      text-align: right;
+      color: $dark-25;
+    }
+  }
+
+  &__sample {
+    &_h1 {
+      @include Quicksand(bold, 2.4rem, 3rem);
+      color: dark;
+    }
+
+    &_h2 {
+      @include Quicksand(bold, 1.9rem, 2.4rem);
+      color: $dark;
+    }
+
+    &_h3 {
+      @include Montserrat(bold, 1.2rem, 1.5rem);
+      text-transform: uppercase;
+      color: $dark;
+    }
+
+    &_body {
+      @include Montserrat(normal, 1.4rem, 2.4rem);
+      color: &dark-75;
+    }
+  }
+}
