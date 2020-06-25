@@ -6,9 +6,9 @@
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
-  src: url("/montserrat-v14-latin_cyrillic-regular.9c413f0d.eot");
+  src: url("../montserrat-v14-latin_cyrillic-regular.e62df61f.eot");
   /* IE9 Compat Modes */
-  src: local("Montserrat Regular"), local("Montserrat-Regular"), url("/montserrat-v14-latin_cyrillic-regular.9c413f0d.eot?#iefix") format("embedded-opentype"), url("/montserrat-v14-latin_cyrillic-regular.2ad30f1c.woff") format("woff"), url("/montserrat-v14-latin_cyrillic-regular.62472a27.ttf") format("truetype"), url("/montserrat-v14-latin_cyrillic-regular.c4759a18.svg#Montserrat") format("svg");
+  src: local("Montserrat Regular"), local("Montserrat-Regular"), url("../montserrat-v14-latin_cyrillic-regular.e62df61f.eot?#iefix") format("embedded-opentype"), url("../montserrat-v14-latin_cyrillic-regular.f402552c.woff") format("woff"), url("../montserrat-v14-latin_cyrillic-regular.de35258f.ttf") format("truetype"), url("../montserrat-v14-latin_cyrillic-regular.a0ad2328.svg#Montserrat") format("svg");
   /* Legacy iOS */
 }
 /* montserrat-700 - latin_cyrillic */
@@ -16,9 +16,9 @@
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
-  src: url("/montserrat-v14-latin_cyrillic-700.69095323.eot");
+  src: url("../montserrat-v14-latin_cyrillic-700.7e9f0798.eot");
   /* IE9 Compat Modes */
-  src: local("Montserrat Bold"), local("Montserrat-Bold"), url("/montserrat-v14-latin_cyrillic-700.69095323.eot?#iefix") format("embedded-opentype"), url("/montserrat-v14-latin_cyrillic-700.828a8ed1.woff") format("woff"), url("/montserrat-v14-latin_cyrillic-700.ae6647a6.ttf") format("truetype"), url("/montserrat-v14-latin_cyrillic-700.38d4f879.svg#Montserrat") format("svg");
+  src: local("Montserrat Bold"), local("Montserrat-Bold"), url("../montserrat-v14-latin_cyrillic-700.7e9f0798.eot?#iefix") format("embedded-opentype"), url("../montserrat-v14-latin_cyrillic-700.c92bbaca.woff") format("woff"), url("../montserrat-v14-latin_cyrillic-700.23ba7728.ttf") format("truetype"), url("../montserrat-v14-latin_cyrillic-700.3c66659a.svg#Montserrat") format("svg");
   /* Legacy iOS */
 }
 /* quicksand-regular - latin-ext */
@@ -26,9 +26,9 @@
   font-family: "Quicksand";
   font-style: normal;
   font-weight: 400;
-  src: url("/quicksand-v20-latin-ext-regular.a0b2e6f2.eot");
+  src: url("../quicksand-v20-latin-ext-regular.322a5fda.eot");
   /* IE9 Compat Modes */
-  src: local(""), url("/quicksand-v20-latin-ext-regular.a0b2e6f2.eot?#iefix") format("embedded-opentype"), url("/quicksand-v20-latin-ext-regular.43b609b5.woff2") format("woff2"), url("/quicksand-v20-latin-ext-regular.4617df5c.woff") format("woff"), url("/quicksand-v20-latin-ext-regular.f2adc946.ttf") format("truetype"), url("/quicksand-v20-latin-ext-regular.af7b7801.svg#Quicksand") format("svg");
+  src: local(""), url("../quicksand-v20-latin-ext-regular.322a5fda.eot?#iefix") format("embedded-opentype"), url("../quicksand-v20-latin-ext-regular.d4525d4d.woff2") format("woff2"), url("../quicksand-v20-latin-ext-regular.890bd329.woff") format("woff"), url("../quicksand-v20-latin-ext-regular.fc051db0.ttf") format("truetype"), url("../quicksand-v20-latin-ext-regular.b5cac77d.svg#Quicksand") format("svg");
   /* Legacy iOS */
 }
 /* quicksand-700 - latin-ext */
@@ -36,9 +36,9 @@
   font-family: "Quicksand";
   font-style: normal;
   font-weight: 700;
-  src: url("/quicksand-v20-latin-ext-700.32924d25.eot");
+  src: url("../quicksand-v20-latin-ext-700.a6a84c65.eot");
   /* IE9 Compat Modes */
-  src: local(""), url("/quicksand-v20-latin-ext-700.32924d25.eot?#iefix") format("embedded-opentype"), url("/quicksand-v20-latin-ext-700.56c82eff.woff2") format("woff2"), url("/quicksand-v20-latin-ext-700.d15a33f8.woff") format("woff"), url("/quicksand-v20-latin-ext-700.5e68f0a4.ttf") format("truetype"), url("/quicksand-v20-latin-ext-700.1e0a7b3f.svg#Quicksand") format("svg");
+  src: local(""), url("../quicksand-v20-latin-ext-700.a6a84c65.eot?#iefix") format("embedded-opentype"), url("../quicksand-v20-latin-ext-700.b430ce7b.woff2") format("woff2"), url("../quicksand-v20-latin-ext-700.36cb63de.woff") format("woff"), url("../quicksand-v20-latin-ext-700.fee5c988.ttf") format("truetype"), url("../quicksand-v20-latin-ext-700.fd75e73c.svg#Quicksand") format("svg");
   /* Legacy iOS */
 }
 .color-item {
@@ -537,9 +537,9 @@ https://drbrain.ru/articles/css-radio-buttons-styling/ */
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
-  src: url("/montserrat-v14-latin_cyrillic-regular.9c413f0d.eot");
+  src: url("../montserrat-v14-latin_cyrillic-regular.e62df61f.eot");
   /* IE9 Compat Modes */
-  src: local("Montserrat Regular"), local("Montserrat-Regular"), url("/montserrat-v14-latin_cyrillic-regular.9c413f0d.eot?#iefix") format("embedded-opentype"), url("/montserrat-v14-latin_cyrillic-regular.2ad30f1c.woff") format("woff"), url("/montserrat-v14-latin_cyrillic-regular.62472a27.ttf") format("truetype"), url("/montserrat-v14-latin_cyrillic-regular.c4759a18.svg#Montserrat") format("svg");
+  src: local("Montserrat Regular"), local("Montserrat-Regular"), url("../montserrat-v14-latin_cyrillic-regular.e62df61f.eot?#iefix") format("embedded-opentype"), url("../montserrat-v14-latin_cyrillic-regular.f402552c.woff") format("woff"), url("../montserrat-v14-latin_cyrillic-regular.de35258f.ttf") format("truetype"), url("../montserrat-v14-latin_cyrillic-regular.a0ad2328.svg#Montserrat") format("svg");
   /* Legacy iOS */
 }
 /* montserrat-700 - latin_cyrillic */
@@ -547,9 +547,9 @@ https://drbrain.ru/articles/css-radio-buttons-styling/ */
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
-  src: url("/montserrat-v14-latin_cyrillic-700.69095323.eot");
+  src: url("../montserrat-v14-latin_cyrillic-700.7e9f0798.eot");
   /* IE9 Compat Modes */
-  src: local("Montserrat Bold"), local("Montserrat-Bold"), url("/montserrat-v14-latin_cyrillic-700.69095323.eot?#iefix") format("embedded-opentype"), url("/montserrat-v14-latin_cyrillic-700.828a8ed1.woff") format("woff"), url("/montserrat-v14-latin_cyrillic-700.ae6647a6.ttf") format("truetype"), url("/montserrat-v14-latin_cyrillic-700.38d4f879.svg#Montserrat") format("svg");
+  src: local("Montserrat Bold"), local("Montserrat-Bold"), url("../montserrat-v14-latin_cyrillic-700.7e9f0798.eot?#iefix") format("embedded-opentype"), url("../montserrat-v14-latin_cyrillic-700.c92bbaca.woff") format("woff"), url("../montserrat-v14-latin_cyrillic-700.23ba7728.ttf") format("truetype"), url("../montserrat-v14-latin_cyrillic-700.3c66659a.svg#Montserrat") format("svg");
   /* Legacy iOS */
 }
 /* quicksand-regular - latin-ext */
@@ -557,9 +557,9 @@ https://drbrain.ru/articles/css-radio-buttons-styling/ */
   font-family: "Quicksand";
   font-style: normal;
   font-weight: 400;
-  src: url("/quicksand-v20-latin-ext-regular.a0b2e6f2.eot");
+  src: url("../quicksand-v20-latin-ext-regular.322a5fda.eot");
   /* IE9 Compat Modes */
-  src: local(""), url("/quicksand-v20-latin-ext-regular.a0b2e6f2.eot?#iefix") format("embedded-opentype"), url("/quicksand-v20-latin-ext-regular.43b609b5.woff2") format("woff2"), url("/quicksand-v20-latin-ext-regular.4617df5c.woff") format("woff"), url("/quicksand-v20-latin-ext-regular.f2adc946.ttf") format("truetype"), url("/quicksand-v20-latin-ext-regular.af7b7801.svg#Quicksand") format("svg");
+  src: local(""), url("../quicksand-v20-latin-ext-regular.322a5fda.eot?#iefix") format("embedded-opentype"), url("../quicksand-v20-latin-ext-regular.d4525d4d.woff2") format("woff2"), url("../quicksand-v20-latin-ext-regular.890bd329.woff") format("woff"), url("../quicksand-v20-latin-ext-regular.fc051db0.ttf") format("truetype"), url("../quicksand-v20-latin-ext-regular.b5cac77d.svg#Quicksand") format("svg");
   /* Legacy iOS */
 }
 /* quicksand-700 - latin-ext */
@@ -567,9 +567,9 @@ https://drbrain.ru/articles/css-radio-buttons-styling/ */
   font-family: "Quicksand";
   font-style: normal;
   font-weight: 700;
-  src: url("/quicksand-v20-latin-ext-700.32924d25.eot");
+  src: url("../quicksand-v20-latin-ext-700.a6a84c65.eot");
   /* IE9 Compat Modes */
-  src: local(""), url("/quicksand-v20-latin-ext-700.32924d25.eot?#iefix") format("embedded-opentype"), url("/quicksand-v20-latin-ext-700.56c82eff.woff2") format("woff2"), url("/quicksand-v20-latin-ext-700.d15a33f8.woff") format("woff"), url("/quicksand-v20-latin-ext-700.5e68f0a4.ttf") format("truetype"), url("/quicksand-v20-latin-ext-700.1e0a7b3f.svg#Quicksand") format("svg");
+  src: local(""), url("../quicksand-v20-latin-ext-700.a6a84c65.eot?#iefix") format("embedded-opentype"), url("../quicksand-v20-latin-ext-700.b430ce7b.woff2") format("woff2"), url("../quicksand-v20-latin-ext-700.36cb63de.woff") format("woff"), url("../quicksand-v20-latin-ext-700.fee5c988.ttf") format("truetype"), url("../quicksand-v20-latin-ext-700.fd75e73c.svg#Quicksand") format("svg");
   /* Legacy iOS */
 }
 .checkbox {
@@ -625,7 +625,7 @@ https://drbrain.ru/articles/css-radio-buttons-styling/ */
 
 .checkbox__input:checked + .checkbox__text:before {
   border: 1px solid #bc9cff;
-  background-image: url(/vector.a97c5277.svg);
+  background-image: url(../vector.48d7869d.svg);
 }
 
 .checkbox__input:hover + .checkbox__text:before {
@@ -674,54 +674,50 @@ https://drbrain.ru/articles/css-radio-buttons-styling/ */
 }
 
 .dropdown {
+  margin: 0px auto;
   position: relative;
-  max-width: 32rem;
+  width: calc(100% - 40px);
+  max-width: 300px;
 }
-.dropdown__label {
+
+.dropdown label {
   display: block;
-  padding: 1rem;
-  border: 1px solid #000000;
+  padding: 8px 16px;
+  background: #ea8c02;
+  color: #fafafa;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 18px;
-  color: rgba(31, 32, 65, 0.75);
 }
-.dropdown__ul {
+
+.dropdown ul {
   list-style: none;
   position: absolute;
   width: 100%;
-  padding-inline-start: 0;
-  margin-top: 0;
-  border: 1px solid #000000;
-  border-top: none;
-  text-transform: uppercase;
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
-  color: #1f2041;
 }
-.dropdown__li {
+
+.dropdown ul li {
+  padding: 0px 16px;
+  background: #ddd;
+  color: #343838;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8);
   height: 0px;
   overflow: hidden;
   cursor: pointer;
   transition: height 0.1s linear 0s;
 }
-.dropdown__li_submit {
-  text-align: end;
-  color: #bc9cff;
-}
-.dropdown__li:hover, .dropdown__li.selected {
-  color: #aaaaaa;
+
+.dropdown ul li:hover,
+.dropdown ul li.selected {
+  background: #00b4cc;
+  color: #fafafa;
+  border-left: 2px solid blue !important;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
-.dropdown.open .dropdown__li {
-  padding: 1rem;
-  height: 3rem;
+
+.dropdown.open ul li {
+  padding: 8px 16px;
+  height: 34px;
+  border-top: none;
 }
 
 .color-types {
@@ -896,7 +892,7 @@ https://drbrain.ru/articles/css-radio-buttons-styling/ */
 }
 
 .landing-body {
-  background: url(/image.faa22318.jpg);
+  background: url(../image.eaf3dbee.jpg);
 }
 
 .container-macbook {
@@ -925,4 +921,4 @@ body {
   outline: none !important;
 }
 
-/*# sourceMappingURL=/main.d999673e.css.map */
+/*# sourceMappingURL=../main.20212ab4.css.map */

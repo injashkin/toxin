@@ -42,9 +42,16 @@ block main
   +container('Toggle')
     include ../../components/toggle/toggle
   +container('Checkbox')
-    include ../../components/checkbox/checkbox
+    include ../../components/checkbox/checkbox    
 
   +container('Text Field')
     +field('e', 'Email', 'email', 'y', 32)
   +container('Subscription text field')
-    +field('e', 'Email', 'subscription', 'n', 20)
+    +field('e', 'Email', 'subscription', 'n', 20)    
+  +container('Dropdown')
+    +dropdown()
+  
+  script(src="../../components/dropdown/dropdown.js")
+  script(src="../../theme/main.js")    
+  
+  
