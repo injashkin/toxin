@@ -4,9 +4,18 @@ var $ = require("jquery");
 
 $(function () {
   $(".dropdown__li").on("click", function () {
-    var label = $(this).parent().parent().children("label");
+    var label = $(this).parent().parent().children(".dropdown__label");
+
     label.attr("data-value", $(this).attr("data-value"));
-    label.html($(this).html());
+    //console.log($(this).parent());
+
+    //console.log($(this).html());
+
+    //console.log($(this).hasClass("dropdown__li_submit"));
+
+    if (!$(this).hasClass("dropdown__li_submit")) {
+      label.html($(this).html());
+    }
 
     $(this).parent().children(".selected").removeClass("selected");
     $(this).addClass("selected");

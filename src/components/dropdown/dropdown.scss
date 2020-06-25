@@ -5,7 +5,13 @@
   &__label {
     display: block;
     padding: 1rem;
-    border: 1px solid #000000;
+
+    background: #ffffff;
+    /* Dark 50% */
+    border: 1px solid rgba(31, 32, 65, 0.5);
+    box-sizing: border-box;
+    border-radius: 2px 2px 0 0;
+
     cursor: pointer;
 
     font-family: Montserrat;
@@ -22,8 +28,13 @@
     width: 100%;
     padding-inline-start: 0;
     margin-top: 0;
-    border: 1px solid #000000;
-    border-top: none;
+    border-radius: 0 0 2px 2px;
+    /* Dark 50% */
+
+    box-sizing: border-box;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+
+    //border-top: none;
 
     text-transform: uppercase;
     font-family: Montserrat;
@@ -54,5 +65,9 @@
   &.open &__li {
     padding: 1rem;
     height: 3rem;
+  }
+
+  &.open &__ul {
+    border: 1px solid rgba(31, 32, 65, 0.5);
   }
 }

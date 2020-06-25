@@ -1,0 +1,18 @@
+.input-number {
+  &__button {
+    border-radius: 1rem;
+  }
+
+  &__input {
+    all: unset;
+    -moz-appearance: textfield;
+
+    width: 3rem;
+    text-align: center;
+
+    // Убирает стрелки
+    &::-webkit-inner-spin-button {
+      display: none;
+    }
+  }
+}
