@@ -676,8 +676,9 @@ https://drbrain.ru/articles/css-radio-buttons-styling/ */
 .dropdown {
   position: relative;
   max-width: 32rem;
+  min-width: 28.8rem;
 }
-.dropdown__label {
+.dropdown__header {
   display: block;
   padding: 1rem;
   background: #ffffff;
@@ -712,6 +713,9 @@ https://drbrain.ru/articles/css-radio-buttons-styling/ */
   color: #1f2041;
 }
 .dropdown__li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 0px;
   overflow: hidden;
   cursor: pointer;

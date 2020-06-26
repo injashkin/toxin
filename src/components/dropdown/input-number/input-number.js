@@ -4,9 +4,7 @@ var $ = require("jquery");
 
 $(function () {
   $(".minus").click(function () {
-    console.log(this);
     var $input = $(this).parent().find("input");
-    console.log($input);
     var count = parseInt($input.val()) - 1;
     count = count < 0 ? 0 : count;
     $input.val(count);

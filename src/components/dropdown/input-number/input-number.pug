@@ -1,5 +1,10 @@
-mixin input-number()
-    .input-number     
+//-
+    name - любое имя, которое будет добавлено к уточняющему классу
+mixin input-number(name)
+
+    - classes = "input-number-" + name
+
+    .input-number(class=classes)    
         button.input-number__button.minus -
-        input.input-number__input(type="number" value="0" min="0")
+        input.input-number__input(type="number" value="0" min="0" max="10")
         button.input-number__button.plus +

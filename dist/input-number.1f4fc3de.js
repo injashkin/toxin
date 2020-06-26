@@ -11284,9 +11284,7 @@ var $ = require("jquery");
 
 $(function () {
   $(".minus").click(function () {
-    console.log(this);
     var $input = $(this).parent().find("input");
-    console.log($input);
     var count = parseInt($input.val()) - 1;
     count = count < 0 ? 0 : count;
     $input.val(count);
@@ -11328,7 +11326,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33411" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38737" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
