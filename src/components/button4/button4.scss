@@ -1,4 +1,9 @@
-.link {
+.button4 {
+  /* Сбрасываем дефолтные стили */
+  border: none;
+  outline: none;
+  background: none;
+
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
@@ -11,6 +16,7 @@
   /* Primary Color */
 
   color: #bc9cff;
+  cursor: pointer;
 
   &:hover {
     color: rgba(31, 32, 65, 0.5);
