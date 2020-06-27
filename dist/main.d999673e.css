@@ -188,15 +188,15 @@
   /* !importanté */
   background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
 }
-.button:hover:before {
-  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%, 0.5);
-  opacity: 0.5;
-}
 .button:active {
   opacity: 0.5;
 }
 .button:active:before {
   opacity: 0.2;
+}
+.button:hover {
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%, 0.5);
+  opacity: 0.5;
 }
 
 .button2 {
@@ -725,7 +725,7 @@ https://drbrain.ru/articles/css-radio-buttons-styling/ */
   text-align: end;
   color: #bc9cff;
 }
-.dropdown__li:hover, .dropdown__li.selected {
+.dropdown__li.selected {
   color: #aaaaaa;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
