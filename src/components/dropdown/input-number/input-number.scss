@@ -30,6 +30,11 @@
       background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%, 0.5);
       opacity: 0.5;
     }
+
+    &_inactive {
+      background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%, 0.5);
+      opacity: 0.5;
+    }
   }
 
   &__input {

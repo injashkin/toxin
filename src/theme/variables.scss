@@ -36,6 +36,16 @@ $green: #6fcf97;
   line-height: $height;
 }
 
+@font-face {
+  font-family: "Material-Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../theme/fonts/materialIcons-regular.eot"); /* For IE6-8 */
+  src: local("Material Icons"), local("MaterialIcons-Regular"),
+    url("../theme/fonts/materialIcons-regular.woff") format("woff"),
+    url("../theme/fonts/materialIcons-regular.ttf") format("truetype");
+}
+
 /* montserrat-regular - latin_cyrillic */
 @font-face {
   font-family: "Montserrat";

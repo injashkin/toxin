@@ -1,7 +1,15 @@
 @charset "UTF-8";
 /*Стандартные цвета*/
-/* montserrat-regular - latin_cyrillic */
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,400&display=swap");
+@font-face {
+  font-family: "Material-Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/materialIcons-regular.ecd58a57.eot");
+  /* For IE6-8 */
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url("/materialIcons-regular.a33ede1e.woff") format("woff"), url("/materialIcons-regular.22d9394a.ttf") format("truetype");
+}
+/* montserrat-regular - latin_cyrillic */
 @font-face {
   font-family: "Montserrat";
   font-style: normal;
@@ -514,6 +522,14 @@ https://drbrain.ru/articles/css-radio-buttons-styling/ */
 }
 
 /*Стандартные цвета*/
+@font-face {
+  font-family: "Material-Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/materialIcons-regular.ecd58a57.eot");
+  /* For IE6-8 */
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url("/materialIcons-regular.a33ede1e.woff") format("woff"), url("/materialIcons-regular.22d9394a.ttf") format("truetype");
+}
 /* montserrat-regular - latin_cyrillic */
 @font-face {
   font-family: "Montserrat";
@@ -660,20 +676,40 @@ https://drbrain.ru/articles/css-radio-buttons-styling/ */
   max-width: 32rem;
   min-width: 28.8rem;
 }
-.dropdown__header {
-  display: block;
-  padding: 1rem;
+.dropdown__header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
   background: #ffffff;
   /* Dark 50% */
   border: 1px solid rgba(31, 32, 65, 0.5);
   box-sizing: border-box;
   border-radius: 2px 2px 0 0;
+}
+.dropdown__header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
   cursor: pointer;
   font-family: Montserrat;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
+  color: rgba(31, 32, 65, 0.75);
+}
+.dropdown__icon {
+  width: 44px;
+  height: 44px;
+  font-family: Material Icons;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  /* Dark 75% */
   color: rgba(31, 32, 65, 0.75);
 }
 .dropdown__ul {
@@ -712,11 +748,14 @@ https://drbrain.ru/articles/css-radio-buttons-styling/ */
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 .dropdown.open .dropdown__li {
-  padding: 1rem;
-  height: 3rem;
+  padding: 0.7rem 0.5rem 0.7rem 1.5rem;
+  height: 2.4rem;
 }
 .dropdown.open .dropdown__ul {
   border: 1px solid rgba(31, 32, 65, 0.5);
+}
+.dropdown__clear_hidden {
+  visibility: hidden;
 }
 
 .color-types {

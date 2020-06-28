@@ -1,6 +1,9 @@
 mixin dropdown()    
     .dropdown
-        label.dropdown__header Сколько гостей 
+        .dropdown__header-wrapper
+            label.dropdown__header Сколько гостей 
+            .dropdown__icon
+                <i class="material-icons">expand_more</i>
         ul.dropdown__ul
             li.dropdown__li
                 .dropdown__label Взрослые
@@ -12,7 +15,7 @@ mixin dropdown()
                 .dropdown__label Младенцы 
                 + input-number("baby")           
             li.dropdown__li.dropdown__footer 
-                + button4("dropdown__clear", "Очистить")
+                + button4("dropdown__clear dropdown__clear_hidden", "Очистить")
                 + button4("dropdown__submit", "Применить")
 
         
