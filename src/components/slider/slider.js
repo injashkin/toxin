@@ -4,6 +4,7 @@ import "./slider.scss";
 //https://stackoverflow.com/questions/47968529/how-do-i-use-jquery-and-jquery-ui-with-parcel-bundler
 var jquery = require("jquery");
 window.$ = window.jQuery = jquery;
+//var $ = require("jquery");
 require("jquery-ui-dist/jquery-ui.js");
 
 //var format = toLocaleString("ru-RU", { useGrouping: true });
