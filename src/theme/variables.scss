@@ -36,6 +36,15 @@ $green: #6fcf97;
   line-height: $height;
 }
 
+@mixin Material-Icons($weight, $size, $height) {
+  //$weight - можно указывать: 400 или normal; 700 или bold
+  font-family: Material-Icons;
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+}
+
 @font-face {
   font-family: "Material-Icons";
   font-style: normal;

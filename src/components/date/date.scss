@@ -1,23 +1,111 @@
+//@import "../../theme/variables.scss";
+
 .date {
   position: relative;
   display: flex;
 
   &__input {
-    padding: 1rem;
+    padding: 1.2rem;
+    width: 15rem;
   }
 
   &__icon {
-    //position: absolute;
+    position: absolute;
+    top: 1rem;
+    left: 11.6rem;
+    margin-right: 1rem;
     display: flex;
-    align-items: center;
-    text-align: center;
 
-    font-family: Material Icons;
+    font-family: Material-Icons;
     font-style: normal;
     font-weight: normal;
-    font-size: 24px;
-    line-height: 24px;
+    font-size: 2.4rem;
+    line-height: 2.4rem;
     /* Dark 50% */
     color: rgba(31, 32, 65, 0.5);
+  }
+}
+
+.ui-datepicker {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 30rem;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  /* Dark 50% */
+  color: rgba(31, 32, 65, 0.5);
+
+  & .ui-datepicker-header {
+    background: #ffffff;
+    border: none;
+
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.9rem;
+    line-height: 2.4rem;
+    /* identical to box height */
+    text-align: center;
+    /* Dark 100% */
+    color: #1f2041;
+  }
+
+  & table {
+    font-size: 1.2rem;
+    border-collapse: separate;
+    border-spacing: 0.4rem;
+  }
+
+  & thead {
+    color: #bc9cff;
+  }
+
+  & .ui-state-default {
+    border: none;
+    background: #ffffff;
+  }
+
+  & .ui-state-active {
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    border-radius: 22px;
+  }
+
+  & .ui-datepicker-buttonpane {
+    border: none;
+  }
+
+  & td {
+    padding: 0;
+  }
+
+  & td a {
+    text-align: center;
+    padding: 1.2rem;
+    //width: 3rem;
+    //height: 3rem;
+  }
+
+  & .ui-datepicker-current {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    //font-size: 12px;
+    //line-height: 15px;
+    text-transform: uppercase;
+    color: rgba(31, 32, 65, 0.5);
+  }
+
+  & .ui-datepicker-close {
+    font-family: Montserrat;
+    font-style: normal;
+    //font-size: 1.2rem;
+    //line-height: 15px;
+    text-transform: uppercase;
+    color: #bc9cff;
   }
 }

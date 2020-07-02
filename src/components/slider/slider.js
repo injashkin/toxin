@@ -2,10 +2,12 @@ import "./slider.scss";
 
 // По этой ссылке нашел как поключить
 //https://stackoverflow.com/questions/47968529/how-do-i-use-jquery-and-jquery-ui-with-parcel-bundler
+//import $ from "jquery";
 var jquery = require("jquery");
 window.$ = window.jQuery = jquery;
 //var $ = require("jquery");
 require("jquery-ui-dist/jquery-ui.js");
+//require("jquery-ui/ui/widgets/slider");
 
 //var format = toLocaleString("ru-RU", { useGrouping: true });
 
