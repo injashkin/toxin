@@ -16,6 +16,8 @@
     margin-right: 1rem;
     display: flex;
 
+    pointer-events: none;
+
     font-family: Material-Icons;
     font-style: normal;
     font-weight: normal;
@@ -27,10 +29,7 @@
 }
 
 .ui-datepicker {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  width: 30rem;
+  width: 31.4rem;
 
   font-family: Montserrat;
   font-style: normal;
@@ -39,12 +38,14 @@
   line-height: 1.5rem;
   /* Dark 50% */
   color: rgba(31, 32, 65, 0.5);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
   & .ui-datepicker-header {
     background: #ffffff;
     border: none;
+    padding: 2rem 0;
 
-    font-family: Quicksand;
+    //font-family: OpenSans; // Open Sans
     font-style: normal;
     font-weight: bold;
     font-size: 1.9rem;
@@ -55,17 +56,27 @@
     color: #1f2041;
   }
 
+  & .ui-widget-header .ui-icon {
+    background-image: none;
+  }
+
   & table {
     font-size: 1.2rem;
     border-collapse: separate;
-    border-spacing: 0.4rem;
+    border-spacing: 0;
   }
 
-  & thead {
+  & th {
     color: #bc9cff;
+    cursor: pointer;
+
+    &:hover {
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
   }
 
   & .ui-state-default {
+    text-align: center;
     border: none;
     background: #ffffff;
   }
@@ -73,6 +84,12 @@
   & .ui-state-active {
     background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
     border-radius: 22px;
+  }
+
+  & .ui-state-highlight {
+    background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+    border-radius: 22px;
+    color: #ffffff;
   }
 
   & .ui-datepicker-buttonpane {
@@ -84,28 +101,89 @@
   }
 
   & td a {
-    text-align: center;
-    padding: 1.2rem;
-    //width: 3rem;
-    //height: 3rem;
+    padding: 1.5rem;
+
+    &:hover {
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 22px;
+    }
   }
 
   & .ui-datepicker-current {
     font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
-    //font-size: 12px;
-    //line-height: 15px;
     text-transform: uppercase;
     color: rgba(31, 32, 65, 0.5);
+
+    &:hover {
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
   }
 
   & .ui-datepicker-close {
     font-family: Montserrat;
     font-style: normal;
-    //font-size: 1.2rem;
-    //line-height: 15px;
     text-transform: uppercase;
     color: #bc9cff;
+
+    &:hover {
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
   }
+
+  & .ui-datepicker-prev {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #bc9cff;
+    top: 2rem;
+
+    &-hover {
+      background: none;
+      border: none;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  & .ui-datepicker-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #bc9cff;
+    top: 2rem;
+
+    &-hover {
+      background: none;
+      border: none;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+}
+
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
 }

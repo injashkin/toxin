@@ -234,18 +234,51 @@ return datepicker.regional.ru;
 
 require("./date.scss");
 
-//Русская локализация
-require("jquery-ui/ui/i18n/datepicker-ru.js"); //require("jquery-ui/ui/widgets/datepicker");
+//Подключение русской локализации
+require("jquery-ui/ui/i18n/datepicker-ru.js");
+/* 
+//Дефолтные настройки локализации datepicker 
+//(находятся в файле node_modules/jquery-ui/ui/i18n/datepicker-ru.js)
+datepicker.regional.ru = {
+	closeText: "Закрыть",
+	prevText: "&#x3C;Пред",
+	nextText: "След&#x3E;",
+	currentText: "Сегодня",
+	monthNames: [ "Январь","Февраль","Март","Апрель","Май","Июнь",
+	"Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь" ],
+	monthNamesShort: [ "Янв","Фев","Мар","Апр","Май","Июн",
+	"Июл","Авг","Сен","Окт","Ноя","Дек" ],
+	dayNames: [ "воскресенье","понедельник","вторник","среда","четверг","пятница","суббота" ],
+	dayNamesShort: [ "вск","пнд","втр","срд","чтв","птн","сбт" ],
+	dayNamesMin: [ "Вс","Пн","Вт","Ср","Чт","Пт","Сб" ],
+	weekHeader: "Нед",
+	dateFormat: "dd.mm.yy",
+	firstDay: 1,
+	isRTL: false,
+	showMonthAfterYear: false,
+	yearSuffix: "" };
+datepicker.setDefaults( datepicker.regional.ru );
+};
+*/
+//Мои настройки локализации
 
 
-$.datepicker.setDefaults($.datepicker.regional["ru"], {
-  buttonText: "Calendar"
-});
+$.datepicker.regional["ru"] = {
+  currentText: "Очистить",
+  closeText: "Применить"
+};
+$.datepicker.setDefaults($.datepicker.regional["ru"]);
 $(function () {
-  //$(".datepicker-here").datepicker();
   $(".datepicker").datepicker({
-    showButtonPanel: true //selectOtherMonths: true,
+    showButtonPanel: true,
+    defaultDate: "+2d",
+    showOtherMonths: true //disabled: true,
+    //showOn: hover,
 
+  });
+  $(".date__input").on("focus", function () {
+    $(".ui-datepicker-prev").html("<i class='material-icons'>arrow_back</i>");
+    $(".ui-datepicker-next").html("<i class='material-icons'>arrow_forward</i>");
   });
 });
 },{"./date.scss":"../components/date/date.scss","jquery-ui/ui/i18n/datepicker-ru.js":"../../node_modules/jquery-ui/ui/i18n/datepicker-ru.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -276,7 +309,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36541" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37551" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
