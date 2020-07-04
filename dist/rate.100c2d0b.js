@@ -184,7 +184,61 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./bundle-url":"../../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../components/rate/rate.scss":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../components/rate/rate.js":[function(require,module,exports) {
+"use strict";
+
+require("./rate.scss");
+
+$(function () {
+  $(".rating__checkbox").on("click", function () {
+    var elem = $(this).parent().parent().find(".rating__checkbox"); //Поиск элемента с атрибутом checked и его удаление
+
+    for (var i = 0; i < elem.length; i++) {
+      if ($(elem[i]).attr("checked")) {
+        $(elem[i]).attr("checked", false);
+      }
+    } //Установка атрибута checked нажатому элементу
+
+
+    $(this).attr("checked", true);
+    var elem = $(this).parent().parent().find(".rating__checkbox");
+    var star = $(this).parent().parent().find(".rating__star"); //Поиск элемента с атрибутом checked
+
+    var trigger = 0;
+    console.log("trigger " + trigger);
+    console.log("--------------------------------------------");
+
+    for (var j = elem.length - 1; j >= 0; j--) {
+      console.log("j " + j);
+
+      if ($(elem[j]).attr("checked")) {
+        trigger = 1;
+      }
+
+      if (trigger == 1) {
+        //На нажатом и всех предшествующих ему элементах загорается звезда
+        //$(this).parent().children(".rating__star").text("star");
+        $(star[j]).text("star");
+        console.log("горит");
+      } else {
+        console.log("trigger " + trigger); //выключаем звезду
+
+        $(star[j]).text("star__border");
+        console.log("trigger " + trigger);
+        console.log("негорит");
+      }
+
+      console.log("j " + j);
+    } //console.log();
+
+  });
+});
+},{"./rate.scss":"../components/rate/rate.scss"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -388,5 +442,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/ui-kit/ui-kit.js.map
+},{}]},{},["../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","../components/rate/rate.js"], null)
+//# sourceMappingURL=/rate.100c2d0b.js.map
