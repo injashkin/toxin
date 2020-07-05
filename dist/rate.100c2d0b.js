@@ -196,48 +196,56 @@ require("./rate.scss");
 
 $(function () {
   $(".rating__checkbox").on("click", function () {
-    var elem = $(this).parent().parent().find(".rating__checkbox"); //Поиск элемента с атрибутом checked и его удаление
+    var elem = $(this).parent().parent().find(".rating__checkbox");
+    var stars = $(this).parent().parent().find(".rating__star"); //удаление атрибута checked и обнуление звезд
+
+    for (var i = 0; i < elem.length; i++) {
+      $(elem[i]).attr("checked", false);
+      $(stars[i]).text();
+    }
+
+    var check = [0, 0, 0, 0, 0];
+    var star = [0, 0, 0, 0, 0]; //Установка атрибута checked нажатому элементу
+
+    $(this).attr("checked", true);
+    console.log($(this).attr("checked", true));
+    elem = $(this).parent().parent().find(".rating__checkbox");
 
     for (var i = 0; i < elem.length; i++) {
       if ($(elem[i]).attr("checked")) {
-        $(elem[i]).attr("checked", false);
+        console.log($(elem[i]).attr("checked"));
+        check[i] = 1;
+        star[i] = 1;
       }
-    } //Установка атрибута checked нажатому элементу
+    } //var elem = $(this).parent().parent().find(".rating__checkbox");
+    //var star = $(this).parent().parent().find(".rating__star");
+    //Поиск элемента с атрибутом checked
 
-
-    $(this).attr("checked", true);
-    var elem = $(this).parent().parent().find(".rating__checkbox");
-    var star = $(this).parent().parent().find(".rating__star"); //Поиск элемента с атрибутом checked
 
     var trigger = 0;
-    console.log("trigger " + trigger);
+    var j = check.length - 1;
     console.log("--------------------------------------------");
 
-    for (var j = elem.length - 1; j >= 0; j--) {
-      console.log("j " + j);
-
-      if ($(elem[j]).attr("checked")) {
+    for (j; j >= 0; j--) {
+      if (check[j] == 1) {
+        //$(elem[j]).attr("checked")
         trigger = 1;
       }
 
-      if (trigger == 1) {
-        //На нажатом и всех предшествующих ему элементах загорается звезда
+      if (trigger == 1) {//На нажатом и всех предшествующих ему элементах загорается звезда
         //$(this).parent().children(".rating__star").text("star");
-        $(star[j]).text("star");
-        console.log("горит");
+        //$(star[j]).text("star");
       } else {
-        console.log("trigger " + trigger); //выключаем звезду
-
-        $(star[j]).text("star__border");
-        console.log("trigger " + trigger);
-        console.log("негорит");
+        //выключаем звезду
+        //$(star[j]).text("star__border");
+        star[j] = 0; //console.log("trigger " + trigger);
       }
 
       console.log("j " + j);
-    } //console.log();
-
+      console.log(star);
+    }
   });
-});
+}); //console.log();
 },{"./rate.scss":"../components/rate/rate.scss"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -266,7 +274,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38975" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38695" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
