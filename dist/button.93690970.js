@@ -184,104 +184,16 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../components/date/date.scss":[function(require,module,exports) {
+},{"./bundle-url":"../../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../components/button/button.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../node_modules/jquery-ui/ui/i18n/datepicker-ru.js":[function(require,module,exports) {
-var define;
-/* Russian (UTF-8) initialisation for the jQuery UI date picker plugin. */
-/* Written by Andrew Stromnov (stromnov@gmail.com). */
-( function( factory ) {
-	if ( typeof define === "function" && define.amd ) {
-
-		// AMD. Register as an anonymous module.
-		define( [ "../widgets/datepicker" ], factory );
-	} else {
-
-		// Browser globals
-		factory( jQuery.datepicker );
-	}
-}( function( datepicker ) {
-
-datepicker.regional.ru = {
-	closeText: "Закрыть",
-	prevText: "&#x3C;Пред",
-	nextText: "След&#x3E;",
-	currentText: "Сегодня",
-	monthNames: [ "Январь","Февраль","Март","Апрель","Май","Июнь",
-	"Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь" ],
-	monthNamesShort: [ "Янв","Фев","Мар","Апр","Май","Июн",
-	"Июл","Авг","Сен","Окт","Ноя","Дек" ],
-	dayNames: [ "воскресенье","понедельник","вторник","среда","четверг","пятница","суббота" ],
-	dayNamesShort: [ "вск","пнд","втр","срд","чтв","птн","сбт" ],
-	dayNamesMin: [ "Вс","Пн","Вт","Ср","Чт","Пт","Сб" ],
-	weekHeader: "Нед",
-	dateFormat: "dd.mm.yy",
-	firstDay: 1,
-	isRTL: false,
-	showMonthAfterYear: false,
-	yearSuffix: "" };
-datepicker.setDefaults( datepicker.regional.ru );
-
-return datepicker.regional.ru;
-
-} ) );
-
-},{}],"../components/date/date.js":[function(require,module,exports) {
+},{"_css_loader":"../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../components/button/button.js":[function(require,module,exports) {
 "use strict";
 
-require("./date.scss");
-
-//Подключение русской локализации
-require("jquery-ui/ui/i18n/datepicker-ru.js");
-/* 
-//Дефолтные настройки локализации datepicker 
-//(находятся в файле node_modules/jquery-ui/ui/i18n/datepicker-ru.js)
-datepicker.regional.ru = {
-	closeText: "Закрыть",
-	prevText: "&#x3C;Пред",
-	nextText: "След&#x3E;",
-	currentText: "Сегодня",
-	monthNames: [ "Январь","Февраль","Март","Апрель","Май","Июнь",
-	"Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь" ],
-	monthNamesShort: [ "Янв","Фев","Мар","Апр","Май","Июн",
-	"Июл","Авг","Сен","Окт","Ноя","Дек" ],
-	dayNames: [ "воскресенье","понедельник","вторник","среда","четверг","пятница","суббота" ],
-	dayNamesShort: [ "вск","пнд","втр","срд","чтв","птн","сбт" ],
-	dayNamesMin: [ "Вс","Пн","Вт","Ср","Чт","Пт","Сб" ],
-	weekHeader: "Нед",
-	dateFormat: "dd.mm.yy",
-	firstDay: 1,
-	isRTL: false,
-	showMonthAfterYear: false,
-	yearSuffix: "" };
-datepicker.setDefaults( datepicker.regional.ru );
-};
-*/
-//Мои настройки локализации
-
-
-$.datepicker.regional["ru"] = {
-  currentText: "Очистить",
-  closeText: "Применить"
-};
-$.datepicker.setDefaults($.datepicker.regional["ru"]);
-$(function () {
-  $(".datepicker").datepicker({
-    showButtonPanel: true,
-    defaultDate: "+2d",
-    showOtherMonths: true //disabled: true,
-    //showOn: hover,
-
-  });
-  $(".date__input").on("focus", function () {
-    $(".ui-datepicker-prev").html("<i class='material-icons'>arrow_back</i>");
-    $(".ui-datepicker-next").html("<i class='material-icons'>arrow_forward</i>");
-  });
-});
-},{"./date.scss":"../components/date/date.scss","jquery-ui/ui/i18n/datepicker-ru.js":"../../node_modules/jquery-ui/ui/i18n/datepicker-ru.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+require("./button.scss");
+},{"./button.scss":"../components/button/button.scss"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -485,5 +397,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","../components/date/date.js"], null)
-//# sourceMappingURL=/date.e6f2cd41.js.map
+},{}]},{},["../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","../components/button/button.js"], null)
+//# sourceMappingURL=/button.93690970.js.map

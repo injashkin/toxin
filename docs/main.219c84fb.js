@@ -124,4 +124,4 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
 require("./main.scss");
 },{"./main.scss":"NOJB"}]},{},["Yf5N"], null)
-//# sourceMappingURL=../main.ad1e8c92.js.map
+//# sourceMappingURL=../main.219c84fb.js.map

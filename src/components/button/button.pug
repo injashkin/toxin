@@ -1,2 +1,10 @@
-button.button
-  span Войти
+//-
+    options.text - текст
+    options.size - размер ('' - большая, 'sm' - маленькая)
+    options.style - стиль ('' - обычная, 'lt' - белый фон, 'wb' - без фона и бордера)
+
+mixin button(option)
+    //if options.style == undefined
+    //    var style = "normal"
+    - var classes = "button_" + option.type
+    button.button(class=classes)= option.text

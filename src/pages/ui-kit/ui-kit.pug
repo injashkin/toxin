@@ -25,14 +25,20 @@ block main
       .container-label= name 
       block
 
-  .container   
-    include ../../components/button/button
+
+  +container('Button')
+    +button({type: "sm", text: "Click Me"})
   .container
-    include ../../components/button2/button2
+    +button({type: "md", text: "Зарегистрироваться"})
+  
   .container
     include ../../components/button3/button3
   .container
     include ../../components/button4/button4
+
+
+  +container('Button4')
+    +button4({type: "sm", label: "Click Me"})
 
   +container('Pagination')
     include ../../components/pagination/pagination
