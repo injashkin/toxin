@@ -117,11 +117,11 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"ovaM":[function(require,module,exports) {
+})({"NOJB":[function(require,module,exports) {
 
-},{}],"sfgC":[function(require,module,exports) {
+},{"./fonts/materialIcons-regular.eot":[["materialIcons-regular.4a54d423.eot","LPgx"],"LPgx"],"./fonts/materialIcons-regular.woff":[["materialIcons-regular.ea1c09f2.woff","BgFv"],"BgFv"],"./fonts/materialIcons-regular.ttf":[["materialIcons-regular.7f257eac.ttf","J6pY"],"J6pY"],"./fonts/montserrat-v14-latin_cyrillic-regular.eot":[["montserrat-v14-latin_cyrillic-regular.e62df61f.eot","KVZ9"],"KVZ9"],"./fonts/montserrat-v14-latin_cyrillic-regular.woff":[["montserrat-v14-latin_cyrillic-regular.f402552c.woff","CecB"],"CecB"],"./fonts/montserrat-v14-latin_cyrillic-regular.ttf":[["montserrat-v14-latin_cyrillic-regular.de35258f.ttf","uzz0"],"uzz0"],"./fonts/montserrat-v14-latin_cyrillic-regular.svg":[["montserrat-v14-latin_cyrillic-regular.a0ad2328.svg","YXF4"],"YXF4"],"./fonts/montserrat-v14-latin_cyrillic-700.eot":[["montserrat-v14-latin_cyrillic-700.7e9f0798.eot","a1Fr"],"a1Fr"],"./fonts/montserrat-v14-latin_cyrillic-700.woff":[["montserrat-v14-latin_cyrillic-700.c92bbaca.woff","iRri"],"iRri"],"./fonts/montserrat-v14-latin_cyrillic-700.ttf":[["montserrat-v14-latin_cyrillic-700.23ba7728.ttf","JfoI"],"JfoI"],"./fonts/montserrat-v14-latin_cyrillic-700.svg":[["montserrat-v14-latin_cyrillic-700.3c66659a.svg","jr0v"],"jr0v"],"./fonts/quicksand-v20-latin-ext-regular.eot":[["quicksand-v20-latin-ext-regular.322a5fda.eot","eWaC"],"eWaC"],"./fonts/quicksand-v20-latin-ext-regular.woff2":[["quicksand-v20-latin-ext-regular.d4525d4d.woff2","dCqr"],"dCqr"],"./fonts/quicksand-v20-latin-ext-regular.woff":[["quicksand-v20-latin-ext-regular.890bd329.woff","uGFT"],"uGFT"],"./fonts/quicksand-v20-latin-ext-regular.ttf":[["quicksand-v20-latin-ext-regular.fc051db0.ttf","yUcc"],"yUcc"],"./fonts/quicksand-v20-latin-ext-regular.svg":[["quicksand-v20-latin-ext-regular.b5cac77d.svg","wpSE"],"wpSE"],"./fonts/quicksand-v20-latin-ext-700.eot":[["quicksand-v20-latin-ext-700.a6a84c65.eot","Ys25"],"Ys25"],"./fonts/quicksand-v20-latin-ext-700.woff2":[["quicksand-v20-latin-ext-700.b430ce7b.woff2","ydPv"],"ydPv"],"./fonts/quicksand-v20-latin-ext-700.woff":[["quicksand-v20-latin-ext-700.36cb63de.woff","iAPz"],"iAPz"],"./fonts/quicksand-v20-latin-ext-700.ttf":[["quicksand-v20-latin-ext-700.fee5c988.ttf","Xhri"],"Xhri"],"./fonts/quicksand-v20-latin-ext-700.svg":[["quicksand-v20-latin-ext-700.fd75e73c.svg","xzCi"],"xzCi"],"./../components/checkbox/vector.svg":[["vector.48d7869d.svg","c9YL"],"c9YL"],"./image.jpg":[["image.eaf3dbee.jpg","etAF"],"etAF"]}],"Yf5N":[function(require,module,exports) {
 "use strict";
 
-require("./button.scss");
-},{"./button.scss":"ovaM"}]},{},["sfgC"], null)
-//# sourceMappingURL=../button.847c2ce9.js.map
+require("./main.scss");
+},{"./main.scss":"NOJB"}]},{},["Yf5N"], null)
+//# sourceMappingURL=../main.a783a9a2.js.map

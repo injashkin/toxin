@@ -1,10 +1,16 @@
+import "./button.scss";
 //-
     options.text - текст
-    options.size - размер ('' - большая, 'sm' - маленькая)
-    options.style - стиль ('' - обычная, 'lt' - белый фон, 'wb' - без фона и бордера)
+    options.size - размер ('' или bg - большая, 'sm' - маленькая)
+    options.style - стиль ('' или st - обычная, 'lt' - белый фон, 'wb' - без фона и бордера, 'ic' - с иконкой)
 
-mixin button(option)
-    //if options.style == undefined
-    //    var style = "normal"
-    - var classes = "button_" + option.type
-    button.button(class=classes)= option.text
+mixin button(options)
+
+    if !options.style
+        - options.style = "st"    
+    -
+      var classes = "button_" + options.style
+      var pict = options.style == "ic" ? "arrow_forward" : ""
+
+    button.button(class=classes)= options.text
+        i.material-icons= pict

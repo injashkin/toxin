@@ -21,7 +21,12 @@ $button-border: 2px; //Ширина бордюра инверсной кнопк
   position: relative;
   box-sizing: border-box;
 
-  &_sm {
+  &_wb {
+    background: none;
+    color: #bc9cff;
+  }
+
+  &_lt {
     padding: 8px 19px;
     color: #bc9cff;
     background: #ffffff;
@@ -42,7 +47,7 @@ $button-border: 2px; //Ширина бордюра инверсной кнопк
     }
   }
 
-  &_md {
+  &_st {
     padding: 12px 16px;
     color: #ffffff;
     background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
@@ -50,15 +55,50 @@ $button-border: 2px; //Ширина бордюра инверсной кнопк
     //border: solid $button-border transparent; /* !importanté */
   }
 
-  &:active {
+  &_ic {
+    display: flex;
+    align-items: center;
+    width: 320px;
+    height: 44px;
+
+    padding: 0 0 0 96px;
+
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    color: #ffffff;
+
+    .material-icons {
+      margin-left: 60px;
+      //font-family: Material Icons;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 24px;
+
+      color: #ffffff;
+    }
+  }
+
+  &_st:active,
+  &_lt:active,
+  &_ic:active {
     opacity: 0.5;
+  }
+
+  &_wb:active {
+    color: rgba(31, 32, 65, 0.5);
   }
 
   &:active:before {
     opacity: 0.2;
   }
 
-  &:hover {
+  &_wb:hover {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  &_st:hover,
+  &_lt:hover,
+  &_ic:hover {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 }

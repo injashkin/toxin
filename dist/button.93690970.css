@@ -16,7 +16,11 @@
   position: relative;
   box-sizing: border-box;
 }
-.button_sm {
+.button_wb {
+  background: none;
+  color: #bc9cff;
+}
+.button_lt {
   padding: 8px 19px;
   color: #bc9cff;
   background: #ffffff;
@@ -25,7 +29,7 @@
   border: solid 2px transparent;
   /* !importanté */
 }
-.button_sm:before {
+.button_lt:before {
   content: "";
   position: absolute;
   top: 0;
@@ -37,18 +41,41 @@
   border-radius: inherit;
   background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
 }
-.button_md {
+.button_st {
   padding: 12px 16px;
   color: #ffffff;
   background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
 }
-.button:active {
+.button_ic {
+  display: flex;
+  align-items: center;
+  width: 320px;
+  height: 44px;
+  padding: 0 0 0 96px;
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  color: #ffffff;
+}
+.button_ic .material-icons {
+  margin-left: 60px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.button_st:active, .button_lt:active, .button_ic:active {
   opacity: 0.5;
+}
+.button_wb:active {
+  color: rgba(31, 32, 65, 0.5);
 }
 .button:active:before {
   opacity: 0.2;
 }
-.button:hover {
+.button_wb:hover {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.button_st:hover, .button_lt:hover, .button_ic:hover {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 

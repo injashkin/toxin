@@ -27,19 +27,14 @@ block main
 
 
   +container('Button')
-    +button({type: "sm", text: "Click Me"})
+    +button({style: "lt", text: "Click Me"})
   .container
-    +button({type: "md", text: "Зарегистрироваться"})
+    +button({text: "Зарегистрироваться"})
+  .container
+    +button({style: "ic", text: "Перейти к оплате"})
+  .container
+    +button({style: "wb", text: "Click Me"})
   
-  .container
-    include ../../components/button3/button3
-  .container
-    include ../../components/button4/button4
-
-
-  +container('Button4')
-    +button4({type: "sm", label: "Click Me"})
-
   +container('Pagination')
     include ../../components/pagination/pagination
   +container('Date Dropdown')
