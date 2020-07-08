@@ -1,16 +1,27 @@
 import "./button.scss";
 //-
-    options.text - текст
+    Вызов
+    +button({Опции})(Атрибуты)
+    
+    Опции вызываются в виде:
+        ({ключ: "значение", ключ: "значение", ...})
+    Пример вызова атрибутов:
+        (class="имя-класса" href="url-адрес" ...)
+
+    Опции:
+    options.text - текст на кнопке
     options.size - размер ('' или bg - большая, 'sm' - маленькая)
     options.style - стиль ('' или st - обычная, 'lt' - белый фон, 'wb' - без фона и бордера, 'ic' - с иконкой)
+    Атрибуты:
+    attributes.class - классы
 
 mixin button(options)
 
     if !options.style
         - options.style = "st"    
     -
-      var classes = "button_" + options.style
+      var classes = "button " + "button_" + options.style
       var pict = options.style == "ic" ? "arrow_forward" : ""
 
-    button.button(class=classes)= options.text
+    button(class=classes class!=attributes.class)= options.text
         i.material-icons= pict

@@ -14,11 +14,9 @@ mixin dropdown()
             li.dropdown__li
                 .dropdown__label Младенцы 
                 + input-number("baby")           
-            li.dropdown__li.dropdown__footer 
-                -//.dropdown__clear.dropdown__clear_hidden
-                +button({text: "Очистить"}) 
-                - //.dropdown__submit
-                +button({text: "Применить"})
+            li.dropdown__li.dropdown__footer                 
+                +button({text: "Очистить", style: "wb"})(class="dropdown__clear dropdown__clear_hidden")                 
+                +button({text: "Применить", style: "wb"})(class="dropdown__submit")
 
         
             
