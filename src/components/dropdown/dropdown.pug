@@ -7,13 +7,13 @@ mixin dropdown()
         ul.dropdown__ul
             li.dropdown__li
                 .dropdown__label Взрослые
-                + input-number("parent")
+                +input-number("parent")
             li.dropdown__li
                 .dropdown__label Дети
-                + input-number("children")
+                +input-number("children")
             li.dropdown__li
                 .dropdown__label Младенцы 
-                + input-number("baby")           
+                +input-number("baby")           
             li.dropdown__li.dropdown__footer                 
                 +button({text: "Очистить", style: "wb"})(class="dropdown__clear dropdown__clear_hidden")                 
                 +button({text: "Применить", style: "wb"})(class="dropdown__submit")

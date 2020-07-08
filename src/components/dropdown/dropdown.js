@@ -1,10 +1,10 @@
 import "./dropdown.scss";
 
 var $ = require("jquery");
-var dropdown = [];
+var dropdown = []; // сохраняет состояние в виде ["имя1", " ", "кол-во1", ", ", "имя2", " ", "кол-во2", ", ", ...]
 
 $(function () {
-  $(".input-number__button").on("click", function () {
+  $(".input-number__button").click(function () {
     var button = $(this)
       .parent()
       .parent()
@@ -62,16 +62,32 @@ $(function () {
 
   //Открывает или закрывает дропдаун-меню при клике на
   //хидер-строке или на кнопке Применить
-  $(".dropdown__header-wrapper, .dropdown__submit").on("click", function () {
+  $(".dropdown__header-wrapper, .dropdown__submit").click(function () {
     $(".dropdown").toggleClass("open");
   });
 
-  //Кнопка "Очистить" обнуляет значения инпутов, массив и хидер
-  $(".dropdown__clear").on("click", function () {
+  //Закрывает дропдаун-меню при клике вне границ дропдауна
+  $(document).click(function (e) {
+    if (
+      // если клик был не по блоку dropdown и не по его дочерним элементам
+      $(".dropdown").has(e.target).length === 0
+    ) {
+      $(".dropdown").removeClass("open"); // скрываем его
+    }
+  });
+
+  //Кнопка "Очистить" обнуляет значения инпутов, массив и хидер и делает кнопки минус неактивными
+  $(".dropdown__clear").click(function () {
     dropdown = [];
     $(this).parent().parent().find("input").val("0");
     $(".dropdown__header").text("Сколько гостей");
     //Прячем кнопку "Очистить"
     $(".dropdown__clear").addClass("dropdown__clear_hidden");
+    //Делаем все кнопки минус в данном дропдауне неактивными
+    $(this)
+      .parent()
+      .parent()
+      .find(".minus")
+      .addClass("input-number__button_inactive");
   });
 });
