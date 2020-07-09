@@ -1,22 +1,39 @@
-mixin dropdown()    
-    .dropdown
+//-
+    options.name - имя компонента
+    options.items - массив элементов выпадающего списка
+    options.placeholder - текст в строке ввода по умолчанию
+
+mixin dropdown(options)
+
+    - classes = "dropdown-" + options.name
+
+    .dropdown(class=classes)
         .dropdown__header-wrapper
-            label.dropdown__header Сколько гостей 
+            label.dropdown__header= options.placeholder
             .dropdown__icon
-                <i class="material-icons">expand_more</i>
+                i.material-icons expand_more
         ul.dropdown__ul
-            li.dropdown__li
-                .dropdown__label Взрослые
-                +input-number("parent")
-            li.dropdown__li
-                .dropdown__label Дети
-                +input-number("children")
-            li.dropdown__li
-                .dropdown__label Младенцы 
-                +input-number("baby")           
-            li.dropdown__li.dropdown__footer                 
+            each val, index in options.items
+                li.dropdown__li
+                    .dropdown__label= val.name
+                    +input-number(options.name + index)
+            li.dropdown__li.dropdown__footer
                 +button({text: "Очистить", style: "wb"})(class="dropdown__clear dropdown__clear_hidden")                 
                 +button({text: "Применить", style: "wb"})(class="dropdown__submit")
+
+            //-
+                li.dropdown__li
+                    .dropdown__label= options.name
+                    +input-number("parent")
+                li.dropdown__li
+                    .dropdown__label= options.name
+                    +input-number("children")
+                li.dropdown__li
+                    .dropdown__label= options.name
+                    +input-number("baby")           
+                li.dropdown__li.dropdown__footer
+                    +button({text: "Очистить", style: "wb"})(class="dropdown__clear dropdown__clear_hidden")                 
+                    +button({text: "Применить", style: "wb"})(class="dropdown__submit")
 
         
             

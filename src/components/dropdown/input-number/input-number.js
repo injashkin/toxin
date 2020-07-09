@@ -9,7 +9,6 @@ $(function () {
     count = count < 0 ? 0 : count;
     $input.val(count);
     $input.change();
-    console.log($input.val());
     if ($input.val() == 0) {
       //Делаем кнопку минус неактивной
       $(this)

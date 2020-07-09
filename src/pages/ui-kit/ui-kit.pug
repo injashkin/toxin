@@ -37,6 +37,10 @@ block main
   
   +container('Pagination')
     include ../../components/pagination/pagination
+  +container('Dropdown')
+    +dropdown({name: "comfort", type: "0", placeholder: "Какие удобства", items: [{name: "Спальни"}, {name: "Кровати"}, {name: "Ванные комнаты"}]})
+  +container('Dropdown')
+    +dropdown({name: "visitor", type: "1", placeholder: "Сколько гостей", items: [{name: "Взрослые"}, {name: "Дети"}, {name: "Младенцы"}]})
   +container('Date Dropdown')
     include ../../components/date/date   
 
@@ -46,7 +50,6 @@ block main
     include ../../components/toggle/toggle
   +container('Rate button')
     include ../../components/rate/rate
-
   +container('Checkbox')
     include ../../components/checkbox/checkbox   
   +container('Slider')
@@ -55,8 +58,7 @@ block main
     +field('e', 'Email', 'email', 'y', 32)
   +container('Subscription text field')
     +field('e', 'Email', 'subscription', 'n', 20)    
-  +container('Dropdown')
-    +dropdown()
+
  
   
 
