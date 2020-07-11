@@ -3,37 +3,25 @@
     options.items - массив элементов выпадающего списка
     options.placeholder - текст в строке ввода по умолчанию
 
-mixin dropdown(options)
+mixin dropdown(options = {})
 
-    - classes = "dropdown-" + options.name
+    - let {name, placeholder, items} = options
+
+    - classes = "dropdown-" + name
 
     .dropdown(class=classes)
         .dropdown__header-wrapper
-            label.dropdown__header= options.placeholder
+            label.dropdown__header= placeholder
             .dropdown__icon
                 i.material-icons expand_more
         ul.dropdown__ul
-            each val, index in options.items
+            each val, index in items
                 li.dropdown__li
-                    .dropdown__label= val.name
-                    +input-number(options.name + index)
-            li.dropdown__li.dropdown__footer
-                +button({text: "Очистить", style: "wb"})(class="dropdown__clear dropdown__clear_hidden")                 
+                    .dropdown__label= val
+                    +input-number(name + index)
+            li.dropdown__li
+                +button({text: "Очистить", style: "wb", color: "alt" })(class="dropdown__clear dropdown__clear_hidden")                 
                 +button({text: "Применить", style: "wb"})(class="dropdown__submit")
-
-            //-
-                li.dropdown__li
-                    .dropdown__label= options.name
-                    +input-number("parent")
-                li.dropdown__li
-                    .dropdown__label= options.name
-                    +input-number("children")
-                li.dropdown__li
-                    .dropdown__label= options.name
-                    +input-number("baby")           
-                li.dropdown__li.dropdown__footer
-                    +button({text: "Очистить", style: "wb"})(class="dropdown__clear dropdown__clear_hidden")                 
-                    +button({text: "Применить", style: "wb"})(class="dropdown__submit")
 
         
             

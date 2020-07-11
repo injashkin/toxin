@@ -11282,53 +11282,140 @@ require("./dropdown.scss");
 
 var $ = require("jquery");
 
-var dropdownComfort = $(".dropdown-comfort");
-var placeholderComfort = "Какие удобства";
-var dropdownVisitor = $(".dropdown-visitor");
-var placeholderVisitor = "Сколько гостей";
-var dropdown = []; // сохраняет состояние в виде ["имя1", " ", "кол-во1", ", ", "имя2", " ", "кол-во2", ", ", ...]
-
+var comfort = {
+  name: "comfort",
+  default: "Какие удобства",
+  selector: $(".dropdown-comfort"),
+  arrState: [],
+  caseOfNouns: ["спальня", "спальни", "спален", "кровать", "кровати", "кроватей", "ванная комната", "ванные комнаты", "ванных комнат"]
+};
+var visitor = {
+  name: "visitor",
+  default: "Сколько гостей",
+  selector: $(".dropdown-visitor"),
+  arrState: [],
+  caseOfNouns: ["гость", "гостя", "гостей"]
+};
+var dropdownState = {};
 $(function () {
   var sum = 0;
+  $(".dropdown__header-wrapper").click(function () {
+    // Получение класса дропдауна в виде строки
+    var strClasses = $(this).parent().attr("class"); // Получение класса дропдауна в виде массива
+
+    var arrClasses = strClasses.split(" "); //Получение имени текущего дропдауна
+
+    var nameDropdown = arrClasses[1].split("-")[1];
+
+    switch (nameDropdown) {
+      case "comfort":
+        dropdownState = comfort;
+        break;
+
+      case "visitor":
+        dropdownState = visitor;
+        break;
+    } //Открывает или закрывает дропдаун-меню при клике на
+    //хидер-строке
+
+
+    $(this).parent().toggleClass("open");
+  });
   $(".input-number__button").click(function () {
-    var button = $(this).parent().parent().parent().parent().children(".dropdown__header").text();
-    console.log(button); //Сохраняем имя позиции, где произошло нажатие кнопки плюс или минус
+    var button = $(this).parent().parent().parent().parent().children(".dropdown__header").text(); //Сохраняем имя позиции, где произошло нажатие кнопки плюс или минус
 
     var label = $(this).parent().parent().children(".dropdown__label").text(); //Сохраняем кол-во, отображаемое между кнопками плюс или минус
 
-    var number = $(this).parent().children(".input-number__input").val(); //Определяем индекс массива, где хранится имя позиции (если имя позиции
+    var number = $(this).parent().children(".input-number__input").val(); //Определяем индекс массива, где хранится имя элемента списка (если имя элемента
     //не сохранено в массиве, то index = -1)
 
-    var index = dropdown.indexOf(label); //Если имени в массиве нет, и если его колличество больше нуля,
+    var index = dropdownState.arrState.indexOf(label); //Если имени в массиве нет, и если его колличество больше нуля,
 
     if (index === -1 && number > "0") {
       //то записываем имя и колличество в массив
-      dropdown.push(label, " ", number, ", ");
+      dropdownState.arrState.push(number, label); //dropdownState.push(label, " ", number, ", ");
     } //Если имя есть, и если его колличество больше нуля,
 
 
     if (index !== -1 && number > "0") {
       //то изменяем колличество
-      dropdown.splice(index + 2, 1, number);
+      dropdownState.arrState.splice(index - 1, 1, number);
     } //Если имя есть, и если его колличество равно или меньше нуля,
 
 
     if (index !== -1 && number <= "0") {
       //то удаляем из массива имя и колличество
-      dropdown.splice(index, 4);
+      dropdownState.arrState.splice(index - 1, 2);
     }
 
     var header; //Если массив пуст (это произойдет, когда ни в одной из
     //позиций не указано колличество),
 
-    if (dropdown.length == 0) {
+    if (dropdownState.arrState.length == 0) {
       // выводим строку по умолчанию
-      header = "Сколько гостей"; //Прячем кнопку "Очистить"
+      header = dropdownState.default; //Прячем кнопку "Очистить"
 
       $(this).parent().parent().parent().find(".dropdown__clear").addClass("dropdown__clear_hidden"); //Если в массиве что-то есть,
     } else {
-      //выводим строку в хидер, удалив у нее последний пробел и запятую
-      header = dropdown.join("").slice(0, -2); //Показываем кнопку "Очистить"
+      var out; //Форматируем строку для вывода
+
+      if (dropdownState.name === "visitor") {
+        var lengthArr = dropdownState.arrState.length;
+        var _sum = 0;
+
+        for (var i = 0; i <= lengthArr - 1; i += 2) {
+          _sum += parseInt(dropdownState.arrState[i]);
+        }
+
+        var _index;
+
+        switch (_sum) {
+          case 1:
+            _index = 0;
+            break;
+
+          case 2:
+          case 3:
+          case 4:
+            _index = 1;
+            break;
+
+          default:
+            _index = 2;
+        }
+
+        out = _sum + " " + dropdownState.caseOfNouns[_index];
+      }
+
+      if (dropdownState.name === "comfort") {
+        var _lengthArr = dropdownState.arrState.length;
+        var num = 0;
+        var str = "";
+        var arr = []; //Копирование массива
+
+        for (var _i = 0; _i <= _lengthArr - 1; _i++) {
+          arr[_i] = dropdownState.arrState[_i];
+        } //Расстановка запятых после слов
+
+
+        for (var _i2 = 1; _i2 <= _lengthArr - 1; _i2 += 2) {
+          str = arr[_i2];
+          str += ",";
+          arr[_i2] = str;
+        } //Форматируем вывод
+
+
+        var lengthStr = 28;
+        str = arr.join(" ").slice(0, -1);
+
+        if (str.length > lengthStr) {
+          out = str.slice(0, lengthStr);
+          out += "...";
+        } else out = str;
+      } //выводим строку в хидер
+
+
+      header = out; //Показываем кнопку "Очистить"
 
       $(this).parent().parent().parent().find(".dropdown__clear").removeClass("dropdown__clear_hidden");
     }
@@ -11336,34 +11423,29 @@ $(function () {
     $(this).parent().parent().parent().parent().find(".dropdown__header").text(header);
     $(this).parent().children(".selected").removeClass("selected");
     $(this).addClass("selected");
-  }); //Открывает или закрывает дропдаун-меню при клике на
-  //хидер-строке
-
-  $(".dropdown__header-wrapper, .dropdown__submit").click(function () {
-    $(this).parent().toggleClass("open");
   }); //Закрывает дропдаун-меню при клике на
   //на кнопке Применить
 
   $(".dropdown__submit").click(function () {
-    $(this).parent().parent().parent().toggleClass("open");
+    $(this).parent().parent().parent().removeClass("open");
   }); //Закрывает дропдаун-меню при клике вне границ дропдауна
 
   $(document).on("click", function (e) {
     // если клик был не по блоку dropdown-comfort и не по его дочерним элементам
-    if (dropdownComfort.has(e.target).length === 0) {
-      dropdownComfort.removeClass("open"); // скрываем его
+    if (comfort.selector.has(e.target).length === 0) {
+      comfort.selector.removeClass("open"); // скрываем его
     } // если клик был не по блоку dropdown-visitor и не по его дочерним элементам
 
 
-    if (dropdownVisitor.has(e.target).length === 0) {
-      dropdownVisitor.removeClass("open"); // скрываем его
+    if (visitor.selector.has(e.target).length === 0) {
+      visitor.selector.removeClass("open"); // скрываем его
     }
   }); //Кнопка "Очистить" обнуляет значения инпутов, массив и хидер и делает кнопки минус неактивными
 
   $(".dropdown__clear").click(function () {
-    dropdown = [];
+    dropdownState.arrState = [];
     $(this).parent().parent().find("input").val("0");
-    $(this).parent().parent().parent().find(".dropdown__header").text("Сколько гостей"); //Прячем кнопку "Очистить"
+    $(this).parent().parent().parent().find(".dropdown__header").text(dropdownState.default); //Прячем кнопку "Очистить"
 
     $(this).addClass("dropdown__clear_hidden"); //Делаем все кнопки минус в данном дропдауне неактивными
 
@@ -11398,7 +11480,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38825" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46657" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

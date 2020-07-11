@@ -10,18 +10,18 @@ import "./button.scss";
 
     Опции:
     options.text - текст на кнопке
-    options.size - размер ('' или bg - большая, 'sm' - маленькая)
-    options.style - стиль ('' или st - обычная, 'lt' - белый фон, 'wb' - без фона и бордера, 'ic' - с иконкой)
+    options.size - размер ('' или 'bg' - большая, 'sm' - маленькая)
+    options.style - стиль ('' или 'st' - обычная, 'lt' - белый фон, 'wb' - без фона и бордера, 'ic' - с иконкой)
+    options.color - цвет текста ('' или 'st' - обычная, 'alt' - альтернативный)
     Атрибуты:
     attributes.class - классы
 
 mixin button(options)
-
-    if !options.style
-        - options.style = "st"    
+    
     -
-      var classes = "button " + "button_" + options.style
-      var pict = options.style == "ic" ? "arrow_forward" : ""
+        let {text = "", size = "bg", style = "st", color = "st"} = options
+        var classes = "button " + "button__style_" + style + " button__color_" + color
+        var pict = style == "ic" ? "arrow_forward" : ""
 
-    button(class=classes class!=attributes.class)= options.text
+    button(class=classes class!=attributes.class)= text
         i.material-icons= pict

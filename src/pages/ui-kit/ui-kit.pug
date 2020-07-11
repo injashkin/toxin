@@ -38,9 +38,9 @@ block main
   +container('Pagination')
     include ../../components/pagination/pagination
   +container('Dropdown')
-    +dropdown({name: "comfort", type: "0", placeholder: "Какие удобства", items: [{name: "Спальни"}, {name: "Кровати"}, {name: "Ванные комнаты"}]})
+    +dropdown({name: "comfort", placeholder: "Какие удобства", items: ["спальни", "кровати", "ванные комнаты"]})
   +container('Dropdown')
-    +dropdown({name: "visitor", type: "1", placeholder: "Сколько гостей", items: [{name: "Взрослые"}, {name: "Дети"}, {name: "Младенцы"}]})
+    +dropdown({name: "visitor", placeholder: "Сколько гостей", items: ["взрослые", "дети", "младенцы"]})
   +container('Date Dropdown')
     include ../../components/date/date   
 

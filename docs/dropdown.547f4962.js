@@ -117,79 +117,9 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
+})({"Pk8C":[function(require,module,exports) {
 
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
-
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"../../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../components/dropdown/input-number/input-number.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../node_modules/process/browser.js":[function(require,module,exports) {
+},{}],"rH1J":[function(require,module,exports) {
 
 // shim for using process in browser
 var process = module.exports = {}; // cached from whatever global is present so that test runners that stub it
@@ -398,7 +328,7 @@ process.chdir = function (dir) {
 process.umask = function () {
   return 0;
 };
-},{}],"../../node_modules/jquery/dist/jquery.js":[function(require,module,exports) {
+},{}],"eeO1":[function(require,module,exports) {
 var global = arguments[3];
 var process = require("process");
 var define;
@@ -11275,244 +11205,182 @@ if ( typeof noGlobal === "undefined" ) {
 return jQuery;
 } );
 
-},{"process":"../../node_modules/process/browser.js"}],"../components/dropdown/input-number/input-number.js":[function(require,module,exports) {
+},{"process":"rH1J"}],"RxAo":[function(require,module,exports) {
 "use strict";
 
-require("./input-number.scss");
+require("./dropdown.scss");
 
 var $ = require("jquery");
 
+var comfort = {
+  name: "comfort",
+  default: "Какие удобства",
+  selector: $(".dropdown-comfort"),
+  arrState: [],
+  caseOfNouns: ["спальня", "спальни", "спален", "кровать", "кровати", "кроватей", "ванная комната", "ванные комнаты", "ванных комнат"]
+};
+var visitor = {
+  name: "visitor",
+  default: "Сколько гостей",
+  selector: $(".dropdown-visitor"),
+  arrState: [],
+  caseOfNouns: ["гость", "гостя", "гостей"]
+};
+var dropdownState = {};
 $(function () {
-  $(".minus").click(function () {
-    var $input = $(this).parent().find("input");
-    var count = parseInt($input.val()) - 1;
-    count = count < 0 ? 0 : count;
-    $input.val(count);
-    $input.change();
+  var sum = 0;
+  $(".dropdown__header-wrapper").click(function () {
+    // Получение класса дропдауна в виде строки
+    var strClasses = $(this).parent().attr("class"); // Получение класса дропдауна в виде массива
 
-    if ($input.val() == 0) {
-      //Делаем кнопку минус неактивной
-      $(this).parent().children(".input-number__button:first-child").addClass("input-number__button_inactive");
-    }
+    var arrClasses = strClasses.split(" "); //Получение имени текущего дропдауна
 
-    return false;
+    var nameDropdown = arrClasses[1].split("-")[1];
+
+    switch (nameDropdown) {
+      case "comfort":
+        dropdownState = comfort;
+        break;
+
+      case "visitor":
+        dropdownState = visitor;
+        break;
+    } //Открывает или закрывает дропдаун-меню при клике на
+    //хидер-строке
+
+
+    $(this).parent().toggleClass("open");
   });
-  $(".plus").click(function () {
-    var $input = $(this).parent().find("input");
-    $input.val(parseInt($input.val()) + 1);
-    $input.change();
+  $(".input-number__button").click(function () {
+    var button = $(this).parent().parent().parent().parent().children(".dropdown__header").text(); //Сохраняем имя позиции, где произошло нажатие кнопки плюс или минус
 
-    if ($input.val() > 0) {
-      //Делаем кнопку минус активной
-      $(this).parent().children(".input-number__button").removeClass("input-number__button_inactive");
+    var label = $(this).parent().parent().children(".dropdown__label").text(); //Сохраняем кол-во, отображаемое между кнопками плюс или минус
+
+    var number = $(this).parent().children(".input-number__input").val(); //Определяем индекс массива, где хранится имя элемента списка (если имя элемента
+    //не сохранено в массиве, то index = -1)
+
+    var index = dropdownState.arrState.indexOf(label); //Если имени в массиве нет, и если его колличество больше нуля,
+
+    if (index === -1 && number > "0") {
+      //то записываем имя и колличество в массив
+      dropdownState.arrState.push(number, label); //dropdownState.push(label, " ", number, ", ");
+    } //Если имя есть, и если его колличество больше нуля,
+
+
+    if (index !== -1 && number > "0") {
+      //то изменяем колличество
+      dropdownState.arrState.splice(index - 1, 1, number);
+    } //Если имя есть, и если его колличество равно или меньше нуля,
+
+
+    if (index !== -1 && number <= "0") {
+      //то удаляем из массива имя и колличество
+      dropdownState.arrState.splice(index - 1, 2);
     }
 
-    return false;
+    var header; //Если массив пуст (это произойдет, когда ни в одной из
+    //позиций не указано колличество),
+
+    if (dropdownState.arrState.length == 0) {
+      // выводим строку по умолчанию
+      header = dropdownState.default; //Прячем кнопку "Очистить"
+
+      $(this).parent().parent().parent().find(".dropdown__clear").addClass("dropdown__clear_hidden"); //Если в массиве что-то есть,
+    } else {
+      var out; //Форматируем строку для вывода
+
+      if (dropdownState.name === "visitor") {
+        var lengthArr = dropdownState.arrState.length;
+        var _sum = 0;
+
+        for (var i = 0; i <= lengthArr - 1; i += 2) {
+          _sum += parseInt(dropdownState.arrState[i]);
+        }
+
+        var _index;
+
+        switch (_sum) {
+          case 1:
+            _index = 0;
+            break;
+
+          case 2:
+          case 3:
+          case 4:
+            _index = 1;
+            break;
+
+          default:
+            _index = 2;
+        }
+
+        out = _sum + " " + dropdownState.caseOfNouns[_index];
+      }
+
+      if (dropdownState.name === "comfort") {
+        var _lengthArr = dropdownState.arrState.length;
+        var num = 0;
+        var str = "";
+        var arr = []; //Копирование массива
+
+        for (var _i = 0; _i <= _lengthArr - 1; _i++) {
+          arr[_i] = dropdownState.arrState[_i];
+        } //Расстановка запятых после слов
+
+
+        for (var _i2 = 1; _i2 <= _lengthArr - 1; _i2 += 2) {
+          str = arr[_i2];
+          str += ",";
+          arr[_i2] = str;
+        } //Форматируем вывод
+
+
+        var lengthStr = 28;
+        str = arr.join(" ").slice(0, -1);
+
+        if (str.length > lengthStr) {
+          out = str.slice(0, lengthStr);
+          out += "...";
+        } else out = str;
+      } //выводим строку в хидер
+
+
+      header = out; //Показываем кнопку "Очистить"
+
+      $(this).parent().parent().parent().find(".dropdown__clear").removeClass("dropdown__clear_hidden");
+    }
+
+    $(this).parent().parent().parent().parent().find(".dropdown__header").text(header);
+    $(this).parent().children(".selected").removeClass("selected");
+    $(this).addClass("selected");
+  }); //Закрывает дропдаун-меню при клике на
+  //на кнопке Применить
+
+  $(".dropdown__submit").click(function () {
+    $(this).parent().parent().parent().removeClass("open");
+  }); //Закрывает дропдаун-меню при клике вне границ дропдауна
+
+  $(document).on("click", function (e) {
+    // если клик был не по блоку dropdown-comfort и не по его дочерним элементам
+    if (comfort.selector.has(e.target).length === 0) {
+      comfort.selector.removeClass("open"); // скрываем его
+    } // если клик был не по блоку dropdown-visitor и не по его дочерним элементам
+
+
+    if (visitor.selector.has(e.target).length === 0) {
+      visitor.selector.removeClass("open"); // скрываем его
+    }
+  }); //Кнопка "Очистить" обнуляет значения инпутов, массив и хидер и делает кнопки минус неактивными
+
+  $(".dropdown__clear").click(function () {
+    dropdownState.arrState = [];
+    $(this).parent().parent().find("input").val("0");
+    $(this).parent().parent().parent().find(".dropdown__header").text(dropdownState.default); //Прячем кнопку "Очистить"
+
+    $(this).addClass("dropdown__clear_hidden"); //Делаем все кнопки минус в данном дропдауне неактивными
+
+    $(this).parent().parent().find(".minus").addClass("input-number__button_inactive");
   });
 });
-},{"./input-number.scss":"../components/dropdown/input-number/input-number.scss","jquery":"../../node_modules/jquery/dist/jquery.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
-var global = arguments[3];
-var OVERLAY_ID = '__parcel__error__overlay__';
-var OldModule = module.bundle.Module;
-
-function Module(moduleName) {
-  OldModule.call(this, moduleName);
-  this.hot = {
-    data: module.bundle.hotData,
-    _acceptCallbacks: [],
-    _disposeCallbacks: [],
-    accept: function (fn) {
-      this._acceptCallbacks.push(fn || function () {});
-    },
-    dispose: function (fn) {
-      this._disposeCallbacks.push(fn);
-    }
-  };
-  module.bundle.hotData = null;
-}
-
-module.bundle.Module = Module;
-var checkedAssets, assetsToAccept;
-var parent = module.bundle.parent;
-
-if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
-  var hostname = "" || location.hostname;
-  var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46657" + '/');
-
-  ws.onmessage = function (event) {
-    checkedAssets = {};
-    assetsToAccept = [];
-    var data = JSON.parse(event.data);
-
-    if (data.type === 'update') {
-      var handled = false;
-      data.assets.forEach(function (asset) {
-        if (!asset.isNew) {
-          var didAccept = hmrAcceptCheck(global.parcelRequire, asset.id);
-
-          if (didAccept) {
-            handled = true;
-          }
-        }
-      }); // Enable HMR for CSS by default.
-
-      handled = handled || data.assets.every(function (asset) {
-        return asset.type === 'css' && asset.generated.js;
-      });
-
-      if (handled) {
-        console.clear();
-        data.assets.forEach(function (asset) {
-          hmrApply(global.parcelRequire, asset);
-        });
-        assetsToAccept.forEach(function (v) {
-          hmrAcceptRun(v[0], v[1]);
-        });
-      } else if (location.reload) {
-        // `location` global exists in a web worker context but lacks `.reload()` function.
-        location.reload();
-      }
-    }
-
-    if (data.type === 'reload') {
-      ws.close();
-
-      ws.onclose = function () {
-        location.reload();
-      };
-    }
-
-    if (data.type === 'error-resolved') {
-      console.log('[parcel] ✨ Error resolved');
-      removeErrorOverlay();
-    }
-
-    if (data.type === 'error') {
-      console.error('[parcel] 🚨  ' + data.error.message + '\n' + data.error.stack);
-      removeErrorOverlay();
-      var overlay = createErrorOverlay(data);
-      document.body.appendChild(overlay);
-    }
-  };
-}
-
-function removeErrorOverlay() {
-  var overlay = document.getElementById(OVERLAY_ID);
-
-  if (overlay) {
-    overlay.remove();
-  }
-}
-
-function createErrorOverlay(data) {
-  var overlay = document.createElement('div');
-  overlay.id = OVERLAY_ID; // html encode message and stack trace
-
-  var message = document.createElement('div');
-  var stackTrace = document.createElement('pre');
-  message.innerText = data.error.message;
-  stackTrace.innerText = data.error.stack;
-  overlay.innerHTML = '<div style="background: black; font-size: 16px; color: white; position: fixed; height: 100%; width: 100%; top: 0px; left: 0px; padding: 30px; opacity: 0.85; font-family: Menlo, Consolas, monospace; z-index: 9999;">' + '<span style="background: red; padding: 2px 4px; border-radius: 2px;">ERROR</span>' + '<span style="top: 2px; margin-left: 5px; position: relative;">🚨</span>' + '<div style="font-size: 18px; font-weight: bold; margin-top: 20px;">' + message.innerHTML + '</div>' + '<pre>' + stackTrace.innerHTML + '</pre>' + '</div>';
-  return overlay;
-}
-
-function getParents(bundle, id) {
-  var modules = bundle.modules;
-
-  if (!modules) {
-    return [];
-  }
-
-  var parents = [];
-  var k, d, dep;
-
-  for (k in modules) {
-    for (d in modules[k][1]) {
-      dep = modules[k][1][d];
-
-      if (dep === id || Array.isArray(dep) && dep[dep.length - 1] === id) {
-        parents.push(k);
-      }
-    }
-  }
-
-  if (bundle.parent) {
-    parents = parents.concat(getParents(bundle.parent, id));
-  }
-
-  return parents;
-}
-
-function hmrApply(bundle, asset) {
-  var modules = bundle.modules;
-
-  if (!modules) {
-    return;
-  }
-
-  if (modules[asset.id] || !bundle.parent) {
-    var fn = new Function('require', 'module', 'exports', asset.generated.js);
-    asset.isNew = !modules[asset.id];
-    modules[asset.id] = [fn, asset.deps];
-  } else if (bundle.parent) {
-    hmrApply(bundle.parent, asset);
-  }
-}
-
-function hmrAcceptCheck(bundle, id) {
-  var modules = bundle.modules;
-
-  if (!modules) {
-    return;
-  }
-
-  if (!modules[id] && bundle.parent) {
-    return hmrAcceptCheck(bundle.parent, id);
-  }
-
-  if (checkedAssets[id]) {
-    return;
-  }
-
-  checkedAssets[id] = true;
-  var cached = bundle.cache[id];
-  assetsToAccept.push([bundle, id]);
-
-  if (cached && cached.hot && cached.hot._acceptCallbacks.length) {
-    return true;
-  }
-
-  return getParents(global.parcelRequire, id).some(function (id) {
-    return hmrAcceptCheck(global.parcelRequire, id);
-  });
-}
-
-function hmrAcceptRun(bundle, id) {
-  var cached = bundle.cache[id];
-  bundle.hotData = {};
-
-  if (cached) {
-    cached.hot.data = bundle.hotData;
-  }
-
-  if (cached && cached.hot && cached.hot._disposeCallbacks.length) {
-    cached.hot._disposeCallbacks.forEach(function (cb) {
-      cb(bundle.hotData);
-    });
-  }
-
-  delete bundle.cache[id];
-  bundle(id);
-  cached = bundle.cache[id];
-
-  if (cached && cached.hot && cached.hot._acceptCallbacks.length) {
-    cached.hot._acceptCallbacks.forEach(function (cb) {
-      cb();
-    });
-
-    return true;
-  }
-}
-},{}]},{},["../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","../components/dropdown/input-number/input-number.js"], null)
-//# sourceMappingURL=/input-number.1f4fc3de.js.map
+},{"./dropdown.scss":"Pk8C","jquery":"eeO1"}]},{},["RxAo"], null)
+//# sourceMappingURL=../dropdown.547f4962.js.map
