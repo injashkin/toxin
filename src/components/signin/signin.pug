@@ -1,0 +1,11 @@
+include ../input/input
+//- include ../button/button
+
+mixin signin()    
+    form.signin    
+        +input()    
+        +input()
+        +button()
+        .signin__footer
+            .text Нет аккаунта на Toxin?
+            +button()

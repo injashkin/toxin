@@ -1,0 +1,49 @@
+.input {
+  display: inline-block;
+  position: relative;
+
+  &__input {
+    background: #ffffff;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 1.3rem 1.5rem;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+
+    &:hover {
+      border: 1px solid rgba(31, 32, 65, 0.5);
+      //content: "This is pretty awesome";
+    }
+  }
+
+  &_add-arrow-off {
+    display: none;
+  }
+
+  &_add-arrow-on {
+    position: absolute;
+    top: 50%;
+    left: 95%;
+    transform: translate(-50%, -50%);
+
+    .material-icons {
+      cursor: pointer;
+
+      font-family: Material Icons;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 24px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+
+      color: #bc9cff;
+    }
+  }
+}

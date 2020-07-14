@@ -1,4 +1,3 @@
-import "./button.scss";
 //-
     Вызов
     +button({Опции})(Атрибуты)
@@ -17,6 +16,8 @@ import "./button.scss";
     attributes.class - классы
 
 mixin button(options)
+    if !options
+        - options = {}
     
     -
         let {text = "", size = "bg", style = "st", color = "st"} = options

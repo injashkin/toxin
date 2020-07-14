@@ -6,6 +6,9 @@
   &__header-wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: 4.4rem;
+    padding: 1rem;
 
     cursor: pointer;
 
@@ -17,31 +20,42 @@
   }
 
   &__header {
-    display: flex;
-    align-items: center;
-    padding: 1rem;
+    //display: inline-block;
+    //position: relative;
+    //top: 50%;
+    //transform: translateY(-50%);
+    //text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 0.4rem;
+    padding-right: 2rem;
+
+    //height: 4rem;
 
     cursor: pointer;
 
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
     color: rgba(31, 32, 65, 0.75);
   }
 
   &__icon {
-    width: 44px;
-    height: 44px;
+    //display: inline-block;
+
+    //width: 4.4rem;
+    //height: 4.4rem;
 
     font-family: Material Icons;
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
     line-height: 24px;
-    display: flex;
-    align-items: center;
+    //display: flex;
+    //align-items: center;
     text-align: center;
 
     /* Dark 75% */

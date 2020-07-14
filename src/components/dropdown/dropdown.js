@@ -2,7 +2,7 @@ import "./dropdown.scss";
 
 var $ = require("jquery");
 
-var comfort = {
+const comfort = {
   name: "comfort",
   default: "Какие удобства",
   selector: $(".dropdown-comfort"),
@@ -20,7 +20,7 @@ var comfort = {
   ],
 };
 
-var visitor = {
+const visitor = {
   name: "visitor",
   default: "Сколько гостей",
   selector: $(".dropdown-visitor"),
@@ -28,12 +28,12 @@ var visitor = {
   caseOfNouns: ["гость", "гостя", "гостей"],
 };
 
-var dropdownState = {};
+let dropdownState = {};
 
 $(function () {
   var sum = 0;
-
-  $(".dropdown__header-wrapper").click(function () {
+  var $dropdown__headerWrapper = $(".js-dropdown__header-wrapper");
+  $dropdown__headerWrapper.click(function () {
     // Получение класса дропдауна в виде строки
     let strClasses = $(this).parent().attr("class");
     // Получение класса дропдауна в виде массива
@@ -52,11 +52,12 @@ $(function () {
     }
 
     //Открывает или закрывает дропдаун-меню при клике на
-    //хидер-строке
+    //хедер-строке
     $(this).parent().toggleClass("open");
   });
 
-  $(".input-number__button").click(function () {
+  var $inputNumber__button = $(".js-input-number__button");
+  $inputNumber__button.click(function () {
     var button = $(this)
       .parent()
       .parent()
@@ -65,7 +66,7 @@ $(function () {
       .children(".dropdown__header")
       .text();
 
-    //Сохраняем имя позиции, где произошло нажатие кнопки плюс или минус
+    //Сохраняем имя пункта списка, где произошло нажатие кнопки плюс или минус
     var label = $(this).parent().parent().children(".dropdown__label").text();
     //Сохраняем кол-во, отображаемое между кнопками плюс или минус
     var number = $(this).parent().children(".input-number__input").val();
@@ -74,26 +75,26 @@ $(function () {
     //не сохранено в массиве, то index = -1)
     var index = dropdownState.arrState.indexOf(label);
 
-    //Если имени в массиве нет, и если его колличество больше нуля,
+    //Если имени в массиве нет, и если его количество больше нуля,
     if (index === -1 && number > "0") {
-      //то записываем имя и колличество в массив
+      //то записываем имя и количество в массив
       dropdownState.arrState.push(number, label); //dropdownState.push(label, " ", number, ", ");
     }
 
-    //Если имя есть, и если его колличество больше нуля,
+    //Если имя есть, и если его количество больше нуля,
     if (index !== -1 && number > "0") {
-      //то изменяем колличество
+      //то изменяем количество
       dropdownState.arrState.splice(index - 1, 1, number);
     }
-    //Если имя есть, и если его колличество равно или меньше нуля,
+    //Если имя есть, и если его количество равно или меньше нуля,
     if (index !== -1 && number <= "0") {
-      //то удаляем из массива имя и колличество
+      //то удаляем из массива имя и количество
       dropdownState.arrState.splice(index - 1, 2);
     }
 
     var header;
     //Если массив пуст (это произойдет, когда ни в одной из
-    //позиций не указано колличество),
+    //позиций не указано количество),
     if (dropdownState.arrState.length == 0) {
       // выводим строку по умолчанию
       header = dropdownState.default;
@@ -137,12 +138,9 @@ $(function () {
         let lengthArr = dropdownState.arrState.length;
         let num = 0;
         let str = "";
-        let arr = [];
 
         //Копирование массива
-        for (let i = 0; i <= lengthArr - 1; i++) {
-          arr[i] = dropdownState.arrState[i];
-        }
+        let arr = [...dropdownState.arrState];
 
         //Расстановка запятых после слов
         for (let i = 1; i <= lengthArr - 1; i += 2) {
@@ -151,16 +149,12 @@ $(function () {
           arr[i] = str;
         }
 
-        //Форматируем вывод
-        let lengthStr = 28;
-        str = arr.join(" ").slice(0, -1);
-        if (str.length > lengthStr) {
-          out = str.slice(0, lengthStr);
-          out += "...";
-        } else out = str;
+        //Форматирование вывода
+        str = arr.join(" ").slice(0, -1); //убираем последнюю запятую
+        out = str;
       }
 
-      //выводим строку в хидер
+      //Вывод строки в хедер
       header = out;
 
       //Показываем кнопку "Очистить"
@@ -186,7 +180,8 @@ $(function () {
 
   //Закрывает дропдаун-меню при клике на
   //на кнопке Применить
-  $(".dropdown__submit").click(function () {
+  var $dropdown__submit = $(".js-dropdown__submit");
+  $dropdown__submit.click(function () {
     $(this).parent().parent().parent().removeClass("open");
   });
 
@@ -202,7 +197,8 @@ $(function () {
     }
   });
 
-  //Кнопка "Очистить" обнуляет значения инпутов, массив и хидер и делает кнопки минус неактивными
+  //Кнопка "Очистить" обнуляет значения input, массив и хедер и делает кнопки минус неактивными
+  var $dropdown__clear = $(".js-dropdown__clear");
   $(".dropdown__clear").click(function () {
     dropdownState.arrState = [];
     $(this).parent().parent().find("input").val("0");

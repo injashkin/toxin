@@ -1,0 +1,37 @@
+//-
+    type - тип элемента (https://developer.mozilla.org/ru/docs/Web/HTML/Element/Input).
+    placeholder - подсказка в строке ввода
+    name - имя поля для обработчика
+    arrow - добавляет стрелку в поле справа (y - стрелка включена, любое другое значение отключает стрелку)
+    size - ширина поля в символах
+
+link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+
+mixin input(type, placeholder, name, arrow, size)
+    - if (type == "e")
+        - type = "email"
+        - inputmode = "email"
+    - else if (type == "t")
+        - type = "tel"
+        - inputmode = "tel"
+    - else if (type == "u")
+        - type = "url"
+        - inputmode = "url"
+    - else
+        - type = "text"
+        - inputmode = "text"
+    - if (arrow == "y")
+        - addArrow = "text-field text-field_add-arrow-on"
+    - else addArrow = "text-field text-field_add-arrow-off"
+    .text-field   
+        input(   
+            class="text-field__input"        
+            type=type             
+            placeholder!=placeholder 
+            inputmode!=inputmode
+            name!=name
+            size!=size            
+            )  
+        div(class=addArrow)
+            i.material-icons arrow_forward
+

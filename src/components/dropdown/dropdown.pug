@@ -10,8 +10,8 @@ mixin dropdown(options = {})
     - classes = "dropdown-" + name
 
     .dropdown(class=classes)
-        .dropdown__header-wrapper
-            label.dropdown__header= placeholder
+        .dropdown__header-wrapper.js-dropdown__header-wrapper
+            .dropdown__header= placeholder
             .dropdown__icon
                 i.material-icons expand_more
         ul.dropdown__ul
@@ -20,8 +20,8 @@ mixin dropdown(options = {})
                     .dropdown__label= val
                     +input-number(name + index)
             li.dropdown__li
-                +button({text: "Очистить", style: "wb", color: "alt" })(class="dropdown__clear dropdown__clear_hidden")                 
-                +button({text: "Применить", style: "wb"})(class="dropdown__submit")
+                +button({text: "Очистить", style: "wb", color: "alt" })(class="dropdown__clear js-dropdown__clear dropdown__clear_hidden")                 
+                +button({text: "Применить", style: "wb"})(class="dropdown__submit js-dropdown__submit")
 
         
             

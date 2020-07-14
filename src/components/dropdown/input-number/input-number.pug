@@ -6,6 +6,6 @@ mixin input-number(name)
     - classes2 = name + " input-number__input"
 
     .input-number(class=classes)    
-        button.input-number__button.input-number__button_inactive.minus -
+        button.input-number__button.js-input-number__button.input-number__button_inactive.minus -
         input(class=classes2 type="number" value="0" min="0" max="10")
-        button.input-number__button.plus +
+        button.input-number__button.js-input-number__button.plus +
