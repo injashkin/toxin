@@ -24,5 +24,7 @@ mixin button(options)
         var classes = "button " + "button__style_" + style + " button__color_" + color
         var pict = style == "ic" ? "arrow_forward" : ""
 
-    button(class=classes class!=attributes.class)= text
-        i.material-icons= pict
+    button(class=classes class!=attributes.class)
+        .button__text= text
+        .button__icon
+            i.material-icons= pict

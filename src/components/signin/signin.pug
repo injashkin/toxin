@@ -2,10 +2,11 @@ include ../input/input
 //- include ../button/button
 
 mixin signin()    
-    form.signin    
-        +input()    
-        +input()
-        +button()
+    form.signin
+        .signin__header Войти
+        +input({placeholder: "Email"})    
+        +input({placeholder: "Пароль"})
+        +button({text: "Войти", style: "ic"})
         .signin__footer
-            .text Нет аккаунта на Toxin?
-            +button()
+            .signin__text Нет аккаунта на Toxin?
+            +button({style: "lt", text: "Создать"})

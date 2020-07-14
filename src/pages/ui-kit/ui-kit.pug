@@ -57,9 +57,12 @@ block main
   +container('Text Field')
     +field('e', 'Email', 'email', 'y', 32)
   +container('Subscription text field')
-    +field('e', 'Email', 'subscription', 'n', 20)    
+    +field('e', 'Email', 'subscription', 'n', 20)   
+  .container
+    +button({style: "ic", text: "Перейти"})
+  +button({style: "lt", text: "Click Me"})
   +container('Signin')
-    +signin
+    +signin()
  
   
 
