@@ -43,7 +43,7 @@ block main
   +container('Dropdown')
     +dropdown({name: "visitor", placeholder: "Сколько гостей", items: ["взрослые", "дети", "младенцы"]})
   +container('Date Dropdown')
-    include ../../components/date/date   
+    +date()
 
   +container('Radio Buttons')
     +radio()
@@ -66,6 +66,9 @@ block main
     +signin()
   +container('Signup')
     +signup()
+  +container('Search Rooms')
+    +search-rooms()
+
  
   
 

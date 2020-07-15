@@ -1,0 +1,10 @@
+mixin search-rooms()    
+    form.search-rooms
+        +text({text: 'Найдём номера под ваши пожелания', size: 'h1'})
+        +text({text: 'Прибытие', size: 'h3'})
+        +date()
+        +text({text: 'Выезд', size: 'h3'})
+        +date()
+        +text({text: 'Гости', size: 'h3'})
+        +dropdown()
+        +button({text: "Подобрать номер", style: "ic"})        

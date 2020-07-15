@@ -5,7 +5,7 @@
 
 mixin dropdown(options = {})
 
-    - let {name, placeholder, items} = options
+    - let {name='visitor', placeholder='Сколько гостей', items=["взрослые", "дети", "младенцы"]} = options
 
     - classes = "dropdown-" + name
 
