@@ -1,13 +1,16 @@
 mixin signup()
-    form.signup
-        .signin__header Регистрация аккаунта
-        +input({placeholder: "Имя"})    
-        +input({placeholder: "Фамилия"})
+    form.signup        
+        +text({text: 'Регистрация аккаунта', size: 'h1'})
+        +input({placeholder: 'Имя'})    
+        +input({placeholder: 'Фамилия'})
         +radio()
-        +input({placeholder: "Email"})    
-        +input({placeholder: "Пароль"})
+        +text({text: 'Дата рождения', size: 'h3'})
+        +input({placeholder: 'ДД.ММ.ГГГГ'})    
+        +text({text: 'Данные для входа в сервис', size: 'h3'})
+        +input({placeholder: 'Email'})    
+        +input({placeholder: 'Пароль'})
         +toggle()
-        +button({text: "Перейти к оплате", style: "ic"})
+        +button({text: 'Перейти к оплате', style: 'ic'})
         .signin__footer
-            .signin__text Уже есть аккаунт на Toxin
-            +button({style: "lt", text: "Войти", size: "sm"})
+            +text({text: 'Уже есть аккаунт на Toxin', size: 'body'})
+            +button({style: 'lt', text: 'Войти', size: 'sm'})

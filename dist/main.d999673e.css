@@ -28,29 +28,9 @@
   src: local("Montserrat Bold"), local("Montserrat-Bold"), url("/montserrat-v14-latin_cyrillic-700.69095323.eot?#iefix") format("embedded-opentype"), url("/montserrat-v14-latin_cyrillic-700.828a8ed1.woff") format("woff"), url("/montserrat-v14-latin_cyrillic-700.ae6647a6.ttf") format("truetype"), url("/montserrat-v14-latin_cyrillic-700.38d4f879.svg#Montserrat") format("svg");
   /* Legacy iOS */
 }
-/* quicksand-regular - latin-ext */
-@font-face {
-  font-family: "Quicksand";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/quicksand-v20-latin-ext-regular.a0b2e6f2.eot");
-  /* IE9 Compat Modes */
-  src: local(""), url("/quicksand-v20-latin-ext-regular.a0b2e6f2.eot?#iefix") format("embedded-opentype"), url("/quicksand-v20-latin-ext-regular.43b609b5.woff2") format("woff2"), url("/quicksand-v20-latin-ext-regular.4617df5c.woff") format("woff"), url("/quicksand-v20-latin-ext-regular.f2adc946.ttf") format("truetype"), url("/quicksand-v20-latin-ext-regular.af7b7801.svg#Quicksand") format("svg");
-  /* Legacy iOS */
-}
-/* quicksand-700 - latin-ext */
-@font-face {
-  font-family: "Quicksand";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/quicksand-v20-latin-ext-700.32924d25.eot");
-  /* IE9 Compat Modes */
-  src: local(""), url("/quicksand-v20-latin-ext-700.32924d25.eot?#iefix") format("embedded-opentype"), url("/quicksand-v20-latin-ext-700.56c82eff.woff2") format("woff2"), url("/quicksand-v20-latin-ext-700.d15a33f8.woff") format("woff"), url("/quicksand-v20-latin-ext-700.5e68f0a4.ttf") format("truetype"), url("/quicksand-v20-latin-ext-700.1e0a7b3f.svg#Quicksand") format("svg");
-  /* Legacy iOS */
-}
 /* open-sans-regular - latin_cyrillic */
 @font-face {
-  font-family: "Open Sans";
+  font-family: "Quicksand";
   font-style: normal;
   font-weight: 400;
   src: url("/open-sans-v17-latin_cyrillic-regular.4f3fe0a5.eot");
@@ -60,7 +40,7 @@
 }
 /* open-sans-700 - latin_cyrillic */
 @font-face {
-  font-family: "Open Sans";
+  font-family: "Quicksand";
   font-style: normal;
   font-weight: 700;
   src: url("/open-sans-v17-latin_cyrillic-700.55388810.eot");
@@ -269,29 +249,9 @@
   src: local("Montserrat Bold"), local("Montserrat-Bold"), url("/montserrat-v14-latin_cyrillic-700.69095323.eot?#iefix") format("embedded-opentype"), url("/montserrat-v14-latin_cyrillic-700.828a8ed1.woff") format("woff"), url("/montserrat-v14-latin_cyrillic-700.ae6647a6.ttf") format("truetype"), url("/montserrat-v14-latin_cyrillic-700.38d4f879.svg#Montserrat") format("svg");
   /* Legacy iOS */
 }
-/* quicksand-regular - latin-ext */
-@font-face {
-  font-family: "Quicksand";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/quicksand-v20-latin-ext-regular.a0b2e6f2.eot");
-  /* IE9 Compat Modes */
-  src: local(""), url("/quicksand-v20-latin-ext-regular.a0b2e6f2.eot?#iefix") format("embedded-opentype"), url("/quicksand-v20-latin-ext-regular.43b609b5.woff2") format("woff2"), url("/quicksand-v20-latin-ext-regular.4617df5c.woff") format("woff"), url("/quicksand-v20-latin-ext-regular.f2adc946.ttf") format("truetype"), url("/quicksand-v20-latin-ext-regular.af7b7801.svg#Quicksand") format("svg");
-  /* Legacy iOS */
-}
-/* quicksand-700 - latin-ext */
-@font-face {
-  font-family: "Quicksand";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/quicksand-v20-latin-ext-700.32924d25.eot");
-  /* IE9 Compat Modes */
-  src: local(""), url("/quicksand-v20-latin-ext-700.32924d25.eot?#iefix") format("embedded-opentype"), url("/quicksand-v20-latin-ext-700.56c82eff.woff2") format("woff2"), url("/quicksand-v20-latin-ext-700.d15a33f8.woff") format("woff"), url("/quicksand-v20-latin-ext-700.5e68f0a4.ttf") format("truetype"), url("/quicksand-v20-latin-ext-700.1e0a7b3f.svg#Quicksand") format("svg");
-  /* Legacy iOS */
-}
 /* open-sans-regular - latin_cyrillic */
 @font-face {
-  font-family: "Open Sans";
+  font-family: "Quicksand";
   font-style: normal;
   font-weight: 400;
   src: url("/open-sans-v17-latin_cyrillic-regular.4f3fe0a5.eot");
@@ -301,7 +261,7 @@
 }
 /* open-sans-700 - latin_cyrillic */
 @font-face {
-  font-family: "Open Sans";
+  font-family: "Quicksand";
   font-style: normal;
   font-weight: 700;
   src: url("/open-sans-v17-latin_cyrillic-700.55388810.eot");

@@ -1,0 +1,10 @@
+//- 
+    options.text
+    options.size - Размер текста ("h1", "h2", "h3", "body")
+
+mixin text(options = {})
+    -
+        let {text = "", size = "body"} = options
+        var classes = 'text__' + size
+
+    .text(class=classes)= text
