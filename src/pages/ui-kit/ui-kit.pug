@@ -5,17 +5,18 @@ block title
    
 block main   
   .color-types
-
+  
     .color-types__logo
       include ../../theme/logo-dark-25.svg
-    .color-types__color
-      +color-items("Dark Shade 100%", "#1F2041",  "#1F2041")
-      +color-items("Dark Shade 75%", "#1F2041",  "rgba(31, 32, 65, 0.75)")
-      +color-items("Dark Shade 50%", "#1F2041",  "rgba(31, 32, 65, 0.5)")
-      +color-items("Dark Shade 25%", "#1F2041",  "rgba(31, 32, 65, 0.25)")
-      +color-items("Dark Shade 5%", "#1F2041",  "rgba(31, 32, 65, 0.05)")
-      +color-items("Purple",  "#BC9CFF",  "#BC9CFF")
-      +color-items("Green",  "#BC9CFF",  "#6FCF97")
+
+    .color-types__color    
+      +color-item("Dark Shade 100%", "#1F2041",  "#1F2041")
+      +color-item("Dark Shade 75%", "#1F2041",  "rgba(31, 32, 65, 0.75)")
+      +color-item("Dark Shade 50%", "#1F2041",  "rgba(31, 32, 65, 0.5)")
+      +color-item("Dark Shade 25%", "#1F2041",  "rgba(31, 32, 65, 0.25)")
+      +color-item("Dark Shade 5%", "#1F2041",  "rgba(31, 32, 65, 0.05)")
+      +color-item("Purple",  "#BC9CFF",  "#BC9CFF")
+      +color-item("Green",  "#BC9CFF",  "#6FCF97")
 
     .color-types__types
       +types
@@ -45,9 +46,9 @@ block main
     include ../../components/date/date   
 
   +container('Radio Buttons')
-    include ../../components/radio-buttons/radio-buttons
+    +radio()
   +container('Toggle')
-    include ../../components/toggle/toggle
+    +toggle()
   +container('Rate button')
     include ../../components/rate/rate
   +container('Checkbox')
@@ -63,6 +64,8 @@ block main
   +button({style: "lt", text: "Click Me"})
   +container('Signin')
     +signin()
+  +container('Signup')
+    +signup()
  
   
 

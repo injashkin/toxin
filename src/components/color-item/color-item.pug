@@ -1,0 +1,10 @@
+mixin color-item(name1, name2, value)
+    -
+      var color = ""
+      color += "background: " + value
+
+    .color-item
+        .color-item__rectangle(style!=color)        
+        .color-item__label
+            .color-item__name= name1
+            .color-item__name= name2

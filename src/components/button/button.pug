@@ -10,14 +10,12 @@
     Опции:
     options.text - текст на кнопке
     options.size - размер ('' или 'bg' - большая, 'sm' - маленькая)
-    options.style - стиль ('' или 'st' - обычная, 'lt' - белый фон, 'wb' - без фона и бордера, 'ic' - с иконкой)
+    options.style - стиль ('' или 'st' - обычная, 'lt' - белый фон, 'wb' - без фона и бордюра, 'ic' - с иконкой)
     options.color - цвет текста ('' или 'st' - обычная, 'alt' - альтернативный)
     Атрибуты:
     attributes.class - классы
 
-mixin button(options)
-    if !options
-        - options = {}
+mixin button(options = {})
     
     -
         let {text = "", size = "bg", style = "st", color = "st"} = options

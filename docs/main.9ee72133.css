@@ -1,0 +1,227 @@
+@charset "UTF-8";
+/*Стандартные цвета*/
+@font-face {
+  font-family: "Material-Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../materialIcons-regular.4a54d423.eot");
+  /* For IE6-8 */
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url("../materialIcons-regular.ea1c09f2.woff") format("woff"), url("../materialIcons-regular.7f257eac.ttf") format("truetype");
+}
+/* montserrat-regular - latin_cyrillic */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../montserrat-v14-latin_cyrillic-regular.e62df61f.eot");
+  /* IE9 Compat Modes */
+  src: local("Montserrat Regular"), local("Montserrat-Regular"), url("../montserrat-v14-latin_cyrillic-regular.e62df61f.eot?#iefix") format("embedded-opentype"), url("../montserrat-v14-latin_cyrillic-regular.f402552c.woff") format("woff"), url("../montserrat-v14-latin_cyrillic-regular.de35258f.ttf") format("truetype"), url("../montserrat-v14-latin_cyrillic-regular.a0ad2328.svg#Montserrat") format("svg");
+  /* Legacy iOS */
+}
+/* montserrat-700 - latin_cyrillic */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../montserrat-v14-latin_cyrillic-700.7e9f0798.eot");
+  /* IE9 Compat Modes */
+  src: local("Montserrat Bold"), local("Montserrat-Bold"), url("../montserrat-v14-latin_cyrillic-700.7e9f0798.eot?#iefix") format("embedded-opentype"), url("../montserrat-v14-latin_cyrillic-700.c92bbaca.woff") format("woff"), url("../montserrat-v14-latin_cyrillic-700.23ba7728.ttf") format("truetype"), url("../montserrat-v14-latin_cyrillic-700.3c66659a.svg#Montserrat") format("svg");
+  /* Legacy iOS */
+}
+/* quicksand-regular - latin-ext */
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../quicksand-v20-latin-ext-regular.322a5fda.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../quicksand-v20-latin-ext-regular.322a5fda.eot?#iefix") format("embedded-opentype"), url("../quicksand-v20-latin-ext-regular.d4525d4d.woff2") format("woff2"), url("../quicksand-v20-latin-ext-regular.890bd329.woff") format("woff"), url("../quicksand-v20-latin-ext-regular.fc051db0.ttf") format("truetype"), url("../quicksand-v20-latin-ext-regular.b5cac77d.svg#Quicksand") format("svg");
+  /* Legacy iOS */
+}
+/* quicksand-700 - latin-ext */
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../quicksand-v20-latin-ext-700.a6a84c65.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../quicksand-v20-latin-ext-700.a6a84c65.eot?#iefix") format("embedded-opentype"), url("../quicksand-v20-latin-ext-700.b430ce7b.woff2") format("woff2"), url("../quicksand-v20-latin-ext-700.36cb63de.woff") format("woff"), url("../quicksand-v20-latin-ext-700.fee5c988.ttf") format("truetype"), url("../quicksand-v20-latin-ext-700.fd75e73c.svg#Quicksand") format("svg");
+  /* Legacy iOS */
+}
+/*
+
+@import "../components/types/types.scss";
+@import "../components/pagination/pagination";
+@import "../components/checkbox/checkbox";
+@import "../components/text-field/text-field";
+@import "../components/dropdown/dropdown";
+*/
+.color-types {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  min-height: 90rem;
+}
+.color-types__logo {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+}
+.color-types__color {
+  display: flex;
+  flex-direction: column;
+  margin-left: 14rem;
+}
+
+.container {
+  margin: 1rem;
+}
+
+.container-label {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  color: #1f2041;
+  margin: 0.5rem;
+}
+
+.button2 {
+  /* Сбрасываем дефолтные стили */
+  border: none;
+  outline: none;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height */
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 12px 16px;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+}
+
+.button2:hover {
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  opacity: 0.5;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.button2:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  position: relative;
+  width: 6.7em;
+  height: 40px;
+}
+.logo .logo__text {
+  position: absolute;
+  top: 13px;
+  left: 48px;
+}
+
+.group {
+  display: flex;
+  list-style: none;
+  margin: 0 auto;
+  font: 14px Montserrat, normal, normal;
+}
+.group .item {
+  margin: 1em;
+}
+.group .link {
+  text-decoration: none;
+  color: rgba(31, 32, 65, 0.5);
+}
+
+.nav-bar {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  height: 4.38em;
+  align-items: center;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  background: #ffffff;
+  z-index: -1;
+}
+.nav-bar .container-logo {
+  margin-left: 8.75em;
+}
+.nav-bar .container-button2 {
+  margin-right: 1em;
+}
+
+/* Group2 */
+.group2 {
+  position: absolute;
+  width: 380px;
+  height: 374px;
+  left: 140px;
+  top: 140px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  /* Найдём номера под ваши пожелания */
+}
+.group2 .group2__head {
+  position: absolute;
+  width: 320px;
+  height: 60px;
+  left: 30px;
+  top: 40px;
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  /* Dark 100% */
+  color: #1f2041;
+}
+
+.landing-body {
+  background: url(../image.eaf3dbee.jpg);
+}
+
+.container-macbook {
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  background-color: #dddddd;
+}
+
+.container-macbook .container-nav-bar {
+  width: 100%;
+}
+
+::-moz-focus-outer,
+::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+:focus {
+  outline: none !important;
+}
+
+/*# sourceMappingURL=../main.9ee72133.css.map */

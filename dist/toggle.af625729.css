@@ -1,0 +1,66 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,400&display=swap");
+.toggle {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  width: 260px;
+  height: 24px;
+  /*Настройки текста*/
+  /*Включено для постели*/
+  /*Включено для внутренней кнопки*/
+}
+.toggle input {
+  position: absolute;
+  opacity: 0;
+  cursor: inherit;
+}
+.toggle .toggle__text {
+  position: absolute;
+  padding-left: 50px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  /*Общие настройки для постели и кнопки*/
+  /*Постель кнопки*/
+  /*Внутренняя кнопка*/
+}
+.toggle .toggle__text:before, .toggle .toggle__text:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+}
+.toggle .toggle__text:before {
+  left: 0;
+  margin-top: -10px;
+  height: 20px;
+  width: 40px;
+  border-radius: 10px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+}
+.toggle .toggle__text:after {
+  left: 4px;
+  height: 12px;
+  width: 12px;
+  margin-top: -6px;
+  /* Dark 25% */
+  background: rgba(31, 32, 65, 0.25);
+  border-radius: 10px;
+}
+.toggle input:checked + .toggle__text:before {
+  /* Primary Color */
+  border: 1px solid #bc9cff;
+}
+.toggle input:checked + .toggle__text:after {
+  left: 24px;
+  /* Primary Gradient */
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+}
+.toggle input:hover + .toggle__text:before {
+  opacity: 0.5;
+}
+
+/*# sourceMappingURL=/toggle.af625729.css.map */

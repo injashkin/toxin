@@ -1,11 +1,14 @@
-include ../components/сolor-item/сolor-item
 include ../components/types/types
 include ../components/text-field/text-field
 include ../components/dropdown/dropdown
 include ../components/dropdown/input-number/input-number
 include ../components/button/button
 include ../components/signin/signin
+include ../components/signup/signup
 include ../components/input/input
+include ../components/toggle/toggle
+include ../components/radio/radio
+include ../components/color-item/color-item
 
 doctype html
 html(lang="ru")
@@ -26,6 +29,7 @@ html(lang="ru")
 
   body
     block main 
+    script(src="../../components/signup/signup.js")
     script(src="../../components/input/input.js")    
     script(src="../../components/signin/signin.js")    
     script(src="../../components/button/button.js")    
@@ -34,6 +38,9 @@ html(lang="ru")
     script(src="../../components/slider/slider.js")
     script(src="../../components/date/date.js")
     script(src="../../components/rate/rate.js")
+    script(src="../../components/toggle/toggle.js")
+    script(src="../../components/radio/radio.js")
+    script(src="../../components/color-item/color-item.js")
 
     script(src="../../theme/main.js") 
 

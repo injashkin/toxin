@@ -1,14 +1,10 @@
 @import "./src/theme/variables.scss";
 
-@import "../components/сolor-item/сolor-item";
 @import "../components/types/types.scss";
 @import "../components/pagination/pagination";
-@import "../components/radio-buttons/radio-buttons";
-@import "../components/toggle/toggle";
 @import "../components/checkbox/checkbox";
 @import "../components/text-field/text-field";
 @import "../components/dropdown/dropdown";
-//@import "../components/dropdown/input-number/input-number";
 
 .color-types {
   display: flex;

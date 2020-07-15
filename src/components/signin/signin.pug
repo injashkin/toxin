@@ -1,6 +1,3 @@
-include ../input/input
-//- include ../button/button
-
 mixin signin()    
     form.signin
         .signin__header Войти
@@ -9,4 +6,4 @@ mixin signin()
         +button({text: "Войти", style: "ic"})
         .signin__footer
             .signin__text Нет аккаунта на Toxin?
-            +button({style: "lt", text: "Создать"})
+            +button({style: "lt", text: "Создать", size: "sm"})

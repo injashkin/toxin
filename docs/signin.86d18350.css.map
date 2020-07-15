@@ -1,1 +1,0 @@
-{"version":3,"sources":["../components/signin/signin.scss"],"names":[],"mappings":"AAAA;EACE;EACA","file":"signin.86d18350.css","sourceRoot":"../src/pages","sourcesContent":[".signin {\n  display: flex;\n  flex-direction: column;\n}\n"]}

@@ -1,0 +1,13 @@
+mixin signup()
+    form.signup
+        .signin__header Регистрация аккаунта
+        +input({placeholder: "Имя"})    
+        +input({placeholder: "Фамилия"})
+        +radio()
+        +input({placeholder: "Email"})    
+        +input({placeholder: "Пароль"})
+        +toggle()
+        +button({text: "Перейти к оплате", style: "ic"})
+        .signin__footer
+            .signin__text Уже есть аккаунт на Toxin
+            +button({style: "lt", text: "Войти", size: "sm"})
