@@ -26,7 +26,8 @@ block main
       .container-label= name 
       block
 
-
+  +container('header')
+    +header()
   +container('Button')
     +button({style: "lt", text: "Click Me"})
   .container
@@ -68,6 +69,7 @@ block main
     +signup()
   +container('Search Rooms')
     +search-rooms()
+
 
  
   

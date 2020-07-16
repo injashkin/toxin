@@ -1,0 +1,36 @@
+mixin header()
+  .header
+    .header__logo
+      +logo()
+
+    .header__right
+      nav.header__nav
+        ul.header__ul.header__ul_top
+          li.header__item 
+            a.header__link(href="#") О нас
+          li.header__item
+            a.header__link(href="#") Услуги
+            i.material-icons expand_more
+            ul.header__ul.header__ul_sub
+              li.header__item 
+                a.header__link(href="#") Услуга 1
+              li.header__item 
+                a.header__link(href="#") Услуга 2
+              li.header__item 
+                a.header__link(href="#") Услуга 3
+          li.header__item 
+            a.header__link(href="#") Вакансии
+          li.header__item 
+            a.header__link(href="#") Новости
+          li.header__item 
+            a.header__link(href="#") Соглашения
+            i.material-icons expand_more
+            ul.header__ul.header__ul_sub
+              li.header__item 
+                a.header__link(href="#") Соглашение 1
+              li.header__item 
+                a.header__link(href="#") Соглашение 2
+              li.header__item 
+                a.header__link(href="#") Соглашение 3
+      +button({text: 'Войти', style: 'lt'})
+      +button({text: 'Зарегистрироваться'})

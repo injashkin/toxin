@@ -1,0 +1,92 @@
+// Для стилизации выпадающего меню я использовал статью https://html5book.ru/mnogourovnevoe-vypadayushee-menu/
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 1rem;
+  align-items: center;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  //Вот эта сволочь не позволяла видеть бордюр кнопки
+  background: #ffffff;
+  //после того, как я опустил слой, все заработало
+  z-index: -1;
+
+  &__right {
+    display: flex;
+
+    & > :nth-child(2) {
+      margin-right: 2rem;
+    }
+  }
+
+  &__nav &__item:hover > &__ul_sub {
+    transform: rotateX(0deg);
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__ul {
+    //display: flex;
+    //align-items: center;
+    list-style: none;
+
+    & > * {
+      margin-right: 2rem;
+    }
+
+    &_top {
+      display: flex;
+    }
+
+    &_top > .header__item {
+      position: relative;
+    }
+
+    &_sub {
+      position: absolute;
+      z-index: 5;
+      min-width: 20rem;
+      background: white;
+      visibility: hidden;
+      opacity: 0;
+      transform-origin: 0% 0%;
+      transform: rotateX(-90deg);
+      transition: 0.1s linear;
+      margin-top: 5.9rem;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    text-decoration: none;
+    transition: 0.3s linear;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    /* Dark 50% */
+    color: rgba(31, 32, 65, 0.5);
+  }
+
+  & .material-icons {
+    font-family: Material Icons;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 20px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: rgba(31, 32, 65, 0.5);
+  }
+}
