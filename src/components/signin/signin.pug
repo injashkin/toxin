@@ -1,9 +1,9 @@
 mixin signin()    
     form.signin
-        .signin__header Войти
-        +input({placeholder: "Email"})    
-        +input({placeholder: "Пароль"})
-        +button({text: "Войти", style: "ic"})
+        +text({text: 'Войти', size: 'h1'})
+        +input({type: 'email', name: 'signin-email'}) 
+        +input({type: 'pwd', name: 'signin-pwd'})
+        +button({text: 'Войти', style: 'ic'})
         .signin__footer
-            .signin__text Нет аккаунта на Toxin?
-            +button({style: "lt", text: "Создать", size: "sm"})
+            +text({text: 'Нет аккаунта на Toxin?', size: 'body'})
+            +button({style: 'lt', text: 'Создать', size: 'sm'})
