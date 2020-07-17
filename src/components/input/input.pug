@@ -4,28 +4,27 @@
     options.placeholder - подсказка в строке ввода    
     options.arrow - добавляет стрелку в поле справа ('y' или 'yes' или 'arrow' - стрелка включена, любое другое значение отключает стрелку)
     options.size - ширина поля в символах
+    options.label - 
 
 //-link(href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet')
 
 mixin input(options = {})
     
     - let {name, type = 'text', placeholder = 'Text', arrow = ''} = options
+    
     case type            
         when 'email'
             -
-                type = type
                 inputmode = type
                 placeholder = placeholder === 'Text' ? 'Email' : placeholder
         when 'pwd'
         when 'password'
             -
-                type = type  
                 inputmode = 'number' 
                 placeholder = placeholder === 'Text' ? 'Пароль' : placeholder  
         when 'date'
             -
-                type = type   
-                placeholder = placeholder === 'Text' ? 'ДД.ММ.ГГГГ' : placeholder 
+                placeholder = placeholder === 'Text' ? 'ДД.ММ.ГГГГ' : placeholder                
         default
             -
                 type = 'text'
@@ -34,14 +33,14 @@ mixin input(options = {})
     - if (arrow === 'y' || arrow === 'yes' || arrow === 'arrow')
         - addArrow = 'text-field text-field_add-arrow-on'
     - else addArrow = 'text-field text-field_add-arrow-off'
-    .input   
-        input(   
+
+    .input 
+        input.input__input(   
             class='input__input' 
-            name=name                   
-            type=type             
+            name = name                   
+            type = type             
             placeholder=placeholder 
             inputmode=inputmode            
             )  
         div(class=addArrow)
             i.material-icons arrow_forward
-

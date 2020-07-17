@@ -1,0 +1,9 @@
+mixin select(options = {})
+    - let {name, label = 'Checkbox', type = 'checkbox'} = options
+    .select
+        label.select__label= label
+            input.select__input(
+                type = type
+                name = name            
+            )
+            span.select__span
