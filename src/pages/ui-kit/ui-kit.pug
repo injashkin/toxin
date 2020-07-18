@@ -55,8 +55,15 @@ block main
     +toggle()
   +container('Rate button')
     include ../../components/rate/rate
+
   +container('Checkbox')
-    include ../../components/checkbox/checkbox   
+    +listbox({items: ['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)']})
+  +container('Checkbox list')
+    +listbox({title:'expandable checkbox list', list: 'on', items: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь']})
+  +container('rich Checkbox Buttons')
+    +listbox({title:'rich Checkbox Buttons', items: ['Широкий коридор', 'Помощник для инвалидов']})
+
+
   +container('Slider')
     include ../../components/slider/slider   
   +container('Text Field')

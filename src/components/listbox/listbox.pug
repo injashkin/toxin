@@ -1,0 +1,25 @@
+//- 
+    options.list - выпадающий список включен ('on') список выключен ('off')
+    options.title - заголовок списка ({title: ''} - отключает заголовок)
+    options.items - 
+
+mixin listbox(options = {})
+
+    - let {list = 'on', title = '', items = []} = options
+    - let listClass = 'listbox__list'
+    - let arrow = 'listbox__arrow_rotate'
+    - if (list === 'off')
+        - listClass = 'listbox__list_' + list
+        - arrow = 'listbox__arrow'
+
+    .listbox 
+      - if (title !== '')
+          .listbox__header
+            .listbox__title= title
+            div(class=arrow)
+              i.material-icons expand_more
+
+      ul.listbox__ul(class=listClass)
+        each item in items
+          li.listbox__li
+            +select({label: item}) 

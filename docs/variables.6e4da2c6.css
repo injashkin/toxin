@@ -1,0 +1,52 @@
+@charset "UTF-8";
+/*Стандартные цвета*/
+@font-face {
+  font-family: "Material-Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../materialIcons-regular.4a54d423.eot");
+  /* For IE6-8 */
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url("../materialIcons-regular.ea1c09f2.woff") format("woff"), url("../materialIcons-regular.7f257eac.ttf") format("truetype");
+}
+/* montserrat-regular - latin_cyrillic */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../montserrat-v14-latin_cyrillic-regular.e62df61f.eot");
+  /* IE9 Compat Modes */
+  src: local("Montserrat Regular"), local("Montserrat-Regular"), url("../montserrat-v14-latin_cyrillic-regular.e62df61f.eot?#iefix") format("embedded-opentype"), url("../montserrat-v14-latin_cyrillic-regular.f402552c.woff") format("woff"), url("../montserrat-v14-latin_cyrillic-regular.de35258f.ttf") format("truetype"), url("../montserrat-v14-latin_cyrillic-regular.a0ad2328.svg#Montserrat") format("svg");
+  /* Legacy iOS */
+}
+/* montserrat-700 - latin_cyrillic */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../montserrat-v14-latin_cyrillic-700.7e9f0798.eot");
+  /* IE9 Compat Modes */
+  src: local("Montserrat Bold"), local("Montserrat-Bold"), url("../montserrat-v14-latin_cyrillic-700.7e9f0798.eot?#iefix") format("embedded-opentype"), url("../montserrat-v14-latin_cyrillic-700.c92bbaca.woff") format("woff"), url("../montserrat-v14-latin_cyrillic-700.23ba7728.ttf") format("truetype"), url("../montserrat-v14-latin_cyrillic-700.3c66659a.svg#Montserrat") format("svg");
+  /* Legacy iOS */
+}
+/* open-sans-regular - latin_cyrillic */
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../open-sans-v17-latin_cyrillic-regular.609d3f14.eot");
+  /* IE9 Compat Modes */
+  src: local("Open Sans Regular"), local("OpenSans-Regular"), url("../open-sans-v17-latin_cyrillic-regular.609d3f14.eot?#iefix") format("embedded-opentype"), url("../open-sans-v17-latin_cyrillic-regular.2c32d5c9.woff2") format("woff2"), url("../open-sans-v17-latin_cyrillic-regular.ff111bf4.woff") format("woff"), url("../open-sans-v17-latin_cyrillic-regular.2aacc43a.ttf") format("truetype"), url("../open-sans-v17-latin_cyrillic-regular.261dcc78.svg#OpenSans") format("svg");
+  /* Legacy iOS */
+}
+/* open-sans-700 - latin_cyrillic */
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../open-sans-v17-latin_cyrillic-700.c40ea2cf.eot");
+  /* IE9 Compat Modes */
+  src: local("Open Sans Bold"), local("OpenSans-Bold"), url("../open-sans-v17-latin_cyrillic-700.c40ea2cf.eot?#iefix") format("embedded-opentype"), url("../open-sans-v17-latin_cyrillic-700.51bc19b8.woff2") format("woff2"), url("../open-sans-v17-latin_cyrillic-700.9d86f466.woff") format("woff"), url("../open-sans-v17-latin_cyrillic-700.0511f6aa.ttf") format("truetype"), url("../open-sans-v17-latin_cyrillic-700.c1353141.svg#OpenSans") format("svg");
+  /* Legacy iOS */
+}
+
+/*# sourceMappingURL=../variables.6e4da2c6.css.map */

@@ -2,7 +2,6 @@
   display: block;
   position: relative;
   padding-left: 3rem;
-  margin-bottom: 1.5rem;
   cursor: pointer;
   user-select: none;
   font-family: Montserrat;
@@ -37,7 +36,7 @@
   position: absolute;
   display: none;
   left: 0.6rem;
-  top: 0.2rem;
+  top: 0.3rem;
   width: 0.4rem;
   height: 0.7rem;
   border: solid #000000;
