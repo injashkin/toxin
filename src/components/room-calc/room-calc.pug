@@ -1,0 +1,49 @@
+//- 
+    options.number - номер
+    options.luxe - люкс опции (true - да, false - нет)
+    options.rate - стоимость номера в сутки
+    options.arrival - дата прибытия
+    options.departure - дата выезда
+    options.discount - скидка
+    options.toll - сбор за услуги  
+    options.feeAddService - сбор за доп. услуги
+
+mixin room-calc(options = {})
+
+    - let {number, luxe, rate, arrival, departure, discount, toll, feeAddService} = options
+
+    .room-calc
+        .room-calc__header
+            .room-calc__number                
+                h1 № #{number}                
+                if (luxe)
+                   h3 Люкс
+            .room-calc__rate
+                h2 #{rate} ₽
+                p в сутки
+        .room-calc__dade-picker
+            .room-calc__arrival-date                
+                h3 Прибытие
+                +date()
+            .room-calc__departure-date
+                h3 Выезд
+                +date()
+        h3 Гости
+        +dropdown()
+        .room-calc__result
+            - let day = 4
+            p #{rate}₽ x #{day} суток
+            - let result = rate * day
+            p #{result}₽
+        .room-calc__toll
+            p Сбор за услуги: скидка #{discount}
+            p #{toll}₽
+        .room-calc__fee
+            p Сбор за дополнительные услуги
+            p #{feeAddService}
+        .room-calc__total
+            h2 Итого
+            - let total = result - discount + toll + feeAddService
+            h2 #{total}₽
+
+        +button({text: "Забронировать", style: "ic"})      
