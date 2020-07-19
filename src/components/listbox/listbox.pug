@@ -1,11 +1,14 @@
 //- 
     options.list - выпадающий список включен ('on') список выключен ('off')
     options.title - заголовок списка ({title: ''} - отключает заголовок)
-    options.items - 
+    options.items[n] - массив списка элементов
+    options.items[n].name - массив списка названий элементов
+    options.items[n].desc - массив списка расширенного описания элементов
+    options.type - тип списка ('check' - чекбоксы, 'radio' - радиокнопки, 'ul' - маркированный список)
 
 mixin listbox(options = {})
-
-    - let {list = 'on', title = '', items = []} = options
+  
+    - let {list = 'on', title = '', items = [], type = 'check'} = options
     - let listClass = 'listbox__list'
     - let arrow = 'listbox__arrow_rotate'
     - if (list === 'off')
@@ -13,13 +16,27 @@ mixin listbox(options = {})
         - arrow = 'listbox__arrow'
 
     .listbox 
-      - if (title !== '')
-          .listbox__header
-            .listbox__title= title
-            div(class=arrow)
-              i.material-icons expand_more
+        if (title !== '')
+            .listbox__header
+              .listbox__title= title
+              div(class=arrow)
+                i.material-icons expand_more
 
-      ul.listbox__ul(class=listClass)
-        each item in items
-          li.listbox__li
-            +select({label: item}) 
+        ul.listbox__ul(class=listClass)
+
+            each item in items
+                if (type === 'ul')
+
+                    .listbox__bulleted
+                        ul.listbox__bulleted-ul
+                            li.listbox__bulleted-li= item
+                            
+                else
+                    if (typeof item === 'object')
+                        li.listbox__li
+                            .listbox__name
+                                +select({label: item.name, inherit: true})
+                            p.listbox__desc= item.desc
+                    else 
+                        li.listbox__li
+                            +select({label: item}) 

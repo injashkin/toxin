@@ -35,6 +35,29 @@
 .listbox__li {
   margin-bottom: 1.2rem;
 }
+.listbox__name {
+  margin-top: 1rem;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height, or 129% */
+  /* Dark 75% */
+  color: rgba(31, 32, 65, 0.75);
+}
+.listbox__desc {
+  margin-left: 3rem;
+  margin-top: 0.7rem;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  /* or 117% */
+  /* Dark 50% */
+  color: rgba(31, 32, 65, 0.5);
+}
 .listbox__arrow_rotate {
   transform: rotate(-180deg);
 }
@@ -46,6 +69,33 @@
   line-height: 20px;
   color: rgba(31, 32, 65, 0.5);
   text-align: center;
+}
+.listbox__bulleted-ul {
+  list-style: none;
+  padding-left: 3rem;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
+  /* Dark 75% */
+  color: rgba(31, 32, 65, 0.75);
+}
+.listbox__bulleted-li {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-bottom: 1rem;
+}
+.listbox__bulleted-li:before {
+  position: absolute;
+  left: -2.1rem;
+  width: 1rem;
+  height: 1rem;
+  background: rgba(31, 32, 65, 0.25);
+  border-radius: 50%;
+  content: " ";
 }
 
 /*# sourceMappingURL=/listbox.f8f7e2aa.css.map */

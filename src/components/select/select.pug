@@ -1,7 +1,19 @@
+//-
+    options.name - 
+    options.label - 
+    options.type -
+    options.inherit - наследует стили родителя
+
 mixin select(options = {})
-    - let {name, label = 'Checkbox', type = 'checkbox'} = options
+
+    - let {name, label = 'Checkbox', type = 'checkbox', inherit = false} = options
+    - if (inherit === true)
+        - classes = 'select__label_inherit'
+    -else
+        - classes = 'select__label'
+
     .select
-        label.select__label= label
+        label(class=classes)= label
             input.select__input(
                 type = type
                 name = name            

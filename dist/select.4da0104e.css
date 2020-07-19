@@ -13,6 +13,13 @@
   /* Dark 50% */
   color: rgba(31, 32, 65, 0.5);
 }
+.select__label_inherit {
+  display: block;
+  position: relative;
+  padding-left: 3rem;
+  cursor: pointer;
+  user-select: none;
+}
 .select__input {
   position: absolute;
   opacity: 0;
