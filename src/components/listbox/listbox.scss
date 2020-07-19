@@ -22,7 +22,8 @@
     list-style: none;
   }
 
-  &__list {
+  &__drop {
+    margin: 0;
     transition: 0.1s linear;
     //min-width: 20rem;
     //transform-origin: 0% 0%;
@@ -95,7 +96,9 @@
 
   &__bulleted-ul {
     list-style: none;
-    padding-left: 3rem;
+    padding: 0;
+    margin: 0;
+    padding-left: 2rem;
 
     font-family: Montserrat;
     font-style: normal;
@@ -118,7 +121,7 @@
 
   &__bulleted-li:before {
     position: absolute;
-    left: -2.1rem;
+    left: -2rem;
     width: 1rem;
     height: 1rem;
     background: rgba(31, 32, 65, 0.25);

@@ -1,36 +1,38 @@
 //- 
-    options.list - выпадающий список включен ('on') список выключен ('off')
+    options.type - тип списка ('drop' - выпадающий, 'fix' - фиксированный)
+    options.drop - выпадающий список открыт ('true') или закрыт ('false')
+    options.content - тип списка ('check' - чекбоксы, 'radio' - радиокнопки, 'ul' - маркированный список)
     options.title - заголовок списка ({title: ''} - отключает заголовок)
     options.items[n] - массив списка элементов
     options.items[n].name - массив списка названий элементов
     options.items[n].desc - массив списка расширенного описания элементов
-    options.type - тип списка ('check' - чекбоксы, 'radio' - радиокнопки, 'ul' - маркированный список)
 
 mixin listbox(options = {})
   
-    - let {list = 'on', title = '', items = [], type = 'check'} = options
-    - let listClass = 'listbox__list'
+    - let {drop = 'true', title = '', items = [], content = 'check', type = 'fix'} = options
+    - let dropClass = 'listbox__drop'
     - let arrow = 'listbox__arrow_rotate'
-    - if (list === 'off')
-        - listClass = 'listbox__list_' + list
+    - if (drop === 'false')
+        - dropClass = 'listbox__drop_' + drop
         - arrow = 'listbox__arrow'
 
     .listbox 
         if (title !== '')
             .listbox__header
               .listbox__title= title
-              div(class=arrow)
-                i.material-icons expand_more
+              if (type === 'drop' && drop === 'true')
+                  div(class=arrow)
+                      i.material-icons expand_more
 
-        ul.listbox__ul(class=listClass)
+        ul.listbox__ul(class=dropClass)
 
             each item in items
-                if (type === 'ul')
+                if (content === 'ul')
 
                     .listbox__bulleted
                         ul.listbox__bulleted-ul
                             li.listbox__bulleted-li= item
-                            
+
                 else
                     if (typeof item === 'object')
                         li.listbox__li

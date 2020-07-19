@@ -59,11 +59,11 @@ block main
   +container('Checkbox')
     +listbox({items: ['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)']})
   +container('Checkbox list')
-    +listbox({title:'expandable checkbox list', list: 'on', items: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь']})
+    +listbox({title:'expandable checkbox list', type: 'drop', items: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь']})
   +container('rich Checkbox Buttons')
     +listbox({title:'rich Checkbox Buttons', items: [{name: 'Широкий коридор', desc: 'Ширина коридоров в номере не менее 91 см.'}, {name: 'Помощник для инвалидов', desc: 'На 1 этаже вас встретит специалист  и проводит до номера.'}]})
   +container('Bullet list')
-    +listbox({type: 'ul', items: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})
+    +listbox({title:'Bullet list', content: 'ul', items: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})
 
   +container('Slider')
     include ../../components/slider/slider   
