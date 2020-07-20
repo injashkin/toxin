@@ -1,0 +1,17 @@
+//- 
+    options.colors - массив элементов
+    options.colors[n].name - имя цвета элемента
+    options.colors[n].hex - шестнадцатеричное значение цвета
+    options.colors[n].value - значение цвета в любом формате
+
+mixin color-table(options) 
+    .color-table    
+        each item in options
+            - var {name = '', hex = '', value = ''} = item    
+                - var color = ''      
+                - color += 'background: ' + value
+                    .color-table__item    
+                        .color-table__rectangle(style!=color)        
+                        .color-table__label
+                            .color-table__name= name
+                            .color-table__name= hex

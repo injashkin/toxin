@@ -1,0 +1,1 @@
+import "./color-table.scss";
