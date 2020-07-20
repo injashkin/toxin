@@ -1,0 +1,25 @@
+extends ../template    
+
+block title
+  |  Страница Colors & Type
+
+block main   
+    .color-types
+
+        .color-types__logo
+            include ../../theme/logo-dark-25.svg
+
+        .color-types__color
+            -
+                let colors = [
+                    {name: "Dark Shade 100%", hex: "#1F2041",  value: "#1F2041"},
+                    {name: 'Dark Shade 75%', hex: '#1F2041',  value: 'rgba(31, 32, 65, 0.75)'},      
+                    {name: 'Dark Shade 50%', hex: '#1F2041',  value: 'rgba(31, 32, 65, 0.5)'},
+                    {name: 'Dark Shade 25%', hex: '#1F2041',  value: 'rgba(31, 32, 65, 0.25)'},
+                    {name: 'Dark Shade 5%', hex: '#1F2041',  value: 'rgba(31, 32, 65, 0.05)'}, 
+                    {name: 'Purple', hex: '#BC9CFF',  value: '#BC9CFF'}, 
+                    {name: 'Green', hex: '#BC9CFF',  value: '#6FCF97'}                                   
+                ]
+            +color-table(colors)
+        .color-types__types
+            +types

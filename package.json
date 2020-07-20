@@ -4,9 +4,8 @@
   "description": "\"Учебный проект по верстке лендинга\"",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel src/pages/ui-kit/ui-kit.pug src/pages/landing/landing.pug --open",
-    "build": "parcel build src/pages/ui-kit/ui-kit.pug src/pages/landing/landing.pug -d docs --public-url ../ --no-minify"
+    "start": "parcel serve ./src/index.html --open",
+    "build": "parcel build ./src/index.html -d docs --public-url ../docs --no-minify"
   },
   "repository": {
     "type": "git",
@@ -30,6 +29,7 @@
     "src": "^1.1.2"
   },
   "devDependencies": {
+    "parcel": "^2.0.0-beta.1",
     "pug": "^3.0.0",
     "sass": "^1.26.8"
   }

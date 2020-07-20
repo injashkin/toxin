@@ -1,0 +1,46 @@
+.signin {
+  display: flex;
+  flex-direction: column;
+  width: 38rem;
+  padding: 4rem 3rem 3rem;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.signin__header {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  /* identical to box height */
+  /* Dark 100% */
+  color: #1f2041;
+}
+.signin > :nth-child(even) {
+  margin-top: 1rem;
+}
+.signin__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.signin .signin__footer {
+  margin-top: 2rem;
+}
+.signin__text {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height, or 129% */
+  color: #000000;
+}
+.signin > * {
+  margin-bottom: 1rem;
+}
+
+/*# sourceMappingURL=../docs/signin.be6f6d7f.css.map */

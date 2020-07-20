@@ -1,0 +1,43 @@
+.input {
+  display: inline-block;
+  position: relative;
+}
+.input__input {
+  background: #ffffff;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 1.2rem 1.5rem;
+  width: 100%;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+.input__input:hover {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+}
+.input_add-arrow-off {
+  display: none;
+}
+.input_add-arrow-on {
+  position: absolute;
+  top: 50%;
+  left: 95%;
+  transform: translate(-50%, -50%);
+}
+.input_add-arrow-on .material-icons {
+  cursor: pointer;
+  font-family: Material Icons;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #bc9cff;
+}
+
+/*# sourceMappingURL=../docs/input.003ab47c.css.map */
