@@ -1,6 +1,6 @@
 // JS
 //import './js/'
-//import './pug/utils/mixins'
+import './pages/scripts.js'
 
 // SCSS
-import './theme/main.scss'
+//import './theme/main.scss'

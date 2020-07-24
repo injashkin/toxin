@@ -10,6 +10,8 @@ const PATHS = {
   src: path.join(__dirname, "../src"),
   dist: path.join(__dirname, "../dist"),
   assets: "assets/",
+  outPathFonts: "fonts/",
+  outPathImg: "img/",
 };
 
 // Pages const for HtmlWebpackPlugin
@@ -48,6 +50,7 @@ module.exports = {
   },
   module: {
     rules: [
+      // PUG
       {
         test: /\.pug$/,
         loader: "pug-loader",
@@ -55,25 +58,78 @@ module.exports = {
           pretty: true, //расставляет отступы и переносы строк в html коде
         },
       },
+      // JS
       {
         test: /\.js$/,
         loader: "babel-loader",
         exclude: "/node_modules/",
       },
+      // Шрифты
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
         loader: "file-loader",
         options: {
           name: "[name].[ext]",
+          outputPath: `${PATHS.outPathFonts}`,
         },
       },
+      // Изображения
       {
-        test: /\.(png|jpg|gif|svg)$/,
+        test: /\.(png|jpg|gif)$/,
         loader: "file-loader",
         options: {
           name: "[name].[ext]",
+          outputPath: `${PATHS.outPathImg}`,
         },
       },
+      // Отделяет шрифты svg из каталога src/theme/fonts/ от других изображений svg НЕ СМОГ НАСТРОИТЬ
+      {
+        test: /\.svg$/,
+        loader: "file-loader",
+        options: {
+          name: "[name].[ext]",
+          //outputPath: "fonts2",
+          /*
+          outputPath: (url, resourcePath, context) => {
+            // `resourcePath` - это оригинальный абсолютный путь к асету
+            // `context` - это каталог, где хранится асет (`rootContext`) или опция `context`
+
+            // Чтобы получить относительный путь, вы можете использовать
+            // const relativePath = path.relative(context, resourcePath);
+
+            //if (/fonts\.svg/.test(resourcePath)) {
+            //  return `image_output_path/${url}`;
+            //}
+
+            if (/fonts/.test(context)) {
+              return `fonts/${url}`;
+            }
+
+            return `img/${url}`;
+          },
+          */
+        },
+      },
+      // CSS
+      {
+        test: /\.css$/,
+        use: [
+          "style-loader",
+          MiniCssExtractPlugin.loader,
+          {
+            loader: "css-loader",
+            options: { sourceMap: true },
+          },
+          {
+            loader: "postcss-loader",
+            options: {
+              sourceMap: true,
+              config: { path: `./postcss.config.js` },
+            },
+          },
+        ],
+      },
+      // SCSS
       {
         test: /\.scss$/,
         use: [
@@ -95,26 +151,8 @@ module.exports = {
             options: { sourceMap: true },
           },
         ],
-      },
-      {
-        test: /\.css$/,
-        use: [
-          "style-loader",
-          MiniCssExtractPlugin.loader,
-          {
-            loader: "css-loader",
-            options: { sourceMap: true },
-          },
-          {
-            loader: "postcss-loader",
-            options: {
-              sourceMap: true,
-              config: { path: `./postcss.config.js` },
-            },
-          },
-        ],
-      },
-    ],
+      } /* end SCSS */,
+    ] /* end rules */,
   },
   resolve: {
     alias: {
@@ -127,7 +165,7 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
-      { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
+      // { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
       { from: `${PATHS.src}/static`, to: "" },
     ]),
 

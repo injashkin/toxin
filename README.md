@@ -9,3 +9,9 @@
 - О том, как устанавливать шрифты в этот проект информация [здесь](./src/theme/fonts/READMI.md)
 
 - [Руководство по Material Icons от Google](https://google.github.io/material-design-icons/)
+
+## Webpack
+
+Шаблон Webpack я взял готовый из [репозитория GitHub](https://github.com/vedees/webpack-template). Были удалены настройки для Vue и теперь адаптирую под данный проект.
+
+## Структура проекта
