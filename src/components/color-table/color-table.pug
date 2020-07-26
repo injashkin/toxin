@@ -11,7 +11,6 @@ mixin color-table(options)
                 - var color = ''      
                 - color += 'background: ' + value
                     .color-table__item    
-                        .color-table__rectangle(style!=color)        
-                        .color-table__label
-                            .color-table__name= name
-                            .color-table__name= hex
+                        .color-table__rectangle(style=color)     
+                        .color-table__name= name
+                        .color-table__name= hex

@@ -1,67 +1,66 @@
-.color-types__types {
-  align-self: start;
-  padding-top: 14.5rem;
-  margin-right: 20.5rem;
-}
-
-.type-item {
+.types-table {
   display: grid;
-  grid-template-columns: 15% 85%;
-  gap: 2rem;
-  margin-bottom: 5rem;
-  width: 40rem;
+  grid-template-columns: 4rem 31.1rem;
+  grid-template-rows: 10rem 8.8rem 5.2rem 5rem;
+  grid-column-gap: 3rem;
+  grid-row-gap: 1rem;
+  justify-content: flex-end;
 
-  &__type {
-    padding-right: 1rem;
-
-    &_h1 {
-      @include Montserrat(normal, 2.4rem, 2.9rem);
-      text-align: right;
-      text-transform: uppercase;
-      color: $dark-25;
-    }
-
-    &_h2 {
-      @include Montserrat(normal, 1.9rem, 2.3rem);
-      text-align: right;
-      text-transform: uppercase;
-      color: $dark-25;
-    }
-
-    &_h3 {
-      @include Montserrat(normal, 1.2rem, 1.5rem);
-      text-align: right;
-      text-transform: uppercase;
-      color: $dark-25;
-    }
-
-    &_body {
-      @include Montserrat(normal, 1.4rem, 2.4rem);
-      text-align: right;
-      color: $dark-25;
-    }
+  @media screen and (max-width: 1200px) {
+    //justify-content: start;
   }
 
-  &__sample {
-    &_h1 {
-      @include Quicksand(bold, 2.4rem, 3rem);
-      color: dark;
+  & > :nth-child(odd) {
+    text-align: right;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    /* Dark 25% */
+    color: rgba(31, 32, 65, 0.25);
+    white-space: pre-wrap;
+  }
+
+  & > :nth-child(1) {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  & > :nth-child(2) {
+    margin-right: -3rem; //Самое непонятное, что я сделал, чтобы совпало с дизайном.
+    //Вопрос: Ошибка дизайна, или так задумано?
+  }
+
+  & > :nth-child(3) {
+    font-size: 19px;
+    line-height: 23px;
+  }
+
+  & > :nth-child(5) {
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+  }
+
+  & > :nth-child(7) {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .types-table {
+    display: block;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    & > :nth-child(odd) {
+      text-align: center;
     }
 
-    &_h2 {
-      @include Quicksand(bold, 1.9rem, 2.4rem);
-      color: $dark;
-    }
-
-    &_h3 {
-      @include Montserrat(bold, 1.2rem, 1.5rem);
-      text-transform: uppercase;
-      color: $dark;
-    }
-
-    &_body {
-      @include Montserrat(normal, 1.4rem, 2.4rem);
-      color: &dark-75;
+    & > :nth-child(2n) {
+      text-align: center;
+      margin-bottom: 1rem;
     }
   }
 }

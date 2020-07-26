@@ -1,16 +1,10 @@
-mixin type(type, sample)
-
-    - 
-      classes1 = "type-item__type" + " type-item__type_" + type
-      classes2 = "type-item__sample" + " type-item__sample_" + type
-
-    .type-item
-        div(class=classes1)= type
-        div(class=classes2)= sample
-
 mixin types()
-
-    +type("h1", "This one is the sub-section or widget title")
-    +type("h2", "Next one is the item title inside widgets")
-    +type("h3", "This is a label or CTA text")
-    +type("Body", "This is the body text which is used for most of the design, like paragraphs, lists, etc.")
+    .types-table
+        .types-table__item_h1 H1
+        h1 This one is the sub-section or widget title      
+        .types-table__item_h2 H2
+        h2 Next one is the item title inside widgets      
+        .types-table__item_h3 H3
+        h3 This is a label or CTA text      
+        .types-table__item_body Body
+        p This is the body text which is used for most of the design, like paragraphs, lists, etc.

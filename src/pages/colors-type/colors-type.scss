@@ -1,12 +1,15 @@
 @import "./src/theme/variables.scss";
 
 .color-types {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 39.6% 45.4%;
   position: relative;
-  min-height: 90rem;
+  padding-top: 13.5rem;
+
+  & > :nth-child(3) {
+    padding-top: 1rem;
+  }
 
   &__logo {
     position: absolute;
@@ -14,9 +17,14 @@
     left: 3rem;
   }
 
-  &__color {
+  @media screen and (max-width: 900px) {
     display: flex;
     flex-direction: column;
-    margin-left: 14rem;
+    align-items: center;
+
+    & > :nth-child(3) {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
   }
 }

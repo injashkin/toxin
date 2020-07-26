@@ -4,27 +4,6 @@
 @import "../components/text-field/text-field";
 @import "../components/dropdown/dropdown";
 
-.color-types {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-  min-height: 90rem;
-
-  &__logo {
-    position: absolute;
-    top: 3rem;
-    left: 3rem;
-  }
-
-  &__color {
-    display: flex;
-    flex-direction: column;
-    margin-left: 14rem;
-  }
-}
-
 .container {
   margin: 1rem;
 }
