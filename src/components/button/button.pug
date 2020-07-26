@@ -3,9 +3,9 @@
     +button({Опции})(Атрибуты)
     
     Опции вызываются в виде:
-        ({ключ: "значение", ключ: "значение", ...})
+        ({ключ: 'значение', ключ: 'значение', ...})
     Пример вызова атрибутов:
-        (class="имя-класса" href="url-адрес" ...)
+        (class='имя-класса' href='url-адрес' ...)
 
     Опции:
     options.text - текст на кнопке
@@ -18,11 +18,11 @@
 mixin button(options = {})
     
     -
-        let {text = "", size = "bg", style = "st", color = "st"} = options
-        var classes = "button " + "button__style_" + style + " button__color_" + color
-        var pict = style == "ic" ? "arrow_forward" : ""
+        let {text = '', size = 'bg', style = 'st', color = 'st'} = options
+        var classes = `button button_style-${style} button_color-${color} button_size-${size}`
+        var pict = style == 'ic' ? 'arrow_forward' : ''
 
-    button(class=classes class!=attributes.class)
+    button(class=classes class=attributes.class)
         .button__text= text
         .button__icon
             i.material-icons= pict

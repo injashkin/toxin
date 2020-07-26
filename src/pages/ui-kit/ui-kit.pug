@@ -16,10 +16,14 @@ block main
 
   +container('header')
     +header()
+  +container('header')
+    +header({username: 'Юлий Цезарь'})
+  +container('footer')
+    +footer()
   +container('Button')
-    +button({style: "lt", text: "Click Me"})
+    +button({style: "lt", text: "Войти"})
   .container
-    +button({text: "Зарегистрироваться"})
+    +button({text: "Зарегистрироваться", size: 'sm'})
   .container
     +button({style: "ic", text: "Перейти к оплате"})
   .container

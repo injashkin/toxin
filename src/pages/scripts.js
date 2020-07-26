@@ -18,5 +18,6 @@ import "../components/logo/logo.js";
 import "../components/select/select.js";
 import "../components/listbox/listbox.js";
 import "../components/room-calc/room-calc.js";
+import "../components/footer/footer.js";
 
 import "../theme/main.js";

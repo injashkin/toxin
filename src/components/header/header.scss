@@ -2,7 +2,7 @@
 
 .header {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   width: 100%;
   padding: 1.25rem;
   align-items: center;
@@ -12,12 +12,22 @@
   //после того, как я опустил слой, все заработало
   z-index: -1;
 
+  &__logo {
+    display: flex;
+    flex-basis: 24.2%;
+    justify-content: center;
+  }
+
   &__right {
     display: flex;
+    justify-content: flex-end;
+    flex-basis: 65.2%;
+    //padding-left: 2.3rem;
+  }
 
-    & > :nth-child(2) {
-      margin-right: 2rem;
-    }
+  &__nav {
+    display: flex;
+    margin-top: 0.1rem;
   }
 
   &__nav &__item:hover > &__ul_sub {
@@ -27,8 +37,7 @@
   }
 
   &__ul {
-    //display: flex;
-    //align-items: center;
+    align-self: center;
     list-style: none;
 
     & > * {
@@ -54,6 +63,16 @@
       transform: rotateX(-90deg);
       transition: 0.1s linear;
       margin-top: 5.9rem;
+    }
+  }
+
+  &__sign {
+    display: flex;
+    margin-left: 0.2rem;
+
+    // Промежуток между кнопками
+    & > :first-child {
+      margin-right: 2rem;
     }
   }
 
@@ -88,5 +107,16 @@
     text-align: center;
 
     color: rgba(31, 32, 65, 0.5);
+  }
+
+  &__vertical-bar {
+    height: 3rem;
+    width: 1px;
+    background: rgba(31, 32, 65, 0.1);
+  }
+
+  &__username {
+    display: flex;
+    align-items: center;
   }
 }

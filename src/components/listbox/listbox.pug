@@ -1,11 +1,27 @@
-//- 
+//- Компонент выводит информацию в виде списка. Элементы списка могут быть выведены в виде чекбоксов, 
+    радиокнопок, ссылок, маркированных элементов, простого текста. Списку можно задать заголовок.
+    Список может быть выпадающим или фиксированным. 
+    Вызов компонента:
+    
+    +listbox({title: 'Навигация', items: navigation})
+    
+    где `navigation` может быть задана в виде массива объектов, например:
+
+    let navigation = [
+        {name: 'О нас', link: '/about.html'},
+        {name: 'Новости', link: '/news.html'},
+        {name: 'Служба поддержки', link: '/support.html'},
+        {name: 'Услуги', link: '/services.html'}
+    ]
+    ---
     options.type - тип списка ('drop' - выпадающий, 'fix' - фиксированный)
     options.drop - выпадающий список открыт ('true') или закрыт ('false')
-    options.content - тип списка ('check' - чекбоксы, 'radio' - радиокнопки, 'ul' - маркированный список)
+    options.content - тип списка ('check' - чекбоксы, 'radio' - радиокнопки, 'ul' - маркированный список 'txt' - текст)
     options.title - заголовок списка ({title: ''} - отключает заголовок)
     options.items[n] - массив списка элементов
     options.items[n].name - массив списка названий элементов
     options.items[n].desc - массив списка расширенного описания элементов
+    options.items[n].link - массив ссылок, соответствующих названиям элементов
 
 mixin listbox(options = {})
   
@@ -28,17 +44,19 @@ mixin listbox(options = {})
 
             each item in items
                 if (content === 'ul')
-
                     .listbox__bulleted
                         ul.listbox__bulleted-ul
                             li.listbox__bulleted-li= item
+                if (content === 'txt')
+                    li.listbox__text= item                       
 
                 else
-                    if (typeof item === 'object')
-                        li.listbox__li
+                    li.listbox__li
+                        if (typeof item === 'object' && item.desc !== undefined)                        
                             .listbox__name
                                 +select({label: item.name, inherit: true})
                             p.listbox__desc= item.desc
-                    else 
-                        li.listbox__li
+                        if (typeof item === 'object' && item.link !== undefined)                                                  
+                            a.listbox__a(href= item.link)= item.name
+                        else                         
                             +select({label: item}) 
