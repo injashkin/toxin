@@ -1,3 +1,5 @@
+@import "fonts/font-awesome/fontawesome";
+
 /*Стандартные цвета*/
 $dark: #1f2041;
 $dark-75: rgba(31, 32, 65, 0.75);
@@ -176,4 +178,17 @@ $green: #6fcf97;
     /* Safari, Android, iOS */
       url("../theme/fonts/open-sans-v17-latin_cyrillic-700.svg#OpenSans")
       format("svg"); /* Legacy iOS */
+}
+
+/* Font Awesome 5 Brands 400 */
+@font-face {
+  font-family: "fa-brands"; //"Open Sans"
+  font-style: normal;
+  font-weight: 400;
+  src: url("../theme/fonts/fa-brands-400.eot");
+  src: local("Open Sans Bold"), local("OpenSans-Bold"),
+    url("../theme/fonts/fa-brands-400.eot?#iefix") format("embedded-opentype"),
+    url("../theme/fonts/fa-brands-400.woff") format("woff"),
+    url("../theme/fonts/fa-brands-400.ttf") format("truetype"),
+    url("../theme/fonts/fa-brands-400.svg#OpenSans") format("svg");
 }

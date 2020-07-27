@@ -30,13 +30,15 @@ mixin input(options = {})
                 type = 'text'
                 inputmode = 'text'
 
+    if (name === undefined)
+        - placeholder = 'Введите имя поля для обработчика'
+
     - if (arrow === 'y' || arrow === 'yes' || arrow === 'arrow')
         - addArrow = 'text-field text-field_add-arrow-on'
     - else addArrow = 'text-field text-field_add-arrow-off'
 
     .input 
-        input.input__input(   
-            class='input__input' 
+        input.input__input(               
             name = name                   
             type = type             
             placeholder=placeholder 
