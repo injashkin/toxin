@@ -194,5 +194,10 @@ module.exports = {
       filename: "./colors-type.html",
       inject: true,
     }),
+    new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/pages/headers-footers/headers-footers.pug`,
+      filename: "./headers-footers.html",
+      inject: true,
+    }),
   ],
 };
