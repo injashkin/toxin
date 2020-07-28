@@ -1,1 +1,1 @@
-import "./signin.scss";
+import "./signin.js";

@@ -1,15 +1,15 @@
-@import "./src/theme/variables.scss";
-@import "../components/types/types.scss";
-@import "../components/pagination/pagination";
-@import "../components/text-field/text-field";
-@import "../components/dropdown/dropdown";
+@import "../../variables.scss";
+//@import "../components/types/types.scss";
+//@import "../components/pagination/pagination";
+//@import "../components/text-field/text-field";
+//@import "../components/dropdown/dropdown";
 
 .container {
   margin-bottom: 1rem;
 }
 
 .container-label {
-  @include font-body(bold, 1.2rem, 1.5rem);
+  //@include font-body(bold, 1.2rem, 1.5rem);
   text-transform: uppercase;
   color: $dark;
   margin: 0.5rem;
