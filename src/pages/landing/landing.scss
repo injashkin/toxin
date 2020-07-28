@@ -1,8 +1,23 @@
-//@import "macbook/macbook.scss";
+.landing {
+  background: url("./img/landing/image 3.jpg") no-repeat;
+  background-size: 100%;
 
-.landing-body {
-  background: url(image.jpg);
-}
-.container-macbook {
-  margin: 0;
+  &__frame {
+    position: relative;
+    height: 83rem;
+  }
+
+  &__search-rooms {
+    position: absolute;
+    top: 7rem;
+    left: 14rem;
+  }
+
+  &__slogan {
+    position: absolute;
+    top: 76rem;
+    left: 100.6rem;
+    width: 30rem;
+    text-align: right;
+  }
 }

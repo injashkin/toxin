@@ -204,5 +204,15 @@ module.exports = {
       filename: "./signin.html",
       inject: true,
     }),
+    new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/pages/signup/signup.pug`,
+      filename: "./signup.html",
+      inject: true,
+    }),
+    new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/pages/landing/landing.pug`,
+      filename: "./landing.html",
+      inject: true,
+    }),
   ],
 };
