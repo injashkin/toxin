@@ -199,5 +199,10 @@ module.exports = {
       filename: "./headers-footers.html",
       inject: true,
     }),
+    new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/pages/signin/signin.pug`,
+      filename: "./signin.html",
+      inject: true,
+    }),
   ],
 };
