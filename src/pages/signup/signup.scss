@@ -1,0 +1,16 @@
+.signup-pg {
+  background: url("./img/image 4.png") no-repeat;
+  background-size: 100%;
+
+  &__frame {
+    position: relative;
+    height: 68.5rem;
+  }
+
+  &__signup {
+    position: absolute;
+    left: 50.2%;
+    transform: translate(-50%, 0);
+    top: 1.9rem;
+  }
+}

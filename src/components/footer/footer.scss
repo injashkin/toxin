@@ -1,0 +1,109 @@
+.footer {
+  background: #ffffff;
+  width: 100%;
+
+  &__widgets {
+    box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
+    display: flex;
+    justify-content: flex-end;
+    height: 26.8rem;
+    padding-top: 10.4rem;
+
+    & > :last-child {
+      flex-basis: 27.8%;
+    }
+
+    & > :first-child {
+      margin-top: -0.4rem;
+      margin-right: 4rem;
+    }
+
+    & > :nth-child(n + 2):not(:last-child) {
+      flex-basis: 12.5%; //13.2%
+      margin-right: 2rem;
+    }
+  }
+  &__brand {
+    & > :first-child {
+      margin-bottom: 1.7rem;
+    }
+  }
+
+  &__brand,
+  &__subscribe > :first-child {
+    width: 26rem;
+  }
+
+  &__subscribe > :first-child {
+    margin-bottom: 2.3rem;
+  }
+
+  &__copyright-bar {
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    //border-top: 1px;
+    height: 7.1rem;
+  }
+
+  &__copyright-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    flex-basis: 80.4%;
+    margin-right: 0.2rem;
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    & > *:not(:last-child) {
+      margin-right: 2.2rem;
+    }
+  }
+
+  &_mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ffffff;
+    max-width: 76.8rem;
+
+    margin-left: auto;
+    margin-right: auto;
+    padding: 12.3rem 0 12rem;
+
+    & > :first-child {
+      margin-bottom: 1.7rem;
+      margin-right: 1.2rem;
+    }
+
+    & > :last-child {
+      margin-top: 2.2rem;
+      margin-right: 0.2rem;
+    }
+  }
+
+  &__socials_mobile {
+    & > *:not(:last-child) {
+      margin-right: 2.1rem;
+    }
+  }
+}
+
+.fa {
+  font-family: fa-brands;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 23px;
+  /* identical to box height */
+
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: hsl(259, 100%, 81%); //Для не поддерживающих градиент браузеров
+}

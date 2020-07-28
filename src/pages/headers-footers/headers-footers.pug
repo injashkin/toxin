@@ -1,0 +1,19 @@
+extends ../template 
+
+block title
+  |  Страница Headers & Footers
+
+block main   
+    .headers-footers
+
+        .headers-footers__logo
+            include ../../theme/logo-dark-25.svg
+
+        .headers-footers__header-no-sign
+            +header()
+        .headers-footers__header-sign
+            +header({username: 'Юлий Цезарь'})
+        .headers-footers__footer
+            +footer()
+        .headers-footers__footer-creative
+            +footer({device: 'mobile'})

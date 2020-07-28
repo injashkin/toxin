@@ -1,0 +1,1 @@
+module.exports = __webpack_public_path__ + "quicksand-v20-latin-ext-regular.svg";

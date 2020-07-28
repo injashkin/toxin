@@ -1,0 +1,16 @@
+.signin-pg {
+  background: url("./img/image 4.png") no-repeat;
+  background-size: 100%;
+
+  &__frame {
+    position: relative;
+    height: 70.2rem;
+  }
+
+  &__signin {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 17.2rem;
+  }
+}
