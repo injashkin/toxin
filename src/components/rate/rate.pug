@@ -1,11 +1,12 @@
-mixin rate()
+mixin rate(number)
     fieldset.rating
         legend.rating__caption
         .rating__grop
 
-                - let i = 0
-                while i < 5
-
-                    label.rating__label
-                        input(class="rating__checkbox" type="radio" name="health" value= i++)
-                        i.material-icons.rating__star.rating__star1 star_border
+            - let i = 0            
+            while i < 5
+                - let star = i < number ? 'star' : 'star_border'
+                        
+                label.rating__label
+                    input(class="rating__checkbox" type="radio" name="health" value= i++)
+                    i.material-icons.rating__star.rating__star1= star
