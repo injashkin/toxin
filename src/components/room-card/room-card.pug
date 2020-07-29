@@ -1,2 +1,31 @@
-mixin room-card()
-    +rate(3)
+//-
+    options.number - номер номера
+    options.luxe - люкс опции (true - да, false - нет)
+    options.price - стоимость номера рублей в сутки
+    options.rate - количество звезд
+    options.review - количество отзывов
+
+
+mixin room-card(options = {})
+
+    - let {number, price, rate, review, luxe} = options
+
+    .room-card
+          
+        img.room-card__img(src="./img/image.png", alt="")
+        .room-card__description
+            .room-card__number-card
+                .room-card__number
+                    .room-card__number-symbol №
+                    .room-card__number-number #{number}                      
+                    if luxe
+                        .room-card__type Люкс
+                .room-card__price
+                    .room-card__price-value #{price}₽
+                    .room-card__price-period в сутки        
+            .room-card__rate-review
+                .room-card__rate
+                    +rate(rate)
+                .room-card__review
+                    .room-card__review-value #{review}
+                    .room-card__review-review Отзывов
