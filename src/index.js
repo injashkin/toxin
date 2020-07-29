@@ -6,6 +6,7 @@ import "./pages/signup/signup.js";
 import "./pages/signin/signin.js";
 import "./pages/headers-footers/headers-footers.js";
 import "./pages/colors-type/colors-type.js";
+import "./pages/search-room/search-room.js";
 //Компоненты
 import "./components/footer/footer.js";
 import "./components/types/types.js";

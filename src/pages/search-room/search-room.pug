@@ -1,0 +1,18 @@
+extends ../template 
+
+block title
+  |  Search Room
+
+block main   
+  .search-room
+
+    .search-room__header
+      +header()
+    .search-room__sidebar
+        +dropdown({name: 'numberGuests', placeholder: "Сколько гостей", items: ["взрослые", "дети", "младенцы"]})
+        include ../../components/slider/slider
+        +listbox({title: 'Checkbox Buttons', items: ['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)']})
+    .search-room__frame
+
+    .search-room__footer
+      +footer()

@@ -224,5 +224,10 @@ module.exports = {
       filename: "./landing.html",
       inject: true,
     }),
+    new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/pages/search-room/search-room.pug`,
+      filename: "./search-room.html",
+      inject: true,
+    }),
   ],
 };
