@@ -25,9 +25,10 @@
     "jquery-ui": "^1.12.1",
     "jquery-ui-dist": "^1.12.1",
     "prettier": "^2.0.5",
-    "src": "^1.1.2",
     "pug": "^3.0.0",
-    "sass": "^1.26.8"
+    "sass": "^1.26.8",
+    "sass-resources-loader": "^2.0.3",
+    "src": "^1.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.10.5",

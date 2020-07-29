@@ -15,3 +15,7 @@
 Шаблон Webpack я взял готовый из [репозитория GitHub](https://github.com/vedees/webpack-template). Были удалены настройки для Vue и теперь адаптирую под данный проект.
 
 ## Структура проекта
+
+## NPM модули
+
+- [sass-resources-loader](https://github.com/shakacode/sass-resources-loader) - позволяет использовать общие переменные и миксины во всех стилях SCSS, не импортируя их вручную в каждый файл.
