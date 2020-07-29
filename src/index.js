@@ -1,15 +1,12 @@
 // JS
-//import './js/'
-
-import "./theme/main.js";
-
+//Страницы
 import "./pages/ui-kit/ui-kit.js";
 import "./pages/landing/landing.js";
 import "./pages/signup/signup.js";
 import "./pages/signin/signin.js";
 import "./pages/headers-footers/headers-footers.js";
 import "./pages/colors-type/colors-type.js";
-
+//Компоненты
 import "./components/footer/footer.js";
 import "./components/types/types.js";
 import "./components/signup/signup.js";
@@ -31,10 +28,10 @@ import "./components/logo/logo.js";
 import "./components/select/select.js";
 import "./components/listbox/listbox.js";
 import "./components/room-calc/room-calc.js";
+import "./components/room-card/room-card.js";
 
 // SCSS
-//import './theme/main.scss'
+import "./theme/main.scss";
 import "./components/signin/signin.scss";
-
 //import "./variables.scss";
 import "./theme/fonts.scss";
