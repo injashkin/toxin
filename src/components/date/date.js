@@ -1,7 +1,9 @@
+import "air-datepicker";
+import "air-datepicker/dist/css/datepicker.min.css";
 import "./date.scss";
 
 //Подключение русской локализации
-require("jquery-ui/ui/i18n/datepicker-ru.js");
+//require("jquery-ui/ui/i18n/datepicker-ru.js");
 
 /* 
 //Дефолтные настройки локализации datepicker 
@@ -29,6 +31,7 @@ datepicker.setDefaults( datepicker.regional.ru );
 */
 
 //Мои настройки локализации
+/*
 $.datepicker.regional["ru"] = {
   currentText: "Очистить",
   closeText: "Применить",
@@ -52,3 +55,4 @@ $(function () {
     );
   });
 });
+*/
