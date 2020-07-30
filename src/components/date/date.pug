@@ -1,5 +1,14 @@
 mixin date(options)
     .date
-        input.date__input(type='text' class="datepicker-here" data-range="true" data-position="bottom left" data-multiple-dates-separator=" - " placeholder="ДД,ММ.ГГГГ")    
-        //-.date__icon
+        input.date__input(
+            type='text' 
+            class="datepicker-here" 
+            data-inline='false' 
+            data-range="true"             
+            data-position="bottom left"
+            keyboardNav="true" 
+            data-multiple-dates-separator=" - "
+            data-clearButton="true"
+            placeholder="ДД,ММ.ГГГГ")    
+        .date__icon
             i.material-icons expand_more
