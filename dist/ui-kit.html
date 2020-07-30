@@ -9,7 +9,7 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <meta name="Keywords" content="верстка, Pug, SCSS, JavaScript">
     <meta name="description" content="Основы верстки на Pug, SCSS и JS">
-  <link href="/assets/css/app.2fc3c14b92feeb356310.css" rel="stylesheet"></head>
+  <link href="/assets/css/app.1ba401b33f0b4bfd7aa4.css" rel="stylesheet"></head>
   <title> Страница UI-Kit
   </title>
   <body>
@@ -22,6 +22,9 @@
 
       </div>
     </div>
+        <div class="container">
+          <div class="container-label">room-card</div>
+        </div>
         <div class="container">
           <div class="container-label">header</div>
           <div class="header">
@@ -50,38 +53,149 @@
                   </li>
                 </ul>
               </nav>
-              <button class="button button__style_lt button__color_st">
-                <div class="button__text">Войти</div>
-                <div class="button__icon"><i class="material-icons"></i></div>
-              </button>
-              <button class="button button__style_st button__color_st">
-                <div class="button__text">Зарегистрироваться</div>
-                <div class="button__icon"><i class="material-icons"></i></div>
-              </button>
+              <div class="header__sign"> 
+                <button class="button button_style-lt button_color-st button_size-sm">
+                  <div class="button__text">Войти</div>
+                  <div class="button__icon"><i class="material-icons"></i></div>
+                </button>
+                <button class="button button_style-st button_color-st button_size-sm">
+                  <div class="button__text">Зарегистрироваться</div>
+                  <div class="button__icon"><i class="material-icons"></i></div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="container-label">header</div>
+          <div class="header">
+            <div class="header__logo">
+              <div class="logo"> <img class="logo__img" src="./logo.svg" alt="Значок логотипа"><img class="logo__text" src="./logo-text.svg" alt="Текст логотипа"></div>
+            </div>
+            <div class="header__right">
+              <nav class="header__nav">
+                <ul class="header__ul header__ul_top">
+                  <li class="header__item"> <a class="header__link" href="#">О нас</a></li>
+                  <li class="header__item"><a class="header__link" href="#">Услуги</a><i class="material-icons">expand_more</i>
+                    <ul class="header__ul header__ul_sub">
+                      <li class="header__item"> <a class="header__link" href="#">Услуга 1</a></li>
+                      <li class="header__item"> <a class="header__link" href="#">Услуга 2</a></li>
+                      <li class="header__item"> <a class="header__link" href="#">Услуга 3</a></li>
+                    </ul>
+                  </li>
+                  <li class="header__item"> <a class="header__link" href="#">Вакансии</a></li>
+                  <li class="header__item"> <a class="header__link" href="#">Новости</a></li>
+                  <li class="header__item"> <a class="header__link" href="#">Соглашения</a><i class="material-icons">expand_more</i>
+                    <ul class="header__ul header__ul_sub">
+                      <li class="header__item"> <a class="header__link" href="#">Соглашение 1</a></li>
+                      <li class="header__item"> <a class="header__link" href="#">Соглашение 2</a></li>
+                      <li class="header__item"> <a class="header__link" href="#">Соглашение 3</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+              <div class="header__sign"> 
+                <div class="header__vertical-bar"></div>
+                <div class="header__username">Юлий Цезарь</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="container-label">footer</div>
+          <div class="footer"> 
+            <div class="footer__widgets">
+              <div class="footer__brand">
+                <div class="logo"> <img class="logo__img" src="./logo.svg" alt="Значок логотипа"><img class="logo__text" src="./logo-text.svg" alt="Текст логотипа"></div>
+                <p class="footer__legend">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</p>
+              </div>
+              <div class="listbox"> 
+                <div class="listbox__header">
+                  <div class="listbox__title">Навигация</div>
+                </div>
+                <ul class="listbox__ul listbox__drop">
+                  <li class="listbox__li"><a class="listbox__a" href="/about.html">О нас</a>
+                  </li>
+                  <li class="listbox__li"><a class="listbox__a" href="/news.html">Новости</a>
+                  </li>
+                  <li class="listbox__li"><a class="listbox__a" href="/support.html">Служба поддержки</a>
+                  </li>
+                  <li class="listbox__li"><a class="listbox__a" href="/services.html">Услуги</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="listbox"> 
+                <div class="listbox__header">
+                  <div class="listbox__title">О нас</div>
+                </div>
+                <ul class="listbox__ul listbox__drop">
+                  <li class="listbox__li"><a class="listbox__a" href="/about-service.html">О сервисе</a>
+                  </li>
+                  <li class="listbox__li"><a class="listbox__a" href="/our-team.html">Наша команда</a>
+                  </li>
+                  <li class="listbox__li"><a class="listbox__a" href="/vacancy.html">Вакансии</a>
+                  </li>
+                  <li class="listbox__li"><a class="listbox__a" href="/investors.html">Инвесторы</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="listbox"> 
+                <div class="listbox__header">
+                  <div class="listbox__title">Служба поддержки</div>
+                </div>
+                <ul class="listbox__ul listbox__drop">
+                  <li class="listbox__li"><a class="listbox__a" href="/agreements.html">Соглашения</a>
+                  </li>
+                  <li class="listbox__li"><a class="listbox__a" href="/communities.html">Сообщества</a>
+                  </li>
+                  <li class="listbox__li"><a class="listbox__a" href="/communication-with-us.html">Связь с нами</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer__subscribe">
+                <div class="listbox"> 
+                  <div class="listbox__header">
+                    <div class="listbox__title">Подписка</div>
+                  </div>
+                  <ul class="listbox__ul listbox__drop">
+                    <li class="listbox__text">Получайте специальные предложения и новости сервиса</li>
+                  </ul>
+                </div>
+                <div class="input"> 
+                  <input class="input__input" name="subscribe" type="email" placeholder="Email" inputmode="email">
+                  <div class="text-field text-field_add-arrow-on"><i class="material-icons">arrow_forward</i></div>
+                </div>
+              </div>
+            </div>
+            <div class="footer__copyright-bar">
+              <div class="footer__copyright-wrapper">
+                <p class="footer__copyright">Copyright © 2018 Toxin отель. Все права зачищены.    </p>
+                <div class="footer__socials"><a class="footer__link" href="https://twitter.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter"></i></a><a class="footer__link" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook-square"></i></a><a class="footer__link" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram"></i></a></div>
+              </div>
             </div>
           </div>
         </div>
         <div class="container">
           <div class="container-label">Button</div>
-          <button class="button button__style_lt button__color_st">
-            <div class="button__text">Click Me</div>
+          <button class="button button_style-lt button_color-st button_size-bg">
+            <div class="button__text">Войти</div>
             <div class="button__icon"><i class="material-icons"></i></div>
           </button>
         </div>
     <div class="container">
-      <button class="button button__style_st button__color_st">
+      <button class="button button_style-st button_color-st button_size-sm">
         <div class="button__text">Зарегистрироваться</div>
         <div class="button__icon"><i class="material-icons"></i></div>
       </button>
     </div>
     <div class="container">
-      <button class="button button__style_ic button__color_st">
+      <button class="button button_style-ic button_color-st button_size-bg">
         <div class="button__text">Перейти к оплате</div>
         <div class="button__icon"><i class="material-icons">arrow_forward</i></div>
       </button>
     </div>
     <div class="container">
-      <button class="button button__style_wb button__color_st">
+      <button class="button button_style-wb button_color-st button_size-bg">
         <div class="button__text">Click Me</div>
         <div class="button__icon"><i class="material-icons"></i></div>
       </button>
@@ -143,11 +257,11 @@
                 </div>
               </li>
               <li class="dropdown__li">
-                <button class="button button__style_wb button__color_alt dropdown__clear js-dropdown__clear dropdown__clear_hidden">
+                <button class="button button_style-wb button_color-alt button_size-bg dropdown__clear js-dropdown__clear dropdown__clear_hidden">
                   <div class="button__text">Очистить</div>
                   <div class="button__icon"><i class="material-icons"></i></div>
                 </button>
-                <button class="button button__style_wb button__color_st dropdown__submit js-dropdown__submit">
+                <button class="button button_style-wb button_color-st button_size-bg dropdown__submit js-dropdown__submit">
                   <div class="button__text">Применить</div>
                   <div class="button__icon"><i class="material-icons"></i></div>
                 </button>
@@ -188,11 +302,11 @@
                 </div>
               </li>
               <li class="dropdown__li">
-                <button class="button button__style_wb button__color_alt dropdown__clear js-dropdown__clear dropdown__clear_hidden">
+                <button class="button button_style-wb button_color-alt button_size-bg dropdown__clear js-dropdown__clear dropdown__clear_hidden">
                   <div class="button__text">Очистить</div>
                   <div class="button__icon"><i class="material-icons"></i></div>
                 </button>
-                <button class="button button__style_wb button__color_st dropdown__submit js-dropdown__submit">
+                <button class="button button_style-wb button_color-st button_size-bg dropdown__submit js-dropdown__submit">
                   <div class="button__text">Применить</div>
                   <div class="button__icon"><i class="material-icons"></i></div>
                 </button>
@@ -226,26 +340,6 @@
         </div>
         <div class="container">
           <div class="container-label">Rate button</div>
-<fieldset class="rating">
-  <legend class="rating__caption"></legend>
-  <div class="rating__grop">
-    <label class="rating__label">
-      <input class="rating__checkbox" type="radio" name="health" value="1"><i class="material-icons rating__star rating__star1">star_border</i>
-    </label>
-    <label class="rating__label">
-      <input class="rating__checkbox" type="radio" name="health" value="2"><i class="material-icons rating__star rating__star2">star_border</i>
-    </label>
-    <label class="rating__label">
-      <input class="rating__checkbox" type="radio" name="health" value="3"><i class="material-icons rating__star rating__star3">star_border</i>
-    </label>
-    <label class="rating__label">
-      <input class="rating__checkbox" type="radio" name="health" value="4"><i class="material-icons rating__star rating__star4">star_border</i>
-    </label>
-    <label class="rating__label">
-      <input class="rating__checkbox" type="radio" name="health" value="5"><i class="material-icons rating__star rating__star5">star_border</i>
-    </label>
-  </div>
-</fieldset>
         </div>
         <div class="container">
           <div class="container-label">Checkbox</div>
@@ -344,6 +438,11 @@
                   </div>
                 </div>
                 <p class="listbox__desc">Ширина коридоров в номере не менее 91 см.</p>
+                <div class="select">
+                  <label class="select__label">[object Object]
+                    <input class="select__input" type="checkbox"><span class="select__span"></span>
+                  </label>
+                </div>
               </li>
               <li class="listbox__li">
                 <div class="listbox__name">
@@ -354,6 +453,11 @@
                   </div>
                 </div>
                 <p class="listbox__desc">На 1 этаже вас встретит специалист  и проводит до номера.</p>
+                <div class="select">
+                  <label class="select__label">[object Object]
+                    <input class="select__input" type="checkbox"><span class="select__span"></span>
+                  </label>
+                </div>
               </li>
             </ul>
           </div>
@@ -370,16 +474,37 @@
                   <li class="listbox__bulleted-li">Нельзя с питомцами</li>
                 </ul>
               </div>
+              <li class="listbox__li">
+                <div class="select">
+                  <label class="select__label">Нельзя с питомцами
+                    <input class="select__input" type="checkbox"><span class="select__span"></span>
+                  </label>
+                </div>
+              </li>
               <div class="listbox__bulleted">
                 <ul class="listbox__bulleted-ul">
                   <li class="listbox__bulleted-li">Без вечеринок и мероприятий</li>
                 </ul>
               </div>
+              <li class="listbox__li">
+                <div class="select">
+                  <label class="select__label">Без вечеринок и мероприятий
+                    <input class="select__input" type="checkbox"><span class="select__span"></span>
+                  </label>
+                </div>
+              </li>
               <div class="listbox__bulleted">
                 <ul class="listbox__bulleted-ul">
                   <li class="listbox__bulleted-li">Время прибытия — после 13:00, а выезд до 12:00</li>
                 </ul>
               </div>
+              <li class="listbox__li">
+                <div class="select">
+                  <label class="select__label">Время прибытия — после 13:00, а выезд до 12:00
+                    <input class="select__input" type="checkbox"><span class="select__span"></span>
+                  </label>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
@@ -407,12 +532,12 @@
           </div>
         </div>
     <div class="container">
-      <button class="button button__style_ic button__color_st">
+      <button class="button button_style-ic button_color-st button_size-bg">
         <div class="button__text">Перейти</div>
         <div class="button__icon"><i class="material-icons">arrow_forward</i></div>
       </button>
     </div>
-    <button class="button button__style_lt button__color_st">
+    <button class="button button_style-lt button_color-st button_size-bg">
       <div class="button__text">Click Me</div>
       <div class="button__icon"><i class="material-icons"></i></div>
     </button>
@@ -421,20 +546,20 @@
           <form class="signin">
             <div class="text text__h1">Войти</div>
             <div class="input"> 
-              <input class="input__input input__input" name="signin-email" type="email" placeholder="Email" inputmode="email">
+              <input class="input__input" name="signin-email" type="email" placeholder="Email" inputmode="email">
               <div class="text-field text-field_add-arrow-off"><i class="material-icons">arrow_forward</i></div>
             </div>
             <div class="input"> 
-              <input class="input__input input__input" name="signin-pwd" type="pwd" placeholder="Пароль" inputmode="number">
+              <input class="input__input" name="signin-pwd" type="pwd" placeholder="Пароль" inputmode="number">
               <div class="text-field text-field_add-arrow-off"><i class="material-icons">arrow_forward</i></div>
             </div>
-            <button class="button button__style_ic button__color_st">
+            <button class="button button_style-ic button_color-st button_size-bg">
               <div class="button__text">Войти</div>
               <div class="button__icon"><i class="material-icons">arrow_forward</i></div>
             </button>
             <div class="signin__footer">
               <div class="text text__body">Нет аккаунта на Toxin?</div>
-              <button class="button button__style_lt button__color_st">
+              <button class="button button_style-lt button_color-st button_size-bg">
                 <div class="button__text">Создать</div>
                 <div class="button__icon"><i class="material-icons"></i></div>
               </button>
@@ -446,11 +571,11 @@
           <form class="signup">       
             <div class="text text__h1">Регистрация аккаунта</div>
             <div class="input"> 
-              <input class="input__input input__input" name="signup-first-name" type="text" placeholder="Имя" inputmode="text">
+              <input class="input__input" name="signup-first-name" type="text" placeholder="Имя" inputmode="text">
               <div class="text-field text-field_add-arrow-off"><i class="material-icons">arrow_forward</i></div>
             </div>
             <div class="input"> 
-              <input class="input__input input__input" name="signup-last-name" type="text" placeholder="Фамилия" inputmode="text">
+              <input class="input__input" name="signup-last-name" type="text" placeholder="Фамилия" inputmode="text">
               <div class="text-field text-field_add-arrow-off"><i class="material-icons">arrow_forward</i></div>
             </div>
             <div class="radio-buttons">
@@ -463,28 +588,28 @@
             </div>
             <div class="text text__h3">Дата рождения</div>
             <div class="input"> 
-              <input class="input__input input__input" name="signup-date" type="date" placeholder="ДД.ММ.ГГГГ" inputmode="text">
+              <input class="input__input" name="signup-date" type="date" placeholder="ДД.ММ.ГГГГ" inputmode="text">
               <div class="text-field text-field_add-arrow-off"><i class="material-icons">arrow_forward</i></div>
             </div>
             <div class="text text__h3">Данные для входа в сервис</div>
             <div class="input"> 
-              <input class="input__input input__input" name="signup-email" type="email" placeholder="Email" inputmode="email">
+              <input class="input__input" name="signup-email" type="email" placeholder="Email" inputmode="email">
               <div class="text-field text-field_add-arrow-off"><i class="material-icons">arrow_forward</i></div>
             </div>
             <div class="input"> 
-              <input class="input__input input__input" name="signup-pwd" type="password" placeholder="Пароль" inputmode="number">
+              <input class="input__input" name="signup-pwd" type="password" placeholder="Пароль" inputmode="number">
               <div class="text-field text-field_add-arrow-off"><i class="material-icons">arrow_forward</i></div>
             </div>
             <label class="toggle">
               <input type="checkbox" checked><span class="toggle__text">Получать спецпредложения</span>
             </label>
-            <button class="button button__style_ic button__color_st">
+            <button class="button button_style-ic button_color-st button_size-bg">
               <div class="button__text">Перейти к оплате</div>
               <div class="button__icon"><i class="material-icons">arrow_forward</i></div>
             </button>
             <div class="signin__footer">
               <div class="text text__body">Уже есть аккаунт на Toxin</div>
-              <button class="button button__style_lt button__color_st">
+              <button class="button button_style-lt button_color-st button_size-sm">
                 <div class="button__text">Войти</div>
                 <div class="button__icon"><i class="material-icons"></i></div>
               </button>
@@ -494,7 +619,7 @@
         <div class="container">
           <div class="container-label">Search Rooms</div>
           <form class="search-rooms">
-            <div class="text text__h1">Найдём номера под ваши пожелания</div>
+            <h1>Найдём номера под ваши пожелания</h1>
             <div class="search-rooms__dade-picker">
               <div class="search-rooms__arrival-date">
                 <div class="text text__h3">Прибытие</div>
@@ -543,18 +668,18 @@
                   </div>
                 </li>
                 <li class="dropdown__li">
-                  <button class="button button__style_wb button__color_alt dropdown__clear js-dropdown__clear dropdown__clear_hidden">
+                  <button class="button button_style-wb button_color-alt button_size-bg dropdown__clear js-dropdown__clear dropdown__clear_hidden">
                     <div class="button__text">Очистить</div>
                     <div class="button__icon"><i class="material-icons"></i></div>
                   </button>
-                  <button class="button button__style_wb button__color_st dropdown__submit js-dropdown__submit">
+                  <button class="button button_style-wb button_color-st button_size-bg dropdown__submit js-dropdown__submit">
                     <div class="button__text">Применить</div>
                     <div class="button__icon"><i class="material-icons"></i></div>
                   </button>
                 </li>
               </ul>
             </div>
-            <button class="button button__style_ic button__color_st">
+            <button class="button button_style-ic button_color-st button_size-bg">
               <div class="button__text">Подобрать номер</div>
               <div class="button__icon"><i class="material-icons">arrow_forward</i></div>
             </button>
@@ -621,11 +746,11 @@
                   </div>
                 </li>
                 <li class="dropdown__li">
-                  <button class="button button__style_wb button__color_alt dropdown__clear js-dropdown__clear dropdown__clear_hidden">
+                  <button class="button button_style-wb button_color-alt button_size-bg dropdown__clear js-dropdown__clear dropdown__clear_hidden">
                     <div class="button__text">Очистить</div>
                     <div class="button__icon"><i class="material-icons"></i></div>
                   </button>
-                  <button class="button button__style_wb button__color_st dropdown__submit js-dropdown__submit">
+                  <button class="button button_style-wb button_color-st button_size-bg dropdown__submit js-dropdown__submit">
                     <div class="button__text">Применить</div>
                     <div class="button__icon"><i class="material-icons"></i></div>
                   </button>
@@ -648,11 +773,11 @@
               <h2>Итого</h2>
               <h2>38081₽</h2>
             </div>
-            <button class="button button__style_ic button__color_st">
+            <button class="button button_style-ic button_color-st button_size-bg">
               <div class="button__text">Забронировать</div>
               <div class="button__icon"><i class="material-icons">arrow_forward</i></div>
             </button>
           </div>
         </div>
-  <script type="text/javascript" src="/assets/js/vendors.2fc3c14b92feeb356310.js"></script><script type="text/javascript" src="/assets/js/app.2fc3c14b92feeb356310.js"></script></body>
+  <script type="text/javascript" src="/assets/js/vendors.1ba401b33f0b4bfd7aa4.js"></script><script type="text/javascript" src="/assets/js/app.1ba401b33f0b4bfd7aa4.js"></script></body>
 </html>

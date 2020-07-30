@@ -1,0 +1,214 @@
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"><link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!--<link rel="stylesheet" href="/resources/demos/style.css">--><script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <meta name="Keywords" content="верстка, Pug, SCSS, JavaScript">
+    <meta name="description" content="Основы верстки на Pug, SCSS и JS">
+  <link href="/assets/css/app.1ba401b33f0b4bfd7aa4.css" rel="stylesheet"></head>
+  <title> Search Room
+  </title>
+  <body>
+    <div class="search-room">
+      <div class="search-room__header">
+        <div class="header">
+          <div class="header__logo">
+            <div class="logo"> <img class="logo__img" src="./logo.svg" alt="Значок логотипа"><img class="logo__text" src="./logo-text.svg" alt="Текст логотипа"></div>
+          </div>
+          <div class="header__right">
+            <nav class="header__nav">
+              <ul class="header__ul header__ul_top">
+                <li class="header__item"> <a class="header__link" href="#">О нас</a></li>
+                <li class="header__item"><a class="header__link" href="#">Услуги</a><i class="material-icons">expand_more</i>
+                  <ul class="header__ul header__ul_sub">
+                    <li class="header__item"> <a class="header__link" href="#">Услуга 1</a></li>
+                    <li class="header__item"> <a class="header__link" href="#">Услуга 2</a></li>
+                    <li class="header__item"> <a class="header__link" href="#">Услуга 3</a></li>
+                  </ul>
+                </li>
+                <li class="header__item"> <a class="header__link" href="#">Вакансии</a></li>
+                <li class="header__item"> <a class="header__link" href="#">Новости</a></li>
+                <li class="header__item"> <a class="header__link" href="#">Соглашения</a><i class="material-icons">expand_more</i>
+                  <ul class="header__ul header__ul_sub">
+                    <li class="header__item"> <a class="header__link" href="#">Соглашение 1</a></li>
+                    <li class="header__item"> <a class="header__link" href="#">Соглашение 2</a></li>
+                    <li class="header__item"> <a class="header__link" href="#">Соглашение 3</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+            <div class="header__sign"> 
+              <button class="button button_style-lt button_color-st button_size-sm">
+                <div class="button__text">Войти</div>
+                <div class="button__icon"><i class="material-icons"></i></div>
+              </button>
+              <button class="button button_style-st button_color-st button_size-sm">
+                <div class="button__text">Зарегистрироваться</div>
+                <div class="button__icon"><i class="material-icons"></i></div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="search-room__sidebar"></div>
+      <div class="search-room__frame">
+        <div class="room-card">        
+          <div class="room-card__img">        <img src="./img/image.jpg" alt="рисунок"></div>
+        </div>
+      </div>
+      <div class="search-room__footer">
+        <div class="footer"> 
+          <div class="footer__widgets">
+            <div class="footer__brand">
+              <div class="logo"> <img class="logo__img" src="./logo.svg" alt="Значок логотипа"><img class="logo__text" src="./logo-text.svg" alt="Текст логотипа"></div>
+              <p class="footer__legend">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</p>
+            </div>
+            <div class="listbox"> 
+              <div class="listbox__header">
+                <div class="listbox__title">Навигация</div>
+              </div>
+              <ul class="listbox__ul listbox__drop">
+                <li class="listbox__li"><a class="listbox__a" href="/about.html">О нас</a>
+                </li>
+                <li class="listbox__li"><a class="listbox__a" href="/news.html">Новости</a>
+                </li>
+                <li class="listbox__li"><a class="listbox__a" href="/support.html">Служба поддержки</a>
+                </li>
+                <li class="listbox__li"><a class="listbox__a" href="/services.html">Услуги</a>
+                </li>
+              </ul>
+            </div>
+            <div class="listbox"> 
+              <div class="listbox__header">
+                <div class="listbox__title">О нас</div>
+              </div>
+              <ul class="listbox__ul listbox__drop">
+                <li class="listbox__li"><a class="listbox__a" href="/about-service.html">О сервисе</a>
+                </li>
+                <li class="listbox__li"><a class="listbox__a" href="/our-team.html">Наша команда</a>
+                </li>
+                <li class="listbox__li"><a class="listbox__a" href="/vacancy.html">Вакансии</a>
+                </li>
+                <li class="listbox__li"><a class="listbox__a" href="/investors.html">Инвесторы</a>
+                </li>
+              </ul>
+            </div>
+            <div class="listbox"> 
+              <div class="listbox__header">
+                <div class="listbox__title">Служба поддержки</div>
+              </div>
+              <ul class="listbox__ul listbox__drop">
+                <li class="listbox__li"><a class="listbox__a" href="/agreements.html">Соглашения</a>
+                </li>
+                <li class="listbox__li"><a class="listbox__a" href="/communities.html">Сообщества</a>
+                </li>
+                <li class="listbox__li"><a class="listbox__a" href="/communication-with-us.html">Связь с нами</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__subscribe">
+              <div class="listbox"> 
+                <div class="listbox__header">
+                  <div class="listbox__title">Подписка</div>
+                </div>
+                <ul class="listbox__ul listbox__drop">
+                  <li class="listbox__text">Получайте специальные предложения и новости сервиса</li>
+                </ul>
+              </div>
+              <div class="input"> 
+                <input class="input__input" name="subscribe" type="email" placeholder="Email" inputmode="email">
+                <div class="text-field text-field_add-arrow-on"><i class="material-icons">arrow_forward</i></div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__copyright-bar">
+            <div class="footer__copyright-wrapper">
+              <p class="footer__copyright">Copyright © 2018 Toxin отель. Все права зачищены.    </p>
+              <div class="footer__socials"><a class="footer__link" href="https://twitter.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter"></i></a><a class="footer__link" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook-square"></i></a><a class="footer__link" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram"></i></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown dropdown-numberGuests">
+          <div class="dropdown__header-wrapper js-dropdown__header-wrapper">
+            <div class="dropdown__header">Сколько гостей</div>
+            <div class="dropdown__icon"><i class="material-icons">expand_more</i></div>
+          </div>
+          <ul class="dropdown__ul">
+            <li class="dropdown__li">
+              <div class="dropdown__label">взрослые</div>
+              <div class="input-number input-number-numberGuests0">   
+                <button class="input-number__button js-input-number__button input-number__button_inactive minus">-</button>
+                <input class="numberGuests0 input-number__input" type="number" value="0" min="0" max="10">
+                <button class="input-number__button js-input-number__button plus">+</button>
+              </div>
+            </li>
+            <li class="dropdown__li">
+              <div class="dropdown__label">дети</div>
+              <div class="input-number input-number-numberGuests1">   
+                <button class="input-number__button js-input-number__button input-number__button_inactive minus">-</button>
+                <input class="numberGuests1 input-number__input" type="number" value="0" min="0" max="10">
+                <button class="input-number__button js-input-number__button plus">+</button>
+              </div>
+            </li>
+            <li class="dropdown__li">
+              <div class="dropdown__label">младенцы</div>
+              <div class="input-number input-number-numberGuests2">   
+                <button class="input-number__button js-input-number__button input-number__button_inactive minus">-</button>
+                <input class="numberGuests2 input-number__input" type="number" value="0" min="0" max="10">
+                <button class="input-number__button js-input-number__button plus">+</button>
+              </div>
+            </li>
+            <li class="dropdown__li">
+              <button class="button button_style-wb button_color-alt button_size-bg dropdown__clear js-dropdown__clear dropdown__clear_hidden">
+                <div class="button__text">Очистить</div>
+                <div class="button__icon"><i class="material-icons"></i></div>
+              </button>
+              <button class="button button_style-wb button_color-st button_size-bg dropdown__submit js-dropdown__submit">
+                <div class="button__text">Применить</div>
+                <div class="button__icon"><i class="material-icons"></i></div>
+              </button>
+            </li>
+          </ul>
+        </div>
+<div class="slider">
+  <p class="slider__header">
+    <label class="slider__label" for="amount">Range Slider</label>
+    <input class="slider__input" type="text" id="amount" readonly>
+  </p><div id="slider-range"></div>
+</div>
+        <div class="listbox"> 
+          <div class="listbox__header">
+            <div class="listbox__title">Checkbox Buttons</div>
+          </div>
+          <ul class="listbox__ul listbox__drop">
+            <li class="listbox__li">
+              <div class="select">
+                <label class="select__label">Можно курить
+                  <input class="select__input" type="checkbox"><span class="select__span"></span>
+                </label>
+              </div>
+            </li>
+            <li class="listbox__li">
+              <div class="select">
+                <label class="select__label">Можно с питомцами
+                  <input class="select__input" type="checkbox"><span class="select__span"></span>
+                </label>
+              </div>
+            </li>
+            <li class="listbox__li">
+              <div class="select">
+                <label class="select__label">Можно пригласить гостей (до 10 человек)
+                  <input class="select__input" type="checkbox"><span class="select__span"></span>
+                </label>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  <script type="text/javascript" src="/assets/js/vendors.1ba401b33f0b4bfd7aa4.js"></script><script type="text/javascript" src="/assets/js/app.1ba401b33f0b4bfd7aa4.js"></script></body>
+</html>

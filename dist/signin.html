@@ -1,0 +1,158 @@
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"><link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!--<link rel="stylesheet" href="/resources/demos/style.css">--><script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <meta name="Keywords" content="верстка, Pug, SCSS, JavaScript">
+    <meta name="description" content="Основы верстки на Pug, SCSS и JS">
+  <link href="/assets/css/app.1ba401b33f0b4bfd7aa4.css" rel="stylesheet"></head>
+  <title> Страница Sign in
+  </title>
+  <body>
+    <div class="signin-pg">
+      <div class="signin-pg__header">
+        <div class="header">
+          <div class="header__logo">
+            <div class="logo"> <img class="logo__img" src="./logo.svg" alt="Значок логотипа"><img class="logo__text" src="./logo-text.svg" alt="Текст логотипа"></div>
+          </div>
+          <div class="header__right">
+            <nav class="header__nav">
+              <ul class="header__ul header__ul_top">
+                <li class="header__item"> <a class="header__link" href="#">О нас</a></li>
+                <li class="header__item"><a class="header__link" href="#">Услуги</a><i class="material-icons">expand_more</i>
+                  <ul class="header__ul header__ul_sub">
+                    <li class="header__item"> <a class="header__link" href="#">Услуга 1</a></li>
+                    <li class="header__item"> <a class="header__link" href="#">Услуга 2</a></li>
+                    <li class="header__item"> <a class="header__link" href="#">Услуга 3</a></li>
+                  </ul>
+                </li>
+                <li class="header__item"> <a class="header__link" href="#">Вакансии</a></li>
+                <li class="header__item"> <a class="header__link" href="#">Новости</a></li>
+                <li class="header__item"> <a class="header__link" href="#">Соглашения</a><i class="material-icons">expand_more</i>
+                  <ul class="header__ul header__ul_sub">
+                    <li class="header__item"> <a class="header__link" href="#">Соглашение 1</a></li>
+                    <li class="header__item"> <a class="header__link" href="#">Соглашение 2</a></li>
+                    <li class="header__item"> <a class="header__link" href="#">Соглашение 3</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+            <div class="header__sign"> 
+              <button class="button button_style-lt button_color-st button_size-sm">
+                <div class="button__text">Войти</div>
+                <div class="button__icon"><i class="material-icons"></i></div>
+              </button>
+              <button class="button button_style-st button_color-st button_size-sm">
+                <div class="button__text">Зарегистрироваться</div>
+                <div class="button__icon"><i class="material-icons"></i></div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="signin-pg__frame">
+        <div class="signin-pg__signin">
+          <form class="signin">
+            <div class="text text__h1">Войти</div>
+            <div class="input"> 
+              <input class="input__input" name="signin-email" type="email" placeholder="Email" inputmode="email">
+              <div class="text-field text-field_add-arrow-off"><i class="material-icons">arrow_forward</i></div>
+            </div>
+            <div class="input"> 
+              <input class="input__input" name="signin-pwd" type="pwd" placeholder="Пароль" inputmode="number">
+              <div class="text-field text-field_add-arrow-off"><i class="material-icons">arrow_forward</i></div>
+            </div>
+            <button class="button button_style-ic button_color-st button_size-bg">
+              <div class="button__text">Войти</div>
+              <div class="button__icon"><i class="material-icons">arrow_forward</i></div>
+            </button>
+            <div class="signin__footer">
+              <div class="text text__body">Нет аккаунта на Toxin?</div>
+              <button class="button button_style-lt button_color-st button_size-bg">
+                <div class="button__text">Создать</div>
+                <div class="button__icon"><i class="material-icons"></i></div>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="signin-pg__footer">
+        <div class="footer"> 
+          <div class="footer__widgets">
+            <div class="footer__brand">
+              <div class="logo"> <img class="logo__img" src="./logo.svg" alt="Значок логотипа"><img class="logo__text" src="./logo-text.svg" alt="Текст логотипа"></div>
+              <p class="footer__legend">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</p>
+            </div>
+            <div class="listbox"> 
+              <div class="listbox__header">
+                <div class="listbox__title">Навигация</div>
+              </div>
+              <ul class="listbox__ul listbox__drop">
+                <li class="listbox__li"><a class="listbox__a" href="/about.html">О нас</a>
+                </li>
+                <li class="listbox__li"><a class="listbox__a" href="/news.html">Новости</a>
+                </li>
+                <li class="listbox__li"><a class="listbox__a" href="/support.html">Служба поддержки</a>
+                </li>
+                <li class="listbox__li"><a class="listbox__a" href="/services.html">Услуги</a>
+                </li>
+              </ul>
+            </div>
+            <div class="listbox"> 
+              <div class="listbox__header">
+                <div class="listbox__title">О нас</div>
+              </div>
+              <ul class="listbox__ul listbox__drop">
+                <li class="listbox__li"><a class="listbox__a" href="/about-service.html">О сервисе</a>
+                </li>
+                <li class="listbox__li"><a class="listbox__a" href="/our-team.html">Наша команда</a>
+                </li>
+                <li class="listbox__li"><a class="listbox__a" href="/vacancy.html">Вакансии</a>
+                </li>
+                <li class="listbox__li"><a class="listbox__a" href="/investors.html">Инвесторы</a>
+                </li>
+              </ul>
+            </div>
+            <div class="listbox"> 
+              <div class="listbox__header">
+                <div class="listbox__title">Служба поддержки</div>
+              </div>
+              <ul class="listbox__ul listbox__drop">
+                <li class="listbox__li"><a class="listbox__a" href="/agreements.html">Соглашения</a>
+                </li>
+                <li class="listbox__li"><a class="listbox__a" href="/communities.html">Сообщества</a>
+                </li>
+                <li class="listbox__li"><a class="listbox__a" href="/communication-with-us.html">Связь с нами</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__subscribe">
+              <div class="listbox"> 
+                <div class="listbox__header">
+                  <div class="listbox__title">Подписка</div>
+                </div>
+                <ul class="listbox__ul listbox__drop">
+                  <li class="listbox__text">Получайте специальные предложения и новости сервиса</li>
+                </ul>
+              </div>
+              <div class="input"> 
+                <input class="input__input" name="subscribe" type="email" placeholder="Email" inputmode="email">
+                <div class="text-field text-field_add-arrow-on"><i class="material-icons">arrow_forward</i></div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__copyright-bar">
+            <div class="footer__copyright-wrapper">
+              <p class="footer__copyright">Copyright © 2018 Toxin отель. Все права зачищены.    </p>
+              <div class="footer__socials"><a class="footer__link" href="https://twitter.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter"></i></a><a class="footer__link" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook-square"></i></a><a class="footer__link" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram"></i></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <script type="text/javascript" src="/assets/js/vendors.1ba401b33f0b4bfd7aa4.js"></script><script type="text/javascript" src="/assets/js/app.1ba401b33f0b4bfd7aa4.js"></script></body>
+</html>

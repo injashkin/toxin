@@ -1,0 +1,27 @@
+.search-room {
+  &__content {
+    display: flex;
+    background: #ffffff;
+  }
+
+  &__sidebar {
+    margin: 1rem;
+
+    & > * {
+      margin: 1rem;
+    }
+  }
+
+  &__title {
+    margin: 1rem;
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+
+    & > * {
+      margin: 1rem;
+    }
+  }
+}
