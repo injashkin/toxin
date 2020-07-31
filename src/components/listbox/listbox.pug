@@ -50,13 +50,15 @@ mixin listbox(options = {})
                 if (content === 'txt')
                     li.listbox__text= item                       
 
-                else
-                    li.listbox__li
-                        if (typeof item === 'object' && item.desc !== undefined)                        
+                else                    
+                    if (typeof item === 'object' && item.desc !== undefined)  
+                        li.listbox__li_small                     
                             .listbox__name
                                 +select({label: item.name, inherit: true})
                             p.listbox__desc= item.desc
-                        if (typeof item === 'object' && item.link !== undefined)                                                  
+                    else if (typeof item === 'object' && item.link !== undefined)
+                        li.listbox__li                              
                             a.listbox__a(href= item.link)= item.name
-                        else                         
+                    else
+                        li.listbox__li                         
                             +select({label: item}) 

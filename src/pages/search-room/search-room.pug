@@ -13,35 +13,48 @@ block main
         .search-room__block
           .search-room__block-title Даты пребывания в отеле
           .search-room__block-component
-              +date()
+              +date({placeholder: '19 авг - 23 авг'})
         .search-room__block
           .search-room__block-title Гости
           .search-room__block-component
-            +dropdown({name: 'numberGuests', placeholder: "Сколько гостей", items: ["взрослые", "дети", "младенцы"]})
+            +dropdown({name: 'numberGuests', placeholder: "3 гостя, 1 младенец", items: ["взрослые", "дети", "младенцы"]})
         .search-room__block
           .search-room__block-title
           .search-room__block-component
             +slider({label: 'Диапазон цены'})
-        +listbox({title: 'Checkbox Buttons', items: ['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)']})
-        +listbox({title:'Доступность', items: [{name: 'Широкий коридор', desc: 'Ширина коридоров в номере не менее 91 см.'}, {name: 'Помощник для инвалидов', desc: 'На 1 этаже вас встретит специалист  и проводит до номера.'}]})
-        +dropdown({name: "comfort", placeholder: "Какие удобства", items: ["спальни", "кровати", "ванные комнаты"]})
-        +listbox({title:'Дополнительные удобства', type: 'drop', items: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь']})
+        .search-room__block
+          .search-room__block-title 
+          .search-room__block-component 
+            +listbox({title: 'Checkbox Buttons', items: ['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)']})
+        .search-room__block
+          .search-room__block-title Доступность
+          .search-room__block-component
+            +listbox({title:'', items: [{name: 'Широкий коридор', desc: 'Ширина коридоров в номере не менее 91 см.'}, {name: 'Помощник для инвалидов', desc: 'На 1 этаже вас встретит специалист  и проводит до номера.'}]})
+        .search-room__block
+          .search-room__block-title Удобства номера
+          .search-room__block-component
+            +dropdown({name: "comfort", placeholder: "2 спальни, 2 кровати...", items: ["спальни", "кровати", "ванные комнаты"]})
+        .search-room__block
+          .search-room__block-title 
+          .search-room__block-component 
+            +listbox({title:'Дополнительные удобства', type: 'drop', items: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь']})
 
       .search-room__frame
-        h1.search-room__title Номера, которые мы для вас подобрали
-        .search-room__cards
-          +room-card({number: 888, luxe: true, price: 9990, rate: 5, review: 145})
-          +room-card({number: 840, luxe: false, price: 9900, rate: 4, review: 65})
-          +room-card({number: 980, luxe: true, price: 8500, rate: 3, review: 35})
-          +room-card({number: 856, luxe: false, price: 7300, rate: 5, review: 19})
-          +room-card({number: 740, luxe: false, price: 6000, rate: 4, review: 44})
-          +room-card({number: 982, luxe: false, price: 5800, rate: 3, review: 56})
-          +room-card({number: 678, luxe: false, price: 5500, rate: 5, review: 45})
-          +room-card({number: 450, luxe: false, price: 5300, rate: 4, review: 39})
-          +room-card({number: 350, luxe: false, price: 5000, rate: 3, review: 77})
-          +room-card({number: 666, luxe: false, price: 5000, rate: 5, review: 25})
-          +room-card({number: 444, luxe: false, price: 5000, rate: 3, review: 15})
-          +room-card({number: 352, luxe: false, price: 5000, rate: 3, review: 55})
+        .search-room__wrapper-cards
+          h1.search-room__title Номера, которые мы для вас подобрали
+          .search-room__cards
+            +room-card({number: 888, luxe: true, price: 9990, rate: 5, review: 145})
+            +room-card({number: 840, luxe: false, price: 9900, rate: 4, review: 65})
+            +room-card({number: 980, luxe: true, price: 8500, rate: 3, review: 35})
+            +room-card({number: 856, luxe: false, price: 7300, rate: 5, review: 19})
+            +room-card({number: 740, luxe: false, price: 6000, rate: 4, review: 44})
+            +room-card({number: 982, luxe: false, price: 5800, rate: 3, review: 56})
+            +room-card({number: 678, luxe: false, price: 5500, rate: 5, review: 45})
+            +room-card({number: 450, luxe: false, price: 5300, rate: 4, review: 39})
+            +room-card({number: 350, luxe: false, price: 5000, rate: 3, review: 77})
+            +room-card({number: 666, luxe: false, price: 5000, rate: 5, review: 25})
+            +room-card({number: 444, luxe: false, price: 5000, rate: 3, review: 15})
+            +room-card({number: 352, luxe: false, price: 5000, rate: 3, review: 55})
         .search-room__pagination
         
     .search-room__footer

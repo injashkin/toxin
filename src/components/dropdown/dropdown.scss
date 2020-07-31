@@ -1,7 +1,5 @@
 .dropdown {
   position: relative;
-  max-width: 32rem;
-  min-width: 28.8rem;
 
   &__header-wrapper {
     display: flex;
@@ -16,7 +14,7 @@
     /* Dark 50% */
     border: 1px solid rgba(31, 32, 65, 0.5);
     box-sizing: border-box;
-    border-radius: 3px 3px 0 0;
+    border-radius: 3px 3px 3px 3px;
   }
 
   &__header {

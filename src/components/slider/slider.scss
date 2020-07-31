@@ -1,6 +1,4 @@
 .slider {
-  max-width: 32rem;
-
   &__header {
     display: flex;
     justify-content: space-between;
@@ -14,9 +12,9 @@
 
   &__input {
     border: 0;
-
     text-align: right;
     text-transform: uppercase;
+    width: 12rem;
   }
 
   &__legend {

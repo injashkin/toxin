@@ -1,4 +1,6 @@
-mixin date(options)
+mixin date(options = {})
+    - let {placeholder = 'ДД,ММ.ГГГГ'} = options
+
     .date
         input.date__input(
             type='text' 
@@ -9,6 +11,6 @@ mixin date(options)
             keyboardNav="true" 
             data-multiple-dates-separator=" - "
             data-clearButton="true"
-            placeholder="ДД,ММ.ГГГГ")    
+            placeholder=placeholder)    
         .date__icon
             i.material-icons expand_more
