@@ -67,48 +67,29 @@ module.exports = {
       // Шрифты
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        //include: [
+        //path.resolve(__dirname, "src/theme/fonts"),
+        //path.resolve(__dirname, "node_modules"), //Непонятно зачем
+        //],
+        //use: {
         loader: "file-loader",
         options: {
           name: "[name].[ext]",
           outputPath: `${PATHS.outPathFonts}`,
         },
+        //},
       },
       // Изображения
       {
-        test: /\.(png|jpg|gif)$/,
+        test: /\.(png|jpg|jpeg|gif|svg)$/,
+        //exclude: [path.resolve(__dirname, "src/theme/fonts")],
+        //use: {
         loader: "file-loader",
         options: {
           name: "[name].[ext]",
           outputPath: `${PATHS.outPathImg}`,
         },
-      },
-      // Отделяет шрифты svg из каталога src/theme/fonts/ от других изображений svg НЕ СМОГ НАСТРОИТЬ
-      {
-        test: /\.svg$/,
-        loader: "file-loader",
-        options: {
-          name: "[name].[ext]",
-          //outputPath: "fonts2",
-          /*
-          outputPath: (url, resourcePath, context) => {
-            // `resourcePath` - это оригинальный абсолютный путь к асету
-            // `context` - это каталог, где хранится асет (`rootContext`) или опция `context`
-
-            // Чтобы получить относительный путь, вы можете использовать
-            // const relativePath = path.relative(context, resourcePath);
-
-            //if (/fonts\.svg/.test(resourcePath)) {
-            //  return `image_output_path/${url}`;
-            //}
-
-            if (/fonts/.test(context)) {
-              return `fonts/${url}`;
-            }
-
-            return `img/${url}`;
-          },
-          */
-        },
+        //},
       },
       // CSS
       {

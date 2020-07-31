@@ -10,9 +10,18 @@ block main
       +header()
     .search-room__content
       .search-room__sidebar
-        +date()
-        +dropdown({name: 'numberGuests', placeholder: "Сколько гостей", items: ["взрослые", "дети", "младенцы"]})
-        include ../../components/slider/slider
+        .search-room__block
+          .search-room__block-title Даты пребывания в отеле
+          .search-room__block-component
+              +date()
+        .search-room__block
+          .search-room__block-title Гости
+            .search-room__block-component
+            +dropdown({name: 'numberGuests', placeholder: "Сколько гостей", items: ["взрослые", "дети", "младенцы"]})
+        .search-room__block
+          .search-room__block-title Диапазон цены
+            .search-room__block-component
+            include ../../components/slider/slider
         +listbox({title: 'Checkbox Buttons', items: ['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)']})
         +listbox({title:'Доступность', items: [{name: 'Широкий коридор', desc: 'Ширина коридоров в номере не менее 91 см.'}, {name: 'Помощник для инвалидов', desc: 'На 1 этаже вас встретит специалист  и проводит до номера.'}]})
         +dropdown({name: "comfort", placeholder: "Какие удобства", items: ["спальни", "кровати", "ванные комнаты"]})
