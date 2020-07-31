@@ -1,6 +1,10 @@
-.slider
-  p.slider__header
-    label.slider__label(for="amount") Range Slider
-    input.slider__input(type="text" id="amount" readonly)
+mixin slider(options={})
+  - let {label = ''} = options
 
-  <div id="slider-range"></div>
+  .slider
+      p.slider__header
+        span.slider__label(for="amount")= label
+        input.slider__input(type="text" id="amount" readonly)
+
+      .slider-range(id="slider-range")
+      .slider__legend Стоимость за сутки пребывания в номере
