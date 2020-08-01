@@ -210,5 +210,10 @@ module.exports = {
       filename: "./search-room.html",
       inject: true,
     }),
+    new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/pages/room/room.pug`,
+      filename: "./room.html",
+      inject: true,
+    }),
   ],
 };
