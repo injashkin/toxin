@@ -37,3 +37,4 @@ import "./theme/main.scss";
 import "./components/signin/signin.scss";
 //import "./variables.scss";
 import "./theme/fonts.scss";
+import "./style.css";

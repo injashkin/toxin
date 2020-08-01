@@ -1,10 +1,23 @@
+.body {
+  position: relative;
+  height: 100vh;
+}
+
 .home-menu {
   position: absolute;
-  font-size: 2em;
+  font-size: 2rem;
   list-style: none;
-  top: 20%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.home-menu__label {
+  font-weight: bold;
+}
+
+li {
+  margin-bottom: 1rem;
 }
 
 .home-menu__item-menu {

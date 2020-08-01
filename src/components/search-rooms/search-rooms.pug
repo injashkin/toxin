@@ -1,14 +1,17 @@
 mixin search-rooms()    
     form.search-rooms
-        h1 Найдём номера под ваши пожелания
-        //-+text({text: 'Найдём номера под ваши пожелания', size: 'h1'})
+        h1.search-rooms__title Найдём номера под ваши пожелания        
         .search-rooms__dade-picker
             .search-rooms__arrival-date
-                +text({text: 'Прибытие', size: 'h3'})
-                +date()
+                h3.search-rooms__label Прибытие
+                .search-rooms__date
+                    +date()
             .search-rooms__departure-date
-                +text({text: 'Выезд', size: 'h3'})
-                +date()
-        +text({text: 'Гости', size: 'h3'})
-        +dropdown()
-        +button({text: "Подобрать номер", style: "ic"})        
+                h3.search-rooms__label Выезд
+                .search-rooms__date
+                    +date()
+        h3.search-rooms__label Гости
+        .search-rooms__guests
+            +dropdown()
+        .search-rooms__button
+            +button({text: "Подобрать номер", style: "ic"})        
