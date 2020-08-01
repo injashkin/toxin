@@ -30,6 +30,7 @@ import "./components/select/select.js";
 import "./components/listbox/listbox.js";
 import "./components/room-calc/room-calc.js";
 import "./components/room-card/room-card.js";
+import "./components/pagination/pagination.js";
 
 // SCSS
 import "./theme/main.scss";
