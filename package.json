@@ -24,6 +24,7 @@
     "jquery": "^3.5.1",
     "jquery-ui": "^1.12.1",
     "jquery-ui-dist": "^1.12.1",
+    "material-design-icons": "^3.0.1",
     "prettier": "^2.0.5",
     "pug": "^3.0.0",
     "sass": "^1.26.8",

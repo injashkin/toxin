@@ -1,8 +1,7 @@
 //- Компонент выводит информацию в виде списка. Элементы списка могут быть выведены в виде чекбоксов, 
     радиокнопок, ссылок, маркированных элементов, простого текста. Списку можно задать заголовок.
     Список может быть выпадающим или фиксированным. 
-    Вызов компонента:
-    
+    Вызов компонента:    
     +listbox({title: 'Навигация', items: navigation})
     
     где `navigation` может быть задана в виде массива объектов, например:
@@ -22,6 +21,7 @@
     options.items[n].name - массив списка названий элементов
     options.items[n].desc - массив списка расширенного описания элементов
     options.items[n].link - массив ссылок, соответствующих названиям элементов
+    options.items[n].icon - массив названий иконок из Material Icons
 
 mixin listbox(options = {})
   
@@ -42,20 +42,33 @@ mixin listbox(options = {})
 
         ul.listbox__ul(class=dropClass)
 
-            each item in items
+            each item, index in items
                 if (content === 'ul')
                     .listbox__bulleted
                         ul.listbox__bulleted-ul
                             li.listbox__bulleted-li= item
-                if (content === 'txt')
+                else if (content === 'txt')
                     li.listbox__text= item                       
 
                 else                    
-                    if (typeof item === 'object' && item.desc !== undefined)  
-                        li.listbox__li_small                     
-                            .listbox__name
-                                +select({label: item.name, inherit: true})
-                            p.listbox__desc= item.desc
+                    if (typeof item === 'object' && item.desc !== undefined)
+                        if (item.icon !== undefined)  
+                            li.listbox__li
+                                .listbox__item_with-icon
+                                    .listbox__row
+                                        .listbox__icon-mi
+                                            i.material-icons= item.icon
+                                        .listbox__column
+                                            .listbox__item-name= item.name
+                                            .listbox__item-desc= item.desc
+                                if (index < items.length - 1)
+                                    .listbox__separating-line
+                                
+                        else
+                            li.listbox__li_small                     
+                                .listbox__name
+                                    +select({label: item.name, inherit: true})
+                                p.listbox__desc= item.desc
                     else if (typeof item === 'object' && item.link !== undefined)
                         li.listbox__li                              
                             a.listbox__a(href= item.link)= item.name
