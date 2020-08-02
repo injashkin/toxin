@@ -32,6 +32,7 @@ import "./components/listbox/listbox.js";
 import "./components/room-calc/room-calc.js";
 import "./components/room-card/room-card.js";
 import "./components/pagination/pagination.js";
+import "./components/pie-chart/pie-chart.js";
 
 // SCSS
 import "./theme/main.scss";

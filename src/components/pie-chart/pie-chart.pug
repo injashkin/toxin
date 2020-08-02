@@ -1,0 +1,49 @@
+mixin pie-chart()  
+    .pie-chart
+        .pie-chart__chart
+            svg(width="125" height="125")
+            
+                linearGradient(id="satisfactorily")
+                    stop(offset="0%" stop-color="#BC9CFF")
+                    stop(offset="100%" stop-color="#8BA4F9")
+                linearGradient(id="good")
+                    stop(offset="0%" stop-color="#66D2EA")
+                    stop(offset="100%" stop-color="#6FCF97")
+                linearGradient(id="excellent")
+                    stop(offset="0%" stop-color="#FFE39C")
+                    stop(offset="100%" stop-color="#FFBA9C")
+                linearGradient(id="disappointed")
+                    stop(offset="0%" stop-color="#909090")
+                    stop(offset="100%" stop-color="#3D4975")
+            
+                
+                circle(cx="63" cy="63" r="58" 
+                    stroke="url('#good')" 
+                    stroke-width="4" 
+                    fill="transparent" 
+                    stroke-dasharray="90 1300" 
+                    stroke-dashoffset="1")
+                circle(cx="63" cy="63" r="58" 
+                    stroke="url('#excellent')" 
+                    stroke-width="4" 
+                    fill="transparent" 
+                    stroke-dasharray="180 500" 
+                    stroke-dashoffset="-92")
+                circle(cx="63" cy="63" r="58" 
+                    stroke="url('#satisfactorily')" 
+                    stroke-width="4" 
+                    fill="transparent" 
+                    stroke-dasharray="88 500" 
+                    stroke-dashoffset="-274")
+                //-line(x1="0" y1="63" x2="125" y2="63" stroke="black")
+                //-line(x1="63" y1="0" x2="63" y2="125" stroke="black")
+            .pie-chart__number-voices 
+                .pie-chart__number 260 
+                .pie-chart__voices голосов
+
+
+        ul.pie-chart__legend 
+            li.pie-chart__legend-item Великолепно
+            li.pie-chart__legend-item Хорошо
+            li.pie-chart__legend-item Удовлетворительно
+            li.pie-chart__legend-item Разочарован

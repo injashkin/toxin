@@ -18,6 +18,8 @@ block main
                             +listbox({title:'', items: [{name: 'Комфорт', desc: 'Шумопоглощающие стены', icon: 'insert_emoticon'}, {name: 'Удобство', desc: 'Окно в каждой из спален', icon: 'location_city'}, {name: 'Уют', desc: 'Номер оснащён камином', icon: 'whatshot'}]})
                     .room__impress
                         h3.room__impress-title Впечатления от номера
+                        .room__impress-content
+                            +pie-chart()
                 .room__reviews
                     h3.room__reviews-title Отзывы посетителей номера
                     .room__reviews-content
