@@ -38,6 +38,7 @@
   line-height: $height;
 }
 
+/* Material-Icons */
 @font-face {
   font-family: "Material-Icons";
   font-style: normal;
@@ -46,6 +47,36 @@
   src: local("Material Icons"), local("MaterialIcons-Regular"),
     url("../theme/fonts/materialIcons-regular.woff") format("woff"),
     url("../theme/fonts/materialIcons-regular.ttf") format("truetype");
+}
+
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
+
+  &.md-48 {
+    font-size: 48px;
+    line-height: 41px;
+  }
 }
 
 /* montserrat-regular - latin_cyrillic */

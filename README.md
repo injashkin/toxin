@@ -6,7 +6,7 @@
 
 ## Шрифты
 
-- О том, как устанавливать шрифты в этот проект информация [здесь](./src/theme/fonts/READMI.md)
+- [Использование шрифтов в данном проекте](./src/theme/fonts/README.md)
 
 - [Руководство по Material Icons от Google](https://google.github.io/material-design-icons/)
 
