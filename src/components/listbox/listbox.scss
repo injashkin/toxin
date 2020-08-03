@@ -163,17 +163,16 @@
     display: flex;
     align-items: center;
     position: relative;
-    padding-bottom: 1rem;
   }
 
   &__bulleted-li:before {
     position: absolute;
-    left: -2rem;
+    top: 0.7rem;
+    left: -2.1rem;
     width: 1rem;
     height: 1rem;
     background: rgba(31, 32, 65, 0.25);
     border-radius: 50%;
-    //text-align: center;
     content: " ";
   }
 }
