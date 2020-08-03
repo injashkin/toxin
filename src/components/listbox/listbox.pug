@@ -65,12 +65,12 @@ mixin listbox(options = {})
                                     .listbox__separating-line
                                 
                         else
-                            li.listbox__li_small                     
+                            li.listbox__li_margin9                   
                                 .listbox__name
                                     +select({label: item.name, inherit: true})
                                 p.listbox__desc= item.desc
                     else if (typeof item === 'object' && item.link !== undefined)
-                        li.listbox__li                              
+                        li.listbox__li_margin14
                             a.listbox__a(href= item.link)= item.name
                     else
                         li.listbox__li                         

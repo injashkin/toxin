@@ -1,5 +1,27 @@
 //- 
   options.username - имя пользователя
+  options.menuItems - массив элементов меню
+  options.menuItems[n].name - название n-го элемента меню
+  options.menuItems[n].link - ссылка n-го элемента меню
+  options.menuItems[n].subMenuItems - массив подменю n-го элемента меню
+
+  Пример:
+- 
+  let menuItems = [
+      {name: 'О нас', link: '/about.html'},
+      {name: 'Услуги', link: '/services.html', subMenuItems: [
+        {name: 'Услуга 1', link: '/services1.html'},
+        {name: 'Услуга 2', link: '/services2.html'},
+        {name: 'Услуга 3', link: '/services3.html'},
+      ]},
+      {name: 'Вакансии', link: '/vacancy.html'},
+      {name: 'Новости', link: '/news.html'},
+      {name: 'Соглашения', link: '/agreements.html', subMenuItems: [
+        {name: 'Соглашение 1', link: '/agreements1.html'},
+        {name: 'Соглашение 2', link: '/agreements2.html'},
+      ]}, 
+  ]
+
 
 mixin header(options = {})
 
@@ -12,32 +34,15 @@ mixin header(options = {})
     .header__right
       nav.header__nav
         ul.header__ul.header__ul_top
-          li.header__item 
-            a.header__link(href="#") О нас
-          li.header__item
-            a.header__link(href="#") Услуги
-            i.material-icons expand_more
-            ul.header__ul.header__ul_sub
-              li.header__item 
-                a.header__link(href="#") Услуга 1
-              li.header__item 
-                a.header__link(href="#") Услуга 2
-              li.header__item 
-                a.header__link(href="#") Услуга 3
-          li.header__item 
-            a.header__link(href="#") Вакансии
-          li.header__item 
-            a.header__link(href="#") Новости
-          li.header__item 
-            a.header__link(href="#") Соглашения
-            i.material-icons expand_more
-            ul.header__ul.header__ul_sub
-              li.header__item 
-                a.header__link(href="#") Соглашение 1
-              li.header__item 
-                a.header__link(href="#") Соглашение 2
-              li.header__item 
-                a.header__link(href="#") Соглашение 3
+          each item in menuItems
+            li.header__item 
+              a.header__link(href=item.link)= item.name
+              if item.subMenuItems
+                i.material-icons expand_more
+                ul.header__ul.header__ul_sub
+                  each subItem in item.subMenuItems
+                    li.header__item 
+                      a.header__link-sub(href=subItem.link)= subItem.name     
       .header__sign 
         if (username !== '')
           .header__vertical-bar
