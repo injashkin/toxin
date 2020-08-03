@@ -1,13 +1,77 @@
 .room {
   &__main {
     display: flex;
+    width: 80.6%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__content {
+    width: 91%;
+
+    & > :nth-child(3) {
+      justify-content: space-between;
+    }
   }
 
   &__row {
     display: flex;
   }
 
-  &__info-title {
-    margin-bottom: 2rem;
+  &__info {
+    flex-basis: 50.4%;
+
+    &-title {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__impress {
+    flex-basis: 49%;
+
+    &-title {
+      margin-bottom: 1.8rem;
+      padding-left: 0.3rem;
+    }
+  }
+
+  &__reviews {
+    margin-top: 2.1rem;
+    margin-bottom: 3.5rem;
+
+    & > :nth-child(1) {
+      justify-content: space-between;
+    }
+
+    &-item {
+      margin-top: 2rem;
+    }
+
+    &-username {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 24px;
+      /* or 171% */
+      color: $dark75;
+    }
+
+    &-message {
+      margin-top: 1rem;
+    }
+  }
+
+  &__rules {
+    flex-basis: 36%;
+
+    &-title {
+      margin-bottom: 1.7rem;
+      margin-left: 2rem;
+    }
+  }
+
+  &__cancel {
+    flex-basis: 49.4%;
   }
 }
