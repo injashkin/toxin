@@ -4,15 +4,16 @@
     options.price - стоимость номера рублей в сутки
     options.rate - количество звезд
     options.review - количество отзывов
+    options.img - путь к фотографии
 
 
 mixin room-card(options = {})
 
-    - let {number, price, rate, review, luxe} = options
+    - let {number, price, rate, review, luxe, img} = options
     
     .room-card         
                  
-        img.room-card__img(src="assets/img/888-1.jpg")    
+        img.room-card__img(src=img)    
         .room-card__description
             .room-card__number-card
                 .room-card__number
@@ -23,6 +24,7 @@ mixin room-card(options = {})
                 .room-card__price
                     .room-card__price-value #{price}₽
                     .room-card__price-period в сутки        
+            .room-card__dividing-line
             .room-card__rate-review
                 .room-card__rate
                     +rate(rate)

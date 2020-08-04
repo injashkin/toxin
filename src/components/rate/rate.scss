@@ -6,8 +6,8 @@
   &__label {
     display: inline-block;
     position: relative;
-    width: 2rem;
-    height: 2rem;
+    width: 2.05rem;
+    //height: 1rem;
 
     cursor: pointer;
   }
@@ -24,11 +24,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -70%);
 
     color: #8ba4f9;
   }

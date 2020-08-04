@@ -14,36 +14,53 @@ mixin room-calc(options = {})
 
     .room-calc
         .room-calc__header
-            .room-calc__number                
-                h1 № #{number}                
+            .room-calc__number
+                .room-calc__number-symbol №
+                h1 #{number}                
                 if (luxe)
                    h3 Люкс
             .room-calc__rate
-                h2 #{rate} ₽
+                .room-calc__rate-value #{rate}₽
                 p в сутки
-        .room-calc__dade-picker
-            .room-calc__arrival-date                
-                h3 Прибытие
+        .room-calc__date-picker
+            .room-calc__arrival-date
+                h3.room-calc__field-label Прибытие
                 +date()
             .room-calc__departure-date
-                h3 Выезд
+                h3.room-calc__field-label Выезд
                 +date()
-        h3 Гости
-        +dropdown()
-        .room-calc__result
+        h3.room-calc__field-label Гости
+        .room-calc__dropdown
+            +dropdown()
             - let day = 4
-            p #{rate}₽ x #{day} суток
-            - let result = rate * day
-            p #{result}₽
-        .room-calc__toll
-            p Сбор за услуги: скидка #{discount}
-            p #{toll}₽
-        .room-calc__fee
-            p Сбор за дополнительные услуги
-            p #{feeAddService}
-        .room-calc__total
-            h2 Итого
-            - let total = result - discount + toll + feeAddService
-            h2 #{total}₽
-
-        +button({text: "Забронировать", style: "ic"})      
+        table.room-calc__result
+            tr.room-calc__row.room-calc__gross
+                td.room-calc__cell 
+                    .room-calc__gross-label #{rate}₽ x #{day} суток
+                - let result = rate * day
+                td.room-calc__cell 
+                    .room-calc__gross-value #{result}₽
+            tr.room-calc__row.room-calc__toll
+                td.room-calc__cell
+                    .room-calc__cell-wrapper
+                        .room-calc__toll-label Сбор за услуги: скидка #{discount}₽
+                        .room-calc__tooltip i
+                td.room-calc__cell
+                    .room-calc__toll-value #{toll}₽
+            tr.room-calc__row.room-calc__fee
+                td.room-calc__cell
+                    .room-calc__cell-wrapper
+                        .room-calc__fee-label Сбор за дополнительные услуги
+                        .room-calc__tooltip i
+                td.room-calc__cell
+                    .room-calc__fee-value #{feeAddService}₽
+            tr.room-calc__row.room-calc__total
+                td.room-calc__cell.room-calc__cell_total
+                    .room-calc__cell-wrapper
+                        p.room-calc__total-label Итого                    
+                        span.room-calc__total-point
+                - let total = result - discount + toll + feeAddService
+                td.room-calc__cell.room-calc__cell_total
+                    .room-calc__total-value #{total}₽
+        .room-calc__button-wrapper
+            +button({text: "Забронировать", style: "ic"})      

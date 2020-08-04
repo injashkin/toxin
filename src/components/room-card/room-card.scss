@@ -12,22 +12,21 @@
   }
 
   &__description {
-    padding: 2rem;
+    padding: 2rem 2.1rem;
   }
 
   &__number-card {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid $dark10;
   }
 
   &__number {
     display: flex;
-    align-items: center;
+    align-items: baseline;
 
     &-symbol {
-      font-family: Quicksand;
+      font-family: Quicksand, Open Sans;
       font-style: normal;
       font-weight: bold;
       font-size: 14px;
@@ -38,7 +37,7 @@
     }
 
     &-number {
-      font-family: Quicksand;
+      font-family: Quicksand, Open Sans;
       font-style: normal;
       font-weight: bold;
       font-size: 19px;
@@ -80,10 +79,17 @@
     }
   }
 
+  &__dividing-line {
+    height: 1px;
+    background: $dark10;
+    margin-top: 1rem;
+    margin-bottom: 0.8rem;
+  }
+
   &__rate-review {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
   }
 
   &__review {
@@ -98,7 +104,7 @@
     color: $dark50;
 
     &-value {
-      margin-right: 0.5rem;
+      margin-right: 0.4rem;
     }
 
     &-review {
