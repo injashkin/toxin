@@ -7,6 +7,10 @@
 
   &__banner {
     display: flex;
+    width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    //overflow: hidden;
 
     &-img3 {
       margin-top: -0.1rem;

@@ -34,7 +34,7 @@ module.exports = {
   output: {
     filename: `${PATHS.assets}js/[name].[hash].js`,
     path: PATHS.dist,
-    publicPath: "/",
+    publicPath: "./",
   },
   optimization: {
     splitChunks: {
@@ -75,7 +75,7 @@ module.exports = {
         loader: "file-loader",
         options: {
           name: "[name].[ext]",
-          outputPath: `${PATHS.outPathFonts}`,
+          outputPath: `${PATHS.assets}fonts`,
         },
         //},
       },
@@ -131,6 +131,7 @@ module.exports = {
             loader: "sass-loader",
             options: { sourceMap: true },
           },
+          // Позволяет не прописывать variables.scss в файлах, где он используется
           {
             loader: "sass-resources-loader",
             options: {
@@ -156,7 +157,7 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
-      { from: `${PATHS.src}/theme/fonts`, to: `${PATHS.assets}fonts` },
+      { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
       { from: `${PATHS.src}/static`, to: "" },
     ]),
 
