@@ -4,16 +4,15 @@
     options.price - стоимость номера рублей в сутки
     options.rate - количество звезд
     options.review - количество отзывов
-    options.img - путь к фотографии
-
+    options.imgName - имя файла изображения
 
 mixin room-card(options = {})
 
-    - let {number, price, rate, review, luxe, img} = options
+    - let {number, price, rate, review, luxe, imgName} = options    
     
-    .room-card         
-                 
-        img.room-card__img(src=img)    
+    .room-card     
+        //- Путь в img перенести в вызывающую страницу
+        img.room-card__img(src=require(`../../pages/search-room/img/${imgName}.jpg`))        
         .room-card__description
             .room-card__number-card
                 .room-card__number
