@@ -10,10 +10,10 @@ block main
             +header()
         .room__banner
             .room__banner-left
-                img.room__banner-img1(src="./assets/img/888-room-baner1.jpg", alt="Интерьер номера")
+                img.room__banner-img1(src=require("./img/888-room-baner1.jpg"), alt="Интерьер номера")                
             .room__banner-right
-                img.room__banner-img2(src="./assets/img/888-room-baner2.jpg", alt="Интерьер номера")
-                img.room__banner-img3(src="./assets/img/888-room-baner3.jpg", alt="Интерьер номера")
+                img.room__banner-img2(src=require("./img/888-room-baner2.jpg"), alt="Интерьер номера")
+                img.room__banner-img3(src=require("./img/888-room-baner3.jpg"), alt="Интерьер номера")
         .room__main
             .room__wrapper-content
                 .room__content
@@ -35,7 +35,7 @@ block main
                                 .room__row
                                     .room__reviews-left-side
                                         .room__reviews-avatar
-                                            img.room__reviews-avatar-img(src="./assets/img/murad.jpg")
+                                            img.room__reviews-avatar-img(src=require("./img/murad.jpg"), alt="Аватар пользователя")
                                     .room__reviews-right-side
                                         .room__reviews-username Мурад Сарафанов                               
                                         .room__reviews-time 5 дней назад
@@ -44,7 +44,7 @@ block main
                                 .room__row
                                     .room__reviews-left-side
                                         .room__reviews-avatar
-                                            img.room__reviews-avatar-img(src="./assets/img/patrisija.jpg")
+                                            img.room__reviews-avatar-img(src=require("./img/patrisija.jpg"), alt="Аватар пользователя")
                                     .room__reviews-right-side
                                         .room__reviews-username Патрисия Стёклышкова
                                         .room__reviews-time Неделю назад

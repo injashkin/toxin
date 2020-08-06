@@ -1,43 +1,5 @@
 @import "../assets/fonts/font-awesome/fontawesome";
 
-//Данный миксин больше не применять. 23.06.20
-//Везде заменять его на миксин Montserrat
-@mixin font-body($weight, $size, $height) {
-  //$weight - можно указывать: 400 или normal; 700 или bold
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: $weight;
-  font-size: $size;
-  line-height: $height;
-}
-
-@mixin Montserrat($weight, $size, $height) {
-  //$weight - можно указывать: 400 или normal; 700 или bold
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: $weight;
-  font-size: $size;
-  line-height: $height;
-}
-
-@mixin Quicksand($weight, $size, $height) {
-  //$weight - можно указывать: 400 или normal; 700 или bold
-  font-family: Quicksand;
-  font-style: normal;
-  font-weight: $weight;
-  font-size: $size;
-  line-height: $height;
-}
-
-@mixin Material-Icons($weight, $size, $height) {
-  //$weight - можно указывать: 400 или normal; 700 или bold
-  font-family: Material-Icons;
-  font-style: normal;
-  font-weight: $weight;
-  font-size: $size;
-  line-height: $height;
-}
-
 /* Material-Icons */
 @font-face {
   font-family: "Material-Icons";
@@ -133,10 +95,10 @@
       url("../assets/fonts/quicksand-v20-latin-ext-regular.woff") format("woff"),
     /* Modern Browsers */
       url("../assets/fonts/quicksand-v20-latin-ext-regular.ttf")
-      format("truetype"),
-    /* Safari, Android, iOS */
-      url("../assets/fonts/quicksand-v20-latin-ext-regular.svg#Quicksand")
-      format("svg"); /* Legacy iOS */
+      format("truetype");
+  /* Safari, Android, iOS */
+  /*  url("../assets/fonts/quicksand-v20-latin-ext-regular.svg#Quicksand")
+      format("svg");*/ /* Legacy iOS */
 }
 
 /* quicksand-700 - latin-ext */
@@ -153,10 +115,10 @@
     /* Super Modern Browsers */
       url("../assets/fonts/quicksand-v20-latin-ext-700.woff") format("woff"),
     /* Modern Browsers */ url("../assets/fonts/quicksand-v20-latin-ext-700.ttf")
-      format("truetype"),
-    /* Safari, Android, iOS */
-      url("../assets/fonts/quicksand-v20-latin-ext-700.svg#Quicksand")
-      format("svg"); /* Legacy iOS */
+      format("truetype");
+  /* Safari, Android, iOS */
+  /*  url("../assets/fonts/quicksand-v20-latin-ext-700.svg#Quicksand")
+      format("svg");*/ /* Legacy iOS */
 }
 
 /* open-sans-regular - latin_cyrillic */

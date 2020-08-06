@@ -3,6 +3,7 @@ const fs = require("fs");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 // Main const
 // see more: https://github.com/vedees/webpack-template/blob/master/README.md#main-const
@@ -10,8 +11,6 @@ const PATHS = {
   src: path.join(__dirname, "../src"),
   dist: path.join(__dirname, "../dist"),
   assets: "assets/",
-  outPathFonts: "fonts/",
-  outPathImg: "img/",
 };
 
 // Pages const for HtmlWebpackPlugin
@@ -27,12 +26,13 @@ module.exports = {
   externals: {
     paths: PATHS,
   },
-  entry: {
-    app: PATHS.src,
+  entry: `${PATHS.src}/index.js`,
+  /*entry: {
+    app: `${PATHS.src}/index.js`,
     // module: `${PATHS.src}/your-module.js`,
-  },
+  },*/
   output: {
-    filename: `${PATHS.assets}js/[name].[hash].js`,
+    filename: "[name]-[hash].js",
     path: PATHS.dist,
     publicPath: "./",
   },
@@ -50,46 +50,11 @@ module.exports = {
   },
   module: {
     rules: [
-      // PUG
-      {
-        test: /\.pug$/,
-        loader: "pug-loader",
-        options: {
-          pretty: true, //расставляет отступы и переносы строк в html коде
-        },
-      },
       // JS
       {
         test: /\.js$/,
         loader: "babel-loader",
         exclude: "/node_modules/",
-      },
-      // Шрифты
-      {
-        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-        //include: [
-        //path.resolve(__dirname, "src/theme/fonts"),
-        //path.resolve(__dirname, "node_modules"), //Непонятно зачем
-        //],
-        //use: {
-        loader: "file-loader",
-        options: {
-          name: "[name].[ext]",
-          outputPath: `${PATHS.assets}fonts`,
-        },
-        //},
-      },
-      // Изображения
-      {
-        test: /\.(png|jpg|jpeg|gif|svg)$/,
-        //exclude: [path.resolve(__dirname, "src/theme/fonts")],
-        //use: {
-        loader: "file-loader",
-        options: {
-          name: "[name].[ext]",
-          outputPath: `${PATHS.outPathImg}`,
-        },
-        //},
       },
       // CSS
       {
@@ -99,12 +64,12 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           {
             loader: "css-loader",
-            options: { sourceMap: true },
+            options: { sourceMap: false },
           },
           {
             loader: "postcss-loader",
             options: {
-              sourceMap: true,
+              sourceMap: false,
               config: { path: `./postcss.config.js` },
             },
           },
@@ -118,25 +83,26 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           {
             loader: "css-loader",
-            options: { sourceMap: true },
+            options: { sourceMap: false },
           },
           {
             loader: "postcss-loader",
             options: {
-              sourceMap: true,
+              sourceMap: false,
               config: { path: `./postcss.config.js` },
             },
           },
           {
             loader: "sass-loader",
-            options: { sourceMap: true },
+            options: { sourceMap: false },
           },
           // Позволяет не прописывать variables.scss в файлах, где он используется
           {
             loader: "sass-resources-loader",
             options: {
               // Provide path to the file with resources
-              resources: `${PATHS.src}/variables.scss`,
+              //resources: `${PATHS.src}/variables.scss`,
+              resources: [`${PATHS.src}/variables.scss`],
 
               // Or array of paths
               //resources: ['./path/to/vars.scss', './path/to/mixins.scss']
@@ -144,6 +110,41 @@ module.exports = {
           },
         ],
       } /* end SCSS */,
+      // PUG
+      {
+        test: /\.pug$/,
+        loader: "pug-loader",
+        options: {
+          pretty: true, //расставляет отступы и переносы строк в html коде
+        },
+      },
+      // Шрифты
+      {
+        test: /\.(woff|woff2|ttf|eot|svg)$/, //(\?v=\d+\.\d+\.\d+)?
+        //include: [
+        //path.resolve(__dirname, "src/theme/fonts"),
+        //path.resolve(__dirname, "node_modules"), //Непонятно зачем
+        //],
+        //use: {
+        loader: "file-loader", //?name=./assets/fonts/[name].[ext]
+
+        options: {
+          name: "[name].[ext]",
+          outputPath: "fonts",
+        },
+      },
+      // Изображения
+      {
+        test: /\.(png|jpg|jpeg|gif|svg)$/,
+        //exclude: [path.resolve(__dirname, "src/theme/fonts")],
+        //use: {
+        loader: "file-loader",
+        options: {
+          name: "[name].[ext]",
+          outputPath: "assets/img",
+        },
+        //},
+      },
     ] /* end rules */,
   },
   resolve: {
@@ -152,12 +153,20 @@ module.exports = {
     },
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: `${PATHS.assets}css/[name].[hash].css`,
+      filename: "css/[name].[hash].css",
     }),
     new CopyWebpackPlugin([
-      { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
-      { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
+      {
+        from: `${PATHS.src}/${PATHS.assets}img`,
+        to: "assets/img", //`${PATHS.assets}img`,
+      },
+
+      {
+        from: `${PATHS.src}/${PATHS.assets}fonts`,
+        to: "assets/fonts", //`${PATHS.assets}fonts`,
+      },
       { from: `${PATHS.src}/static`, to: "" },
     ]),
 
