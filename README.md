@@ -18,4 +18,22 @@
 
 ## NPM модули
 
+- [copy-webpack-plugin]() -
+
+- [file-loader](https://github.com/webpack-contrib/file-loader) - разрешает `import/require()` для файла, указанного в url-адресе и отправляет файл в выходной каталог.
+
+- [html-webpack-plugin]() -
+
+- [mini-css-extract-plugin](https://github.com/webpack-contrib/mini-css-extract-plugin) - извлекает CSS в отдельные файлы. Он создает CSS-файл для каждого JS-файла, содержащего CSS. Рекомендуется комбинировать `mini-css-extract-plugin` с `sass-loader`
+
+- [node-sass](https://github.com/sass/node-sass) - компилирует .scss файлы в css
+
+- [sass](https://github.com/sass/dart-sass) - компилирует .scss файлы в css. ПОМОЕМУ, МОЖНО УДАЛИТЬ
+
+- [sass-loader](https://github.com/webpack-contrib/sass-loader) - Загружает файл Sass/SCSS и компилирует его в CSS. Для работы требуется `node-sass` или `sass` (Dart Sass). `sass-loader` совместно с `mini-css-extract-plugin` конвертирует scss в css и минифицируя выводит в файл css.
+
 - [sass-resources-loader](https://github.com/shakacode/sass-resources-loader) - позволяет использовать общие переменные и миксины во всех стилях SCSS, не импортируя их вручную в каждый файл.
+
+- [style-loader](https://github.com/webpack-contrib/style-loader) - встраивает css код в файл HTML. `style-loader` рекомендуется использовать с `css-loader`
+
+- [resolve-url-loader](https://github.com/bholloway/resolve-url-loader) - преобразует относительные пути в URL() в исходном файле.

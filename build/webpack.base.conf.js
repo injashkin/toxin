@@ -64,12 +64,12 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           {
             loader: "css-loader",
-            options: { sourceMap: false },
+            options: { sourceMap: true },
           },
           {
             loader: "postcss-loader",
             options: {
-              sourceMap: false,
+              sourceMap: true,
               config: { path: `./postcss.config.js` },
             },
           },
@@ -83,18 +83,21 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           {
             loader: "css-loader",
-            options: { sourceMap: false },
+            options: { sourceMap: true },
           },
           {
             loader: "postcss-loader",
             options: {
-              sourceMap: false,
+              sourceMap: true,
               config: { path: `./postcss.config.js` },
             },
           },
           {
+            loader: "resolve-url-loader",
+          },
+          {
             loader: "sass-loader",
-            options: { sourceMap: false },
+            options: { sourceMap: true },
           },
           // Позволяет не прописывать variables.scss в файлах, где он используется
           {
@@ -120,18 +123,19 @@ module.exports = {
       },
       // Шрифты
       {
-        test: /\.(woff|woff2|ttf|eot|svg)$/, //(\?v=\d+\.\d+\.\d+)?
+        test: /\.(eot|svg|ttf|woff|woff2)$/, //(\?v=\d+\.\d+\.\d+)?
         //include: [
         //path.resolve(__dirname, "src/theme/fonts"),
         //path.resolve(__dirname, "node_modules"), //Непонятно зачем
         //],
         //use: {
-        loader: "file-loader", //?name=./assets/fonts/[name].[ext]
-
+        loader: "file-loader?name=./assets/fonts/[name].[ext]", //?name=./assets/fonts/[name].[ext]
+        /*
         options: {
           name: "[name].[ext]",
-          outputPath: "fonts",
+          outputPath: "assets/fonts/",
         },
+        */
       },
       // Изображения
       {
@@ -141,7 +145,7 @@ module.exports = {
         loader: "file-loader",
         options: {
           name: "[name].[ext]",
-          outputPath: "assets/img",
+          outputPath: "assets/img/",
         },
         //},
       },
@@ -155,7 +159,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: "css/[name].[hash].css",
+      filename: "[name].[hash].css",
     }),
     new CopyWebpackPlugin([
       {
