@@ -1,0 +1,34 @@
+//-
+  options.menuItems - массив элементов меню
+  options.menuItems[n].name - название n-го элемента меню
+  options.menuItems[n].link - ссылка n-го элемента меню
+  options.menuItems[n].subMenuItems - массив подменю n-го элемента меню
+
+- 
+    let menuItems = [
+        {name: 'О нас', link: '/about.html'},
+        {name: 'Услуги', link: '/services.html', subMenuItems: [
+            {name: 'Услуга 1', link: '/services1.html'},
+            {name: 'Услуга 2', link: '/services2.html'},
+            {name: 'Услуга 3', link: '/services3.html'},
+        ]},
+        {name: 'Вакансии', link: '/vacancy.html'},
+        {name: 'Новости', link: '/news.html'},
+        {name: 'Соглашения', link: '/agreements.html', subMenuItems: [
+            {name: 'Соглашение 1', link: '/agreements1.html'},
+            {name: 'Соглашение 2', link: '/agreements2.html'},
+        ]}, 
+    ]
+
+mixin menu()
+    nav.menu        
+        ul.menu__ul.menu__ul_top
+            each item in menuItems
+                li.menu__item 
+                    a.menu__link(href=item.link)= item.name
+                    if item.subMenuItems
+                        i.material-icons expand_more
+                            ul.menu__ul.menu__ul_sub
+                                each subItem in item.subMenuItems
+                                    li.menu__item 
+                                        a.menu__link-sub(href=subItem.link)= subItem.name  

@@ -33,6 +33,7 @@ import "./components/room-calc/room-calc.js";
 import "./components/room-card/room-card.js";
 import "./components/pagination/pagination.js";
 import "./components/pie-chart/pie-chart.js";
+import "./components/menu/menu.js";
 
 // SCSS
 import "./style.css";
