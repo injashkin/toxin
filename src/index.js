@@ -35,8 +35,9 @@ import "./components/pagination/pagination.js";
 import "./components/pie-chart/pie-chart.js";
 
 // SCSS
+import "./style.css";
 import "./theme/main.scss";
 import "./components/signin/signin.scss";
 import "./variables.scss";
 import "./theme/fonts.scss";
-import "./style.css";
+import "./pages/template.scss";

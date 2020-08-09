@@ -4,13 +4,15 @@ block title
   |  Страница Lending
 
 block main   
-  .landing
-
+  .landing    
     .landing__header
-      +header()
+      .main
+        +header()
     .landing__frame
-      .landing__search-rooms
-        +search-rooms()
-      p.landing__slogan Лучшие номера для вашей работы, отдыха и просто вдохновения
+      .main
+        .landing__search-rooms
+          +search-rooms()
+        p.landing__slogan Лучшие номера для вашей работы, отдыха и просто вдохновения    
     .landing__footer
-      +footer()
+      .main
+        +footer()
