@@ -11,6 +11,8 @@ mixin header(options = {})
     .header__right
       .header__menu
         +menu()
+      .header__menu_mobile
+        +menu({type: 'mobile'})
       .header__sign 
         if (username !== '')
           .header__vertical-bar

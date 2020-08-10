@@ -1,4 +1,5 @@
 //-
+  options.type - тип меню ('' или desktop - для десктопов, mobile - для мобильных)
   options.menuItems - массив элементов меню
   options.menuItems[n].name - название n-го элемента меню
   options.menuItems[n].link - ссылка n-го элемента меню
@@ -20,15 +21,22 @@
         ]}, 
     ]
 
-mixin menu()
-    nav.menu        
-        ul.menu__ul.menu__ul_top
+mixin menu(options = {})
+    - let {type = ''} = options
+    - classes = ''
+    - type === 'mobile' ? classes = '_mobile' : classes = ''
+
+    if type === 'mobile'
+        .menu-icon
+            i.material-icons menu
+    nav(class='menu' + classes)
+        ul.menu__ul(class=(type === 'mobile' ? 'menu__ul_column' : 'menu__ul_row'))
             each item in menuItems
                 li.menu__item 
                     a.menu__link(href=item.link)= item.name
                     if item.subMenuItems
                         i.material-icons expand_more
-                            ul.menu__ul.menu__ul_sub
+                            ul.menu__ul.menu__ul_column
                                 each subItem in item.subMenuItems
                                     li.menu__item 
                                         a.menu__link-sub(href=subItem.link)= subItem.name  
