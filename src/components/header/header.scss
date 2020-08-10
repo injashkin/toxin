@@ -4,34 +4,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   //z-index: -1;
 
   &__logo {
     display: flex;
-    //flex-basis: 26%;
-    //justify-content: center;
   }
 
   &__right {
     display: flex;
-    //justify-content: flex-end;
-    //flex-basis: 64.2%;
-    //padding-left: 2.3rem;
+    align-items: center;
   }
 
   &__menu {
     &_mobile {
       display: none;
-    }
-  }
-
-  &__sign {
-    display: flex;
-    align-items: center;
-    margin-left: 0.2rem;
-    // Промежуток между кнопками
-    & > :first-child {
-      margin-right: 2rem;
     }
   }
 
@@ -61,12 +48,54 @@
   }
 }
 
-@media (max-width: 950px) {
-  .header__menu {
-    display: none;
+.header-sign {
+  display: flex;
+  align-items: center;
+  margin-left: 0.2rem;
 
-    &_mobile {
-      display: block;
+  &__icon {
+    display: none;
+  }
+
+  &__icon .material-icons {
+    font-size: 30px;
+
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: hsl(259, 100%, 81%); //Для не поддерживающих градиент браузеров
+  }
+
+  &__button {
+    display: flex;
+    // Промежуток между кнопками
+    & > :first-child {
+      margin-right: 2rem;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .header-sign {
+    &__group {
+      display: none;
+    }
+
+    &__icon {
+      display: flex;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .header {
+    &__menu {
+      display: none;
+
+      &_mobile {
+        display: flex;
+        margin-right: 2rem;
+      }
     }
   }
 }

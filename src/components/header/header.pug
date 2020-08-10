@@ -13,12 +13,17 @@ mixin header(options = {})
         +menu()
       .header__menu_mobile
         +menu({type: 'mobile'})
-      .header__sign 
-        if (username !== '')
-          .header__vertical-bar
-          .header__username= username
-        else
-          +button({text: 'Войти', style: 'lt', size: 'sm'})   
-          +button({text: 'Зарегистрироваться', size: 'sm'})
+      .header-sign
+        .header-sign__icon
+          i.material-icons person
+        .header-sign__group
+          if (username !== '')
+            .header-sign__username-group
+              .header-sign__vertical-bar
+              .header-sign__username= username
+          else
+            .header-sign__button
+              +button({text: 'Войти', style: 'lt', size: 'sm'})   
+              +button({text: 'Зарегистрироваться', size: 'sm'})
 
 

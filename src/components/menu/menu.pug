@@ -24,19 +24,32 @@
 mixin menu(options = {})
     - let {type = ''} = options
     - classes = ''
-    - type === 'mobile' ? classes = '_mobile' : classes = ''
+    - type === 'mobile' ? classes = '-mobile' : classes = ''
 
     if type === 'mobile'
-        .menu-icon
+        .menu-mobile__icon
             i.material-icons menu
-    nav(class='menu' + classes)
-        ul.menu__ul(class=(type === 'mobile' ? 'menu__ul_column' : 'menu__ul_row'))
-            each item in menuItems
-                li.menu__item 
-                    a.menu__link(href=item.link)= item.name
-                    if item.subMenuItems
-                        i.material-icons expand_more
-                            ul.menu__ul.menu__ul_column
-                                each subItem in item.subMenuItems
-                                    li.menu__item 
-                                        a.menu__link-sub(href=subItem.link)= subItem.name  
+        nav.menu-mobile
+            ul.menu-mobile__ul(class=(type === 'mobile' ? 'menu-mobile__ul_column' : 'menu-mobile__ul_row'))
+                each item in menuItems
+                    li.menu-mobile__item 
+                        a.menu-mobile__link(href=item.link)= item.name
+                        if item.subMenuItems
+                            i.material-icons expand_more
+                                ul.menu-mobile__ul.menu-mobile__ul_column
+                                    each subItem in item.subMenuItems
+                                        li.menu-mobile__item 
+                                            a.menu-mobile__link-sub(href=subItem.link)= subItem.name
+    else        
+        nav.menu
+            ul.menu__ul.menu__ul_row
+                each item in menuItems
+                    li.menu__item 
+                        a.menu__link(href=item.link)= item.name
+                        if item.subMenuItems
+                            i.material-icons expand_more
+                                ul.menu__ul.menu-sub__ul
+                                    each subItem in item.subMenuItems
+                                        li.menu__item.menu-sub__item
+                                            a.menu__link.menu-sub__link(href=subItem.link)= subItem.name
+        
