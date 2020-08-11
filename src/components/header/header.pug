@@ -5,24 +5,24 @@ mixin header(options = {})
 
   - let {username = ''} = options
 
-  .header
-    .header__logo
+  .header-main
+    .header-main__logo
       +logo()
-    .header__right
-      .header__menu
+    .header-main__right
+      .header-main__menu
         +menu()
-      .header__menu_mobile
+      .header-main__menu_mobile
         +menu({type: 'mobile'})
-      .header-sign
-        .header-sign__icon
+      .header-main-sign
+        .header-main-sign__icon
           i.material-icons person
-        .header-sign__group
+        .header-main-sign__group
           if (username !== '')
-            .header-sign__username-group
-              .header-sign__vertical-bar
-              .header-sign__username= username
+            .header-main-sign__username-group
+              .header-main-sign__vertical-bar
+              .header-main-sign__username= username
           else
-            .header-sign__button
+            .header-main-sign__button
               +button({text: 'Войти', style: 'lt', size: 'sm'})   
               +button({text: 'Зарегистрироваться', size: 'sm'})
 

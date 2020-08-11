@@ -5,14 +5,16 @@ block title
 
 block main   
   .landing    
-    .landing__header
-      .main
+    header.header
+      .content-width
         +header()
-    .landing__frame
-      .main
-        .landing__search-rooms
-          +search-rooms()
-        p.landing__slogan Лучшие номера для вашей работы, отдыха и просто вдохновения    
-    .landing__footer
-      .main
+    main.main.landing__main      
+      .content-width
+        .content-wrapper
+          .landing__search-rooms
+            +search-rooms()
+          .landing__slogan-wrapper
+            p.landing__slogan Лучшие номера для вашей работы, отдыха и просто вдохновения    
+    footer.footer
+      .content-width
         +footer()

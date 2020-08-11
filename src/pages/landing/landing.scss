@@ -1,35 +1,27 @@
 .landing {
-  background: url("img/image-3.jpg") no-repeat;
-  background-size: 100%;
-
-  &__header {
-    padding: 0.6rem 2rem;
-    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-    background: #ffffff;
-  }
-
-  &__frame {
-    position: relative;
-    height: 82.9rem;
+  &__main {
+    background: url("img/image-3.jpg") no-repeat;
+    background-size: cover;
+    //background-position: center -7rem;
+    //box-sizing: border-box;
+    margin-top: -7rem;
   }
 
   &__search-rooms {
     position: absolute;
-    top: 7rem;
-    left: 14rem;
+    top: 14rem;
+    left: 0;
   }
-  /*
-  &__slogan {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    width: 30rem;
-    text-align: right;
-  }
-  */
 
-  &__footer {
-    background: #ffffff;
-    border-top: 1px solid $dark25;
+  &__slogan-wrapper {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__slogan {
+    text-align: right;
+    padding-top: 83.1rem;
+    padding-bottom: 2rem;
+    max-width: 30rem;
   }
 }
