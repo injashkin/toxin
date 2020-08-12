@@ -24,4 +24,22 @@
     padding-bottom: 2rem;
     max-width: 30rem;
   }
+
+  &-footer {
+    display: block;
+  }
+
+  &-footer-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .landing-footer {
+    display: none;
+  }
+
+  .landing-footer-mobile {
+    display: block;
+  }
 }

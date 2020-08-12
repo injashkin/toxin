@@ -17,4 +17,7 @@ block main
             p.landing__slogan Лучшие номера для вашей работы, отдыха и просто вдохновения    
     footer.footer
       .content-width
-        +footer()
+        .landing-footer
+          +footer()
+        .landing-footer-mobile
+          +footer({device: 'mobile'})
