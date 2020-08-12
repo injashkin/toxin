@@ -36,10 +36,10 @@ mixin menu(options = {})
                         a.menu-mobile__link(href=item.link)= item.name
                         if item.subMenuItems
                             i.material-icons expand_more
-                                ul.menu-mobile__ul.menu-mobile__ul_column
-                                    each subItem in item.subMenuItems
-                                        li.menu-mobile__item 
-                                            a.menu-mobile__link-sub(href=subItem.link)= subItem.name
+                            ul.menu-mobile__ul.menu-mobile__ul_column
+                                each subItem in item.subMenuItems
+                                    li.menu-mobile__item 
+                                        a.menu-mobile__link-sub(href=subItem.link)= subItem.name
     else        
         nav.menu
             ul.menu__ul.menu__ul_row
