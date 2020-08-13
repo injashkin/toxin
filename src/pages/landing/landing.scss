@@ -2,8 +2,6 @@
   &__main {
     background: url("img/image-3.jpg") no-repeat;
     background-size: cover;
-    //background-position: center -7rem;
-    //box-sizing: border-box;
     margin-top: -7rem;
   }
 
@@ -21,25 +19,7 @@
   &__slogan {
     text-align: right;
     padding-top: 83.1rem;
-    padding-bottom: 2rem;
+    padding-bottom: 2.1rem;
     max-width: 30rem;
-  }
-
-  &-footer {
-    display: block;
-  }
-
-  &-footer-mobile {
-    display: none;
-  }
-}
-
-@media (max-width: 768px) {
-  .landing-footer {
-    display: none;
-  }
-
-  .landing-footer-mobile {
-    display: block;
   }
 }
