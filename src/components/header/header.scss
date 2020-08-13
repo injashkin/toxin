@@ -1,11 +1,19 @@
 // Для стилизации выпадающего меню я использовал статью https://html5book.ru/mnogourovnevoe-vypadayushee-menu/
 
-.header-main {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.header {
+  padding: 0.6rem 2rem;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  background: #ffffff;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 
-  //z-index: 100;
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   &__logo {
     display: flex;
@@ -48,7 +56,7 @@
   }
 }
 
-.header-main-sign {
+.header-sign {
   display: flex;
   align-items: center;
   margin-left: 0.2rem;
@@ -76,7 +84,7 @@
 }
 
 @media (max-width: 950px) {
-  .header-main-sign {
+  .header-sign {
     &__group {
       display: none;
     }
@@ -88,7 +96,7 @@
 }
 
 @media (max-width: 700px) {
-  .header-main {
+  .header {
     &__menu {
       display: none;
 

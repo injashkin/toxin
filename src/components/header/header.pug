@@ -1,29 +1,34 @@
 //- 
+  Чтобы Header прилипал к верху страницы, его не нужно оборачивать
+  в персональный контейнер
+  
   options.username - имя пользователя
 
 mixin header(options = {})
 
   - let {username = ''} = options
 
-  .header-main
-    .header-main__logo
-      +logo()
-    .header-main__right
-      .header-main__menu
-        +menu()
-      .header-main__menu_mobile
-        +menu({type: 'mobile'})
-      .header-main-sign
-        .header-main-sign__icon
-          i.material-icons person
-        .header-main-sign__group
-          if (username !== '')
-            .header-main-sign__username-group
-              .header-main-sign__vertical-bar
-              .header-main-sign__username= username
-          else
-            .header-main-sign__button
-              +button({text: 'Войти', style: 'lt', size: 'sm'})   
-              +button({text: 'Зарегистрироваться', size: 'sm'})
+  header.header
+    .content-width
+      .header-wrapper
+        .header__logo
+          +logo()
+        .header__right
+          .header__menu
+            +menu()
+          .header__menu_mobile
+            +menu({type: 'mobile'})
+          .header-sign
+            .header-sign__icon
+              i.material-icons person
+            .header-sign__group
+              if (username !== '')
+                .header-sign__username-group
+                  .header-sign__vertical-bar
+                  .header-sign__username= username
+              else
+                .header-sign__button
+                  +button({text: 'Войти', style: 'lt', size: 'sm'})   
+                  +button({text: 'Зарегистрироваться', size: 'sm'})
 
 
