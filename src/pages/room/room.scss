@@ -1,13 +1,8 @@
 .room {
-  &__main {
-    display: flex;
-    width: 80.6%;
-    margin: 7rem auto 6.2rem;
-  }
-
   &__banner {
     display: flex;
-    width: 1440px;
+    justify-content: center;
+    max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
     //overflow: hidden;
@@ -17,11 +12,25 @@
     }
   }
 
-  &__content {
-    width: 91%;
+  &__main {
+    display: flex;
+    margin: 7rem 0 6.2rem;
+  }
 
-    & > :nth-child(3) {
-      justify-content: space-between;
+  &__wrapper-content {
+    display: flex;
+  }
+
+  &__content {
+    margin-right: 3rem;
+
+    &-top {
+      display: flex;
+      //margin-right: 3rem;
+    }
+
+    &-bottom {
+      display: flex;
     }
   }
 
@@ -30,15 +39,20 @@
   }
 
   &__info {
-    flex-basis: 50.4%;
+    flex: 1 1 auto;
 
     &-title {
       margin-bottom: 2rem;
+      width: 28rem;
+    }
+
+    &-content {
+      width: 28rem;
     }
   }
 
   &__impress {
-    flex-basis: 49%;
+    flex: 1 1 auto;
 
     &-title {
       margin-bottom: 1.8rem;
@@ -50,10 +64,20 @@
     margin-top: 2.1rem;
     margin-bottom: 3.3rem;
     margin-left: -0.1rem;
+    //margin-right: 3rem;
 
-    & > :nth-child(1) {
+    &-header {
+      display: flex;
       justify-content: space-between;
       margin-bottom: 2rem;
+    }
+
+    &-number {
+      margin-right: 4rem;
+    }
+
+    &-content {
+      margin-right: 4rem;
     }
 
     &-item {
@@ -94,20 +118,92 @@
   }
 
   &__rules {
-    flex-basis: 36%;
+    //flex-basis: 36%;
+    flex: 1 1 41.6%;
 
     &-title {
       margin-bottom: 1.7rem;
       margin-left: 2rem;
     }
+
+    &-list {
+      max-width: 26rem;
+    }
   }
 
   &__cancel {
-    flex-basis: 48%;
-    margin-right: 0.8rem;
+    //flex-basis: 48%;
+    //margin-right: 0.8rem;
+    flex: 1 1 auto;
 
     &-title {
       margin-bottom: 1.7rem;
+    }
+
+    &-content {
+      max-width: 34rem;
+    }
+  }
+
+  &__footer {
+    border-top: 1px solid rgba(31, 32, 65, 0.25);
+  }
+}
+
+@media (max-width: 1439px) {
+  .room__banner-right {
+    display: none;
+  }
+
+  .room__main {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+
+@media (max-width: 1050px) {
+  .room {
+    &__banner-img1 {
+      width: 100%;
+    }
+
+    &__wrapper-content {
+      flex-wrap: wrap;
+    }
+
+    &__content {
+      margin: 0 auto;
+    }
+
+    &__sidebar {
+      margin: 3rem auto 0;
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  .room {
+    &__content-top {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__impress {
+      margin: 4rem 0;
+    }
+
+    &__content-bottom {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__rules {
+      flex: 1 1 auto;
+      margin-bottom: 2rem;
+
+      &-list {
+        max-width: none;
+      }
     }
   }
 }
