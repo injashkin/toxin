@@ -1,16 +1,18 @@
 mixin date(options = {})
-    - let {placeholder = 'ДД,ММ.ГГГГ'} = options
+    - let {placeholder = 'ДД.ММ.ГГГГ'} = options
 
     .date
-        input.date__input(
+        input.date__input(            
             type='text' 
             class="datepicker-here" 
             data-inline='false' 
             data-range="true"             
             data-position="bottom left"
-            keyboardNav="true" 
+            data-keyboard-nav="true" 
             data-multiple-dates-separator=" - "
-            data-clearButton="true"
-            placeholder=placeholder)    
+            data-clear-button="true"
+            data-placeholder= placeholder
+            data-today-button='true')    
         .date__icon
             i.material-icons expand_more
+        

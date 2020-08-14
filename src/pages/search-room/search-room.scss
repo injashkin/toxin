@@ -89,3 +89,10 @@
     margin: 2.6rem auto 6.8rem;
   }
 }
+
+@media (max-width: 768px) {
+  .search-room__content {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
