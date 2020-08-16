@@ -192,5 +192,10 @@ module.exports = {
       filename: "./room.html",
       inject: true,
     }),
+    new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/pages/cards/cards.pug`,
+      filename: "./cards.html",
+      inject: true,
+    }),
   ],
 };

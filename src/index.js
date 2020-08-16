@@ -8,6 +8,8 @@ import "./pages/headers-footers/headers-footers.js";
 import "./pages/colors-type/colors-type.js";
 import "./pages/search-room/search-room.js";
 import "./pages/room/room.js";
+import "./pages/cards/cards.js";
+
 //Компоненты
 import "./components/footer/footer.js";
 import "./components/types/types.js";
