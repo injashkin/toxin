@@ -10,11 +10,6 @@
   padding: 0 0.4rem;
   color: rgba(31, 32, 65, 0.25);
 
-  &__active {
-    border: 1px solid #bc9cff;
-    color: #bc9cff;
-  }
-
   &__number {
     width: 100%;
     font-family: Montserrat;
@@ -31,4 +26,9 @@
     line-height: 0.9rem;
     //color: #bc9cff;
   }
+}
+
+.js-like-button__active {
+  border: 1px solid #bc9cff;
+  color: #bc9cff;
 }

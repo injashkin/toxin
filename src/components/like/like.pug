@@ -5,9 +5,9 @@
 mixin like(options = {})
     - let {count = 0, like = false} = options
     - let icon= like ? 'favorite' : 'favorite_border'
-    - let classes = 'like-button'
+    - let classes = 'like-button js-like-button'
     if like
-        - classes = `${classes} like-button__active`
+        - classes = `${classes} js-like-button__active`
 
     button(class=classes type='button')
 
