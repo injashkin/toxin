@@ -1,0 +1,34 @@
+.like-button {
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 1rem;
+  background-color: #ffffff;
+  width: 4rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  padding: 0 0.4rem;
+  color: rgba(31, 32, 65, 0.25);
+
+  &__active {
+    border: 1px solid #bc9cff;
+    color: #bc9cff;
+  }
+
+  &__number {
+    width: 100%;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.2rem;
+
+    //color: #bc9cff;
+  }
+
+  .material-icons {
+    font-size: 1rem;
+    line-height: 0.9rem;
+    //color: #bc9cff;
+  }
+}

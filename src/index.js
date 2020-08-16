@@ -34,6 +34,7 @@ import "./components/room-card/room-card.js";
 import "./components/pagination/pagination.js";
 import "./components/pie-chart/pie-chart.js";
 import "./components/menu/menu.js";
+import "./components/like/like.js";
 
 // SCSS
 import "./style.css";

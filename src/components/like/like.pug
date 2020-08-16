@@ -1,0 +1,15 @@
+//-
+    options.count - количество лайков
+
+mixin like(options = {})
+    - let {count = 0, like = false} = options
+    - let icon= like ? 'favorite' : 'favorite_border'
+    - let classes = 'like-button'
+    if like
+    - classes = `${classes} like-button__active`
+
+    button(class=classes type='button')
+
+        .like-button__icon
+            i.material-icons= icon
+        .like-button__number= count

@@ -13,16 +13,12 @@ block main
     .container
       .container-label= name 
       block
-
-  +container('room-card')
-    //-+room-card({rate: 5, price: 9990, number: 888, review: 145, luxe: true})    
-
-  +container('header')
-    +header()
-  +container('header')
-    +header({username: 'Юлий Цезарь'})
-  +container('footer')
-    +footer()
+      
+  +container('like')    
+    +like({count: 12, like: true})
+    +like({count: 2})
+  +container('room-card')    
+    +room-card({number: 888, luxe: true, price: 9990, rate: 5, review: 145, imgName: "888-1"})
   +container('Button')
     +button({style: "lt", text: "Войти"})
   .container
@@ -61,14 +57,14 @@ block main
     +listbox({title:'Bullet list', content: 'ul', items: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})
 
   +container('Slider')
-    include ../../components/slider/slider   
+    +slider()
   +container('Text Field')
-    +field('e', 'Email', 'email', 'y', 32)
+    +field()
   +container('Subscription text field')
     +field('e', 'Email', 'subscription', 'n', 20)   
-  .container
+  +container()
     +button({style: "ic", text: "Перейти"})
-  +button({style: "lt", text: "Click Me"})
+    +button({style: "lt", text: "Click Me"})
   +container('Signin')
     +signin()
   +container('Signup')
