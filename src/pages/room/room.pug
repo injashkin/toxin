@@ -39,6 +39,8 @@ block main
                                         .room__reviews-left-side
                                             .room__reviews-avatar
                                                 img.room__reviews-avatar-img(src=require("./img/murad.jpg"), alt="Аватар пользователя")
+                                            .room__like
+                                                +like({count: 12, like: true})
                                         .room__reviews-right-side
                                             .room__reviews-username Мурад Сарафанов                               
                                             .room__reviews-time 5 дней назад
@@ -48,6 +50,8 @@ block main
                                         .room__reviews-left-side
                                             .room__reviews-avatar
                                                 img.room__reviews-avatar-img(src=require("./img/patrisija.jpg"), alt="Аватар пользователя")
+                                            .room__like
+                                                +like({count: 2})
                                         .room__reviews-right-side
                                             .room__reviews-username Патрисия Стёклышкова
                                             .room__reviews-time Неделю назад

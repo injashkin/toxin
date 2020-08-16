@@ -1,12 +1,13 @@
 //-
     options.count - количество лайков
+    options.like - добавлен ли лайк
 
 mixin like(options = {})
     - let {count = 0, like = false} = options
     - let icon= like ? 'favorite' : 'favorite_border'
     - let classes = 'like-button'
     if like
-    - classes = `${classes} like-button__active`
+        - classes = `${classes} like-button__active`
 
     button(class=classes type='button')
 
