@@ -13,6 +13,9 @@ block main
     .container
       .container-label= name 
       block
+
+
+  +input({name: 'subscribe', type: 'email', arrow: 'y'})
       
   +container('like')    
     +like({count: 12, like: true})
@@ -57,10 +60,8 @@ block main
 
   +container('Slider')
     +slider()
-  +container('Text Field')
-    +field()
-  +container('Subscription text field')
-    +field('e', 'Email', 'subscription', 'n', 20)   
+
+
   +container()
     +button({style: "ic", text: "Перейти"})
     +button({style: "lt", text: "Click Me"})
