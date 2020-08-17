@@ -21,7 +21,7 @@ block main
         +container('Text Field')  
           +input({name: 'subscribe', type: 'email'})
         +container('Dropdown')
-          +dropdown({name: "visitor", placeholder: "Сколько гостей", items: ["взрослые", "дети", "младенцы"]})
+          +dropdown({name: 'visitor', placeholder: 'Сколько гостей', items: ['взрослые', 'дети', 'младенцы']})
         +container('Masked text field')    
           +input({name: 'masked-text', type: 'text', placeholder: 'ДД.ММ.ГГГГ'})
 
@@ -60,36 +60,36 @@ block main
         +slider({label: 'Slider'})
         +container('buttons')
           .ui-kit__blok-row        
-            +button({text: "Click me", size: 'sm'})
-            +button({text: "Click me", size: 'sm'})
+            +button({text: 'Click me', size: 'sm'})
+            +button({text: 'Click me', size: 'sm'})
           .ui-kit__blok-row       
-            +button({style: "lt", text: "Войти"})
-            +button({style: "lt", text: "Войти"})
+            +button({style: 'lt', text: 'Войти'})
+            +button({style: 'lt', text: 'Войти'})
           .ui-kit__blok-row
-            +button({style: "wb", text: "Click Me"})
-            +button({style: "wb", text: "Click Me"})      
-          +button({style: "ic", text: "Перейти к оплате"})
+            +button({style: 'wb', text: 'Click Me'})
+            +button({style: 'wb', text: 'Click Me'})      
+          +button({style: 'ic', text: 'Перейти к оплате'})
         +container('Pagination')
           +pagination()
 
     .ui-kit__blok-row
       .ui-kit__blok-column
         +container('Dropdown')
-          +dropdown({name: "comfort", placeholder: "Какие удобства", items: ["спальни", "кровати", "ванные комнаты"]})
+          +dropdown({name: 'comfort', placeholder: 'Какие удобства', items: ['спальни', 'кровати', 'ванные комнаты']})
         +container('Dropdown')
-          +dropdown({name: "comfort", placeholder: "Какие удобства", items: ["спальни", "кровати", "ванные комнаты"]})
+          +dropdown({open: true, buttons: false, name: 'comfort-open', placeholder: 'Какие удобства', items: ['спальни', 'кровати', 'ванные комнаты']})
         +container()
           +listbox({title:'Expandable checkbox list', type: 'drop', items: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь']})
         +container()
           +listbox({title:'Expandable checkbox list', type: 'drop', items: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь']})
       .ui-kit__blok-column
         +container('Dropdown')
-          +dropdown({name: 'numberGuests', placeholder: "Сколько гостей", items: ["взрослые", "дети", "младенцы"]})
+          +dropdown({name: 'numberGuests', placeholder: 'Сколько гостей', items: ['взрослые', 'дети', 'младенцы']})
         +container('Rich Checkbox Buttons')
           +listbox({title:'Rich Checkbox Buttons', items: [{name: 'Широкий коридор', desc: 'Ширина коридоров в номере не менее 91 см.'}, {name: 'Помощник для инвалидов', desc: 'На 1 этаже вас встретит специалист  и проводит до номера.'}]})
       .ui-kit__blok-column
         +container('Dropdown')
-          +dropdown({name: 'numberGuests', placeholder: "Сколько гостей", items: ["взрослые", "дети", "младенцы"]})
+          +dropdown({name: 'numberGuests', placeholder: 'Сколько гостей', items: ['взрослые', 'дети', 'младенцы']})
         +container('Bullet list')
           +listbox({title:'Bullet list', content: 'ul', items: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})
 

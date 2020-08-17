@@ -2,12 +2,14 @@
     options.name - имя компонента
     options.items - массив элементов выпадающего списка
     options.placeholder - текст в строке ввода по умолчанию
+    options.open - если true, то дропдаун открыт
+    options.buttons - если true, то кнопки Применить и Очистить присутствуют
 
 mixin dropdown(options = {})
 
-    - let {name='visitor', placeholder='Сколько гостей', items=["взрослые", "дети", "младенцы"]} = options
+    - let {name='visitor', placeholder='Сколько гостей', items=["взрослые", "дети", "младенцы"], open=false, buttons=true} = options
 
-    - classes = "dropdown-" + name
+    - classes = open === true ? 'dropdown-' + name + ' open' : 'dropdown-' + name
 
     .dropdown(class=classes)
         .dropdown__header-wrapper.js-dropdown__header-wrapper
@@ -19,9 +21,10 @@ mixin dropdown(options = {})
                 li.dropdown__li
                     .dropdown__label= val
                     +input-number(name + index)
-            li.dropdown__li
-                +button({text: "Очистить", style: "wb", color: "alt" })(class="dropdown__clear js-dropdown__clear dropdown__clear_hidden")                 
-                +button({text: "Применить", style: "wb"})(class="dropdown__submit js-dropdown__submit")
+            if buttons
+                li.dropdown__li
+                    +button({text: "Очистить", style: "wb", color: "alt" })(class="dropdown__clear js-dropdown__clear dropdown__clear_hidden")                 
+                    +button({text: "Применить", style: "wb"})(class="dropdown__submit js-dropdown__submit")
 
         
             
