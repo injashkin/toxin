@@ -5,7 +5,7 @@
 
   &__input {
     background: #ffffff;
-    border: 1px solid rgba(31, 32, 65, 0.25);
+    border: 1px solid $dark25;
     box-sizing: border-box;
     border-radius: 4px;
     padding: 1.1rem 1.4rem 1.3rem;
@@ -17,9 +17,9 @@
     font-size: 1.4rem;
     line-height: 1.8rem;
 
-    &:hover {
-      border: 1px solid rgba(31, 32, 65, 0.5);
-      //content: "This is pretty awesome";
+    &:hover,
+    &:focus {
+      border-color: $dark50;
     }
   }
 

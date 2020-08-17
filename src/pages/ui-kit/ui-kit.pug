@@ -4,69 +4,95 @@ block title
   |  Страница UI-Kit
    
 block main   
-  .color-types
+  .ui-kit
   
-    .color-types__logo
+    .ui-kit__logo
       include ../../theme/logo-dark-25.svg
   
   mixin container(name)
     .container
       .container-label= name 
       block
+  .ui-kit__content
+    .ui-kit__blok-row
+      .ui-kit__blok-column
+        +container('Text Field')    
+          +input({name: 'subscribe', type: 'email'})
+        +container('Text Field')  
+          +input({name: 'subscribe', type: 'email'})
+        +container('Dropdown')
+          +dropdown({name: "visitor", placeholder: "Сколько гостей", items: ["взрослые", "дети", "младенцы"]})
+        +container('Masked text field')    
+          +input({name: 'masked-text', type: 'text', placeholder: 'ДД.ММ.ГГГГ'})
 
+        +container()
+          .ui-kit__date-dropdown
+            +container('Date Dropdown')
+              +date()
+            +container('Date Dropdown')
+              +date()
 
-  +input({name: 'subscribe', type: 'email', arrow: 'y'})
-      
-  +container('like')    
-    +like({count: 12, like: true})
-    +like({count: 2})
+        .ui-kit__blok-column.ui-kit__blok-column_narrow
+          +container('Filter date dropdown')
+            +date()
+          +container('Subscription text field')    
+            +input({name: 'subscribe', type: 'email', arrow: 'y'})
 
-  +container('Button')
-    +button({style: "lt", text: "Войти"})
-  .container
-    +button({text: "Зарегистрироваться", size: 'sm'})
-  .container
-    +button({style: "ic", text: "Перейти к оплате"})
-  .container
-    +button({style: "wb", text: "Click Me"})
+      .ui-kit__blok-column
+        +container()
+          +listbox({title: 'Checkbox buttons', items: ['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)']})
+        +container('Radio Buttons')
+          +radio()        
+        +container('Toggle')          
+          .ui-kit__toggle
+            +toggle()
+            +toggle()
+        +container('Like button') 
+          .ui-kit__like
+            +like({count: 2})
+            +like({count: 12, like: true})            
+        +container('Rate button')
+          .ui-kit__rate-button
+            +rate(4)
+            +rate(5)
 
-  +container('Checkbox')
-    +select({name: 'checkbox'})
-  
-  +container('Pagination')
-    +pagination()
-  +container('Dropdown')
-    +dropdown({name: "comfort", placeholder: "Какие удобства", items: ["спальни", "кровати", "ванные комнаты"]})
-  +container('Dropdown')
-    +dropdown({name: "visitor", placeholder: "Сколько гостей", items: ["взрослые", "дети", "младенцы"]})
-  +container('Date Dropdown')
-    +date()
+      .ui-kit__blok-column
+        +slider({label: 'Slider'})
+        +container('buttons')
+          .ui-kit__blok-row        
+            +button({text: "Click me", size: 'sm'})
+            +button({text: "Click me", size: 'sm'})
+          .ui-kit__blok-row       
+            +button({style: "lt", text: "Войти"})
+            +button({style: "lt", text: "Войти"})
+          .ui-kit__blok-row
+            +button({style: "wb", text: "Click Me"})
+            +button({style: "wb", text: "Click Me"})      
+          +button({style: "ic", text: "Перейти к оплате"})
+        +container('Pagination')
+          +pagination()
 
-  +container('Radio Buttons')
-    +radio()
-  +container('Toggle')
-    +toggle()
-  +container('Rate button')
-    //-+rate()
+    .ui-kit__blok-row
+      .ui-kit__blok-column
+        +container('Dropdown')
+          +dropdown({name: "comfort", placeholder: "Какие удобства", items: ["спальни", "кровати", "ванные комнаты"]})
+        +container('Dropdown')
+          +dropdown({name: "comfort", placeholder: "Какие удобства", items: ["спальни", "кровати", "ванные комнаты"]})
+        +container()
+          +listbox({title:'Expandable checkbox list', type: 'drop', items: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь']})
+        +container()
+          +listbox({title:'Expandable checkbox list', type: 'drop', items: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь']})
+      .ui-kit__blok-column
+        +container('Dropdown')
+          +dropdown({name: 'numberGuests', placeholder: "Сколько гостей", items: ["взрослые", "дети", "младенцы"]})
+        +container('Rich Checkbox Buttons')
+          +listbox({title:'Rich Checkbox Buttons', items: [{name: 'Широкий коридор', desc: 'Ширина коридоров в номере не менее 91 см.'}, {name: 'Помощник для инвалидов', desc: 'На 1 этаже вас встретит специалист  и проводит до номера.'}]})
+      .ui-kit__blok-column
+        +container('Dropdown')
+          +dropdown({name: 'numberGuests', placeholder: "Сколько гостей", items: ["взрослые", "дети", "младенцы"]})
+        +container('Bullet list')
+          +listbox({title:'Bullet list', content: 'ul', items: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})
 
-  +container('Checkbox')
-    +listbox({items: ['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)']})
-  +container('Checkbox list')
-    +listbox({title:'expandable checkbox list', type: 'drop', items: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь']})
-  +container('rich Checkbox Buttons')
-    +listbox({title:'rich Checkbox Buttons', items: [{name: 'Широкий коридор', desc: 'Ширина коридоров в номере не менее 91 см.'}, {name: 'Помощник для инвалидов', desc: 'На 1 этаже вас встретит специалист  и проводит до номера.'}]})
-  +container('Bullet list')
-    +listbox({title:'Bullet list', content: 'ul', items: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})
-
-  +container('Slider')
-    +slider()
-
-
-  +container()
-    +button({style: "ic", text: "Перейти"})
-    +button({style: "lt", text: "Click Me"})
-
-  
-
-  
-  
+    .ui-kit__blok-row
+      +container()
+        +listbox({title:'', items: [{name: 'Комфорт', desc: 'Шумопоглощающие стены', icon: 'insert_emoticon'}, {name: 'Удобство', desc: 'Окно в каждой из спален', icon: 'location_city'}]})
