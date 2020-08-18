@@ -37,8 +37,9 @@ mixin listbox(options = {})
             .listbox__header.js-listbox__header
                 .listbox__title= title
                 if (type === 'drop')
-                    div(class=arrow)
-                        i.material-icons expand_more
+                    .listbox__icon-wrapper
+                        div(class=arrow)
+                            i.material-icons expand_more
 
         ul.listbox__ul(class=dropClass)
 

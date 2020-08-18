@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 1.6rem;
 
     font-family: Montserrat;
     font-style: normal;
@@ -11,7 +12,24 @@
     line-height: 1.5rem;
     text-transform: uppercase;
     color: $dark;
-    margin-bottom: 1.8rem;
+  }
+
+  &__icon-wrapper {
+    //margin-left: 4.05rem;
+    margin-top: 0.1rem;
+  }
+
+  .js-listbox__arrow {
+    &_rotate {
+      transform: rotate(-180deg);
+    }
+
+    & .material-icons {
+      font-size: 24px;
+      line-height: 20px;
+      color: rgba(31, 32, 65, 0.5);
+      text-align: center;
+    }
   }
 
   &__ul {
@@ -20,7 +38,6 @@
   }
 
   .js-listbox__drop {
-    margin: 0;
     transition: 0.1s linear;
 
     &_close {
@@ -115,22 +132,6 @@
 
     &:hover {
       text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    }
-  }
-
-  .js-listbox__arrow {
-    margin-top: 0.1rem;
-    margin-left: 4.05rem;
-
-    &_rotate {
-      transform: rotate(-180deg);
-    }
-
-    & .material-icons {
-      font-size: 24px;
-      line-height: 20px;
-      color: rgba(31, 32, 65, 0.5);
-      text-align: center;
     }
   }
 
