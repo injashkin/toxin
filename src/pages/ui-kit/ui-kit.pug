@@ -78,20 +78,23 @@ block main
           +dropdown({name: 'comfort', placeholder: 'Какие удобства', items: ['спальни', 'кровати', 'ванные комнаты']})
         +container('Dropdown')
           +dropdown({open: true, buttons: false, name: 'comfort-open', placeholder: 'Какие удобства', items: ['спальни', 'кровати', 'ванные комнаты']})
+      +container('Dropdown')
+        +dropdown({open: true, name: 'numberGuests', placeholder: 'Сколько гостей', items: ['взрослые', 'дети', 'младенцы']})
+      +container('Dropdown')
+        +dropdown({open: true, name: 'presetNumberGuests', placeholder: 'Сколько гостей', items: ['взрослые', 'дети', 'младенцы']})
+
+    .ui-kit__blok-row
+      .ui-kit__blok-column
         +container()
           +listbox({title:'Expandable checkbox list', type: 'drop', items: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь']})
         +container()
           +listbox({title:'Expandable checkbox list', type: 'drop', items: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь']})
       .ui-kit__blok-column
-        +container('Dropdown')
-          +dropdown({name: 'numberGuests', placeholder: 'Сколько гостей', items: ['взрослые', 'дети', 'младенцы']})
         +container('Rich Checkbox Buttons')
-          +listbox({title:'Rich Checkbox Buttons', items: [{name: 'Широкий коридор', desc: 'Ширина коридоров в номере не менее 91 см.'}, {name: 'Помощник для инвалидов', desc: 'На 1 этаже вас встретит специалист  и проводит до номера.'}]})
+          +listbox({items: [{name: 'Широкий коридор', desc: 'Ширина коридоров в номере не менее 91 см.'}, {name: 'Помощник для инвалидов', desc: 'На 1 этаже вас встретит специалист  и проводит до номера.'}]})
       .ui-kit__blok-column
-        +container('Dropdown')
-          +dropdown({name: 'numberGuests', placeholder: 'Сколько гостей', items: ['взрослые', 'дети', 'младенцы']})
         +container('Bullet list')
-          +listbox({title:'Bullet list', content: 'ul', items: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})
+          +listbox({content: 'ul', items: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})
 
     .ui-kit__blok-row
       +container()

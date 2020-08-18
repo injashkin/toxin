@@ -23,7 +23,7 @@
   &__content {
     max-width: 1158px;
     margin: 4.5rem auto 0;
-    // Верхний ряд
+    // 1-й ряд
     & > :first-child {
       // 1 столбец
       & > :first-child {
@@ -50,7 +50,7 @@
         }
       }
     }
-    // Средний ряд
+    // 2-й ряд
     & > :nth-child(2) {
       margin-top: 6rem;
 
@@ -63,6 +63,11 @@
       & > :nth-child(2) {
         width: 26.5rem;
       }
+    }
+
+    // 3-й ряд
+    & > :nth-child(3) {
+      margin-top: 13.5rem;
     }
   }
 
