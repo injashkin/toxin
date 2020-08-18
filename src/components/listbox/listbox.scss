@@ -1,12 +1,14 @@
 .listbox {
   &__header {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
     text-transform: uppercase;
     color: $dark;
     margin-bottom: 1.8rem;
@@ -17,11 +19,11 @@
     list-style: none;
   }
 
-  &__drop {
+  .js-listbox__drop {
     margin: 0;
     transition: 0.1s linear;
 
-    &_off {
+    &_close {
       display: none;
     }
   }
@@ -63,8 +65,8 @@
       font-family: Montserrat;
       font-style: normal;
       font-weight: bold;
-      font-size: 14px;
-      line-height: 24px;
+      font-size: 1.4rem;
+      line-height: 2.4rem;
       color: $dark75;
     }
 
@@ -116,22 +118,17 @@
     }
   }
 
-  &__arrow {
+  .js-listbox__arrow {
+    margin-top: 0.1rem;
+    margin-left: 4.05rem;
+
     &_rotate {
       transform: rotate(-180deg);
     }
 
     & .material-icons {
-      font-family: Material Icons;
-      font-style: normal;
-      font-weight: normal;
       font-size: 24px;
       line-height: 20px;
-
-      //display: flex;
-      //align-items: center;
-      //text-align: center;
-
       color: rgba(31, 32, 65, 0.5);
       text-align: center;
     }
