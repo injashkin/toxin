@@ -91,6 +91,10 @@
           padding-top: 0.3rem;
           padding-right: 7rem;
           padding-left: 6rem;
+
+          & .js-listbox__drop > :first-child {
+            padding-right: 3rem;
+          }
         }
       }
 
@@ -99,8 +103,14 @@
         flex: 1 1 0;
 
         & > :nth-child(1) {
-          padding-top: 0.3rem;
-          padding-left: 6.6rem;
+          padding-right: 6rem;
+          padding-left: 6.7rem;
+
+          & > :first-child > :first-child {
+            margin-top: 0.3rem;
+            margin-bottom: 1.3rem;
+            margin-left: -0.1rem;
+          }
         }
       }
     }
