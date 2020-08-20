@@ -82,7 +82,11 @@ mixin listbox(options = {})
                         else if (typeof item === 'object' && item.link !== undefined)
                             li.listbox__li_for-links
                                 a.listbox__a(href= item.link)= item.name
-                        //- По умолчанию выводится список из чекбоксов
+                        //- По умолчанию выводится список из отмеченных чекбоксов 
+                        else if (typeof item === 'object')
+                            li.listbox__li(class='listbox__li_checkbox-simple') 
+                                +select({label: item.name, checked: item.checked}) 
+                        //- Если это не объект выводится список из чекбоксов
                         else
                             li.listbox__li(class='listbox__li_checkbox-simple') 
                                 +select({label: item.name, checked: item.checked}) 
