@@ -66,6 +66,24 @@
             margin-top: 1.6rem;
           }
         }
+
+        .ui-kit__like {
+          display: flex;
+          margin-top: 1.7rem;
+
+          & > :first-child {
+            margin-right: 1rem;
+          }
+        }
+
+        .ui-kit__rate-button {
+          display: flex;
+          margin-top: 1.6rem;
+
+          & > :first-child {
+            margin-right: 2rem;
+          }
+        }
       }
     }
     // 2-й ряд
@@ -136,24 +154,6 @@
     // 4-й ряд
     & > :nth-child(4) {
       margin-top: 9rem;
-    }
-  }
-
-  &__like {
-    display: flex;
-    margin-top: 1.7rem;
-
-    & > :first-child {
-      margin-right: 1rem;
-    }
-  }
-
-  &__rate-button {
-    display: flex;
-    margin-top: 3.2rem;
-
-    & > :first-child {
-      margin-right: 2rem;
     }
   }
 
