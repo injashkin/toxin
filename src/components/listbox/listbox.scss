@@ -35,6 +35,14 @@
   &__ul {
     padding: 0;
     list-style: none;
+
+    & > .listbox__li_checkbox-simple:nth-child(2) {
+      margin-bottom: 1rem;
+    }
+
+    & > .listbox__li_checkbox-simple:nth-child(3) {
+      margin-right: 4rem;
+    }
   }
 
   .js-listbox__drop {
@@ -48,11 +56,15 @@
   &__li {
     margin-bottom: 1.2rem;
 
-    &_margin9 {
+    &_checkbox-extended {
       margin-bottom: 0.9rem;
     }
 
-    &_margin14 {
+    &_checkbox-simple {
+      margin-bottom: 1.1rem;
+    }
+
+    &_for-links {
       margin-bottom: 1.4rem;
     }
   }
