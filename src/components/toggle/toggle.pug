@@ -1,4 +1,8 @@
 mixin toggle(options = {})
+  - let {label = 'Получать спецпредложения', on = false} = options
   label.toggle
-    input(type="checkbox" checked)
-    span.toggle__text Получать спецпредложения
+    if on
+      input(type='checkbox' checked)
+    else
+      input(type='checkbox')
+    span.toggle__text= label
