@@ -85,4 +85,4 @@ mixin listbox(options = {})
                         //- По умолчанию выводится список из чекбоксов
                         else
                             li.listbox__li(class='listbox__li_checkbox-simple') 
-                                +select({label: item}) 
+                                +select({label: item.name, checked: item.checked}) 

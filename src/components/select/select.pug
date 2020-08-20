@@ -1,13 +1,14 @@
 //-
     
     options.name - уникальное имя компонента
-    options.label - 
-    options.type -
+    options.label - метка
+    options.type - по умолчанию checkbox (можно доработать для radio)
     options.inherit - наследует стили родителя
+    options.checked - если true, то чекбокс выбран
 
 mixin select(options = {})
 
-    - let {name, label = 'Checkbox', type = 'checkbox', inherit = false} = options
+    - let {name, label = 'Checkbox', type = 'checkbox', inherit = false, checked = false} = options
     - if (inherit === true)
         - classes = 'select__label_inherit'
     -else
@@ -16,7 +17,8 @@ mixin select(options = {})
     .select
         label(class=classes)= label
             input.select__input(
-                type = type
-                name = name            
+                type= type
+                name= name
+                checked= checked
             )
             span.select__span

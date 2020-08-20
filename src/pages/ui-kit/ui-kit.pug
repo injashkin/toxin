@@ -40,7 +40,7 @@ block main
 
       .ui-kit__blok-column
         +container()
-          +listbox({title: 'Checkbox buttons', items: ['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)']})
+          +listbox({title: 'Checkbox buttons', items: [{name: 'Можно курить'}, {name: 'Можно с питомцами', checked: true}, {name: 'Можно пригласить гостей (до 10 человек)', checked: true}]})
         +container('Radio Buttons')
           +radio()        
         +container('Toggle')          
