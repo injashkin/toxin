@@ -4,9 +4,11 @@ https://drbrain.ru/articles/css-radio-buttons-styling/ */
 .radio-buttons {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  width: 220.74px;
-  height: 35px;
+  justify-content: flex-start;
+
+  & > :first-child {
+    margin-right: 2rem;
+  }
 }
 
 .radio-buttons__label {
@@ -15,6 +17,7 @@ https://drbrain.ru/articles/css-radio-buttons-styling/ */
   flex-direction: row;
   position: relative;
   align-items: center;
+  cursor: pointer;
 
   /* Скрываем штатные радио-кнопки */
   input {
@@ -33,12 +36,11 @@ https://drbrain.ru/articles/css-radio-buttons-styling/ */
     -moz-appearance: none;
     display: inline-block;
     position: relative;
-    height: 20px;
-    width: 20px;
-    border-radius: 20px;
-    margin-right: 5px;
-    /* Dark 25% */
-    border: 1px solid rgba(31, 32, 65, 0.25);
+    height: 2rem;
+    width: 2rem;
+    border-radius: 2rem;
+    margin-right: 1rem;
+    border: 1px solid $dark25;
     background-color: #ffffff;
     cursor: pointer;
     outline: none;
@@ -49,8 +51,7 @@ https://drbrain.ru/articles/css-radio-buttons-styling/ */
   /* Параметры элементов, заменяющих 
   штатные радио-кнопки. На кнопку навели */
   &:hover .radio-buttons__item {
-    /* Dark 25% */
-    border: 1px solid rgba(31, 32, 65, 0.5);
+    border: 1px solid $dark25;
   }
 
   /* Параметры элементов, заменяющих штатные 
@@ -75,32 +76,15 @@ https://drbrain.ru/articles/css-radio-buttons-styling/ */
     transform: translate(-50%, -50%);
   }
 
-  /*
-  input:checked + .radio-buttons__item::before {
-    //Бордюр маленького кружка
-    border: 1px solid rgba(31, 32, 65, 0.25);
-  }
-  */
-
   /* Параметры подписей радио-кнопок */
   input + .radio-buttons__item + .radio-buttons__text {
-    /* Dark 75% */
-    color: rgba(31, 32, 65, 0.5);
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 24px;
-    font-family: sans-serif;
-    cursor: pointer;
-    //margin-right: 10px;
     align-self: center;
+    padding-bottom: 0.1rem;
   }
 
   /* Параметры подписей выбранных радио-кнопок */
   input:checked + .radio-buttons__item + .radio-buttons__text {
-    /* Dark 50% */
-    color: rgba(31, 32, 65, 0.75);
+    color: $dark50;
     cursor: default;
   }
 }
