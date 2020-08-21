@@ -20,6 +20,15 @@
     margin-left: 3rem;
   }
 
+  &__blok-row {
+    display: flex;
+    justify-content: space-between;
+
+    &_flex-start {
+      justify-content: flex-start;
+    }
+  }
+
   &__content {
     max-width: 1158px;
     margin: 4.5rem auto 0;
@@ -92,10 +101,6 @@
       & > :nth-child(3) {
         flex: 1 1 0;
         max-width: 32rem;
-        & > :first-child {
-          margin-top: 2rem;
-          max-width: 26.6rem;
-        }
       }
     }
     // 2-й ряд
@@ -169,9 +174,43 @@
     }
   }
 
-  &__blok-row {
-    display: flex;
-    justify-content: space-between;
+  &__slider {
+    margin-top: 2rem;
+    max-width: 26.6rem;
+  }
+
+  &__buttons {
+    margin-top: 4.4rem;
+    margin-bottom: 4rem;
+
+    & > .container {
+      & > :nth-child(2) {
+        margin-top: 1.6rem;
+        margin-bottom: 3rem;
+
+        & > :first-child {
+          margin-right: 2rem;
+        }
+      }
+
+      & > :nth-child(3) {
+        & > :first-child {
+          margin-right: 2rem;
+        }
+      }
+
+      & > :nth-child(4) {
+        margin-top: 3rem;
+        margin-bottom: 2.5rem;
+        & > :first-child {
+          margin-right: 2rem;
+        }
+      }
+    }
+  }
+
+  &__pagination .pagination {
+    margin-top: 2rem;
   }
 
   &__date-dropdown {

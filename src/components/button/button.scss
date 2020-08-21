@@ -38,7 +38,7 @@
 
     &-st {
       color: #ffffff;
-      padding: 3px 2px;
+      //padding: 3px 2px;
       background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
       //background-clip: padding-box; /* !importanté */
       //border: solid $button-border transparent; /* !importanté */
@@ -108,13 +108,14 @@
     // Толстая кнопка
     &-bg {
       .button__text {
-        padding: 1.1rem 1.6rem 1.2rem 1.5rem;
+        //padding: 1.1rem 1.6rem 1.2rem 1.5rem;
+        padding: 1.4rem 2rem 1.4rem 1.9rem;
       }
     }
   }
 
   &_color {
-    &-alt {
+    &-inactive {
       color: rgba(31, 32, 65, 0.5);
     }
   }

@@ -57,20 +57,29 @@ block main
             +rate(5)
 
       .ui-kit__blok-column
-        +slider({label: 'Range Slider'})
-        +container('buttons')
-          .ui-kit__blok-row        
-            +button({text: 'Click me', size: 'sm'})
-            +button({text: 'Click me', size: 'sm'})
-          .ui-kit__blok-row       
-            +button({style: 'lt', text: 'Войти'})
-            +button({style: 'lt', text: 'Войти'})
-          .ui-kit__blok-row
-            +button({style: 'wb', text: 'Click Me'})
-            +button({style: 'wb', text: 'Click Me'})      
-          +button({style: 'ic', text: 'Перейти к оплате'})
-        +container('Pagination')
-          +pagination()
+        .ui-kit__slider
+          +slider({label: 'Range Slider'})
+        .ui-kit__buttons
+          +container('buttons')
+            .ui-kit__blok-row.ui-kit__blok-row_flex-start
+              .ui-kit__button-wrapper
+                +button({text: 'Click me', size: 'bg'})
+              .ui-kit__button-wrapper
+                +button({text: 'Click me', size: 'bg'})
+            .ui-kit__blok-row.ui-kit__blok-row_flex-start
+              .ui-kit__button-wrapper
+                +button({style: 'lt', text: 'Click me'})
+              .ui-kit__button-wrapper
+                +button({style: 'lt', text: 'Click me'})
+            .ui-kit__blok-row.ui-kit__blok-row_flex-start
+              .ui-kit__button-wrapper
+                +button({text: 'Click Me', style: 'wb'})
+              .ui-kit__button-wrapper
+                +button({text: 'Click Me', style: 'wb', color: 'inactive'})      
+            +button({style: 'ic', text: 'Перейти к оплате'})
+        .ui-kit__pagination
+          +container('Pagination')
+            +pagination()
 
     .ui-kit__blok-row
       .ui-kit__blok-column

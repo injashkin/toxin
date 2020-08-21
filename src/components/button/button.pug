@@ -11,7 +11,8 @@
     options.text - текст на кнопке
     options.size - размер ('' или 'bg' - большая, 'sm' - маленькая)
     options.style - стиль ('' или 'st' - обычная, 'lt' - белый фон, 'wb' - без фона и бордюра, 'ic' - с иконкой)
-    options.color - цвет текста ('' или 'st' - обычная, 'alt' - альтернативный)
+    options.color - цвет текста ('' или 'st' - по умолчанию, 'inactive' - неактивный)
+    options.type - 
     Атрибуты:
     attributes.class - классы
 
@@ -19,10 +20,12 @@ mixin button(options = {})
     
     -
         let {text = '', size = 'bg', style = 'st', color = 'st'} = options
-        var classes = `button button_style-${style} button_color-${color} button_size-${size}`
-        var pict = style == 'ic' ? 'arrow_forward' : ''
+        let classes = style === 'wb' 
+            ? `button button_style-${style} button_color-${color}` 
+            : `button button_style-${style} button_color-${color} button_size-${size}`
 
-    button(class=classes class=attributes.class)
+    button(class=classes)
         .button__text= text
-        .button__icon
-            i.material-icons= pict
+        if style === 'ic'
+            .button__icon
+                i.material-icons arrow_forward
