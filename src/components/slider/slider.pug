@@ -1,10 +1,14 @@
+//- 
+  options.label - 
+  options.legend - 
+
 mixin slider(options = {})
-  - let {label = ''} = options
+  - let {label = '', legend = ''} = options
 
   .slider
       .slider__header
-        span.slider__label(for="amount")= label
-        input.slider__input(type="text" id="amount" readonly)
+        span.slider__label(for='amount')= label
+        input.slider__input(type='text' id='amount' readonly)
 
-      .slider-range(id="slider-range")
-      .slider__legend Стоимость за сутки пребывания в номере
+      .slider-range(id='slider-range')
+      .slider__legend= legend

@@ -2,20 +2,35 @@
   &__header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 2.4rem;
+    align-items: center;
+    margin-bottom: 2.3rem;
   }
 
   &__label {
+    font-family: Montserrat;
+    font-style: normal;
     font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
     text-transform: uppercase;
-    font-size: 1.2rem;
+    color: $dark;
   }
 
   &__input {
     border: 0;
     text-align: right;
-    text-transform: uppercase;
     width: 12rem;
+    //margin-bottom: 0.3rem;
+    margin-right: 0.1rem;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: right;
+    text-transform: uppercase;
+    color: $dark50;
   }
 
   &__legend {
@@ -31,12 +46,14 @@
     background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
   }
 
-  & .ui-widget .ui-widget-content {
+  & .ui-widget-content {
     border: 1px solid $dark25;
   }
 
   & .ui-slider-handle {
-    border-radius: 1em;
+    border-radius: 50%;
+    width: 1.2rem;
+    height: 1.2rem;
   }
 
   & .ui-slider-horizontal {
@@ -45,7 +62,8 @@
   }
 
   & .ui-slider-horizontal .ui-slider-handle {
-    top: -0.5rem;
+    top: -0.6rem;
+    margin-left: -1rem;
   }
 
   & .ui-widget-header {

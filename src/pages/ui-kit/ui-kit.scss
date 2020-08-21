@@ -27,6 +27,7 @@
     & > :first-child {
       // 1 столбец
       & > :first-child {
+        flex: 1 1 0;
         max-width: 32rem;
 
         & > :nth-child(4) {
@@ -35,7 +36,8 @@
       }
       // 2 столбец
       & > :nth-child(2) {
-        max-width: 27.8rem;
+        flex: 1 1 0;
+        max-width: 26.6rem;
 
         & > * {
           margin-bottom: 4rem;
@@ -83,6 +85,16 @@
           & > :first-child {
             margin-right: 2rem;
           }
+        }
+      }
+
+      // 3-й столбец
+      & > :nth-child(3) {
+        flex: 1 1 0;
+        max-width: 32rem;
+        & > :first-child {
+          margin-top: 2rem;
+          max-width: 26.6rem;
         }
       }
     }
