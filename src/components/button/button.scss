@@ -18,30 +18,56 @@
   text-transform: uppercase;
 
   &_style {
+    &-default {
+      font-size: 11.5px;
+    }
+
     &-wb {
       background: none;
       color: #bc9cff;
+      &-inactive {
+        color: rgba(31, 32, 65, 0.5);
+      }
     }
 
     &-lt {
-      //position: relative;
-      padding: 2px;
-      background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+      // Позиции, отмеченные звездочкой можно было бы заменить на простой
+      // background-color: rgba(r, g, b, a), но на него ругается валидатор
+      // http://htmlbook.ru/blog/poluprozrachnyy-fon
+      position: relative; //*
+      .button__pseudo-parent_style-lt {
+        position: absolute; //*
+        padding: 2px;
+        background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+        width: 100%; //*
+        height: 100%; //*
+        z-index: -1; //*
+        border-radius: inherit; //*
+        left: -2px; //*
 
-      & > :first-child {
+        &-inactive {
+          opacity: 0.5;
+        }
+      }
+
+      & > .button__text {
         background: #ffffff;
         color: #bc9cff;
         border-radius: inherit;
         box-sizing: border-box;
+        padding: 1.2rem 1.8rem 1.2rem 1.7rem;
+        font-size: 11.8px;
+        line-height: 16px;
       }
     }
 
-    &-st {
+    &-default {
       color: #ffffff;
-      //padding: 3px 2px;
       background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-      //background-clip: padding-box; /* !importanté */
-      //border: solid $button-border transparent; /* !importanté */
+
+      &-inactive {
+        opacity: 0.5;
+      }
     }
 
     &-ic {
@@ -52,12 +78,16 @@
       width: 100%;
       background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
       color: #ffffff;
-      padding: 3px 2px;
+
+      & > .button__text {
+        margin-bottom: 0.2rem;
+        margin-left: 0.3rem;
+      }
 
       .button__icon {
         position: absolute;
         top: 50%;
-        left: 93%;
+        left: 93.1%;
         transform: translate(-50%, -50%);
       }
 
@@ -72,7 +102,7 @@
       }
     }
 
-    &-st:active,
+    &-default:active,
     &-lt:active,
     &-ic:active {
       opacity: 0.5;
@@ -90,33 +120,25 @@
       text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
 
-    &-st:hover,
+    &-default:hover,
     &-lt:hover,
     &-ic:hover {
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
   }
 
-  // Размер кнопки
-  &_size {
+  // Высота кнопки
+  &_height {
     // Тонкая кнопка
-    &-sm {
+    &-s {
       .button__text {
         padding: 0.6rem 1.8rem 0.7rem 1.7rem;
       }
     }
-    // Толстая кнопка
-    &-bg {
-      .button__text {
-        //padding: 1.1rem 1.6rem 1.2rem 1.5rem;
-        padding: 1.4rem 2rem 1.4rem 1.9rem;
-      }
-    }
-  }
-
-  &_color {
-    &-inactive {
-      color: rgba(31, 32, 65, 0.5);
+    // Средняя кнопка
+    &-md {
+      padding: 0.1rem 2.2rem 0 1.9rem;
+      height: 4.4rem;
     }
   }
 }
