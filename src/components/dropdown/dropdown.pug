@@ -4,14 +4,15 @@
     options.placeholder - текст в строке ввода по умолчанию
     options.open - если true, то дропдаун открыт
     options.buttons - если true, то кнопки Применить и Очистить присутствуют
+    options.type - 
 
 mixin dropdown(options = {})
 
-    - let {name='visitor', placeholder='Сколько гостей', items=["взрослые", "дети", "младенцы"], open=false, buttons=true} = options
+    - let {name='visitor', type='visitor', placeholder='Сколько гостей', items=['взрослые', 'дети', 'младенцы'], open=false, buttons=true} = options
 
-    - classes = open === true ? 'dropdown-' + name + ' open' : 'dropdown-' + name
+    - classes = open === true ? 'dropdown-' + type + ' open' : 'dropdown-' + type
 
-    .dropdown(class=classes)
+    .dropdown(class=classes id=name)
         .dropdown__header-wrapper.js-dropdown__header-wrapper
             .dropdown__header= placeholder
             .dropdown__icon
@@ -20,11 +21,13 @@ mixin dropdown(options = {})
             each val, index in items
                 li.dropdown__li
                     .dropdown__label= val
-                    +input-number(name + index)
+                    +input-number(type + index)
             if buttons
-                li.dropdown__li
-                    +button({text: "Очистить", style: "wb", color: "alt" })(class="dropdown__clear js-dropdown__clear dropdown__clear_hidden")                 
-                    +button({text: "Применить", style: "wb"})(class="dropdown__submit js-dropdown__submit")
+                li.dropdown__li.dropdown__li_buttons
+                    .dropdown__clear.js-dropdown__clear.dropdown__clear_hidden
+                        +button({text: 'Очистить', style: 'wb', state: 'inactive'})
+                    .dropdown__submit.js-dropdown__submit
+                        +button({text: 'Применить', style: 'wb'})
 
         
             

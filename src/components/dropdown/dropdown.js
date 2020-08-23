@@ -185,21 +185,24 @@ $(function () {
     $(this).parent().parent().parent().removeClass("open");
   });
 
-  //Закрывает дропдаун-меню при клике вне границ дропдауна
+  //Закрывает дропдаун-меню при клике вне его границ
   $(document).on("click", function (e) {
-    // если клик был не по блоку dropdown-comfort и не по его дочерним элементам
-    if (comfort.selector.has(e.target).length === 0) {
-      comfort.selector.removeClass("open"); // скрываем его
-    }
-    // если клик был не по блоку dropdown-visitor и не по его дочерним элементам
-    if (visitor.selector.has(e.target).length === 0) {
-      visitor.selector.removeClass("open"); // скрываем его
-    }
+    var allDropdown = $(".dropdown");
+
+    $.each(allDropdown, function (key, value) {
+      if (
+        // если клик был не по блоку dropdown и не по его дочерним элементам
+        !$(value).is(e.target) &&
+        $(value).has(e.target).length === 0
+      ) {
+        $(value).removeClass("open");
+      }
+    });
   });
 
   //Кнопка "Очистить" обнуляет значения input, массив и хедер и делает кнопки минус неактивными
-  var $dropdown__clear = $(".js-dropdown__clear");
-  $(".dropdown__clear").click(function () {
+  let $dropdown__clear = $(".js-dropdown__clear");
+  $dropdown__clear.click(function () {
     dropdownState.arrState = [];
     $(this).parent().parent().find("input").val("0");
     $(this)
