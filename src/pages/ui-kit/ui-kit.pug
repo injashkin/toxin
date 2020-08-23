@@ -65,12 +65,12 @@ block main
               .ui-kit__button-wrapper
                 +button({text: 'Click me', size: 'bg'})
               .ui-kit__button-wrapper
-                +button({text: 'Click me', size: 'bg'})
+                +button({text: 'Click me', size: 'bg', state: 'inactive'})
             .ui-kit__blok-row.ui-kit__blok-row_flex-start
               .ui-kit__button-wrapper
                 +button({style: 'lt', text: 'Click me'})
               .ui-kit__button-wrapper
-                +button({style: 'lt', text: 'Click me'})
+                +button({style: 'lt', text: 'Click me', state: 'inactive'})
             .ui-kit__blok-row.ui-kit__blok-row_flex-start
               .ui-kit__button-wrapper
                 +button({text: 'Click Me', style: 'wb'})
@@ -84,13 +84,13 @@ block main
     .ui-kit__blok-row
       .ui-kit__blok-column
         +container('Dropdown')
-          +dropdown({name: 'comfort', placeholder: 'Какие удобства', items: ['спальни', 'кровати', 'ванные комнаты']})
+          +dropdown({name: 'comfort1', type: 'comfort', placeholder: 'Какие удобства', items: ['спальни', 'кровати', 'ванные комнаты']})
         +container('Dropdown')
-          +dropdown({open: true, buttons: false, name: 'comfort-open', placeholder: 'Какие удобства', items: ['спальни', 'кровати', 'ванные комнаты']})
+          +dropdown({name: 'comfort2', type: 'comfort', open: true, buttons: false, placeholder: 'Какие удобства', items: ['спальни', 'кровати', 'ванные комнаты']})
       +container('Dropdown')
-        +dropdown({open: true, name: 'numberGuests', placeholder: 'Сколько гостей', items: ['взрослые', 'дети', 'младенцы']})
+        +dropdown({name: 'visitor1', type: 'visitor', open: true, placeholder: 'Сколько гостей', items: ['взрослые', 'дети', 'младенцы']})
       +container('Dropdown')
-        +dropdown({open: true, name: 'presetNumberGuests', placeholder: 'Сколько гостей', items: ['взрослые', 'дети', 'младенцы']})
+        +dropdown({name: 'visitor2', type: 'visitor', open: true, placeholder: 'Сколько гостей', items: ['взрослые', 'дети', 'младенцы']})
 
     .ui-kit__blok-row
       .ui-kit__blok-column        
