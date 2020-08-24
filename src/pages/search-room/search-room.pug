@@ -24,7 +24,7 @@ block main
         .search-room__block
           .search-room__block-title 
           .search-room__block-component 
-            +listbox({title: 'Checkbox Buttons', items: ['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)']})
+            +listbox({title: 'Checkbox Buttons', items: [{name: 'Можно курить'}, {name: 'Можно с питомцами', checked: true}, {name: 'Можно пригласить гостей (до 10 человек)', checked: true}]})
         .search-room__block
           .search-room__block-title Доступность
           .search-room__block-component
@@ -36,7 +36,7 @@ block main
         .search-room__block
           .search-room__block-title 
           .search-room__block-component 
-            +listbox({title:'Дополнительные удобства', type: 'drop', items: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь']})
+            +listbox({title:'Дополнительные удобства', type: 'drop', drop: false, items: [{name: 'Завтрак'}, {name: 'Письменный стол'}, {name: 'Стул для кормления'}, {name: 'Кроватка'}, {name: 'Телевизор'}, {name: 'Шампунь'}]})
 
       .search-room__frame
         .search-room__wrapper-cards

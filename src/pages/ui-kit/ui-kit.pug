@@ -95,9 +95,9 @@ block main
     .ui-kit__blok-row
       .ui-kit__blok-column        
         .ui-kit__listbox-wrapper
-          +listbox({title:'Expandable checkbox list', type: 'drop', drop: false, items: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь']})
+          +listbox({title:'Expandable checkbox list', type: 'drop', drop: false, items: [{name: 'Завтрак'}, {name: 'Письменный стол', checked: true}, {name: 'Стул для кормления', checked: true}, {name: 'Кроватка', checked: true}, {name: 'Телевизор'}, {name: 'Шампунь'}]})
         .ui-kit__listbox-wrapper
-          +listbox({title:'Expandable checkbox list', type: 'drop', items: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь']})
+          +listbox({title:'Expandable checkbox list', type: 'drop', items: [{name: 'Завтрак'}, {name: 'Письменный стол', checked: true}, {name: 'Стул для кормления', checked: true}, {name: 'Кроватка', checked: true}, {name: 'Телевизор'}, {name: 'Шампунь'}]})
       .ui-kit__blok-column   
         .ui-kit__listbox-wrapper     
           +listbox({title:'Rich Checkbox Buttons', items: [{name: 'Широкий коридор', desc: 'Ширина коридоров в номере не менее 91 см.'}, {name: 'Помощник для инвалидов', desc: 'На 1 этаже вас встретит специалист  и проводит до номера.'}]})
@@ -106,4 +106,4 @@ block main
           +listbox({title: 'Bullet list', content: 'ul', items: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})
 
     .ui-kit__blok-row
-      +listbox({title:'', items: [{name: 'Комфорт', desc: 'Шумопоглощающие стены', icon: 'insert_emoticon'}, {name: 'Удобство', desc: 'Окно в каждой из спален', icon: 'location_city'}]})
+      +listbox({items: [{name: 'Комфорт', desc: 'Шумопоглощающие стены', icon: 'insert_emoticon'}, {name: 'Удобство', desc: 'Окно в каждой из спален', icon: 'location_city'}]})
