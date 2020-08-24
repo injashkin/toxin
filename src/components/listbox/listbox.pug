@@ -31,6 +31,7 @@ mixin listbox(options = {})
     - if (drop === false)
         - dropClass = 'js-listbox__drop js-listbox__drop_close'
         - arrow = 'js-listbox__arrow'
+    - let classes = type === 'drop' ? `listbox__ul ${dropClass}` : 'listbox__ul'
 
     .listbox(class=`listbox_${content}`) 
         //- Выводит заголовок списка если задан
@@ -41,52 +42,50 @@ mixin listbox(options = {})
                 if (type === 'drop')
                     .listbox__icon-wrapper
                         div(class=arrow)
-                            i.material-icons expand_more
-        if (type === 'drop')
-            ul.listbox__ul(class=dropClass)
-        else 
-            ul.listbox__ul
-                each item, index in items
-                    //- Если список маркированный
-                    if (content === 'ul')
-                        .listbox__bulleted
-                            ul.listbox__bulleted-ul
-                                li.listbox__bulleted-li= item
-                    //- Если список в виде текста
-                    else if (content === 'txt')
-                        li.listbox__text= item                       
-                    //- Другие типы списков, в т. ч. чекбоксы
-                    else                    
-                        //-
-                        if (typeof item === 'object' && item.desc !== undefined)
-                            //- Если в объекте есть имена значков
-                            if (item.icon !== undefined)  
-                                //- выводится список со значками и доп. описанием
-                                li.listbox__li
-                                    .listbox__item_with-icon
-                                        .listbox__row
-                                            .listbox__icon-mi
-                                                i.material-icons.md-48= item.icon
-                                            .listbox__column
-                                                .listbox__item-name= item.name
-                                                .listbox__item-desc= item.desc
-                                    if (index < items.length - 1)
-                                        .listbox__separating-line
-                            //- Иначе выводится список с чекбоксами и доп. описанием
-                            else
-                                li.listbox__li.listbox__li_checkbox-extended
-                                    .listbox__name
-                                        +select({label: item.name, inherit: true})
-                                    p.listbox__desc= item.desc
-                        //- Если в объекте заданы ссылки
-                        else if (typeof item === 'object' && item.link !== undefined)
-                            li.listbox__li_for-links
-                                a.listbox__a(href= item.link)= item.name
-                        //- По умолчанию выводится список из отмеченных чекбоксов 
-                        else if (typeof item === 'object')
-                            li.listbox__li(class='listbox__li_checkbox-simple') 
-                                +select({label: item.name, checked: item.checked}) 
-                        //- Если это не объект выводится список из чекбоксов
+                            i.material-icons expand_more        
+        ul(class=classes)      
+            each item, index in items
+                //- Если список маркированный
+                if (content === 'ul')
+                    .listbox__bulleted
+                        ul.listbox__bulleted-ul
+                            li.listbox__bulleted-li= item
+                //- Если список в виде текста
+                else if (content === 'txt')
+                    li.listbox__text= item                       
+                //- Другие типы списков, в т. ч. чекбоксы
+                else                    
+                    //-
+                    if (typeof item === 'object' && item.desc !== undefined)
+                        //- Если в объекте есть имена значков
+                        if (item.icon !== undefined)  
+                            //- выводится список со значками и доп. описанием
+                            li.listbox__li
+                                .listbox__item_with-icon
+                                    .listbox__row
+                                        .listbox__icon-mi
+                                            i.material-icons.md-48= item.icon
+                                        .listbox__column
+                                            .listbox__item-name= item.name
+                                            .listbox__item-desc= item.desc
+                                if (index < items.length - 1)
+                                    .listbox__separating-line
+                        //- Иначе выводится список с чекбоксами и доп. описанием
                         else
-                            li.listbox__li(class='listbox__li_checkbox-simple') 
-                                +select({label: item.name, checked: item.checked}) 
+                            li.listbox__li.listbox__li_checkbox-extended
+                                .listbox__name
+                                    +select({label: item.name, inherit: true})
+                                p.listbox__desc= item.desc
+                    //- Если в объекте заданы ссылки
+                    else if (typeof item === 'object' && item.link !== undefined)
+                        li.listbox__li_for-links
+                            a.listbox__a(href= item.link)= item.name
+                    //- По умолчанию выводится список из отмеченных чекбоксов 
+                    else 
+                        //-if (typeof item === 'object')
+                        li.listbox__li(class='listbox__li_checkbox-simple') 
+                            +select({label: item.name, checked: item.checked}) 
+                    //- Если это не объект выводится список из чекбоксов
+                    //-else
+                        li.listbox__li(class='listbox__li_checkbox-simple') 
+                            +select({label: name, checked: checked}) 
