@@ -106,4 +106,14 @@ block main
           +listbox({title: 'Bullet list', content: 'ul', items: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})
 
     .ui-kit__blok-row
-      +listbox({items: [{name: 'Комфорт', desc: 'Шумопоглощающие стены', icon: 'insert_emoticon'}, {name: 'Удобство', desc: 'Окно в каждой из спален', icon: 'location_city'}]})
+      .ui-kit__listbox-wrapper
+        +listbox({items: [{name: 'Комфорт', desc: 'Шумопоглощающие стены', icon: 'insert_emoticon'}, {name: 'Удобство', desc: 'Окно в каждой из спален', icon: 'location_city'}]})
+      .ui-kit__reviews-wrapper
+        +reviews({items: [
+          {
+          userName: 'Мурад Сарафанов',
+          date: '5 дней назад',
+          review: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+          like: {count: 12, like: true}
+          }
+        ]})

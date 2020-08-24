@@ -1,0 +1,43 @@
+//-        
+    options.countReviews - показывает количество отзывов, если не указать то не показывает
+    options.items[] - массив с отзывами
+    options.items[n].userName - Имя пользователя
+    options.items[n].date - когда добавлен отзыв
+    options.items[n].review - текст отзыва
+    options.items[n].like.count - количество лайков
+    options.items[n].like.like - если true, то лайк от данного пользователя добавлен
+
+mixin reviews(options = {})
+    - let {items = [], title = '', countReviews = ''} = options
+    
+    .reviews
+        each item in items
+            if title !== ''
+                .reviews__header
+                    h2.reviews__title= title
+                    if countReviews !== ''
+                        p.reviews__number= countReviews
+            .reviews__content
+                .reviews__item
+                    .reviews__row
+                        .reviews__left-side
+                            .reviews__avatar
+                                img.reviews__avatar-img(src=require("../../components/reviews/img/murad.jpg"), alt="Аватар пользователя")
+                            .reviews__like
+                                +like({count: item.like.count, like: item.like.like})
+                        .reviews__right-side
+                            .reviews__username= item.userName                           
+                            .reviews__time= item.date
+                            .reviews__message= item.review
+
+                //-.reviews__item
+                    .reviews__row
+                        .reviews__left-side
+                            .reviews__avatar
+                                img.reviews__avatar-img(src=require("../../components/reviews/img/patrisija.jpg"), alt="Аватар пользователя")
+                            .reviews__like
+                                +like({count: 2})
+                        .reviews__right-side
+                            .reviews__username Патрисия Стёклышкова
+                            .reviews__time Неделю назад
+                            .reviews__message Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент

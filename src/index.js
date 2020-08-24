@@ -37,6 +37,7 @@ import "./components/pagination/pagination.js";
 import "./components/pie-chart/pie-chart.js";
 import "./components/menu/menu.js";
 import "./components/like/like.js";
+import "./components/reviews/reviews.js";
 
 // SCSS
 import "./style.css";

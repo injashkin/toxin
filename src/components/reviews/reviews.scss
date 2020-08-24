@@ -1,0 +1,56 @@
+.reviews {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+
+  &__number {
+    margin-right: 4rem;
+  }
+
+  &__item {
+    margin-bottom: 2.3rem;
+  }
+
+  &__username {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+    /* or 171% */
+    color: $dark75;
+  }
+
+  &__message {
+    margin-top: 1rem;
+  }
+
+  &__avatar {
+    //border: 1px solid #000000;
+    //margin-top: -0.2rem;
+    //margin-left: -0.3rem;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    //background: url("murad.jpg") no-repeat;
+    //background-position: -19 -9;
+    overflow: hidden;
+    margin-right: 1rem;
+
+    &-img {
+      margin-left: -2rem;
+      margin-top: -1rem;
+    }
+  }
+
+  &__like {
+    margin-left: 0.5rem;
+    margin-top: 1.2rem;
+  }
+
+  &__row {
+    display: flex;
+  }
+}
