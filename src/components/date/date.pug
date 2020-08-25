@@ -1,18 +1,35 @@
+//-
+    options.inputField - если false, то выводится календарь без поля ввода
+    options.inline - если true, то календарь будет постоянно виден
+    options.placeholder - 
+
 mixin date(options = {})
-    - let {placeholder = 'ДД.ММ.ГГГГ'} = options
+    - let {placeholder = 'ДД.ММ.ГГГГ', inline = false, inputField = true} = options
+    - inline = inline ? 'true' : 'false'
 
     .date
-        input.date__input(            
-            type='text' 
-            class="datepicker-here" 
-            data-inline='false' 
-            data-range="true"             
-            data-position="bottom left"
-            data-keyboard-nav="true" 
-            data-multiple-dates-separator=" - "            
-            data-placeholder= placeholder
-            data-clear-button="true"
-            data-today-button='true')    
-        .date__icon
-            i.material-icons expand_more
+        if inputField === false
+            .datepicker-here(                 
+                data-range="true"             
+                data-position="bottom left"
+                data-keyboard-nav="true" 
+                data-multiple-dates-separator=" - "                            
+                data-clear-button="true"
+                data-today-button='true'
+            )
+        else          
+            input.date__input(            
+                type='text' 
+                placeholder= placeholder
+                class="datepicker-here" 
+                data-inline= inline
+                data-range="true"             
+                data-position="bottom left"
+                data-keyboard-nav="true" 
+                data-multiple-dates-separator=" - "                            
+                data-clear-button="true"
+                data-today-button='true'
+            )    
+            .date__icon
+                i.material-icons expand_more
         

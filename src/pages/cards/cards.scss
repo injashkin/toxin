@@ -8,11 +8,18 @@
     display: flex;
     justify-content: center;
     margin-top: 7.2rem;
+
+    & > * {
+      flex: 1 1 0;
+      max-width: 42rem;
+    }
+
+    & > :last-child {
+      max-width: 32rem;
+    }
   }
 
   &__columns {
-    margin-right: 4rem;
-
     & > * {
       margin-bottom: 4rem;
     }

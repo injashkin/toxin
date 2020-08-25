@@ -38,9 +38,18 @@ $.datepicker.regional["ru"] = {
 };
 
 $.datepicker.setDefaults($.datepicker.regional["ru"]);
+*/
 
 $(function () {
-  $(".datepicker").datepicker({
+  $(".datepicker--nav > :first-child").html(
+    "<i class='material-icons'>arrow_back</i>"
+  );
+  $(".datepicker--nav > :last-child").html(
+    "<i class='material-icons'>arrow_forward</i>"
+  );
+
+  /*
+	$(".datepicker").datepicker({
     showButtonPanel: true,
     defaultDate: "+2d",
     showOtherMonths: true,
@@ -49,10 +58,10 @@ $(function () {
   });
 
   $(".date__input").on("focus", function () {
-    $(".ui-datepicker-prev").html("<i class='material-icons'>arrow_back</i>");
+    
     $(".ui-datepicker-next").html(
       "<i class='material-icons'>arrow_forward</i>"
     );
   });
+  */
 });
-*/
