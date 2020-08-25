@@ -1,17 +1,23 @@
 .container {
   margin: 2rem 0;
-}
 
-.container-label {
-  margin-bottom: 0.5rem;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
 
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  color: $dark;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: $dark;
+  }
+
+  &__status {
+    font-weight: normal;
+  }
 }
 
 .ui-kit {
@@ -39,6 +45,13 @@
         flex: 1 1 0;
         max-width: 32rem;
 
+        & > :nth-child(1),
+        & > :nth-child(4) {
+          & .container__status {
+            margin-top: -0.3rem;
+          }
+        }
+
         & > :nth-child(4) {
           margin-top: 2.3rem;
         }
@@ -60,6 +73,11 @@
           }
         }
 
+        // TOGGLE
+        & > :nth-child(3) {
+          margin-bottom: 4.3rem;
+        }
+
         .ui-kit__toggle {
           margin-top: 1.3rem;
 
@@ -68,10 +86,7 @@
           }
         }
 
-        & > :nth-child(3) {
-          margin-bottom: 4.3rem;
-        }
-
+        // LIKE BUTTON
         & > :nth-child(4) {
           & > :nth-child(2) {
             margin-top: 1.6rem;
@@ -87,6 +102,7 @@
           }
         }
 
+        // RATE BUTTON
         .ui-kit__rate-button {
           display: flex;
           margin-top: 1.6rem;
@@ -146,6 +162,14 @@
         & > :nth-child(2) {
           margin-left: -0.1rem;
           max-width: 25.6rem;
+
+          & .listbox__header {
+            margin-bottom: 1.4rem;
+          }
+
+          & .listbox__ul > :nth-child(n + 3) {
+            margin-bottom: 1rem;
+          }
         }
       }
 
@@ -188,6 +212,8 @@
       & > :first-child {
         flex: 1 1 0;
         max-width: 27rem;
+        margin-top: 0.1rem;
+        margin-left: -0.1rem;
       }
     }
   }
@@ -258,7 +284,7 @@
 
   &__reviews-wrapper {
     flex: 1 1 0;
-    max-width: 71.3rem;
-    margin-top: 0.5rem;
+    max-width: 71.2rem;
+    margin-top: 1.1rem;
   }
 }
