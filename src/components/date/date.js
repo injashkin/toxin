@@ -40,28 +40,21 @@ $.datepicker.regional["ru"] = {
 $.datepicker.setDefaults($.datepicker.regional["ru"]);
 */
 
-$(function () {
-  $(".datepicker--nav > :first-child").html(
-    "<i class='material-icons'>arrow_back</i>"
-  );
-  $(".datepicker--nav > :last-child").html(
-    "<i class='material-icons'>arrow_forward</i>"
-  );
+/*$(function () {
+  //var $datepicker = $(".date");
+ 
+  var $datepicker = $(".date");
+  //var $navPrev = $(".datepicker--nav > :first-child");
+  //var $navNext = $(".datepicker--nav > :last-child");
+  var $arrowBack = "<i class='material-icons'>arrow_back</i>";
+  var $arrowForward = "<i class='material-icons'>arrow_forward</i>";
 
-  /*
-	$(".datepicker").datepicker({
-    showButtonPanel: true,
-    defaultDate: "+2d",
-    showOtherMonths: true,
-    //disabled: true,
-    //showOn: hover,
+  let click = $datepicker.on("click", function () {
+    // При кешировании выборок стрелки после клика пропадают. Поэтому оставил пока так
+    $(".datepicker--nav > :first-child").html($arrowBack);
+    $(".datepicker--nav > :last-child").html($arrowForward);
   });
 
-  $(".date__input").on("focus", function () {
-    
-    $(".ui-datepicker-next").html(
-      "<i class='material-icons'>arrow_forward</i>"
-    );
-  });
-  */
-});
+  $datepicker.triggerHandler("click");
+  
+});*/
