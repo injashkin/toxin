@@ -14,6 +14,11 @@
     color: $dark;
   }
 
+  &_checkbox,
+  &_ul {
+    min-width: 24rem;
+  }
+
   &__icon-wrapper {
     //margin-left: 4.05rem;
     margin-top: 0.1rem;
