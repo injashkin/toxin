@@ -21,7 +21,7 @@ mixin room-card(options = {})
                     if luxe
                         .room-card__type Люкс
                 .room-card__price
-                    .room-card__price-value #{price}₽
+                    .room-card__price-value #{price.toLocaleString()}₽
                     .room-card__price-period в сутки        
             .room-card__dividing-line
             .room-card__rate-review

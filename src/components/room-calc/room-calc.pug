@@ -20,7 +20,7 @@ mixin room-calc(options = {})
                 if (luxe)
                    h3 Люкс
             .room-calc__rate
-                .room-calc__rate-value #{rate}₽
+                .room-calc__rate-value #{rate.toLocaleString()}₽                    
                 p в сутки
         .room-calc__date-picker
             .room-calc__arrival-date
@@ -36,24 +36,24 @@ mixin room-calc(options = {})
         table.room-calc__result
             tr.room-calc__row.room-calc__gross
                 td.room-calc__cell 
-                    .room-calc__gross-label #{rate}₽ x #{day} суток
+                    .room-calc__gross-label #{rate.toLocaleString()}₽ x #{day} суток
                 - let result = rate * day
                 td.room-calc__cell 
-                    .room-calc__gross-value #{result}₽
+                    .room-calc__gross-value #{result.toLocaleString()}₽
             tr.room-calc__row.room-calc__toll
                 td.room-calc__cell
                     .room-calc__cell-wrapper
-                        .room-calc__toll-label Сбор за услуги: скидка #{discount}₽
+                        .room-calc__toll-label Сбор за услуги: скидка #{discount.toLocaleString()}₽
                         .room-calc__tooltip i
                 td.room-calc__cell
-                    .room-calc__toll-value #{toll}₽
+                    .room-calc__toll-value #{toll.toLocaleString()}₽
             tr.room-calc__row.room-calc__fee
                 td.room-calc__cell
                     .room-calc__cell-wrapper
                         .room-calc__fee-label Сбор за дополнительные услуги
                         .room-calc__tooltip i
                 td.room-calc__cell
-                    .room-calc__fee-value #{feeAddService}₽
+                    .room-calc__fee-value #{feeAddService.toLocaleString()}₽
             tr.room-calc__row.room-calc__total
                 td.room-calc__cell.room-calc__cell_total
                     .room-calc__cell-wrapper
@@ -61,6 +61,6 @@ mixin room-calc(options = {})
                         span.room-calc__total-point
                 - let total = result - discount + toll + feeAddService
                 td.room-calc__cell.room-calc__cell_total
-                    .room-calc__total-value #{total}₽
+                    .room-calc__total-value #{total.toLocaleString()}₽
         .room-calc__button-wrapper
             +button({text: "Забронировать", style: "ic"})      
