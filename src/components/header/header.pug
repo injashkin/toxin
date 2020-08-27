@@ -28,7 +28,9 @@ mixin header(options = {})
                   .header-sign__username= username
               else
                 .header-sign__button
-                  +button({text: 'Войти', style: 'lt', size: 'sm'})   
-                  +button({text: 'Зарегистрироваться', size: 'sm'})
+                  .header-sign__button-signin
+                    +button({text: 'Войти', style: 'lt', height: 'xs'})   
+                  .header-sign__button-signup
+                    +button({text: 'Зарегистрироваться', height: 'xs'})
 
 

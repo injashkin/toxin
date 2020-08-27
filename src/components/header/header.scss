@@ -22,6 +22,10 @@
   &__right {
     display: flex;
     align-items: center;
+
+    & > :first-child {
+      margin-right: 2rem;
+    }
   }
 
   &__menu {
@@ -76,9 +80,10 @@
 
   &__button {
     display: flex;
+    align-items: center;
     // Промежуток между кнопками
     & > :first-child {
-      margin-right: 2rem;
+      margin-right: 2.2rem;
     }
   }
 }

@@ -256,6 +256,10 @@
         & > :first-child {
           margin-right: 1.9rem;
         }
+
+        .button__text {
+          font-size: 11.5px;
+        }
       }
 
       & > :nth-child(3) {

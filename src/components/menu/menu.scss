@@ -1,13 +1,13 @@
 .menu {
-  display: flex;
+  //display: flex;
   margin-top: 0.1rem;
 
   &__ul {
     align-self: center;
     list-style: none;
 
-    & > * {
-      margin-right: 2rem;
+    & > *:not(:last-child) {
+      margin-right: 1.85rem;
       margin-bottom: 0;
     }
 
@@ -29,8 +29,8 @@
   &__link {
     text-decoration: none;
     transition: 0.3s linear;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding: 2rem 0.1rem;
+
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;

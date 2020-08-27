@@ -6,7 +6,8 @@
 .room-calc {
   display: flex;
   flex-direction: column;
-  width: 38rem;
+  min-width: 38rem;
+  max-width: 38rem;
   padding: 4rem 2.9rem 3rem;
 
   background: #ffffff;

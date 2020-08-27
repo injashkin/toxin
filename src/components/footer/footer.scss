@@ -26,8 +26,8 @@
   }
 
   &__brand,
-  &__subscribe {
-    max-width: 26rem;
+  &__wrapper-subscribe {
+    min-width: 26rem;
     flex: 1 1 0;
   }
 
