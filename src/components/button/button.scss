@@ -13,16 +13,16 @@
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
-  font-size: 1.2rem;
-  line-height: 1.5rem;
+  font-size: 12px;
+  line-height: 15px;
   text-transform: uppercase;
 
   &_style {
-    &-default {
+    &_default {
       font-size: 11.5px;
     }
 
-    &-wb {
+    &_wb {
       background: none;
       color: #bc9cff;
       &-inactive {
@@ -30,12 +30,13 @@
       }
     }
 
-    &-lt {
+    &_lt {
       // Позиции, отмеченные звездочкой можно было бы заменить на простой
       // background-color: rgba(r, g, b, a), но на него ругается валидатор
       // http://htmlbook.ru/blog/poluprozrachnyy-fon
+      z-index: 1;
       position: relative; //*
-      .button__pseudo-parent_style-lt {
+      .button__pseudo-parent_style_lt {
         position: absolute; //*
         padding: 2px;
         background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
@@ -50,27 +51,42 @@
         }
       }
 
-      & > .button__text {
-        background: #ffffff;
-        color: #bc9cff;
-        border-radius: inherit;
-        box-sizing: border-box;
-        padding: 1.2rem 1.8rem 1.2rem 1.7rem;
-        font-size: 11.8px;
-        line-height: 16px;
+      &-xs {
+        & > .button__text {
+          background: #ffffff;
+          color: #bc9cff;
+          border-radius: inherit;
+          box-sizing: border-box;
+          padding: 0.7rem 1.8rem 0.7rem 1.8rem;
+          font-size: 12px;
+          line-height: 16px;
+        }
+      }
+
+      &-md {
+        & > .button__text {
+          background: #ffffff;
+          color: #bc9cff;
+          border-radius: inherit;
+          box-sizing: border-box;
+          padding: 1.2rem 1.8rem 1.2rem 1.7rem;
+          font-size: 11.8px;
+          line-height: 16px;
+        }
       }
     }
 
-    &-default {
+    &_default {
       color: #ffffff;
       background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+      font-size: 12px;
 
       &-inactive {
         opacity: 0.5;
       }
     }
 
-    &-ic {
+    &_ic {
       display: flex;
       align-items: center;
       justify-content: space-around;
@@ -81,7 +97,7 @@
 
       & > .button__text {
         margin-bottom: 0.2rem;
-        margin-left: 0.3rem;
+        margin-left: -0.1rem;
       }
 
       .button__icon {
@@ -102,13 +118,13 @@
       }
     }
 
-    &-default:active,
-    &-lt:active,
-    &-ic:active {
+    &_default:active,
+    &_lt:active,
+    &_ic:active {
       opacity: 0.5;
     }
 
-    &-wb:active {
+    &_wb:active {
       color: rgba(31, 32, 65, 0.5);
     }
 
@@ -116,29 +132,34 @@
       opacity: 0.2;
     }
 
-    &-wb:hover {
+    &_wb:hover {
       text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
 
-    &-default:hover,
-    &-lt:hover,
-    &-ic:hover {
+    &_default:hover,
+    &_lt:hover,
+    &_ic:hover {
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
   }
 
   // Высота кнопки
   &_height {
+    // Очень тонкая кнопка
+    &_xs {
+      padding: 0.9rem 2.1rem 1rem 1.9rem;
+    }
     // Тонкая кнопка
-    &-s {
+    &_s {
       .button__text {
         padding: 0.6rem 1.8rem 0.7rem 1.7rem;
       }
     }
     // Средняя кнопка
-    &-md {
+    &_md {
       padding: 0.1rem 2.2rem 0 1.9rem;
       height: 4.4rem;
+      font-size: 12px;
     }
   }
 }

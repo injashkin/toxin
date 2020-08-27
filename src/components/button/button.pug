@@ -9,7 +9,7 @@
 
     Опции:
     options.text - текст на кнопке
-    options.height - высота кнопки ('' или 'md' - средняя (по умолчанию), 's' - тонкая)
+    options.height - высота кнопки ('' или 'md' - средняя (по умолчанию), 's' - тонкая, 'xs' - очень тонкая)
     options.style - стиль ('' или 'default' - по умолчанию, 'lt' - белый фон, 'wb' - без фона и бордюра, 'ic' - с иконкой)
     options.state - состояние кнопки ('' или 'default' - по умолчанию, 'inactive' - неактивная)
     Атрибуты:
@@ -19,19 +19,20 @@ mixin button(options = {})
     
     -
         let {text = '', height = 'md', style = 'default', state = ''} = options          
-        let classInactive = state === 'inactive' ? `button_style-${style}-inactive` : ''        
+        let classInactive = state === 'inactive' ? `button_style_${style}-inactive` : ''        
         let classes = ''
+        let ltHeight = `-${height}`
         classes = style === 'lt'
-            ? `button button_style-${style}`
+            ? `button button_style_${style} button_style_${style}${ltHeight}`
             : style === 'wb'            
-                ? `button button_style-${style} ${classInactive}`   
-                : `button button_style-${style} ${classInactive} button_height-${height}`
+                ? `button button_style_${style} ${classInactive}`   
+                : `button button_style_${style} ${classInactive} button_height_${height}`
 
     button(class=classes)
         if style === 'lt'
             //- для частичной прозрачности
-            - let classLtInactive = state === 'inactive' ? 'button__pseudo-parent_style-lt-inactive' : ''
-            div(class=`button__pseudo-parent_style-lt ${classLtInactive}`)
+            - let classLtInactive = state === 'inactive' ? 'button__pseudo-parent_style_lt-inactive' : ''
+            div(class=`button__pseudo-parent_style_lt ${classLtInactive}`)
         .button__text= text
         if style === 'ic'
             .button__icon
