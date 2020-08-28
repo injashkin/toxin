@@ -1,16 +1,26 @@
 .signup-pg {
-  background: url("./img/image 4.png") no-repeat;
-  background-size: 100%;
+  width: 100%;
+  min-width: 32rem;
 
-  &__frame {
-    position: relative;
-    height: 68.5rem;
+  &__main {
+    background: url("img/image4.jpg") 0 -7rem no-repeat;
+    background-size: cover;
+
+    padding: 2rem 2rem;
+
+    @media (max-width: 1440px) {
+      background-size: auto;
+    }
   }
 
   &__signup {
-    position: absolute;
-    left: 50.2%;
-    transform: translate(-50%, 0);
-    top: 1.9rem;
+    display: flex;
+    justify-content: center;
+    margin-left: 0.5rem;
+    margin-top: -0.1rem;
+
+    @media (max-width: 768px) {
+      margin: 0;
+    }
   }
 }
