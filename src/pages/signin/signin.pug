@@ -5,9 +5,10 @@ block title
 
 block main   
     .signin-pg
-        .signin-pg__header            
-            +header()
-            .signin-pg__frame
+        .signin-pg__wrapper
+            .signin-pg__header            
+                +header()
+            .signin-pg__main
                 .signin-pg__signin
                     +signin()
             .signin-pg__footer
