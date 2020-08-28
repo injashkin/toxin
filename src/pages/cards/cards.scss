@@ -7,11 +7,17 @@
   &__contents {
     display: flex;
     justify-content: center;
-    margin-top: 7.2rem;
+    flex-wrap: wrap;
+    margin-top: 5.2rem;
+    padding: 2rem;
 
     & > * {
       flex: 1 1 0;
-      max-width: 42rem;
+      max-width: 40rem;
+    }
+
+    & > *:not(:last-child) {
+      margin-right: 2rem;
     }
 
     & > :last-child {

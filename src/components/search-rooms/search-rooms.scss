@@ -1,7 +1,8 @@
 .search-rooms {
   display: flex;
   flex-direction: column;
-  width: 38rem;
+  max-width: 38rem;
+  min-width: 32rem;
   padding: 3.9rem 2.9rem 0.9rem;
 
   background: #ffffff;
