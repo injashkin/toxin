@@ -1,14 +1,32 @@
 .landing {
+  min-width: 32rem;
   &__main {
     background: url("img/image-3.jpg") no-repeat;
     background-size: cover;
     margin-top: -7rem;
+    padding: 0 2rem;
+
+    @media (max-width: 420px) {
+      padding: 0;
+    }
   }
 
   &__search-rooms {
     position: absolute;
     top: 14rem;
     left: 0;
+
+    @media (max-width: 768px) {
+      position: static;
+      padding-top: 10rem;
+    }
+
+    @media (max-width: 420px) {
+      & > :first-child {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
   }
 
   &__slogan-wrapper {
