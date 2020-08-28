@@ -1,4 +1,5 @@
 .room {
+  min-width: 320px;
   background: #ffffff;
 
   &__banner {
@@ -16,7 +17,12 @@
 
   &__main {
     display: flex;
-    margin: 7rem 0 6.2rem;
+    margin: 5rem 2rem 4.2rem;
+  }
+
+  &__content-width {
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
   &__wrapper-content {
@@ -24,7 +30,8 @@
   }
 
   &__content {
-    margin-right: 3rem;
+    padding: 2rem;
+    flex: 1 1 auto;
 
     &-top {
       display: flex;
@@ -34,6 +41,15 @@
     &-bottom {
       display: flex;
     }
+  }
+
+  &__sidebar {
+    display: flex;
+    min-width: 38rem;
+    flex: 1 1 auto;
+    padding: 2rem;
+    justify-content: center;
+    align-items: flex-start;
   }
 
   &__row {
@@ -161,11 +177,6 @@
   .room__banner-right {
     display: none;
   }
-
-  .room__main {
-    margin-left: 2rem;
-    margin-right: 2rem;
-  }
 }
 
 @media (max-width: 1050px) {
@@ -190,6 +201,15 @@
 
 @media (max-width: 680px) {
   .room {
+    &__main {
+      margin: 3rem 0;
+    }
+
+    &__sidebar {
+      padding: 0;
+      min-width: 20rem;
+    }
+
     &__content-top {
       flex-direction: column;
       align-items: center;
@@ -205,7 +225,7 @@
     }
 
     &__rules {
-      flex: 1 1 auto;
+      //flex: 1 1 auto;
       margin-bottom: 2rem;
 
       &-list {
