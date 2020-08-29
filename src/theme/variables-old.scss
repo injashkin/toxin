@@ -13,7 +13,7 @@ $green: #6fcf97;
 //Везде заменять его на миксин Montserrat
 @mixin font-body($weight, $size, $height) {
   //$weight - можно указывать: 400 или normal; 700 или bold
-  font-family: Montserrat;
+  font-family: Montserrat, Arial, sans-serif;
   font-style: normal;
   font-weight: $weight;
   font-size: $size;
@@ -22,7 +22,7 @@ $green: #6fcf97;
 
 @mixin Montserrat($weight, $size, $height) {
   //$weight - можно указывать: 400 или normal; 700 или bold
-  font-family: Montserrat;
+  font-family: Montserrat, Arial, sans-serif;
   font-style: normal;
   font-weight: $weight;
   font-size: $size;
