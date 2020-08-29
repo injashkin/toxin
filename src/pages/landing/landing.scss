@@ -3,9 +3,8 @@
   min-width: 32rem;
 
   &__main {
-    background: url("img/image-3.jpg") no-repeat;
-    background-size: cover;
-    margin-top: -7rem;
+    background: url("img/image-3.jpg") 0 -7rem no-repeat;
+    background-size: auto;
     padding: 0 2rem;
 
     @media (max-width: 420px) {
@@ -13,15 +12,21 @@
     }
   }
 
-  &__search-rooms {
-    position: absolute;
-    top: 14rem;
-    left: 0;
+  &__content-width {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
-    @media (max-width: 768px) {
-      position: static;
-      padding-top: 10rem;
+  &__content-wrapper {
+    padding: 0 1.4rem 0 2rem;
+
+    @media (max-width: 420px) {
+      padding: 0;
     }
+  }
+
+  &__search-rooms {
+    padding-top: 7rem;
 
     @media (max-width: 420px) {
       & > :first-child {
@@ -38,8 +43,12 @@
 
   &__slogan {
     text-align: right;
-    padding-top: 83.1rem;
+    padding-top: 31.7rem;
     padding-bottom: 2.1rem;
     max-width: 30rem;
+
+    @media (max-width: 420px) {
+      text-align: center;
+    }
   }
 }
