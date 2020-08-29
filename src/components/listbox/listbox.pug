@@ -15,7 +15,7 @@
     ---
     options.type - тип списка ('drop' - выпадающий, 'fix' - фиксированный)
     options.drop - выпадающий список открыт ('true') или закрыт ('false')
-    options.content - тип списка ('checkbox' - чекбоксы, 'ul' - маркированный список 'txt' - текст)
+    options.content - тип списка ('checkbox' - чекбоксы, 'ul' - маркированный список, 'txt' - текст, 'link' - ссылки)
     options.title - заголовок списка ({title: ''} - отключает заголовок)
     options.items[n] - массив списка элементов
     options.items[n].name - массив списка названий элементов
@@ -35,9 +35,13 @@ mixin listbox(options = {})
 
     .listbox(class=`listbox_${content}`) 
         //- Выводит заголовок списка если задан
-        if (title !== '')
-            .listbox__header.js-listbox__header
-                .listbox__title= title
+        if (title !== '')            
+            - let marginSmall = 'listbox__header js-listbox__header'
+            if (content === 'checkbox')
+                - marginSmall = 'listbox__header listbox__header_margin-bottom_small js-listbox__header'
+            div(class= marginSmall)
+                .listbox__title= title            
+
                 //- Выводит значок expand_more если список выпадающий
                 if (type === 'drop')
                     .listbox__icon-wrapper

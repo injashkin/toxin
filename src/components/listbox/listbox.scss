@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1.6rem;
+    margin-bottom: 1.8rem;
 
     font-family: Montserrat, Arial, sans-serif;
     font-style: normal;
@@ -12,6 +12,10 @@
     line-height: 1.5rem;
     text-transform: uppercase;
     color: $dark;
+
+    &_margin-bottom_small {
+      margin-bottom: 1.6rem;
+    }
   }
 
   &_checkbox,
