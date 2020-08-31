@@ -18,6 +18,12 @@
 
 ## NPM модули
 
+- [jquery.maskedinput](https://github.com/digitalBush/jquery.maskedinput) - Маска ввода для HTML элемента input. Данный плагин больше не поддерживается разработчиком. Есть аналог данному плагину [Cleave.js](https://github.com/nosir/cleave.js)
+
+- []() -
+
+### Модули для Webpack
+
 - [copy-webpack-plugin]() -
 
 - [file-loader](https://github.com/webpack-contrib/file-loader) - разрешает `import/require()` для файла, указанного в url-адресе и отправляет файл в выходной каталог.

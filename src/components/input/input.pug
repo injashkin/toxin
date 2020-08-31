@@ -11,6 +11,7 @@ link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesh
 mixin input(options = {})
     
     - let {name, type = 'text', placeholder = 'Text', arrow = ''} = options
+    - let classes = ''
     
     case type            
         when 'email'
@@ -23,7 +24,9 @@ mixin input(options = {})
                 inputmode = 'number' 
                 placeholder = placeholder === 'Text' ? 'Пароль' : placeholder  
         when 'date'
-            -
+            -   
+                type = 'text'
+                classes = 'js-mask-input'
                 placeholder = placeholder === 'Text' ? 'ДД.ММ.ГГГГ' : placeholder                
         default
             -
@@ -38,7 +41,8 @@ mixin input(options = {})
     - else addArrow = 'input_arrow-off'
 
     .input 
-        input.input__input(               
+        input.input__input(    
+            class = classes           
             name = name                   
             type = type             
             placeholder=placeholder 

@@ -25,6 +25,7 @@
     "jquery": "^3.5.1",
     "jquery-ui": "^1.12.1",
     "jquery-ui-dist": "^1.12.1",
+    "jquery.maskedinput": "^1.4.1",
     "prettier": "^2.0.5",
     "pug": "^3.0.0",
     "sass-resources-loader": "^2.0.3",
